@@ -55,10 +55,6 @@
     "preserve_markup_tokens": true,
     "preserve_newlines_and_bom": true
   },
-  "skip_generic_tsv_compare": [
-    "locale_quiz.txt",
-    "shop_deco.txt"
-  ],
   "legacy_decodings": {
     "ae": [
       "cp1256"
@@ -111,5 +107,136 @@
     "master": [
       "cp1254"
     ]
+  },
+  "parser_registry": {
+    "locale_game.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": "all_non_key"
+    },
+    "locale_interface.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": "all_non_key"
+    },
+    "locale_string.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": "all_non_key"
+    },
+    "locale_mapnames.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": "all_non_key"
+    },
+    "item_names.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "header_rows": 1,
+      "token_columns": [
+        1
+      ]
+    },
+    "mob_names.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "header_rows": 1,
+      "token_columns": [
+        1
+      ]
+    },
+    "itemdesc.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": [
+        1,
+        2
+      ]
+    },
+    "loading_tip_vnum.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": [
+        1
+      ]
+    },
+    "guildbuildinglist.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "header_rows": 1,
+      "token_columns": [
+        3
+      ]
+    },
+    "pet_skill.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": [
+        1,
+        4
+      ]
+    },
+    "locale_quiz.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0,
+        1
+      ],
+      "token_columns": [
+        2
+      ]
+    },
+    "shop_deco.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0,
+        1
+      ],
+      "token_columns": [
+        1
+      ]
+    },
+    "monster_card.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0,
+        1
+      ],
+      "token_columns": "disabled"
+    },
+    "battle_pass.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": "all_non_key"
+    },
+    "skilldesc.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": "disabled"
+    }
   }
 }
