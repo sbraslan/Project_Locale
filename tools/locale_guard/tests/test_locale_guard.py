@@ -27,6 +27,27 @@ class LocaleGuardTests(unittest.TestCase):
             ["%.1f", "%%", "|cffff9d9d", "|H", "|h", "%s", "|h", "|r", "[CENTER_ALIGN]"]
         )
 
+    def test_literal_percent_text_is_not_printf(self):
+        self.assertEqual(protected_tokens("100% deadly"), [])
+        self.assertEqual(protected_tokens("20% EXP"), [])
+        self.assertEqual(protected_tokens("+10% fire resistance"), [])
+
+    def test_occurrence_policy_preserves_repeated_keys(self):
+        rows, duplicates = keyed_tsv_rows(
+            "KEY\tA\nKEY\tB\n",
+            duplicate_policy="occurrence",
+        )
+        self.assertEqual(set(rows), {"KEY@@0", "KEY@@1"})
+        self.assertEqual(duplicates, [])
+
+    def test_excluded_key_column_uses_structural_columns(self):
+        rows, duplicates = keyed_tsv_rows(
+            "1\tEnglish Name\t30000\n1\tTürkçe Ad\t30001\n",
+            key_exclude_columns=(1,),
+        )
+        self.assertEqual(set(rows), {"1|30000", "1|30001"})
+        self.assertEqual(duplicates, [])
+
     def test_german_contamination_warning(self):
         language, counts = suspicious_foreign_language(
             "Beende die Mission, um deine Belohnung zu erhalten."
