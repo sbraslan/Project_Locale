@@ -17,6 +17,9 @@ PRINTF_RE = re.compile(
     r"%(?:\d+\$)?[-+#0']*(?:\d+|\*)?(?:\.(?:\d+|\*))?"
     r"(?:hh|h|ll|l|j|z|t|L)?[diuoxXfFeEgGaAcspn]"
 )
+MALFORMED_PRINTF_RE = re.compile(
+    r"%\.\s+\d+[fFeEgGaA]"
+)
 PRINTF_PARSE_RE = re.compile(
     r"^%(?:(?P<position>\d+)\$)?"
     r"(?P<flags>[-+#0 ']*)"
@@ -374,6 +377,7 @@ def structural_issue_breakdown(issues: Sequence[Issue]) -> list[dict]:
         "DUPLICATE_KEY",
         "COLUMN_COUNT_MISMATCH",
         "STRUCTURAL_COLUMN_MISMATCH",
+        "MALFORMED_PRINTF_SYNTAX",
         "PRINTF_CONTRACT_MISMATCH",
         "MARKUP_TOKEN_MISMATCH",
     }
@@ -607,6 +611,30 @@ def compare_registered_tsv(
         for column_index in columns_to_check:
             en_value = en_columns[column_index]
             tr_value = tr_columns[column_index]
+            for malformed in MALFORMED_PRINTF_RE.finditer(en_value):
+                issues.append(Issue(
+                    "error", "MALFORMED_PRINTF_SYNTAX", en_path,
+                    f"Malformed printf syntax in canonical EN column {column_index}: "
+                    f"{malformed.group(0)!r}",
+                    key=key,
+                    language=en_language,
+                    column=column_index,
+                    source_value=en_value,
+                    target_value=tr_value,
+                ))
+
+            for malformed in MALFORMED_PRINTF_RE.finditer(tr_value):
+                issues.append(Issue(
+                    "error", "MALFORMED_PRINTF_SYNTAX", tr_path,
+                    f"Malformed printf syntax in TR column {column_index}: "
+                    f"{malformed.group(0)!r}",
+                    key=key,
+                    language=tr_language,
+                    column=column_index,
+                    source_value=en_value,
+                    target_value=tr_value,
+                ))
+
             en_printf_contract = printf_contract_tokens(en_value)
             tr_printf_contract = printf_contract_tokens(tr_value)
             if en_printf_contract != tr_printf_contract:
