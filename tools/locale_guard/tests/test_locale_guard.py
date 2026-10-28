@@ -4,6 +4,9 @@ from pathlib import Path
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
+    printf_tokens,
+    printf_contract_tokens,
+    markup_tokens,
     layout_tokens,
     suspicious_foreign_language,
     tsv_rows,
@@ -45,6 +48,21 @@ class LocaleGuardTests(unittest.TestCase):
 
     def test_layout_tokens_are_separate(self):
         self.assertEqual(layout_tokens("Line 1\\nLine 2\\n"), ["\\n", "\\n"])
+
+    def test_printf_contract_distinguishes_argument_types(self):
+        self.assertEqual(printf_contract_tokens("%d %s %lu"), ["d", "s", "lu"])
+        self.assertNotEqual(printf_contract_tokens("%d"), printf_contract_tokens("%s"))
+
+    def test_printf_contract_allows_visual_flag_difference(self):
+        self.assertEqual(printf_contract_tokens("% d"), ["d"])
+        self.assertEqual(printf_contract_tokens("%d"), ["d"])
+        self.assertNotEqual(printf_tokens("% d"), printf_tokens("%d"))
+
+    def test_printf_suffixes_remain_valid_placeholders(self):
+        self.assertEqual(printf_tokens("%dx %ss %dm %dH"), ["%d", "%s", "%d", "%d"])
+
+    def test_markup_tokens_do_not_include_plain_labels(self):
+        self.assertEqual(markup_tokens("[DS] Reward [I]"), [])
 
     def test_occurrence_policy_preserves_repeated_keys(self):
         rows, duplicates = keyed_tsv_rows(
