@@ -12,8 +12,18 @@ from pathlib import Path
 from typing import Sequence
 
 PRINTF_RE = re.compile(
-    r"%(?:\d+\$)?[-+#0 ']*(?:\d+|\*)?(?:\.(?:\d+|\*))?"
-    r"(?:hh|h|ll|l|j|z|t|L)?(?:[diuoxXfFeEgGaAcspn](?![A-Za-z])|%)"
+    r"%%|"
+    r"% (?:[diuoxXfFeEgGaAcspn])(?![A-Za-z])|"
+    r"%(?:\d+\$)?[-+#0']*(?:\d+|\*)?(?:\.(?:\d+|\*))?"
+    r"(?:hh|h|ll|l|j|z|t|L)?[diuoxXfFeEgGaAcspn]"
+)
+PRINTF_PARSE_RE = re.compile(
+    r"^%(?:(?P<position>\d+)\$)?"
+    r"(?P<flags>[-+#0 ']*)"
+    r"(?P<width>\d+|\*)?"
+    r"(?:\.(?P<precision>\d+|\*))?"
+    r"(?P<length>hh|h|ll|l|j|z|t|L)?"
+    r"(?P<conversion>[diuoxXfFeEgGaAcspn])$"
 )
 BRACE_RE = re.compile(r"\{[^{}\r\n]*\}")
 METIN_PIPE_RE = re.compile(
@@ -125,6 +135,36 @@ def decode_text(
             return text, encoding, False
 
         raise utf8_error
+
+def printf_tokens(text: str) -> list[str]:
+    return [match.group(0) for match in PRINTF_RE.finditer(text)]
+
+def printf_contract_tokens(text: str) -> list[str]:
+    contracts: list[str] = []
+    for token in printf_tokens(text):
+        if token == "%%":
+            contracts.append("%%")
+            continue
+
+        parsed = PRINTF_PARSE_RE.match(token)
+        if not parsed:
+            contracts.append(f"UNPARSED:{token}")
+            continue
+
+        position = parsed.group("position") or ""
+        length = parsed.group("length") or ""
+        conversion = parsed.group("conversion")
+        prefix = f"{position}$" if position else ""
+        contracts.append(f"{prefix}{length}{conversion}")
+    return contracts
+
+def markup_tokens(text: str) -> list[str]:
+    tokens: list[tuple[int, str]] = []
+    for regex in (BRACE_RE, METIN_PIPE_RE, BRACKET_DIRECTIVE_RE, URL_RE):
+        for match in regex.finditer(text):
+            tokens.append((match.start(), match.group(0)))
+    tokens.sort(key=lambda value: value[0])
+    return [token for _, token in tokens]
 
 def protected_tokens(text: str) -> list[str]:
     tokens: list[tuple[int, str]] = []
@@ -330,7 +370,9 @@ def structural_issue_breakdown(issues: Sequence[Issue]) -> list[dict]:
         "CANONICAL_MISSING_KEY",
         "DUPLICATE_KEY",
         "COLUMN_COUNT_MISMATCH",
-        "PROTECTED_TOKEN_MISMATCH",
+        "PRINTF_CONTRACT_MISMATCH",
+        "PRINTF_FORMAT_DIFFERENCE",
+        "MARKUP_TOKEN_MISMATCH",
     }
     by_path: dict[str, collections.Counter[str]] = {}
     for issue in issues:
@@ -532,23 +574,43 @@ def compare_registered_tsv(
         for column_index in columns_to_check:
             en_value = en_columns[column_index]
             tr_value = tr_columns[column_index]
-            en_tokens = collections.Counter(protected_tokens(en_value))
-            tr_tokens = collections.Counter(protected_tokens(tr_value))
-            if en_tokens != tr_tokens:
+            en_printf_contract = printf_contract_tokens(en_value)
+            tr_printf_contract = printf_contract_tokens(tr_value)
+            if en_printf_contract != tr_printf_contract:
                 issues.append(Issue(
-                    "error", "PROTECTED_TOKEN_MISMATCH", tr_path,
-                    f"Protected tokens differ from EN in column {column_index}: "
-                    f"EN={dict(en_tokens)} TR={dict(tr_tokens)}",
+                    "error", "PRINTF_CONTRACT_MISMATCH", tr_path,
+                    f"Printf argument contract differs from EN in column {column_index}: "
+                    f"EN={en_printf_contract} TR={tr_printf_contract}",
+                    key=key, language=tr_language
+                ))
+            else:
+                en_printf_raw = printf_tokens(en_value)
+                tr_printf_raw = printf_tokens(tr_value)
+                if en_printf_raw != tr_printf_raw:
+                    issues.append(Issue(
+                        "warning", "PRINTF_FORMAT_DIFFERENCE", tr_path,
+                        f"Printf formatting differs but argument contract matches in "
+                        f"column {column_index}: EN={en_printf_raw} TR={tr_printf_raw}",
+                        key=key, language=tr_language
+                    ))
+
+            en_markup = markup_tokens(en_value)
+            tr_markup = markup_tokens(tr_value)
+            if en_markup != tr_markup:
+                issues.append(Issue(
+                    "error", "MARKUP_TOKEN_MISMATCH", tr_path,
+                    f"Markup tokens differ from EN in column {column_index}: "
+                    f"EN={en_markup} TR={tr_markup}",
                     key=key, language=tr_language
                 ))
 
-            en_layout = collections.Counter(layout_tokens(en_value))
-            tr_layout = collections.Counter(layout_tokens(tr_value))
+            en_layout = layout_tokens(en_value)
+            tr_layout = layout_tokens(tr_value)
             if en_layout != tr_layout:
                 issues.append(Issue(
                     "warning", "LAYOUT_TOKEN_MISMATCH", tr_path,
                     f"Layout escapes differ from EN in column {column_index}: "
-                    f"EN={dict(en_layout)} TR={dict(tr_layout)}",
+                    f"EN={en_layout} TR={tr_layout}",
                     key=key, language=tr_language
                 ))
     return issues
