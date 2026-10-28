@@ -75,6 +75,9 @@ class Issue:
     key: str | None = None
     suggestion: str | None = None
     language: str | None = None
+    column: int | None = None
+    source_value: str | None = None
+    target_value: str | None = None
 
 @dataclass
 class FileInfo:
@@ -580,7 +583,10 @@ def compare_registered_tsv(
                     "error", "PRINTF_CONTRACT_MISMATCH", tr_path,
                     f"Printf argument contract differs from EN in column {column_index}: "
                     f"EN={en_printf_contract} TR={tr_printf_contract}",
-                    key=key, language=tr_language
+                    key=key, language=tr_language,
+                    column=column_index,
+                    source_value=en_value,
+                    target_value=tr_value
                 ))
             else:
                 en_printf_raw = printf_tokens(en_value)
@@ -590,7 +596,10 @@ def compare_registered_tsv(
                         "warning", "PRINTF_FORMAT_DIFFERENCE", tr_path,
                         f"Printf formatting differs but argument contract matches in "
                         f"column {column_index}: EN={en_printf_raw} TR={tr_printf_raw}",
-                        key=key, language=tr_language
+                        key=key, language=tr_language,
+                        column=column_index,
+                        source_value=en_value,
+                        target_value=tr_value
                     ))
 
             en_markup = markup_tokens(en_value)
@@ -600,7 +609,10 @@ def compare_registered_tsv(
                     "error", "MARKUP_TOKEN_MISMATCH", tr_path,
                     f"Markup tokens differ from EN in column {column_index}: "
                     f"EN={en_markup} TR={tr_markup}",
-                    key=key, language=tr_language
+                    key=key, language=tr_language,
+                    column=column_index,
+                    source_value=en_value,
+                    target_value=tr_value
                 ))
 
             en_layout = layout_tokens(en_value)
@@ -610,7 +622,10 @@ def compare_registered_tsv(
                     "warning", "LAYOUT_TOKEN_MISMATCH", tr_path,
                     f"Layout escapes differ from EN in column {column_index}: "
                     f"EN={en_layout} TR={tr_layout}",
-                    key=key, language=tr_language
+                    key=key, language=tr_language,
+                    column=column_index,
+                    source_value=en_value,
+                    target_value=tr_value
                 ))
     return issues
 
