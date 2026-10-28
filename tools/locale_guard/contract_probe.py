@@ -55,14 +55,29 @@ def literal_fragments(value: str | None, min_length: int = 8) -> list[str]:
 def search_terms(issue: dict) -> list[tuple[str, str]]:
     terms: list[tuple[str, str]] = []
     key = base_logical_key(issue.get("key"))
-    if key and not key.isdigit():
+    numeric_key = bool(key and key.isdigit())
+
+    if key and not numeric_key:
         terms.append(("key", key))
 
     source = issue.get("source_value")
     target = issue.get("target_value")
-    for fragment in literal_fragments(source):
+
+    source_fragments = literal_fragments(source)
+    target_fragments = literal_fragments(target)
+
+    # Numeric locale keys (for example locale_string IDs) often have no
+    # symbolic identifier in source code. If the ordinary 8-character
+    # threshold yields nothing, allow a controlled 5-character fallback so
+    # short but meaningful literals such as "Round" can still be probed.
+    if numeric_key and not source_fragments:
+        source_fragments = literal_fragments(source, min_length=5)
+    if numeric_key and not target_fragments:
+        target_fragments = literal_fragments(target, min_length=5)
+
+    for fragment in source_fragments:
         terms.append(("source_text", fragment))
-    for fragment in literal_fragments(target):
+    for fragment in target_fragments:
         terms.append(("target_text", fragment))
 
     dedup: list[tuple[str, str]] = []
