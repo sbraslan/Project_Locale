@@ -1,7 +1,14 @@
 import tempfile
 import unittest
 from pathlib import Path
-from tools.locale_guard.contract_probe import base_logical_key, literal_fragments, search_terms
+from tools.locale_guard.contract_probe import (
+    base_logical_key,
+    classify_evidence_path,
+    evidence_strength,
+    literal_fragments,
+    load_locale_enum_map,
+    search_terms,
+)
 from tools.locale_guard.repair_plan import build_repair_plan
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
@@ -214,6 +221,54 @@ class LocaleGuardTests(unittest.TestCase):
         terms = search_terms(issue)
         self.assertFalse(any(kind == "key" for kind, _ in terms))
         self.assertIn(("source_text", "Round"), terms)
+
+    def test_contract_probe_numeric_key_uses_server_enum_symbol(self):
+        issue = {
+            "key": "276",
+            "source_value": "Round %lu",
+            "target_value": "%u. Tur",
+        }
+        terms = search_terms(issue, {"276": "LU_RUNDE"})
+        self.assertIn(("enum_key", "LU_RUNDE"), terms)
+
+    def test_contract_probe_loads_locale_enum_map(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            header = Path(tmp) / "Locale.hpp"
+            header.write_text(
+                "enum class ELocaleStrings {\n"
+                "    LU_RUNDE = 276,\n"
+                "    AKTUELLE_TEILNEHMER = 282,\n"
+                "};\n",
+                encoding="utf-8",
+            )
+            mapping = load_locale_enum_map(header)
+            self.assertEqual(mapping["276"], "LU_RUNDE")
+            self.assertEqual(mapping["282"], "AKTUELLE_TEILNEHMER")
+
+    def test_contract_probe_separates_source_from_locale_reference(self):
+        self.assertEqual(
+            classify_evidence_path(
+                "Project_Binary",
+                Path("root/game.py"),
+            ),
+            "source",
+        )
+        self.assertEqual(
+            classify_evidence_path(
+                "Project_Binary",
+                Path("locale/locale/country/tr/locale_game.txt"),
+            ),
+            "locale_reference",
+        )
+        self.assertEqual(
+            classify_evidence_path(
+                "Project_ClientSrc",
+                Path("extern/Python315/Lib/subprocess.py"),
+            ),
+            "noise",
+        )
+        self.assertEqual(evidence_strength("key", "GAME_PICK_MONEY", "source"), "strong")
+        self.assertEqual(evidence_strength("source_text", "Cooldown", "source"), "weak")
 
     def test_cp1250_fallback_is_lossless(self):
         data = "Příliš žluťoučký kůň".encode("cp1250")
