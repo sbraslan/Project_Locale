@@ -19,6 +19,7 @@ from tools.locale_guard.runtime_dry_run import (
 )
 from tools.locale_guard.runtime_apply import backup_token
 from tools.locale_guard.canonical_review import canonical_backfill_groups
+from tools.locale_guard.canonical_backfill_probe import load_rows_for_language
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
@@ -490,6 +491,45 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertEqual(rows[0]["sample_keys"], ["100", "101"])
         self.assertEqual(rows[1]["path"], "en/item_names.txt")
         self.assertEqual(rows[1]["count"], 1)
+
+    def test_canonical_backfill_probe_reads_legacy_locale_rows(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            (root / "tr").mkdir()
+            (root / "tr" / "item_names.txt").write_bytes(
+                "VNUM\tNAME\r\n50935\tKırmızı üçlü set\r\n".encode("cp1254")
+            )
+            config = {
+                "legacy_decodings": {"tr": ["cp1254"]},
+            }
+            parser_spec = {
+                "kind": "keyed_tsv",
+                "key_columns": [0],
+                "header_rows": 1,
+                "token_columns": [1],
+            }
+            rows, error = load_rows_for_language(
+                root=root,
+                config=config,
+                language="tr",
+                relative_path="item_names.txt",
+                parser_spec=parser_spec,
+            )
+            self.assertIsNone(error)
+            self.assertEqual(rows["50935"][1], "Kırmızı üçlü set")
+
+    def test_canonical_backfill_probe_reports_missing_locale_file(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            rows, error = load_rows_for_language(
+                root=root,
+                config={"legacy_decodings": {}},
+                language="de",
+                relative_path="itemdesc.txt",
+                parser_spec={"kind": "keyed_tsv", "key_columns": [0]},
+            )
+            self.assertEqual(rows, {})
+            self.assertEqual(error, "file_missing")
 
     def test_runtime_decision_check_accepts_intrinsic_malformed_fix(self):
         plan = {
