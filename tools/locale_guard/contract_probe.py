@@ -143,9 +143,11 @@ def classify_evidence_path(repo_name: str, relative_path: Path) -> str:
 
 
 def evidence_strength(match_type: str, term: str, evidence_kind: str) -> str:
+    if evidence_kind == "symbol_definition":
+        return "definition"
     if evidence_kind != "source":
         return "reference" if evidence_kind in {"reference", "locale_reference"} else "noise"
-    if match_type in {"key", "enum_key"}:
+    if match_type in {"key", "enum_key", "loader_contract"}:
         return "strong"
     normalized = SPACE_RE.sub(" ", term).strip()
     if len(normalized) >= 18:
@@ -153,6 +155,76 @@ def evidence_strength(match_type: str, term: str, evidence_kind: str) -> str:
     if len(normalized) >= 10:
         return "medium"
     return "weak"
+
+
+def classify_match_evidence(
+    match_type: str,
+    term: str,
+    relative_path: Path,
+    line: str,
+    base_kind: str,
+) -> str:
+    normalized_path = relative_path.as_posix().casefold()
+
+    # Locale.hpp maps numeric IDs to enum names. That is useful symbol metadata,
+    # but it is not a runtime use/call-site and must never be counted as proof
+    # of the printf argument contract.
+    if (
+        match_type == "enum_key"
+        and normalized_path.endswith("game/src/locale.hpp")
+        and re.search(
+            rf"^\\s*{re.escape(term)}\\s*=\\s*\\d+\\s*,",
+            line,
+        )
+    ):
+        return "symbol_definition"
+
+    return base_kind
+
+
+def structural_loader_evidence(
+    issue: dict,
+    candidates: Sequence[tuple[str, Path, Path, str]],
+    text_cache: dict[str, str | None],
+) -> list[dict]:
+    if issue.get("code") != "STRUCTURAL_COLUMN_MISMATCH":
+        return []
+
+    evidence: list[dict] = []
+    for repo_name, repo_root, path, evidence_kind in candidates:
+        if repo_name != "Project_Binary":
+            continue
+        relative_path = path.relative_to(repo_root)
+        if relative_path.as_posix().casefold() != "root/localeinfo.py":
+            continue
+
+        cache_key = path.as_posix()
+        if cache_key not in text_cache:
+            text_cache[cache_key] = read_text_safely(path)
+        text = text_cache[cache_key]
+        if text is None:
+            return []
+
+        for line_number, line in enumerate(text.splitlines(), 1):
+            if (
+                'funcDict = {"SA":SA, "SNA":SNA' in line
+                or 'type = tokens[2].strip()' in line
+                or 'localeDict[tokens[0]] = funcDict[type](tokens[1])' in line
+            ):
+                evidence.append({
+                    "repository": repo_name,
+                    "path": relative_path.as_posix(),
+                    "line": line_number,
+                    "match_type": "loader_contract",
+                    "term": "locale_game callable metadata column",
+                    "evidence_kind": "source",
+                    "strength": "strong",
+                    "snippet": line.strip()[:500],
+                })
+
+        return evidence[:3]
+
+    return []
 
 
 def read_text_safely(path: Path) -> str | None:
@@ -244,7 +316,14 @@ def scan_issue(
                     if term.casefold() not in folded:
                         continue
 
-                    strength = evidence_strength(kind, term, evidence_kind)
+                    match_evidence_kind = classify_match_evidence(
+                        kind,
+                        term,
+                        relative_path,
+                        line,
+                        evidence_kind,
+                    )
+                    strength = evidence_strength(kind, term, match_evidence_kind)
                     if allowed_strengths is not None and strength not in allowed_strengths:
                         continue
 
@@ -264,7 +343,7 @@ def scan_issue(
                         "line": line_number,
                         "match_type": kind,
                         "term": term,
-                        "evidence_kind": evidence_kind,
+                        "evidence_kind": match_evidence_kind,
                         "strength": strength,
                         "snippet": line.strip()[:500],
                     })
@@ -319,6 +398,17 @@ def scan_issue(
         limit=max_matches,
     )
 
+    for loader_match in structural_loader_evidence(issue, candidates, text_cache):
+        location_key = (
+            loader_match["repository"],
+            loader_match["path"],
+            loader_match["line"],
+            loader_match["term"].casefold(),
+        )
+        if location_key not in seen_locations and len(matches) < max_matches:
+            seen_locations.add(location_key)
+            matches.append(loader_match)
+
     source_matches = [
         match for match in matches
         if match["evidence_kind"] == "source"
@@ -331,6 +421,10 @@ def scan_issue(
         match for match in matches
         if match["evidence_kind"] == "locale_reference"
     ]
+    symbol_definition_matches = [
+        match for match in matches
+        if match["evidence_kind"] == "symbol_definition"
+    ]
 
     return {
         "issue": issue,
@@ -342,6 +436,7 @@ def scan_issue(
         "source_match_count": len(source_matches),
         "strong_source_match_count": len(strong_source_matches),
         "locale_reference_match_count": len(locale_reference_matches),
+        "symbol_definition_match_count": len(symbol_definition_matches),
         "matches": matches,
     }
 
@@ -455,6 +550,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             f"{issue.get('code')} => matches={item['match_count']} "
             f"source={item['source_match_count']} "
             f"strong_source={item['strong_source_match_count']} "
+            f"symbol_defs={item['symbol_definition_match_count']} "
             f"locale_refs={item['locale_reference_match_count']}"
         )
 
