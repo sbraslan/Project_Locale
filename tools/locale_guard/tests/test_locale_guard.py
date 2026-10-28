@@ -8,6 +8,7 @@ from tools.locale_guard.locale_guard import (
     tsv_rows,
     inspect_file,
     decode_text,
+    keyed_tsv_rows,
 )
 
 class LocaleGuardTests(unittest.TestCase):
@@ -64,6 +65,23 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertEqual(text, "Привет")
         self.assertEqual(encoding, "cp1251")
         self.assertFalse(bom)
+
+    def test_composite_tsv_keys_are_not_false_duplicates(self):
+        rows, duplicates = keyed_tsv_rows(
+            "1\t1\tQuestion A\n1\t2\tQuestion B\n",
+            key_columns=(0, 1),
+        )
+        self.assertEqual(set(rows), {"1|1", "1|2"})
+        self.assertEqual(duplicates, [])
+
+    def test_header_row_can_be_skipped(self):
+        rows, duplicates = keyed_tsv_rows(
+            "VNUM\tNAME\n101\tWolf\n",
+            key_columns=(0,),
+            header_rows=1,
+        )
+        self.assertEqual(set(rows), {"101"})
+        self.assertEqual(duplicates, [])
 
     def test_cp1250_fallback_is_lossless(self):
         data = "Příliš žluťoučký kůň".encode("cp1250")
