@@ -24,6 +24,7 @@ from tools.locale_guard.locale_guard import (
     keyed_tsv_rows,
     parse_git_porcelain,
     structural_issue_breakdown,
+    compare_registered_tsv,
     Issue,
 )
 
@@ -269,6 +270,26 @@ class LocaleGuardTests(unittest.TestCase):
         )
         self.assertEqual(evidence_strength("key", "GAME_PICK_MONEY", "source"), "strong")
         self.assertEqual(evidence_strength("source_text", "Cooldown", "source"), "weak")
+
+    def test_locale_game_callable_tag_mismatch_is_explicit(self):
+        issues = compare_registered_tsv(
+            "en/locale_game.txt",
+            "tr/locale_game.txt",
+            "KEY\tValue %d\tSA\n",
+            "KEY\tDeğer %d\n",
+            set(),
+            "en",
+            "tr",
+            {
+                "key_columns": [0],
+                "token_columns": [1],
+                "structural_columns": [2],
+                "column_count_policy": "strict",
+            },
+        )
+        codes = [issue.code for issue in issues]
+        self.assertIn("STRUCTURAL_COLUMN_MISMATCH", codes)
+        self.assertNotIn("COLUMN_COUNT_MISMATCH", codes)
 
     def test_cp1250_fallback_is_lossless(self):
         data = "Příliš žluťoučký kůň".encode("cp1250")
