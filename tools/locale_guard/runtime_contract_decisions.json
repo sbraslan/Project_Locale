@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "write_enabled": false,
+  "decisions": [
+    {
+      "path": "tr/locale_game.txt",
+      "key": "CHEQUE_SYSTEM_PICK_WON@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "%s Won aldın.",
+      "proposed_value": "%d Won aldın.",
+      "reason": "Client passes cheque as Python int; locale string is formatted with that value.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/game.py",
+          "contains": "localeInfo.CHEQUE_SYSTEM_PICK_WON % (cheque)"
+        },
+        {
+          "repo": "Project_ClientSrc",
+          "path": "UserInterface/PythonNetworkStreamPhaseGame.cpp",
+          "contains": "\"OnPickCheque\", Py_BuildValue(\"(i)\", PointChange.amount)"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "GAME_PICK_MONEY@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "%s Yang aldın.",
+      "proposed_value": "%d Yang aldın.",
+      "reason": "Client passes money as Python int; locale string is formatted with that value.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/game.py",
+          "contains": "localeInfo.GAME_PICK_MONEY % (money)"
+        },
+        {
+          "repo": "Project_ClientSrc",
+          "path": "UserInterface/PythonNetworkStreamPhaseGame.cpp",
+          "contains": "\"OnPickMoney\", Py_BuildValue(\"(i)\", PointChange.amount)"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "GEM_SYSTEM_PICK_GEM@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "%s Gaya aldın.",
+      "proposed_value": "%d Gaya aldın.",
+      "reason": "Client passes gem count as Python int; locale string is formatted with that value.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/game.py",
+          "contains": "localeInfo.GEM_SYSTEM_PICK_GEM % (gem)"
+        },
+        {
+          "repo": "Project_ClientSrc",
+          "path": "UserInterface/PythonNetworkStreamPhaseGame.cpp",
+          "contains": "\"OnPickGem\", Py_BuildValue(\"(i)\", PointChange.amount)"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "MERCENARY_POPUP_MISSION_REWARD_EXP@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "unresolved",
+      "side": "target",
+      "current_value": "Şampiyon EXP topladın: %s",
+      "proposed_value": null,
+      "reason": "Exact runtime call-site was not found. Locale consensus alone is not sufficient to modify the contract.",
+      "evidence": []
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "PET_INFO_EXP@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "Mevcut EXP: %s",
+      "proposed_value": "Mevcut EXP",
+      "reason": "Runtime concatenates the numeric value separately and does not format this locale label.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/uipetinfo.py",
+          "contains": "str(localeInfo.PET_INFO_EXP) + ': '+ str(curPoint)"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "PET_INFO_ITEM_EXP@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "Mevcut eşya EXP: %s",
+      "proposed_value": "Mevcut eşya EXP",
+      "reason": "Runtime concatenates the numeric value separately and does not format this locale label.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/uipetinfo.py",
+          "contains": "str(localeInfo.PET_INFO_ITEM_EXP) + ': '+ str(itemExp)"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "PET_INFO_NEXT_EXP@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "Kalan EXP: %s",
+      "proposed_value": "Kalan EXP",
+      "reason": "Runtime concatenates the numeric value separately and does not format this locale label.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/uipetinfo.py",
+          "contains": "str(localeInfo.PET_INFO_NEXT_EXP) + ': ' + str(maxPoint - curPoint)"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "PET_INFO_NEXT_ITEM_EXP@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "Kalan eşya EXP: %s",
+      "proposed_value": "Kalan eşya EXP",
+      "reason": "Runtime concatenates the numeric value separately and does not format this locale label.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/uipetinfo.py",
+          "contains": "str(localeInfo.PET_INFO_NEXT_ITEM_EXP) + ': ' + str(itemExpMax - itemExp)"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "PET_SKILL_TOOLTIP_COOLTIME@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "resolved",
+      "side": "source",
+      "current_value": "Cooldown: %s seconds",
+      "proposed_value": "Cooldown: %d seconds",
+      "reason": "Tooltip formats with pet_skill_cool_time; native binding returns cooldown as int.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/uitooltip.py",
+          "contains": "localeInfo.PET_SKILL_TOOLTIP_COOLTIME % (pet_skill_cool_time)"
+        },
+        {
+          "repo": "Project_ClientSrc",
+          "path": "UserInterface/PythonSkill.cpp",
+          "contains": "return Py_BuildValue(\"ssii\", c_pSkillData->strName.c_str(), c_pSkillData->strDescription.c_str(), c_pSkillData->byType, c_pSkillData->dwskilldelay);"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "SUNG_MAHI_CURSE_TOOLTIP@@0",
+      "code": "STRUCTURAL_COLUMN_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "",
+      "proposed_value": "SA",
+      "reason": "locale_game column 2 is callable metadata. SA creates a one-argument formatter and the text contains one %d argument.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/localeinfo.py",
+          "contains": "def SA(text):"
+        },
+        {
+          "repo": "Project_Binary",
+          "path": "root/localeinfo.py",
+          "contains": "localeDict[tokens[0]] = funcDict[type](tokens[1])"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_game.txt",
+      "key": "TOOLTIP_AFFECT_DEFENSEWAVE_LASER@@0",
+      "code": "STRUCTURAL_COLUMN_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "SNA",
+      "proposed_value": "",
+      "reason": "Text has no formatting arguments. Extra SNA changes the value from a string into a callable while EN has no callable tag.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/localeinfo.py",
+          "contains": "def SNA(text):"
+        },
+        {
+          "repo": "Project_Binary",
+          "path": "root/localeinfo.py",
+          "contains": "localeDict[tokens[0]] = funcDict[type](tokens[1])"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_interface.txt",
+      "key": "EXTENDET_BATTLE_PASS_TYPENAME_4_DESC_1@@0",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "resolved",
+      "side": "target",
+      "current_value": "En az seviye %d olan oyunculara toplam %s hasar ver. Her krallıktan oyuncular sayılır.",
+      "proposed_value": "Toplam %s hasarı en az seviye %d olan oyunculara ver. Her krallıktan oyuncular sayılır.",
+      "reason": "Mission type 4 formats description with (value, mission_condition); value is first and minimum level second.",
+      "evidence": [
+        {
+          "repo": "Project_Binary",
+          "path": "root/uibattlepass.py",
+          "contains": "4 : {\"name\" : uiScriptLocale.EXTENDET_BATTLE_PASS_TYPENAME_4"
+        },
+        {
+          "repo": "Project_Binary",
+          "path": "root/uibattlepass.py",
+          "contains": "if mission_type in [2 ,4]:"
+        },
+        {
+          "repo": "Project_Binary",
+          "path": "root/uibattlepass.py",
+          "contains": "self.missionNameDict[mission_type][\"desc\"] % (value, mission_condition)"
+        }
+      ]
+    },
+    {
+      "path": "tr/locale_string.txt",
+      "key": "1441",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "unresolved",
+      "side": "target",
+      "current_value": "Kalan zaman: %.2f | Balık zorluk derecesi: %u | Zorluk seviyesi düşüşü: %d",
+      "proposed_value": null,
+      "reason": "Only enum definition is confirmed; no runtime call-site proving %lu versus %u has been found.",
+      "evidence": []
+    },
+    {
+      "path": "tr/locale_string.txt",
+      "key": "1562",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "unresolved",
+      "side": "target",
+      "current_value": "Şampiyon seviyen için %u EXP aldın.",
+      "proposed_value": null,
+      "reason": "Only enum definition is confirmed; no runtime call-site proving %lu versus %u has been found.",
+      "evidence": []
+    },
+    {
+      "path": "tr/locale_string.txt",
+      "key": "1594",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "unresolved",
+      "side": "target",
+      "current_value": "Lonca bölgesi için %u Yang kira ödedin.",
+      "proposed_value": null,
+      "reason": "Only enum definition is confirmed; no runtime call-site proving %lu versus %u has been found.",
+      "evidence": []
+    },
+    {
+      "path": "tr/locale_string.txt",
+      "key": "276",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "unresolved",
+      "side": "target",
+      "current_value": "%u. Tur",
+      "proposed_value": null,
+      "reason": "Only enum definition is confirmed; no runtime call-site proving %lu versus %u has been found.",
+      "evidence": []
+    },
+    {
+      "path": "tr/locale_string.txt",
+      "key": "281",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "unresolved",
+      "side": "target",
+      "current_value": "Kalan katılımcı: %u",
+      "proposed_value": null,
+      "reason": "Only enum definition is confirmed; no runtime call-site proving %lu versus %u has been found.",
+      "evidence": []
+    },
+    {
+      "path": "tr/locale_string.txt",
+      "key": "282",
+      "code": "PRINTF_CONTRACT_MISMATCH",
+      "status": "unresolved",
+      "side": "target",
+      "current_value": "Mevcut katılımcı: %u",
+      "proposed_value": null,
+      "reason": "Only enum definition is confirmed; no runtime call-site proving %lu versus %u has been found.",
+      "evidence": []
+    },
+    {
+      "path": "en/locale_string.txt",
+      "key": "638",
+      "code": "MALFORMED_PRINTF_SYNTAX",
+      "status": "resolved",
+      "side": "source",
+      "current_value": "Chance to find an Item %. 1f",
+      "proposed_value": "Chance to find an Item %.1f",
+      "reason": "%. 1f is intrinsically invalid printf precision syntax; %.1f is the deterministic repair.",
+      "evidence": []
+    },
+    {
+      "path": "en/locale_string.txt",
+      "key": "639",
+      "code": "MALFORMED_PRINTF_SYNTAX",
+      "status": "resolved",
+      "side": "source",
+      "current_value": "Chance to find Yang %. 1f",
+      "proposed_value": "Chance to find Yang %.1f",
+      "reason": "%. 1f is intrinsically invalid printf precision syntax; %.1f is the deterministic repair.",
+      "evidence": []
+    }
+  ]
+}
