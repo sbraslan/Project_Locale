@@ -271,6 +271,25 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertEqual(evidence_strength("key", "GAME_PICK_MONEY", "source"), "strong")
         self.assertEqual(evidence_strength("source_text", "Cooldown", "source"), "weak")
 
+    def test_malformed_printf_precision_is_attributed_to_source(self):
+        issues = compare_registered_tsv(
+            "en/locale_string.txt",
+            "tr/locale_string.txt",
+            "638\tChance %. 1f\n",
+            "638\tŞans %.1f\n",
+            set(),
+            "en",
+            "tr",
+            {
+                "key_columns": [0],
+                "token_columns": [1],
+            },
+        )
+        malformed = [issue for issue in issues if issue.code == "MALFORMED_PRINTF_SYNTAX"]
+        self.assertEqual(len(malformed), 1)
+        self.assertEqual(malformed[0].path, "en/locale_string.txt")
+        self.assertEqual(malformed[0].language, "en")
+
     def test_locale_game_callable_tag_mismatch_is_explicit(self):
         issues = compare_registered_tsv(
             "en/locale_game.txt",
