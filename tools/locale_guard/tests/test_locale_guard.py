@@ -20,6 +20,7 @@ from tools.locale_guard.runtime_dry_run import (
 from tools.locale_guard.runtime_apply import backup_token
 from tools.locale_guard.canonical_review import canonical_backfill_groups
 from tools.locale_guard.canonical_backfill_probe import load_rows_for_language
+from tools.locale_guard.canonical_backfill_stage1_dry_run import verify_stage_shape
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
@@ -530,6 +531,62 @@ class LocaleGuardTests(unittest.TestCase):
             )
             self.assertEqual(rows, {})
             self.assertEqual(error, "file_missing")
+
+    def test_canonical_stage1_shape_requires_three_item_names_and_611_itemdesc(self):
+        plan = {
+            "categories": {
+                "canonical_backfill": {
+                    "issues": [
+                        {"path": "en/item_names.txt", "key": "50935"},
+                        {"path": "en/item_names.txt", "key": "50936"},
+                        {"path": "en/item_names.txt", "key": "50937"},
+                    ] + [
+                        {"path": "en/itemdesc.txt", "key": str(60000 + index)}
+                        for index in range(611)
+                    ]
+                }
+            }
+        }
+        manifest = {
+            "target_path": "en/item_names.txt",
+            "entries": [
+                {"key": "50935"},
+                {"key": "50936"},
+                {"key": "50937"},
+            ],
+            "expected_canonical_missing_total": 614,
+            "expected_deferred_translation_count": 611,
+        }
+        result = verify_stage_shape(plan, manifest)
+        self.assertEqual(result["stage_change_count"], 3)
+        self.assertEqual(result["deferred_translation_count"], 611)
+        self.assertEqual(result["deferred_path"], "en/itemdesc.txt")
+
+    def test_canonical_stage1_shape_fails_on_unexpected_deferred_path(self):
+        plan = {
+            "categories": {
+                "canonical_backfill": {
+                    "issues": [
+                        {"path": "en/item_names.txt", "key": "50935"},
+                        {"path": "en/item_names.txt", "key": "50936"},
+                        {"path": "en/item_names.txt", "key": "50937"},
+                        {"path": "en/other.txt", "key": "1"},
+                    ]
+                }
+            }
+        }
+        manifest = {
+            "target_path": "en/item_names.txt",
+            "entries": [
+                {"key": "50935"},
+                {"key": "50936"},
+                {"key": "50937"},
+            ],
+            "expected_canonical_missing_total": 4,
+            "expected_deferred_translation_count": 1,
+        }
+        with self.assertRaises(RuntimeError):
+            verify_stage_shape(plan, manifest)
 
     def test_runtime_decision_check_accepts_intrinsic_malformed_fix(self):
         plan = {
