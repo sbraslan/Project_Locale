@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Sequence
 
 PRINTF_RE = re.compile(
-    r"%(?:\d+\$)?[-+#0 ']*(?:\d+|\*)?(?:\.(?:\d+|\*))?"
+    r"%(?:\d+\$)?[-+#0]*(?:\d+|\*)?(?:\.(?:\d+|\*))?"
     r"(?:hh|h|ll|l|j|z|t|L)?[diuoxXfFeEgGaAcspn%]"
 )
 BRACE_RE = re.compile(r"\{[^{}\r\n]*\}")
@@ -175,12 +175,15 @@ def keyed_tsv_rows(
     text: str,
     *,
     key_columns: Sequence[int] = (0,),
+    key_exclude_columns: Sequence[int] = (),
     header_rows: int = 0,
     comment_prefixes: Sequence[str] = ("#",),
+    duplicate_policy: str = "error",
 ) -> tuple[dict[str, list[str]], list[str]]:
     rows: dict[str, list[str]] = {}
     duplicates: list[str] = []
     logical_index = 0
+    occurrences: collections.Counter[str] = collections.Counter()
 
     for raw in text.splitlines():
         if not raw.strip() or "\t" not in raw:
@@ -194,15 +197,32 @@ def keyed_tsv_rows(
         logical_index += 1
 
         columns = raw.split("\t")
-        if any(index >= len(columns) for index in key_columns):
+
+        if key_exclude_columns:
+            excluded = set(key_exclude_columns)
+            indices = [
+                index for index in range(len(columns))
+                if index not in excluded
+            ]
+        else:
+            indices = list(key_columns)
+
+        if not indices or any(index >= len(columns) for index in indices):
             continue
 
-        key_parts = [columns[index] for index in key_columns]
-        key = "|".join(key_parts)
-        if key in rows:
-            duplicates.append(key)
-        else:
+        base_key = "|".join(columns[index] for index in indices)
+
+        if duplicate_policy == "occurrence":
+            occurrence = occurrences[base_key]
+            occurrences[base_key] += 1
+            key = f"{base_key}@@{occurrence}"
             rows[key] = columns
+            continue
+
+        if base_key in rows:
+            duplicates.append(base_key)
+        else:
+            rows[base_key] = columns
 
     return rows, duplicates
 
@@ -278,7 +298,7 @@ def git_head_blob_bytes(
 def structural_issue_breakdown(issues: Sequence[Issue]) -> list[dict]:
     structural_codes = {
         "TR_MISSING_KEY",
-        "TR_EXTRA_KEY",
+        "CANONICAL_MISSING_KEY",
         "DUPLICATE_KEY",
         "COLUMN_COUNT_MISMATCH",
         "PROTECTED_TOKEN_MISMATCH",
@@ -389,18 +409,25 @@ def compare_registered_tsv(
 ) -> list[Issue]:
     issues: list[Issue] = []
     key_columns = tuple(parser_spec.get("key_columns", [0]))
+    key_exclude_columns = tuple(parser_spec.get("key_exclude_columns", []))
     header_rows = int(parser_spec.get("header_rows", 0))
     token_columns = parser_spec.get("token_columns", "all_non_key")
+    duplicate_policy = parser_spec.get("duplicate_policy", "error")
+    column_count_policy = parser_spec.get("column_count_policy", "strict")
 
     en_rows, en_duplicates = keyed_tsv_rows(
         en_text,
         key_columns=key_columns,
+        key_exclude_columns=key_exclude_columns,
         header_rows=header_rows,
+        duplicate_policy=duplicate_policy,
     )
     tr_rows, tr_duplicates = keyed_tsv_rows(
         tr_text,
         key_columns=key_columns,
+        key_exclude_columns=key_exclude_columns,
         header_rows=header_rows,
+        duplicate_policy=duplicate_policy,
     )
 
     for key in en_duplicates:
@@ -414,8 +441,17 @@ def compare_registered_tsv(
             "Duplicate logical TSV key.", key=key, language=tr_language
         ))
 
+    def base_key(key: str) -> str:
+        if duplicate_policy == "occurrence" and "@@" in key:
+            return key.rsplit("@@", 1)[0]
+        return key
+
     def is_metadata_key(key: str) -> bool:
-        return len(key_columns) == 1 and key in metadata_keys
+        return (
+            not key_exclude_columns
+            and len(key_columns) == 1
+            and base_key(key) in metadata_keys
+        )
 
     en_keys = {key for key in en_rows if not is_metadata_key(key)}
     tr_keys = {key for key in tr_rows if not is_metadata_key(key)}
@@ -428,15 +464,16 @@ def compare_registered_tsv(
         ))
     for key in sorted(tr_keys - en_keys):
         issues.append(Issue(
-            "warning", "TR_EXTRA_KEY", tr_path,
-            "Logical key exists in TR but not in EN.",
-            key=key, language=tr_language
+            "error", "CANONICAL_MISSING_KEY", en_path,
+            "Logical key exists in TR but is missing in canonical EN. "
+            "EN must be completed before downstream translation.",
+            key=key, language=en_language
         ))
 
     for key in sorted(en_keys & tr_keys):
         en_columns = en_rows[key]
         tr_columns = tr_rows[key]
-        if len(en_columns) != len(tr_columns):
+        if column_count_policy == "strict" and len(en_columns) != len(tr_columns):
             issues.append(Issue(
                 "error", "COLUMN_COUNT_MISMATCH", tr_path,
                 f"TSV column count differs from EN ({len(tr_columns)} vs {len(en_columns)}).",
@@ -447,10 +484,16 @@ def compare_registered_tsv(
         if token_columns == "disabled":
             continue
         if token_columns == "all_non_key":
-            columns_to_check = [
-                index for index in range(len(en_columns))
-                if index not in key_columns
-            ]
+            if key_exclude_columns:
+                columns_to_check = [
+                    index for index in key_exclude_columns
+                    if index < len(en_columns)
+                ]
+            else:
+                columns_to_check = [
+                    index for index in range(len(en_columns))
+                    if index not in key_columns
+                ]
         else:
             columns_to_check = [
                 int(index) for index in token_columns
