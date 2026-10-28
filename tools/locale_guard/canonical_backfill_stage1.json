@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "stage": "canonical_exact_copy_item_names",
+  "write_enabled": false,
+  "source_language": "tr",
+  "target_language": "en",
+  "source_path": "tr/item_names.txt",
+  "target_path": "en/item_names.txt",
+  "previous_anchor_key": "49984",
+  "next_anchor_key": "51300",
+  "entries": [
+    {"key": "50935", "columns": ["50935", "Red monster trio set"]},
+    {"key": "50936", "columns": ["50936", "Blue monster trio set"]},
+    {"key": "50937", "columns": ["50937", "Pink monster trio set"]}
+  ],
+  "expected_canonical_missing_total": 614,
+  "expected_stage_change_count": 3,
+  "expected_deferred_translation_count": 611
+}
