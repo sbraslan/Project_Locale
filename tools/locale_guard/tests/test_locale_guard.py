@@ -451,7 +451,7 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertEqual(encoding, "cp1254")
         self.assertFalse(bom)
         self.assertIn(b"\r\n", simulated)
-        self.assertEqual(newline_style(simulated), "crlf")
+        self.assertEqual(newline_style(simulated), "CRLF")
 
     def test_runtime_decision_check_accepts_intrinsic_malformed_fix(self):
         plan = {
