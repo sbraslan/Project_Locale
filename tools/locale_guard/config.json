@@ -114,8 +114,13 @@
       "key_columns": [
         0
       ],
-      "token_columns": "all_non_key",
-      "duplicate_policy": "occurrence"
+      "token_columns": [
+        1
+      ],
+      "duplicate_policy": "occurrence",
+      "structural_columns": [
+        2
+      ]
     },
     "locale_interface.txt": {
       "kind": "keyed_tsv",
