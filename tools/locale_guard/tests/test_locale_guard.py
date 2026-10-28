@@ -4,6 +4,7 @@ from pathlib import Path
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
+    layout_tokens,
     suspicious_foreign_language,
     tsv_rows,
     inspect_file,
@@ -31,6 +32,19 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertEqual(protected_tokens("100% deadly"), [])
         self.assertEqual(protected_tokens("20% EXP"), [])
         self.assertEqual(protected_tokens("+10% fire resistance"), [])
+        self.assertEqual(protected_tokens("attack value % d"), ["% d"])
+
+    def test_plain_brackets_and_turkish_words_are_not_markup(self):
+        self.assertEqual(protected_tokens("Inventory [I]"), [])
+        self.assertEqual(protected_tokens("[DS] Your reward"), [])
+        self.assertEqual(protected_tokens("Saçı sarıya boyar.|Her 3 seviyede"), [])
+        self.assertEqual(
+            protected_tokens("[CENTER_ALIGN] |cffff9d9d|H|h%s|h|r"),
+            ["[CENTER_ALIGN]", "|cffff9d9d", "|H", "|h", "%s", "|h", "|r"],
+        )
+
+    def test_layout_tokens_are_separate(self):
+        self.assertEqual(layout_tokens("Line 1\\nLine 2\\n"), ["\\n", "\\n"])
 
     def test_occurrence_policy_preserves_repeated_keys(self):
         rows, duplicates = keyed_tsv_rows(
