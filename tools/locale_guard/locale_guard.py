@@ -280,8 +280,29 @@ def git_head_blob_bytes(
     repo_path: str,
 ) -> tuple[bytes | None, str | None]:
     try:
+        resolved = subprocess.run(
+            ["git", "rev-parse", f"HEAD:{repo_path}"],
+            cwd=root,
+            capture_output=True,
+            text=True,
+            encoding="ascii",
+            errors="replace",
+            check=False,
+        )
+    except OSError as exc:
+        return None, str(exc)
+
+    if resolved.returncode != 0:
+        message = resolved.stderr.strip() or resolved.stdout.strip()
+        return None, message or f"git rev-parse returned {resolved.returncode}"
+
+    object_id = resolved.stdout.strip()
+    if not object_id:
+        return None, "git rev-parse returned an empty object id"
+
+    try:
         completed = subprocess.run(
-            ["git", "show", f"HEAD:{repo_path}"],
+            ["git", "cat-file", "blob", object_id],
             cwd=root,
             capture_output=True,
             check=False,
@@ -291,7 +312,7 @@ def git_head_blob_bytes(
 
     if completed.returncode != 0:
         message = completed.stderr.decode("utf-8", errors="replace").strip()
-        return None, message or f"git show returned {completed.returncode}"
+        return None, message or f"git cat-file returned {completed.returncode}"
 
     return completed.stdout, None
 
