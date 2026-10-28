@@ -117,3 +117,15 @@ silently interpreted with a generic parser.
 
 TR_FOREIGN_LANGUAGE_SUSPECT is heuristic-only and is therefore informational,
 not a blocking warning.
+
+
+## Working-tree integrity gate
+
+The audit now checks tracked locale directories with Git before interpreting
+their contents. If a tracked locale file differs from the Git index,
+WORKTREE_DIRTY is emitted as a blocking error.
+
+This prevents local editor, unpacker, code-page conversion, or line-ending
+changes from being mistaken for defects in the repository baseline.
+
+The guard never restores or rewrites a dirty file automatically.
