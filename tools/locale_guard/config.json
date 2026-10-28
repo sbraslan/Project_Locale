@@ -58,5 +58,58 @@
   "skip_generic_tsv_compare": [
     "locale_quiz.txt",
     "shop_deco.txt"
-  ]
+  ],
+  "legacy_decodings": {
+    "ae": [
+      "cp1256"
+    ],
+    "cz": [
+      "cp1250"
+    ],
+    "de": [
+      "cp1252"
+    ],
+    "dk": [
+      "cp1252"
+    ],
+    "en": [
+      "cp1252"
+    ],
+    "es": [
+      "cp1252"
+    ],
+    "fr": [
+      "cp1252"
+    ],
+    "gr": [
+      "cp1253"
+    ],
+    "hu": [
+      "cp1250"
+    ],
+    "it": [
+      "cp1252"
+    ],
+    "nl": [
+      "cp1252"
+    ],
+    "pl": [
+      "cp1250"
+    ],
+    "pt": [
+      "cp1252"
+    ],
+    "ro": [
+      "cp1250"
+    ],
+    "ru": [
+      "cp1251"
+    ],
+    "tr": [
+      "cp1254"
+    ],
+    "master": [
+      "cp1254"
+    ]
+  }
 }
