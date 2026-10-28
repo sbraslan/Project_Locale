@@ -70,3 +70,28 @@ After that, the pipeline will be added in separate stages:
 10. CI gate and PR-only workflow; direct writes to main stay forbidden
 
 The translation layer must never use a whole-file blind replacement strategy.
+
+
+## Locale Guard v2 decoding rules
+
+The audit always tries UTF-8 first. If UTF-8 fails, it may use the configured
+legacy code page for that locale. The fallback is accepted only when decoding
+and re-encoding produces the exact original byte sequence.
+
+Configured legacy families currently include:
+
+- CP1250: cz, hu, pl, ro
+- CP1251: ru
+- CP1252: de, dk, en, es, fr, it, nl, pt
+- CP1253: gr
+- CP1254: tr and master
+- CP1256: ae
+
+Important: these fallbacks are input-decoding rules only. The audit never
+rewrites or normalizes the source file encoding.
+
+File manifests are now built from actual filesystem paths independently of
+whether text decoding succeeds. Therefore an undecodable file is not
+misreported as a missing file.
+
+TR/master equality is checked from raw byte SHA-256 values, not decoded text.
