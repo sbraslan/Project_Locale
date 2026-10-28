@@ -58,6 +58,7 @@ class Issue:
     line: int | None = None
     key: str | None = None
     suggestion: str | None = None
+    language: str | None = None
 
 @dataclass
 class FileInfo:
@@ -174,33 +175,37 @@ def relative_txt_paths(base: Path) -> set[str]:
         if path.is_file()
     }
 
-def inspect_file(path: Path, lang: str) -> tuple[FileInfo | None, str | None, list[Issue]]:
+def inspect_file(path: Path, lang: str, relative: str) -> tuple[FileInfo | None, str | None, list[Issue]]:
     issues: list[Issue] = []
+    display_path = f"{lang}/{relative}"
     data = path.read_bytes()
     try:
         text, encoding, bom = decode_text(data, language=lang)
     except UnicodeDecodeError as exc:
         issues.append(Issue(
-            "error", "ENCODING_UNDECODABLE", path.as_posix(),
-            f"Text file could not be decoded safely: {exc}"
+            "error", "ENCODING_UNDECODABLE", display_path,
+            f"Text file could not be decoded safely: {exc}",
+            language=lang
         ))
         return None, None, issues
 
     newline = newline_style(data)
     if newline == "mixed":
         issues.append(Issue(
-            "error", "NEWLINE_MIXED", path.as_posix(),
-            "Mixed newline styles detected."
+            "error", "NEWLINE_MIXED", display_path,
+            "Mixed newline styles detected.",
+            language=lang
         ))
 
     if "\ufffd" in text:
         issues.append(Issue(
-            "error", "REPLACEMENT_CHAR", path.as_posix(),
-            "Unicode replacement character U+FFFD found; data was already lost or mis-decoded."
+            "error", "REPLACEMENT_CHAR", display_path,
+            "Unicode replacement character U+FFFD found; data was already lost or mis-decoded.",
+            language=lang
         ))
 
     info = FileInfo(
-        path=path.as_posix(),
+        path=relative,
         size=len(data),
         sha256=sha256_bytes(data),
         encoding=encoding,
@@ -212,63 +217,65 @@ def inspect_file(path: Path, lang: str) -> tuple[FileInfo | None, str | None, li
     )
     return info, text, issues
 
-def audit_turkish_text(path: Path, text: str) -> list[Issue]:
+def audit_turkish_text(display_path: str, text: str, language: str) -> list[Issue]:
     issues: list[Issue] = []
     for line_number, line in enumerate(text.splitlines(), 1):
         cp_candidate = cp1254_mojibake_candidate(line)
         if cp_candidate:
             issues.append(Issue(
-                "error", "TR_CP1254_MOJIBAKE", path.as_posix(),
+                "error", "TR_CP1254_MOJIBAKE", display_path,
                 "Windows-1254 mojibake characters detected.",
-                line=line_number, suggestion=cp_candidate
+                line=line_number, suggestion=cp_candidate, language=language
             ))
         utf8_candidate = utf8_mojibake_candidate(line)
         if utf8_candidate:
             issues.append(Issue(
-                "error", "TR_UTF8_MOJIBAKE", path.as_posix(),
+                "error", "TR_UTF8_MOJIBAKE", display_path,
                 "Probable UTF-8/legacy-codepage mojibake detected.",
-                line=line_number, suggestion=utf8_candidate
+                line=line_number, suggestion=utf8_candidate, language=language
             ))
         language, counts = suspicious_foreign_language(line)
         if language:
             issues.append(Issue(
-                "warning", "TR_FOREIGN_LANGUAGE_SUSPECT", path.as_posix(),
+                "warning", "TR_FOREIGN_LANGUAGE_SUSPECT", display_path,
                 f"Line looks more like {language.upper()} than Turkish (scores={counts}).",
-                line=line_number
+                line=line_number, language=language
             ))
     return issues
 
 def compare_tsv(
-    en_path: Path,
-    tr_path: Path,
+    en_path: str,
+    tr_path: str,
     en_text: str,
     tr_text: str,
-    metadata_keys: set[str]
+    metadata_keys: set[str],
+    en_language: str,
+    tr_language: str,
 ) -> list[Issue]:
     issues: list[Issue] = []
     en_rows, en_duplicates = tsv_rows(en_text)
     tr_rows, tr_duplicates = tsv_rows(tr_text)
 
     for key in en_duplicates:
-        issues.append(Issue("error", "DUPLICATE_KEY", en_path.as_posix(), "Duplicate TSV key.", key=key))
+        issues.append(Issue("error", "DUPLICATE_KEY", en_path, "Duplicate TSV key.", key=key, language=en_language))
     for key in tr_duplicates:
-        issues.append(Issue("error", "DUPLICATE_KEY", tr_path.as_posix(), "Duplicate TSV key.", key=key))
+        issues.append(Issue("error", "DUPLICATE_KEY", tr_path, "Duplicate TSV key.", key=key, language=tr_language))
 
     en_keys = set(en_rows) - metadata_keys
     tr_keys = set(tr_rows) - metadata_keys
     for key in sorted(en_keys - tr_keys):
-        issues.append(Issue("error", "TR_MISSING_KEY", tr_path.as_posix(), "Key exists in EN but is missing in TR.", key=key))
+        issues.append(Issue("error", "TR_MISSING_KEY", tr_path, "Key exists in EN but is missing in TR.", key=key, language=tr_language))
     for key in sorted(tr_keys - en_keys):
-        issues.append(Issue("warning", "TR_EXTRA_KEY", tr_path.as_posix(), "Key exists in TR but not in EN.", key=key))
+        issues.append(Issue("warning", "TR_EXTRA_KEY", tr_path, "Key exists in TR but not in EN.", key=key, language=tr_language))
 
     for key in sorted(en_keys & tr_keys):
         en_columns = en_rows[key]
         tr_columns = tr_rows[key]
         if len(en_columns) != len(tr_columns):
             issues.append(Issue(
-                "error", "COLUMN_COUNT_MISMATCH", tr_path.as_posix(),
+                "error", "COLUMN_COUNT_MISMATCH", tr_path,
                 f"TSV column count differs from EN ({len(tr_columns)} vs {len(en_columns)}).",
-                key=key
+                key=key, language=tr_language
             ))
             continue
 
@@ -277,10 +284,10 @@ def compare_tsv(
             tr_tokens = collections.Counter(protected_tokens(tr_value))
             if en_tokens != tr_tokens:
                 issues.append(Issue(
-                    "error", "PROTECTED_TOKEN_MISMATCH", tr_path.as_posix(),
+                    "error", "PROTECTED_TOKEN_MISMATCH", tr_path,
                     f"Protected tokens differ from EN in column {column_index}: "
                     f"EN={dict(en_tokens)} TR={dict(tr_tokens)}",
-                    key=key
+                    key=key, language=tr_language
                 ))
     return issues
 
@@ -304,15 +311,14 @@ def audit_repository(root: Path, config: dict) -> dict:
         language_infos: list[dict] = []
         for relative in sorted(relative_txt_paths(language_dir)):
             path = language_dir / relative
-            info, text, file_issues = inspect_file(path, language)
+            info, text, file_issues = inspect_file(path, language, relative)
             issues.extend(file_issues)
             if info:
-                info.path = relative
                 language_infos.append(asdict(info))
             if text is not None:
                 texts[(language, relative)] = text
                 if language in {turkish, master}:
-                    issues.extend(audit_turkish_text(path, text))
+                    issues.extend(audit_turkish_text(f"{language}/{relative}", text, language))
         files[language] = language_infos
 
     canonical_paths = {item["path"] for item in files.get(canonical, [])}
@@ -323,12 +329,14 @@ def audit_repository(root: Path, config: dict) -> dict:
         for relative in sorted(canonical_paths - language_paths):
             issues.append(Issue(
                 "error", "TARGET_FILE_MISSING", f"{language}/{relative}",
-                f"File exists in {canonical} but not in {language}."
+                f"File exists in {canonical} but not in {language}.",
+                language=language
             ))
         for relative in sorted(language_paths - canonical_paths):
             issues.append(Issue(
                 "warning", "TARGET_FILE_EXTRA", f"{language}/{relative}",
-                f"File exists in {language} but not in {canonical}."
+                f"File exists in {language} but not in {canonical}.",
+                language=language
             ))
 
     turkish_paths = {item["path"] for item in files.get(turkish, [])}
@@ -339,11 +347,13 @@ def audit_repository(root: Path, config: dict) -> dict:
             continue
         if classify_mode(en_text) == "tsv" and classify_mode(tr_text) == "tsv":
             issues.extend(compare_tsv(
-                root / canonical / relative,
-                root / turkish / relative,
+                f"{canonical}/{relative}",
+                f"{turkish}/{relative}",
                 en_text,
                 tr_text,
                 metadata_keys,
+                canonical,
+                turkish,
             ))
 
     master_paths = {item["path"] for item in files.get(master, [])}
@@ -353,12 +363,14 @@ def audit_repository(root: Path, config: dict) -> dict:
         if tr_info is None or master_info is None:
             issues.append(Issue(
                 "error", "MASTER_TR_PATH_MISMATCH", relative,
-                "TR/master file manifest differs."
+                "TR/master file manifest differs.",
+                language=master
             ))
         elif tr_info["sha256"] != master_info["sha256"]:
             issues.append(Issue(
                 "error", "MASTER_TR_CONTENT_MISMATCH", relative,
-                "master/ is not byte-identical to tr/."
+                "master/ is not byte-identical to tr/.",
+                language=master
             ))
 
     counts = collections.Counter(issue.severity for issue in issues)
@@ -405,7 +417,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     errors = report["summary"].get("error", 0)
     warnings = report["summary"].get("warning", 0)
     print(f"locale-guard: errors={errors} warnings={warnings}")
-    print(f"report: {report_path}")
+    print(f"report: {Path(args.report).as_posix()}")
 
     if errors:
         return 2
