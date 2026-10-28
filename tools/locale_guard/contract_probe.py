@@ -35,6 +35,7 @@ PRINTF_LIKE_RE = re.compile(
     r"(?:hh|h|ll|l|j|z|t|L)?[diuoxXfFeEgGaAcspn]"
 )
 SPACE_RE = re.compile(r"\s+")
+LOCALE_ENUM_RE = re.compile(r"^\s*([A-Z0-9_]+)\s*=\s*(\d+)\s*,", re.MULTILINE)
 
 
 def base_logical_key(key: str | None) -> str:
@@ -57,13 +58,20 @@ def literal_fragments(value: str | None, min_length: int = 8) -> list[str]:
     return fragments[:4]
 
 
-def search_terms(issue: dict) -> list[tuple[str, str]]:
+def search_terms(
+    issue: dict,
+    numeric_symbols: dict[str, str] | None = None,
+) -> list[tuple[str, str]]:
     terms: list[tuple[str, str]] = []
     key = base_logical_key(issue.get("key"))
     numeric_key = bool(key and key.isdigit())
 
     if key and not numeric_key:
         terms.append(("key", key))
+    elif numeric_key and numeric_symbols:
+        symbol = numeric_symbols.get(key)
+        if symbol:
+            terms.append(("enum_key", symbol))
 
     source = issue.get("source_value")
     target = issue.get("target_value")
@@ -109,6 +117,18 @@ def iter_text_files(root: Path) -> Iterable[Path]:
         yield path
 
 
+def load_locale_enum_map(locale_header: Path) -> dict[str, str]:
+    if not locale_header.is_file():
+        return {}
+    text = read_text_safely(locale_header)
+    if text is None:
+        return {}
+    return {
+        numeric_id: symbol
+        for symbol, numeric_id in LOCALE_ENUM_RE.findall(text)
+    }
+
+
 def classify_evidence_path(repo_name: str, relative_path: Path) -> str:
     parts = {part.casefold() for part in relative_path.parts}
     posix = relative_path.as_posix().casefold()
@@ -125,7 +145,7 @@ def classify_evidence_path(repo_name: str, relative_path: Path) -> str:
 def evidence_strength(match_type: str, term: str, evidence_kind: str) -> str:
     if evidence_kind != "source":
         return "reference" if evidence_kind in {"reference", "locale_reference"} else "noise"
-    if match_type == "key":
+    if match_type in {"key", "enum_key"}:
         return "strong"
     normalized = SPACE_RE.sub(" ", term).strip()
     if len(normalized) >= 18:
@@ -151,14 +171,38 @@ def scan_issue(
     issue: dict,
     repo_roots: Sequence[tuple[str, Path]],
     max_matches: int,
+    numeric_symbols: dict[str, str] | None = None,
 ) -> dict:
-    terms = search_terms(issue)
+    terms = search_terms(issue, numeric_symbols)
+    terms.sort(
+        key=lambda item: (
+            0 if item[0] in {"key", "enum_key"} else 1,
+            -len(item[1]),
+        )
+    )
     matches: list[dict] = []
 
     for repo_name, repo_root in repo_roots:
         if not repo_root.is_dir():
             continue
-        for path in iter_text_files(repo_root):
+
+        candidate_paths = list(iter_text_files(repo_root))
+        candidate_paths.sort(
+            key=lambda path: (
+                {
+                    "source": 0,
+                    "reference": 1,
+                    "locale_reference": 2,
+                    "noise": 3,
+                }.get(
+                    classify_evidence_path(repo_name, path.relative_to(repo_root)),
+                    4,
+                ),
+                path.as_posix().casefold(),
+            )
+        )
+
+        for path in candidate_paths:
             text = read_text_safely(path)
             if text is None:
                 continue
@@ -254,8 +298,17 @@ def main(argv: Sequence[str] | None = None) -> int:
         for name in DEFAULT_REPOS
     ]
 
+    numeric_symbols = load_locale_enum_map(
+        workspace / "Project_ServerSRC" / "game" / "src" / "Locale.hpp"
+    )
+
     results = [
-        scan_issue(issue, repo_roots, args.max_matches)
+        scan_issue(
+            issue,
+            repo_roots,
+            args.max_matches,
+            numeric_symbols=numeric_symbols,
+        )
         for issue in issues
     ]
 
@@ -279,6 +332,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             for name, path in repo_roots
         ],
         "missing_repositories": missing_repos,
+        "numeric_symbol_count": len(numeric_symbols),
         "issue_count": len(results),
         "issues_with_matches": with_matches,
         "issues_without_matches": without_matches,
