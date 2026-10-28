@@ -170,19 +170,43 @@ def classify_mode(text: str) -> str:
         return "tsv"
     return "freeform"
 
-def tsv_rows(text: str) -> tuple[dict[str, list[str]], list[str]]:
+def keyed_tsv_rows(
+    text: str,
+    *,
+    key_columns: Sequence[int] = (0,),
+    header_rows: int = 0,
+    comment_prefixes: Sequence[str] = ("#",),
+) -> tuple[dict[str, list[str]], list[str]]:
     rows: dict[str, list[str]] = {}
     duplicates: list[str] = []
+    logical_index = 0
+
     for raw in text.splitlines():
         if not raw.strip() or "\t" not in raw:
             continue
+        if any(raw.lstrip().startswith(prefix) for prefix in comment_prefixes):
+            continue
+
+        if logical_index < header_rows:
+            logical_index += 1
+            continue
+        logical_index += 1
+
         columns = raw.split("\t")
-        key = columns[0]
+        if any(index >= len(columns) for index in key_columns):
+            continue
+
+        key_parts = [columns[index] for index in key_columns]
+        key = "|".join(key_parts)
         if key in rows:
             duplicates.append(key)
         else:
             rows[key] = columns
+
     return rows, duplicates
+
+def tsv_rows(text: str) -> tuple[dict[str, list[str]], list[str]]:
+    return keyed_tsv_rows(text)
 
 def relative_txt_paths(base: Path) -> set[str]:
     return {
@@ -268,7 +292,7 @@ def audit_turkish_text(display_path: str, text: str, language: str) -> list[Issu
             ))
     return issues
 
-def compare_tsv(
+def compare_registered_tsv(
     en_path: str,
     tr_path: str,
     en_text: str,
@@ -276,22 +300,53 @@ def compare_tsv(
     metadata_keys: set[str],
     en_language: str,
     tr_language: str,
+    parser_spec: dict,
 ) -> list[Issue]:
     issues: list[Issue] = []
-    en_rows, en_duplicates = tsv_rows(en_text)
-    tr_rows, tr_duplicates = tsv_rows(tr_text)
+    key_columns = tuple(parser_spec.get("key_columns", [0]))
+    header_rows = int(parser_spec.get("header_rows", 0))
+    token_columns = parser_spec.get("token_columns", "all_non_key")
+
+    en_rows, en_duplicates = keyed_tsv_rows(
+        en_text,
+        key_columns=key_columns,
+        header_rows=header_rows,
+    )
+    tr_rows, tr_duplicates = keyed_tsv_rows(
+        tr_text,
+        key_columns=key_columns,
+        header_rows=header_rows,
+    )
 
     for key in en_duplicates:
-        issues.append(Issue("error", "DUPLICATE_KEY", en_path, "Duplicate TSV key.", key=key, language=en_language))
+        issues.append(Issue(
+            "error", "DUPLICATE_KEY", en_path,
+            "Duplicate logical TSV key.", key=key, language=en_language
+        ))
     for key in tr_duplicates:
-        issues.append(Issue("error", "DUPLICATE_KEY", tr_path, "Duplicate TSV key.", key=key, language=tr_language))
+        issues.append(Issue(
+            "error", "DUPLICATE_KEY", tr_path,
+            "Duplicate logical TSV key.", key=key, language=tr_language
+        ))
 
-    en_keys = set(en_rows) - metadata_keys
-    tr_keys = set(tr_rows) - metadata_keys
+    def is_metadata_key(key: str) -> bool:
+        return len(key_columns) == 1 and key in metadata_keys
+
+    en_keys = {key for key in en_rows if not is_metadata_key(key)}
+    tr_keys = {key for key in tr_rows if not is_metadata_key(key)}
+
     for key in sorted(en_keys - tr_keys):
-        issues.append(Issue("error", "TR_MISSING_KEY", tr_path, "Key exists in EN but is missing in TR.", key=key, language=tr_language))
+        issues.append(Issue(
+            "error", "TR_MISSING_KEY", tr_path,
+            "Logical key exists in EN but is missing in TR.",
+            key=key, language=tr_language
+        ))
     for key in sorted(tr_keys - en_keys):
-        issues.append(Issue("warning", "TR_EXTRA_KEY", tr_path, "Key exists in TR but not in EN.", key=key, language=tr_language))
+        issues.append(Issue(
+            "warning", "TR_EXTRA_KEY", tr_path,
+            "Logical key exists in TR but not in EN.",
+            key=key, language=tr_language
+        ))
 
     for key in sorted(en_keys & tr_keys):
         en_columns = en_rows[key]
@@ -304,7 +359,22 @@ def compare_tsv(
             ))
             continue
 
-        for column_index, (en_value, tr_value) in enumerate(zip(en_columns[1:], tr_columns[1:]), 1):
+        if token_columns == "disabled":
+            continue
+        if token_columns == "all_non_key":
+            columns_to_check = [
+                index for index in range(len(en_columns))
+                if index not in key_columns
+            ]
+        else:
+            columns_to_check = [
+                int(index) for index in token_columns
+                if int(index) < len(en_columns)
+            ]
+
+        for column_index in columns_to_check:
+            en_value = en_columns[column_index]
+            tr_value = tr_columns[column_index]
             en_tokens = collections.Counter(protected_tokens(en_value))
             tr_tokens = collections.Counter(protected_tokens(tr_value))
             if en_tokens != tr_tokens:
@@ -322,7 +392,7 @@ def audit_repository(root: Path, config: dict) -> dict:
     turkish = config["turkish_language"]
     master = config["master_directory"]
     metadata_keys = set(config.get("metadata_keys", []))
-    skip_generic_tsv = set(config.get("skip_generic_tsv_compare", []))
+    parser_registry = config.get("parser_registry", {})
     legacy_decodings = config.get("legacy_decodings", {})
 
     issues: list[Issue] = []
@@ -388,12 +458,14 @@ def audit_repository(root: Path, config: dict) -> dict:
         tr_text = texts.get((turkish, relative))
         if en_text is None or tr_text is None:
             continue
+        parser_spec = parser_registry.get(relative)
         if (
-            relative not in skip_generic_tsv
+            parser_spec
+            and parser_spec.get("kind") == "keyed_tsv"
             and classify_mode(en_text) == "tsv"
             and classify_mode(tr_text) == "tsv"
         ):
-            issues.extend(compare_tsv(
+            issues.extend(compare_registered_tsv(
                 f"{canonical}/{relative}",
                 f"{turkish}/{relative}",
                 en_text,
@@ -401,6 +473,7 @@ def audit_repository(root: Path, config: dict) -> dict:
                 metadata_keys,
                 canonical,
                 turkish,
+                parser_spec,
             ))
 
     master_paths = path_manifests.get(master, set())
@@ -420,6 +493,14 @@ def audit_repository(root: Path, config: dict) -> dict:
                 language=master
             ))
 
+    unparsed_tsv_files = sorted(
+        relative
+        for relative in canonical_paths
+        if relative not in parser_registry
+        and (canonical, relative) in texts
+        and classify_mode(texts[(canonical, relative)]) == "tsv"
+    )
+
     counts = collections.Counter(issue.severity for issue in issues)
     encoding_summary = {
         language: dict(collections.Counter(
@@ -435,6 +516,7 @@ def audit_repository(root: Path, config: dict) -> dict:
         "master_directory": master,
         "summary": dict(counts),
         "encoding_summary": encoding_summary,
+        "unparsed_tsv_files": unparsed_tsv_files,
         "files": files,
         "issues": [asdict(issue) for issue in issues],
     }
