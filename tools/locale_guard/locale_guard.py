@@ -143,7 +143,7 @@ def printf_contract_tokens(text: str) -> list[str]:
     contracts: list[str] = []
     for token in printf_tokens(text):
         if token == "%%":
-            contracts.append("%%")
+            # Literal percent consumes no vararg. Placement may differ by language.
             continue
 
         parsed = PRINTF_PARSE_RE.match(token)
