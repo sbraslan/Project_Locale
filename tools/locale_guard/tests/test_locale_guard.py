@@ -213,7 +213,7 @@ class LocaleGuardTests(unittest.TestCase):
         }
         terms = search_terms(issue)
         self.assertFalse(any(kind == "key" for kind, _ in terms))
-        self.assertTrue(any(kind == "source_text" for kind, _ in terms))
+        self.assertIn(("source_text", "Round"), terms)
 
     def test_cp1250_fallback_is_lossless(self):
         data = "Příliš žluťoučký kůň".encode("cp1250")
