@@ -234,11 +234,11 @@ def audit_turkish_text(display_path: str, text: str, language: str) -> list[Issu
                 "Probable UTF-8/legacy-codepage mojibake detected.",
                 line=line_number, suggestion=utf8_candidate, language=language
             ))
-        language, counts = suspicious_foreign_language(line)
-        if language:
+        detected_language, counts = suspicious_foreign_language(line)
+        if detected_language:
             issues.append(Issue(
                 "warning", "TR_FOREIGN_LANGUAGE_SUSPECT", display_path,
-                f"Line looks more like {language.upper()} than Turkish (scores={counts}).",
+                f"Line looks more like {detected_language.upper()} than Turkish (scores={counts}).",
                 line=line_number, language=language
             ))
     return issues
@@ -305,7 +305,11 @@ def audit_repository(root: Path, config: dict) -> dict:
     for language in languages + [master]:
         language_dir = root / language
         if not language_dir.is_dir():
-            issues.append(Issue("error", "LANG_DIR_MISSING", language, "Language directory is missing."))
+            issues.append(Issue(
+                "error", "LANG_DIR_MISSING", language,
+                "Language directory is missing.",
+                language=language
+            ))
             continue
 
         language_infos: list[dict] = []
@@ -362,13 +366,13 @@ def audit_repository(root: Path, config: dict) -> dict:
         master_info = next((item for item in files.get(master, []) if item["path"] == relative), None)
         if tr_info is None or master_info is None:
             issues.append(Issue(
-                "error", "MASTER_TR_PATH_MISMATCH", relative,
+                "error", "MASTER_TR_PATH_MISMATCH", f"{master}/{relative}",
                 "TR/master file manifest differs.",
                 language=master
             ))
         elif tr_info["sha256"] != master_info["sha256"]:
             issues.append(Issue(
-                "error", "MASTER_TR_CONTENT_MISMATCH", relative,
+                "error", "MASTER_TR_CONTENT_MISMATCH", f"{master}/{relative}",
                 "master/ is not byte-identical to tr/.",
                 language=master
             ))
