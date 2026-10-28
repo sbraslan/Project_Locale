@@ -167,54 +167,97 @@ def read_text_safely(path: Path) -> str | None:
     return None
 
 
-def scan_issue(
-    issue: dict,
+def build_candidate_index(
     repo_roots: Sequence[tuple[str, Path]],
-    max_matches: int,
-    numeric_symbols: dict[str, str] | None = None,
-) -> dict:
-    terms = search_terms(issue, numeric_symbols)
-    terms.sort(
-        key=lambda item: (
-            0 if item[0] in {"key", "enum_key"} else 1,
-            -len(item[1]),
-        )
-    )
-    matches: list[dict] = []
-
+) -> list[tuple[str, Path, Path, str]]:
+    candidates: list[tuple[str, Path, Path, str]] = []
     for repo_name, repo_root in repo_roots:
         if not repo_root.is_dir():
             continue
+        for path in iter_text_files(repo_root):
+            relative_path = path.relative_to(repo_root)
+            evidence_kind = classify_evidence_path(repo_name, relative_path)
+            if evidence_kind == "noise":
+                continue
+            candidates.append((repo_name, repo_root, path, evidence_kind))
 
-        candidate_paths = list(iter_text_files(repo_root))
-        candidate_paths.sort(
-            key=lambda path: (
-                {
-                    "source": 0,
-                    "reference": 1,
-                    "locale_reference": 2,
-                    "noise": 3,
-                }.get(
-                    classify_evidence_path(repo_name, path.relative_to(repo_root)),
-                    4,
-                ),
-                path.as_posix().casefold(),
-            )
+    candidates.sort(
+        key=lambda item: (
+            {
+                "source": 0,
+                "reference": 1,
+                "locale_reference": 2,
+            }.get(item[3], 3),
+            item[0].casefold(),
+            item[2].as_posix().casefold(),
         )
+    )
+    return candidates
 
-        for path in candidate_paths:
-            text = read_text_safely(path)
+
+def scan_issue(
+    issue: dict,
+    candidates: Sequence[tuple[str, Path, Path, str]],
+    max_matches: int,
+    numeric_symbols: dict[str, str] | None = None,
+    text_cache: dict[str, str | None] | None = None,
+) -> dict:
+    terms = search_terms(issue, numeric_symbols)
+    exact_terms = [
+        item for item in terms
+        if item[0] in {"key", "enum_key"}
+    ]
+    text_terms = [
+        item for item in terms
+        if item[0] not in {"key", "enum_key"}
+    ]
+    text_terms.sort(key=lambda item: -len(item[1]))
+
+    if text_cache is None:
+        text_cache = {}
+
+    matches: list[dict] = []
+    seen_locations: set[tuple[str, str, int, str]] = set()
+
+    def scan_phase(
+        phase_candidates: Sequence[tuple[str, Path, Path, str]],
+        phase_terms: Sequence[tuple[str, str]],
+        *,
+        allowed_strengths: set[str] | None = None,
+        limit: int,
+    ) -> None:
+        if not phase_terms or len(matches) >= limit:
+            return
+
+        for repo_name, repo_root, path, evidence_kind in phase_candidates:
+            cache_key = path.as_posix()
+            if cache_key not in text_cache:
+                text_cache[cache_key] = read_text_safely(path)
+            text = text_cache[cache_key]
             if text is None:
                 continue
-            lines = text.splitlines()
-            for line_number, line in enumerate(lines, 1):
+
+            relative_path = path.relative_to(repo_root)
+            for line_number, line in enumerate(text.splitlines(), 1):
                 folded = line.casefold()
-                for kind, term in terms:
+                for kind, term in phase_terms:
                     if term.casefold() not in folded:
                         continue
-                    relative_path = path.relative_to(repo_root)
-                    evidence_kind = classify_evidence_path(repo_name, relative_path)
+
                     strength = evidence_strength(kind, term, evidence_kind)
+                    if allowed_strengths is not None and strength not in allowed_strengths:
+                        continue
+
+                    location_key = (
+                        repo_name,
+                        relative_path.as_posix(),
+                        line_number,
+                        term.casefold(),
+                    )
+                    if location_key in seen_locations:
+                        continue
+                    seen_locations.add(location_key)
+
                     matches.append({
                         "repository": repo_name,
                         "path": relative_path.as_posix(),
@@ -226,12 +269,55 @@ def scan_issue(
                         "snippet": line.strip()[:500],
                     })
                     break
-                if len(matches) >= max_matches:
-                    break
-            if len(matches) >= max_matches:
-                break
-        if len(matches) >= max_matches:
-            break
+
+                if len(matches) >= limit:
+                    return
+
+    source_candidates = [
+        item for item in candidates
+        if item[3] == "source"
+    ]
+    reference_candidates = [
+        item for item in candidates
+        if item[3] in {"reference", "locale_reference"}
+    ]
+
+    # 1) Exact symbolic/enum evidence from executable source.
+    scan_phase(
+        source_candidates,
+        exact_terms,
+        allowed_strengths={"strong"},
+        limit=max_matches,
+    )
+
+    # 2) Strong/medium text evidence from executable source.
+    scan_phase(
+        source_candidates,
+        text_terms,
+        allowed_strengths={"strong", "medium"},
+        limit=max_matches,
+    )
+
+    # 3) Keep a very small amount of weak source evidence for diagnostics only.
+    weak_limit = min(max_matches, len(matches) + 3)
+    scan_phase(
+        source_candidates,
+        text_terms,
+        allowed_strengths={"weak"},
+        limit=weak_limit,
+    )
+
+    # 4) Locale/reference copies are supporting evidence, never source proof.
+    scan_phase(
+        reference_candidates,
+        exact_terms,
+        limit=max_matches,
+    )
+    scan_phase(
+        reference_candidates,
+        text_terms,
+        limit=max_matches,
+    )
 
     source_matches = [
         match for match in matches
@@ -258,7 +344,6 @@ def scan_issue(
         "locale_reference_match_count": len(locale_reference_matches),
         "matches": matches,
     }
-
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
@@ -302,12 +387,16 @@ def main(argv: Sequence[str] | None = None) -> int:
         workspace / "Project_ServerSRC" / "game" / "src" / "Locale.hpp"
     )
 
+    candidates = build_candidate_index(repo_roots)
+    text_cache: dict[str, str | None] = {}
+
     results = [
         scan_issue(
             issue,
-            repo_roots,
+            candidates,
             args.max_matches,
             numeric_symbols=numeric_symbols,
+            text_cache=text_cache,
         )
         for issue in issues
     ]
@@ -333,6 +422,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         ],
         "missing_repositories": missing_repos,
         "numeric_symbol_count": len(numeric_symbols),
+        "indexed_file_count": len(candidates),
         "issue_count": len(results),
         "issues_with_matches": with_matches,
         "issues_without_matches": without_matches,
