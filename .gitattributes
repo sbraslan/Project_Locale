@@ -1,0 +1,6 @@
+# Locale Guard: preserve verified newline contracts for runtime-fix targets.
+# Encoding is intentionally NOT transformed by Git attributes.
+en/locale_game.txt text eol=crlf
+en/locale_string.txt text eol=lf
+tr/locale_game.txt text eol=crlf
+tr/locale_interface.txt text eol=crlf
