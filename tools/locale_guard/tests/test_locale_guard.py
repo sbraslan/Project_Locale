@@ -11,6 +11,7 @@ from tools.locale_guard.contract_probe import (
     search_terms,
 )
 from tools.locale_guard.repair_plan import build_repair_plan
+from tools.locale_guard.runtime_decision_check import verify_decisions
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
@@ -338,6 +339,76 @@ class LocaleGuardTests(unittest.TestCase):
         codes = [issue.code for issue in issues]
         self.assertIn("STRUCTURAL_COLUMN_MISMATCH", codes)
         self.assertNotIn("COLUMN_COUNT_MISMATCH", codes)
+
+    def test_runtime_decision_check_accepts_intrinsic_malformed_fix(self):
+        plan = {
+            "categories": {
+                "runtime_contract_review": {
+                    "issues": [{
+                        "path": "en/locale_string.txt",
+                        "key": "638",
+                        "code": "MALFORMED_PRINTF_SYNTAX",
+                        "source_value": "Chance %. 1f",
+                        "target_value": "Şans %.1f",
+                    }]
+                }
+            }
+        }
+        manifest = {
+            "decisions": [{
+                "path": "en/locale_string.txt",
+                "key": "638",
+                "code": "MALFORMED_PRINTF_SYNTAX",
+                "status": "resolved",
+                "side": "source",
+                "current_value": "Chance %. 1f",
+                "proposed_value": "Chance %.1f",
+                "evidence": [],
+            }]
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            report = verify_decisions(plan, manifest, Path(tmp))
+        self.assertEqual(report["error_count"], 0)
+        self.assertTrue(report["ready_for_dry_run_patch"])
+
+    def test_runtime_decision_check_verifies_external_evidence(self):
+        plan = {
+            "categories": {
+                "runtime_contract_review": {
+                    "issues": [{
+                        "path": "tr/locale_game.txt",
+                        "key": "KEY@@0",
+                        "code": "PRINTF_CONTRACT_MISMATCH",
+                        "source_value": "Value %d",
+                        "target_value": "Değer %s",
+                    }]
+                }
+            }
+        }
+        manifest = {
+            "decisions": [{
+                "path": "tr/locale_game.txt",
+                "key": "KEY@@0",
+                "code": "PRINTF_CONTRACT_MISMATCH",
+                "status": "resolved",
+                "side": "target",
+                "current_value": "Değer %s",
+                "proposed_value": "Değer %d",
+                "evidence": [{
+                    "repo": "Project_Binary",
+                    "path": "root/example.py",
+                    "contains": "localeInfo.KEY % value",
+                }],
+            }]
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            workspace = Path(tmp)
+            source = workspace / "Project_Binary" / "root" / "example.py"
+            source.parent.mkdir(parents=True)
+            source.write_text("localeInfo.KEY % value\n", encoding="utf-8")
+            report = verify_decisions(plan, manifest, workspace)
+        self.assertEqual(report["error_count"], 0)
+        self.assertEqual(report["evidence_check_count"], 1)
 
     def test_cp1250_fallback_is_lossless(self):
         data = "Příliš žluťoučký kůň".encode("cp1250")
