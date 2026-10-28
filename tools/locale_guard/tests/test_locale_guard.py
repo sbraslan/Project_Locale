@@ -1,9 +1,12 @@
+import tempfile
 import unittest
+from pathlib import Path
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
     suspicious_foreign_language,
     tsv_rows,
+    inspect_file,
 )
 
 class LocaleGuardTests(unittest.TestCase):
@@ -30,6 +33,14 @@ class LocaleGuardTests(unittest.TestCase):
         rows, duplicates = tsv_rows("10\tName\t\n")
         self.assertEqual(rows["10"], ["10", "Name", ""])
         self.assertEqual(duplicates, [])
+
+    def test_report_paths_are_repo_relative(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "sample.txt"
+            path.write_text("KEY\tValue\n", encoding="utf-8")
+            info, _, issues = inspect_file(path, "tr", "sample.txt")
+            self.assertEqual(info.path, "sample.txt")
+            self.assertTrue(all(issue.path == "tr/sample.txt" for issue in issues))
 
 if __name__ == "__main__":
     unittest.main()
