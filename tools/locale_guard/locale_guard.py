@@ -6,6 +6,7 @@ import collections
 import hashlib
 import json
 import re
+import subprocess
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Sequence
@@ -215,6 +216,45 @@ def relative_txt_paths(base: Path) -> set[str]:
         if path.is_file()
     }
 
+def parse_git_porcelain(output: str) -> list[tuple[str, str]]:
+    entries: list[tuple[str, str]] = []
+    for line in output.splitlines():
+        if len(line) < 4:
+            continue
+        status = line[:2]
+        path = line[3:]
+        if " -> " in path:
+            path = path.split(" -> ", 1)[1]
+        entries.append((status, path.replace("\\", "/")))
+    return entries
+
+def git_dirty_locale_paths(
+    root: Path,
+    directories: Sequence[str],
+) -> tuple[list[tuple[str, str]], str | None]:
+    try:
+        completed = subprocess.run(
+            [
+                "git", "status", "--porcelain=v1",
+                "--untracked-files=no", "--",
+                *directories,
+            ],
+            cwd=root,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=False,
+        )
+    except OSError as exc:
+        return [], str(exc)
+
+    if completed.returncode != 0:
+        message = completed.stderr.strip() or completed.stdout.strip()
+        return [], message or f"git status returned {completed.returncode}"
+
+    return parse_git_porcelain(completed.stdout), None
+
 def inspect_file(
     path: Path,
     lang: str,
@@ -396,6 +436,26 @@ def audit_repository(root: Path, config: dict) -> dict:
     legacy_decodings = config.get("legacy_decodings", {})
 
     issues: list[Issue] = []
+
+    dirty_entries, git_error = git_dirty_locale_paths(
+        root,
+        [*languages, master],
+    )
+    if git_error:
+        issues.append(Issue(
+            "warning", "GIT_STATUS_UNAVAILABLE", ".",
+            f"Could not verify locale working-tree cleanliness: {git_error}"
+        ))
+    else:
+        for status, dirty_path in dirty_entries:
+            language = dirty_path.split("/", 1)[0] if "/" in dirty_path else None
+            issues.append(Issue(
+                "error", "WORKTREE_DIRTY", dirty_path,
+                f"Tracked locale file differs from the Git index (status={status!r}). "
+                "Audit results may not represent the branch baseline.",
+                language=language,
+            ))
+
     files: dict[str, list[dict]] = {}
     texts: dict[tuple[str, str], str] = {}
     path_manifests: dict[str, set[str]] = {}
