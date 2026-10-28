@@ -25,6 +25,48 @@ def read_text_safely(path: Path) -> str | None:
     return None
 
 
+def resolve_evidence_path(
+    workspace: Path,
+    repo: str,
+    rel_path: str,
+) -> tuple[Path | None, str | None]:
+    repo_root = workspace / repo
+    requested = Path(rel_path)
+
+    exact = repo_root / requested
+    if exact.is_file():
+        return exact, None
+
+    if not repo_root.is_dir():
+        return None, f"repository directory not found: {repo}"
+
+    requested_posix = requested.as_posix().casefold()
+    basename = requested.name
+    candidates = []
+    for path in repo_root.rglob(basename):
+        if not path.is_file():
+            continue
+        relative = path.relative_to(repo_root).as_posix().casefold()
+        if relative.endswith(requested_posix):
+            candidates.append(path)
+
+    if len(candidates) == 1:
+        return candidates[0], None
+    if not candidates:
+        return None, (
+            f"evidence path not found: {repo}/{rel_path} "
+            "(exact path and unique suffix lookup both failed)"
+        )
+
+    matches = ", ".join(
+        path.relative_to(repo_root).as_posix()
+        for path in sorted(candidates)
+    )
+    return None, (
+        f"evidence path is ambiguous for {repo}/{rel_path}: {matches}"
+    )
+
+
 def issue_identity(issue: dict) -> tuple[str, str, str]:
     return (
         str(issue.get("path", "")),
@@ -129,13 +171,24 @@ def verify_decisions(
                 errors.append(f"{identity}: incomplete evidence record {proof!r}")
                 continue
 
-            source_path = workspace / str(repo) / str(rel_path)
+            source_path, resolution_error = resolve_evidence_path(
+                workspace,
+                str(repo),
+                str(rel_path),
+            )
+            if resolution_error or source_path is None:
+                evidence_failures += 1
+                errors.append(
+                    f"{identity}: {resolution_error}"
+                )
+                continue
+
             text = read_text_safely(source_path)
             if text is None:
                 evidence_failures += 1
                 errors.append(
-                    f"{identity}: evidence file missing/undecodable: "
-                    f"{repo}/{rel_path}"
+                    f"{identity}: evidence file is undecodable: "
+                    f"{source_path.as_posix()}"
                 )
                 continue
 
