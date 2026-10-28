@@ -13,7 +13,7 @@ from typing import Sequence
 
 PRINTF_RE = re.compile(
     r"%%|"
-    r"% (?:[diuoxXfFeEgGaAcspn])(?![A-Za-z])|"
+    r"% (?:[diuoxXfFeEgGaAcspn])(?![^\W\d_])|"
     r"%(?:\d+\$)?[-+#0']*(?:\d+|\*)?(?:\.(?:\d+|\*))?"
     r"(?:hh|h|ll|l|j|z|t|L)?[diuoxXfFeEgGaAcspn]"
 )
