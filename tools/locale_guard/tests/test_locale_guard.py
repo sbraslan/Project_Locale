@@ -17,6 +17,7 @@ from tools.locale_guard.runtime_dry_run import (
     patch_path_for_decision,
     parse_occurrence_key,
 )
+from tools.locale_guard.runtime_apply import backup_token
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
@@ -452,6 +453,23 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertFalse(bom)
         self.assertIn(b"\r\n", simulated)
         self.assertEqual(newline_style(simulated), "CRLF")
+
+    def test_runtime_apply_backup_token_is_deterministic(self):
+        reports_a = [
+            {
+                "path": "tr/locale_game.txt",
+                "original_sha256": "a" * 64,
+                "simulated_sha256": "b" * 64,
+            },
+            {
+                "path": "en/locale_game.txt",
+                "original_sha256": "c" * 64,
+                "simulated_sha256": "d" * 64,
+            },
+        ]
+        reports_b = list(reversed(reports_a))
+        self.assertEqual(backup_token(reports_a), backup_token(reports_b))
+        self.assertEqual(len(backup_token(reports_a)), 16)
 
     def test_runtime_decision_check_accepts_intrinsic_malformed_fix(self):
         plan = {
