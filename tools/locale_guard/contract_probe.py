@@ -20,6 +20,11 @@ TEXT_SUFFIXES = {
     ".targets", ".cmake", ".mk", ".rc", ".ini", ".cfg", ".conf",
 }
 
+SOURCE_SUFFIXES = {
+    ".c", ".cc", ".cpp", ".cxx", ".h", ".hh", ".hpp", ".hxx", ".inl", ".ipp",
+    ".py", ".pyw", ".lua", ".rc",
+}
+
 SKIP_DIRS = {
     ".git", ".vs", ".idea", ".vscode", "__pycache__", "build", "Build",
     "Debug", "Release", "x64", "Win32", "obj", "objects", "cache", ".cache",
@@ -104,6 +109,32 @@ def iter_text_files(root: Path) -> Iterable[Path]:
         yield path
 
 
+def classify_evidence_path(repo_name: str, relative_path: Path) -> str:
+    parts = {part.casefold() for part in relative_path.parts}
+    posix = relative_path.as_posix().casefold()
+
+    if "locale/locale/country/" in posix:
+        return "locale_reference"
+    if "extern" in parts:
+        return "noise"
+    if relative_path.suffix.lower() not in SOURCE_SUFFIXES:
+        return "reference"
+    return "source"
+
+
+def evidence_strength(match_type: str, term: str, evidence_kind: str) -> str:
+    if evidence_kind != "source":
+        return "reference" if evidence_kind in {"reference", "locale_reference"} else "noise"
+    if match_type == "key":
+        return "strong"
+    normalized = SPACE_RE.sub(" ", term).strip()
+    if len(normalized) >= 18:
+        return "strong"
+    if len(normalized) >= 10:
+        return "medium"
+    return "weak"
+
+
 def read_text_safely(path: Path) -> str | None:
     data = path.read_bytes()
     if b"\x00" in data[:4096]:
@@ -137,12 +168,17 @@ def scan_issue(
                 for kind, term in terms:
                     if term.casefold() not in folded:
                         continue
+                    relative_path = path.relative_to(repo_root)
+                    evidence_kind = classify_evidence_path(repo_name, relative_path)
+                    strength = evidence_strength(kind, term, evidence_kind)
                     matches.append({
                         "repository": repo_name,
-                        "path": path.relative_to(repo_root).as_posix(),
+                        "path": relative_path.as_posix(),
                         "line": line_number,
                         "match_type": kind,
                         "term": term,
+                        "evidence_kind": evidence_kind,
+                        "strength": strength,
                         "snippet": line.strip()[:500],
                     })
                     break
@@ -153,6 +189,19 @@ def scan_issue(
         if len(matches) >= max_matches:
             break
 
+    source_matches = [
+        match for match in matches
+        if match["evidence_kind"] == "source"
+    ]
+    strong_source_matches = [
+        match for match in source_matches
+        if match["strength"] == "strong"
+    ]
+    locale_reference_matches = [
+        match for match in matches
+        if match["evidence_kind"] == "locale_reference"
+    ]
+
     return {
         "issue": issue,
         "search_terms": [
@@ -160,6 +209,9 @@ def scan_issue(
             for kind, term in terms
         ],
         "match_count": len(matches),
+        "source_match_count": len(source_matches),
+        "strong_source_match_count": len(strong_source_matches),
+        "locale_reference_match_count": len(locale_reference_matches),
         "matches": matches,
     }
 
@@ -213,6 +265,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     ]
     with_matches = sum(1 for item in results if item["match_count"])
     without_matches = len(results) - with_matches
+    with_source_evidence = sum(
+        1 for item in results if item["strong_source_match_count"]
+    )
+    without_source_evidence = len(results) - with_source_evidence
 
     report = {
         "schema_version": 1,
@@ -226,6 +282,8 @@ def main(argv: Sequence[str] | None = None) -> int:
         "issue_count": len(results),
         "issues_with_matches": with_matches,
         "issues_without_matches": without_matches,
+        "issues_with_source_evidence": with_source_evidence,
+        "issues_without_source_evidence": without_source_evidence,
         "results": results,
     }
 
@@ -238,7 +296,9 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     print(
         f"contract-probe: issues={len(results)} "
-        f"with_matches={with_matches} without_matches={without_matches}"
+        f"with_matches={with_matches} without_matches={without_matches} "
+        f"with_source_evidence={with_source_evidence} "
+        f"without_source_evidence={without_source_evidence}"
     )
     if missing_repos:
         print("missing repositories: " + ", ".join(missing_repos))
@@ -248,7 +308,10 @@ def main(argv: Sequence[str] | None = None) -> int:
         issue = item["issue"]
         print(
             f"  {issue.get('path')} :: {issue.get('key')} :: "
-            f"{issue.get('code')} => matches={item['match_count']}"
+            f"{issue.get('code')} => matches={item['match_count']} "
+            f"source={item['source_match_count']} "
+            f"strong_source={item['strong_source_match_count']} "
+            f"locale_refs={item['locale_reference_match_count']}"
         )
 
     return 0
