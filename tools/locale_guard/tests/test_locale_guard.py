@@ -123,12 +123,12 @@ class LocaleGuardTests(unittest.TestCase):
         rows = structural_issue_breakdown([
             Issue("error", "TR_MISSING_KEY", "tr/a.txt", "x"),
             Issue("error", "PROTECTED_TOKEN_MISMATCH", "tr/a.txt", "x"),
-            Issue("warning", "TR_EXTRA_KEY", "tr/b.txt", "x"),
+            Issue("error", "CANONICAL_MISSING_KEY", "en/b.txt", "x"),
             Issue("info", "TR_FOREIGN_LANGUAGE_SUSPECT", "tr/a.txt", "x"),
         ])
         self.assertEqual(rows[0]["path"], "tr/a.txt")
         self.assertEqual(rows[0]["total"], 2)
-        self.assertEqual(rows[1]["path"], "tr/b.txt")
+        self.assertEqual(rows[1]["path"], "en/b.txt")
         self.assertEqual(rows[1]["total"], 1)
 
     def test_cp1250_fallback_is_lossless(self):
