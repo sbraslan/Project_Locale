@@ -1,6 +1,7 @@
 import tempfile
 import unittest
 from pathlib import Path
+from tools.locale_guard.repair_plan import build_repair_plan
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
@@ -166,6 +167,23 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertEqual(rows[0]["total"], 2)
         self.assertEqual(rows[1]["path"], "en/b.txt")
         self.assertEqual(rows[1]["total"], 1)
+
+    def test_repair_plan_is_read_only_and_fail_closed(self):
+        plan = build_repair_plan({
+            "issues": [
+                {"code": "CANONICAL_MISSING_KEY", "path": "en/itemdesc.txt"},
+                {"code": "TR_MISSING_KEY", "path": "tr/skilldesc.txt"},
+                {"code": "PRINTF_CONTRACT_MISMATCH", "path": "tr/locale_game.txt"},
+                {"code": "ENCODING_UNDECODABLE", "path": "gr/mob_names.txt"},
+            ]
+        })
+        self.assertFalse(plan["write_enabled"])
+        self.assertTrue(plan["fail_closed"])
+        self.assertEqual(plan["categories"]["canonical_backfill"]["count"], 1)
+        self.assertEqual(plan["categories"]["turkish_backfill"]["count"], 1)
+        self.assertEqual(plan["categories"]["runtime_contract_review"]["count"], 1)
+        self.assertEqual(plan["categories"]["encoding_integrity"]["count"], 1)
+        self.assertEqual(plan["hard_blocker_count"], 2)
 
     def test_cp1250_fallback_is_lossless(self):
         data = "Příliš žluťoučký kůň".encode("cp1250")
