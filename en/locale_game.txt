@@ -2033,7 +2033,7 @@ PET_SKILL_DELETE_QUESTION_DLG_MSG1	Resetting your pet's skill(s) is irreversible
 PET_SKILL_DELETE_QUESTION_DLG_MSG2	Do you want to continue?
 PET_SKILL_LEARN_FAIL_CONDITIONS	Your pet is not old enough or does not have the required level. Only heroic pets can learn skills.
 PET_SKILL_LEARN_QUESTION_DLG_MSG	Do you want to start hero training with '%s'?
-PET_SKILL_TOOLTIP_COOLTIME	Cooldown: %s seconds
+PET_SKILL_TOOLTIP_COOLTIME	Cooldown: %d seconds
 PET_SKILL_TOOLTIP_DURATION	Duration: %d seconds
 PET_SKILL_TOOLTIP_FEATHER	The pet has a %d%% chance to activate Feather Walk for %.1f seconds.\n Attack %d - %d	SAAAA
 PET_SKILL_TOOLTIP_HEAL	When your HP drops below 20%%, you have \n a %d%% chance to increase your HP by %d.	SAA

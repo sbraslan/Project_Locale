@@ -632,8 +632,8 @@
 635	Defence + %d%%
 636	OX quiz script has loaded.
 637	Experience %d%%
-638	Chance to find an Item %. 1f
-639	Chance to find Yang %. 1f
+638	Chance to find an Item %.1f
+639	Chance to find Yang %.1f
 640	Maximum Energy +%d%%
 641	Maximum Energy +%d%%
 642	Skill Damage %d%%

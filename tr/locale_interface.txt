@@ -1369,7 +1369,7 @@ EXTENDET_BATTLE_PASS_TYPENAME_3	Yaratýklara toplam hasar
 EXTENDET_BATTLE_PASS_TYPENAME_3_DESC_1	%s’de toplam %s hasar ver.
 EXTENDET_BATTLE_PASS_TYPENAME_3_DESC_2	Tüm yaratýklara toplam %s hasar ver.
 EXTENDET_BATTLE_PASS_TYPENAME_4	Oyunculara toplam hasar
-EXTENDET_BATTLE_PASS_TYPENAME_4_DESC_1	En az seviye %d olan oyunculara toplam %s hasar ver. Her krallýktan oyuncular sayýlýr.
+EXTENDET_BATTLE_PASS_TYPENAME_4_DESC_1	Toplam %s hasarý en az seviye %d olan oyunculara ver. Her krallýktan oyuncular sayýlýr.
 EXTENDET_BATTLE_PASS_TYPENAME_4_DESC_2	Oyunculara toplam %s hasar ver. Her krallýktan oyuncular sayýlýr.
 EXTENDET_BATTLE_PASS_TYPENAME_5	%s kullan
 EXTENDET_BATTLE_PASS_TYPENAME_5_DESC_1	Bu görevi tamamlamak için %sx %s kullan veya aç.

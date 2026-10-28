@@ -270,7 +270,7 @@ CHAT_SHOUT	Baðýrmak
 CHAT_SHOUT_LIMIT	15 saniyede bir baðýrabilirsiniz.
 CHAT_WHISPER	Fýsýldama
 CHEQUE_SYSTEM_DO_NOT_DROP_MONEY	Para düþüremezsin.
-CHEQUE_SYSTEM_PICK_WON	%s Won aldýn.
+CHEQUE_SYSTEM_PICK_WON	%d Won aldýn.
 CHEQUE_SYSTEM_SELL_PRICE	[Satýþ Fiyatý]
 CHEQUE_SYSTEM_UNIT_WON	Won
 CHEQUE_SYSTEM_UNIT_YANG	Yang
@@ -760,7 +760,7 @@ GAME_INIT_ERROR_ITEM_PROTO	Nesne bilgileri yok.\nOyunu tekrar yükleyiniz.
 GAME_INIT_ERROR_MAIN_WINDOW	Anayapý oluþturulamýyor.
 GAME_INIT_ERROR_MOB_PROTO	Canavar bilgileri yok.\nOyunu tekrar yükleyiniz.
 GAME_INIT_ERROR_NETWORK	Baðlantý kurulamýyor.\ninternet baðlantýnýzý kontrol ediniz.
-GAME_PICK_MONEY	%s Yang aldýn.
+GAME_PICK_MONEY	%d Yang aldýn.
 GEM_SYSTEM_ADD_SLOT	Gerekli nesne: %s.\nÞimdi %d adet kullanýp, yeni bir sýra açmak ister misin?
 GEM_SYSTEM_BUY_ITEM	Bu nesneyi satýn almak istiyor musun?
 GEM_SYSTEM_NAME	Gaya
@@ -768,7 +768,7 @@ GEM_SYSTEM_NOT_ENOUGHT_REFRESHITEM	[Gaya] Yeterince 'Gaya maðazasýný sýfýrlaya' 
 GEM_SYSTEM_NOT_ENOUGH_HP_GEM	[Gaya] Yeterli Gayan yok.
 GEM_SYSTEM_NO_MORE_ADDSLOT	[Gaya] Daha fazla yer açýlamaz.
 GEM_SYSTEM_OPEN_GEMSHOP	[Gaya] Önce Gaya maðazasýný aç.
-GEM_SYSTEM_PICK_GEM	%s Gaya aldýn.
+GEM_SYSTEM_PICK_GEM	%d Gaya aldýn.
 GEM_SYSTEM_REFRESH_SHOP_ITEMS	Sýfýrlamak istiyor musun?
 GIVEUP_QUESTION	Pes etmek istediðinden emin misin?
 GUILDBANK_CLEARBANK	Dikkat: Lonca deposu boþaltýlmýþ olmalý!
@@ -2019,10 +2019,10 @@ PET_INFORMATION_STAGE1	Genç
 PET_INFORMATION_STAGE2	Yabani
 PET_INFORMATION_STAGE3	Cesur
 PET_INFORMATION_STAGE4	Destansý
-PET_INFO_EXP	Mevcut EXP: %s
-PET_INFO_ITEM_EXP	Mevcut eþya EXP: %s
-PET_INFO_NEXT_EXP	Kalan EXP: %s
-PET_INFO_NEXT_ITEM_EXP	Kalan eþya EXP: %s
+PET_INFO_EXP	Mevcut EXP
+PET_INFO_ITEM_EXP	Mevcut eþya EXP
+PET_INFO_NEXT_EXP	Kalan EXP
+PET_INFO_NEXT_ITEM_EXP	Kalan eþya EXP
 PET_MSG_NOT_ENOUGH_MONEY	Yeterli Yang'a sahip deðilsin.
 PET_NAME_CHANGE_ACCEPT	Petinin ismini "%s" olarak deðiþtirmek mi istiyorsun?
 PET_NAME_MIN	Girilen isim çok kýsa.
@@ -2538,7 +2538,7 @@ TOOLTIP_AFFECT_CHEONUN	Eter kalkaný	SNA
 TOOLTIP_AFFECT_CONFUSION	Kafan karýþmýþ.
 TOOLTIP_AFFECT_CRITICAL_GRADE_DOWN	Kritik isabet þansýný azalt	SNA
 TOOLTIP_AFFECT_CZ_UNLIMIT_ENTER	Bekçi Ýmzasý	SNA
-TOOLTIP_AFFECT_DEFENSEWAVE_LASER	Hidro püskürtmesi kesilemedi.	SNA
+TOOLTIP_AFFECT_DEFENSEWAVE_LASER	Hidro püskürtmesi kesilemedi.
 TOOLTIP_AFFECT_DEF_GRADE_DOWN	Savunmayý azalt	SNA
 TOOLTIP_AFFECT_ELECTRIC_SHOCK	Þimþek
 TOOLTIP_AFFECT_ELEMENT_BUFF_CRACK	Bonus hasar türü: %s\n\nAktif bir Fýrtýna/Güç Çiçeði efektin varsa, kendini anýnda diriltebilirsin.
@@ -3691,5 +3691,5 @@ MULTI_FARM_PREMIUM_EFFECT	Çoklu farm hesap sýnýrýný artýrýr: +%d
 NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_ADDITIONAL_EQUIPMENT_PAGE
 EQUIPMENT_VIEW_RESTART_CLIENT	Ekstra ekipmaný deðiþtirmek istiyor musun?
 NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_SUNG_MAHI_TOWER
-SUNG_MAHI_CURSE_TOOLTIP	Sung Mahi Laneti (%d kez birikmiþ) — Her birikme, her 10 saniyede bir Maksimum HP’yi %%10 azaltýr. En fazla 10 kez birikebilir.
+SUNG_MAHI_CURSE_TOOLTIP	Sung Mahi Laneti (%d kez birikmiþ) — Her birikme, her 10 saniyede bir Maksimum HP’yi %%10 azaltýr. En fazla 10 kez birikebilir.	SA
 SUNGMAHEE_TOWER_DENY_TELEPORT	Bu kata ýþýnlanamazsýn.
