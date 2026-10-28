@@ -12,6 +12,11 @@ from tools.locale_guard.contract_probe import (
 )
 from tools.locale_guard.repair_plan import build_repair_plan
 from tools.locale_guard.runtime_decision_check import resolve_evidence_path, verify_decisions
+from tools.locale_guard.runtime_dry_run import (
+    apply_cell_change,
+    patch_path_for_decision,
+    parse_occurrence_key,
+)
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
@@ -27,6 +32,7 @@ from tools.locale_guard.locale_guard import (
     parse_git_porcelain,
     structural_issue_breakdown,
     compare_registered_tsv,
+    newline_style,
     Issue,
 )
 
@@ -366,6 +372,86 @@ class LocaleGuardTests(unittest.TestCase):
                 "Project_ClientSrc/Src/UserInterface/PythonSkill.cpp"
             )
         )
+
+    def test_dry_run_source_side_maps_tr_issue_to_en(self):
+        self.assertEqual(
+            patch_path_for_decision({
+                "path": "tr/locale_game.txt",
+                "side": "source",
+            }),
+            "en/locale_game.txt",
+        )
+        self.assertEqual(
+            patch_path_for_decision({
+                "path": "en/locale_string.txt",
+                "side": "source",
+            }),
+            "en/locale_string.txt",
+        )
+
+    def test_dry_run_occurrence_key_selects_exact_repeat(self):
+        self.assertEqual(parse_occurrence_key("KEY@@2"), ("KEY", 2))
+        lines = [
+            "KEY\tfirst\r\n",
+            "OTHER\tvalue\r\n",
+            "KEY\tsecond\r\n",
+        ]
+        change = apply_cell_change(
+            lines,
+            logical_key="KEY@@1",
+            column=1,
+            current_value="second",
+            proposed_value="changed",
+            structural=False,
+        )
+        self.assertEqual(change["line_number"], 3)
+        self.assertEqual(lines[0], "KEY\tfirst\r\n")
+        self.assertEqual(lines[2], "KEY\tchanged\r\n")
+
+    def test_dry_run_structural_append_and_remove_preserve_shape(self):
+        add_lines = ["KEY\tText\r\n"]
+        apply_cell_change(
+            add_lines,
+            logical_key="KEY@@0",
+            column=2,
+            current_value="",
+            proposed_value="SA",
+            structural=True,
+        )
+        self.assertEqual(add_lines, ["KEY\tText\tSA\r\n"])
+
+        remove_lines = ["KEY\tText\tSNA\r\n"]
+        apply_cell_change(
+            remove_lines,
+            logical_key="KEY@@0",
+            column=2,
+            current_value="SNA",
+            proposed_value="",
+            structural=True,
+        )
+        self.assertEqual(remove_lines, ["KEY\tText\r\n"])
+
+    def test_dry_run_cell_change_preserves_cp1254_and_crlf(self):
+        original = "KEY\tŞampiyon seviyesi\r\n".encode("cp1254")
+        text, encoding, bom = decode_text(
+            original,
+            language="tr",
+            legacy_encodings=["cp1254"],
+        )
+        lines = text.splitlines(keepends=True)
+        apply_cell_change(
+            lines,
+            logical_key="KEY@@0",
+            column=1,
+            current_value="Şampiyon seviyesi",
+            proposed_value="Şampiyon seviyesi %d",
+            structural=False,
+        )
+        simulated = "".join(lines).encode(encoding)
+        self.assertEqual(encoding, "cp1254")
+        self.assertFalse(bom)
+        self.assertIn(b"\r\n", simulated)
+        self.assertEqual(newline_style(simulated), "crlf")
 
     def test_runtime_decision_check_accepts_intrinsic_malformed_fix(self):
         plan = {
