@@ -12,12 +12,17 @@ from pathlib import Path
 from typing import Sequence
 
 PRINTF_RE = re.compile(
-    r"%(?:\d+\$)?[-+#0]*(?:\d+|\*)?(?:\.(?:\d+|\*))?"
-    r"(?:hh|h|ll|l|j|z|t|L)?[diuoxXfFeEgGaAcspn%]"
+    r"%(?:\d+\$)?[-+#0 ']*(?:\d+|\*)?(?:\.(?:\d+|\*))?"
+    r"(?:hh|h|ll|l|j|z|t|L)?(?:[diuoxXfFeEgGaAcspn](?![A-Za-z])|%)"
 )
 BRACE_RE = re.compile(r"\{[^{}\r\n]*\}")
-METIN_PIPE_RE = re.compile(r"\|(?:c[0-9A-Fa-f]{6,8}|H|h|r)")
-BRACKET_DIRECTIVE_RE = re.compile(r"\[[A-Z_][A-Z0-9_]*(?:\s*=[^\]\r\n]*)?(?:;[^\]\r\n]*)?\]")
+METIN_PIPE_RE = re.compile(
+    r"\|c[0-9A-Fa-f]{6,8}|\|[Hhr](?![A-Za-z])"
+)
+BRACKET_DIRECTIVE_RE = re.compile(
+    r"\[(?:CENTER_ALIGN|RIGHT_ALIGN|BANNER_IMG|IMG|X_PADDING|Y_PADDING|COLOR|FONT_SIZE)"
+    r"(?:\s*=[^\]\r\n;]*)?(?:;[^\]\r\n]*)?\]"
+)
 ESCAPE_RE = re.compile(r"\\(?:[nrt\\'\"0]|x[0-9A-Fa-f]{2}|u[0-9A-Fa-f]{4})")
 URL_RE = re.compile(r"(?i)\bhttps?://[^\s\t]+")
 
@@ -123,11 +128,14 @@ def decode_text(
 
 def protected_tokens(text: str) -> list[str]:
     tokens: list[tuple[int, str]] = []
-    for regex in (PRINTF_RE, BRACE_RE, METIN_PIPE_RE, BRACKET_DIRECTIVE_RE, ESCAPE_RE, URL_RE):
+    for regex in (PRINTF_RE, BRACE_RE, METIN_PIPE_RE, BRACKET_DIRECTIVE_RE, URL_RE):
         for match in regex.finditer(text):
             tokens.append((match.start(), match.group(0)))
     tokens.sort(key=lambda value: value[0])
     return [token for _, token in tokens]
+
+def layout_tokens(text: str) -> list[str]:
+    return [match.group(0) for match in ESCAPE_RE.finditer(text)]
 
 def cp1254_mojibake_candidate(text: str) -> str | None:
     if not any(ch in text for ch in TR_CP1254_BAD_CHARS):
@@ -531,6 +539,16 @@ def compare_registered_tsv(
                     "error", "PROTECTED_TOKEN_MISMATCH", tr_path,
                     f"Protected tokens differ from EN in column {column_index}: "
                     f"EN={dict(en_tokens)} TR={dict(tr_tokens)}",
+                    key=key, language=tr_language
+                ))
+
+            en_layout = collections.Counter(layout_tokens(en_value))
+            tr_layout = collections.Counter(layout_tokens(tr_value))
+            if en_layout != tr_layout:
+                issues.append(Issue(
+                    "warning", "LAYOUT_TOKEN_MISMATCH", tr_path,
+                    f"Layout escapes differ from EN in column {column_index}: "
+                    f"EN={dict(en_layout)} TR={dict(tr_layout)}",
                     key=key, language=tr_language
                 ))
     return issues
