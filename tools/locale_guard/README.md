@@ -95,3 +95,25 @@ whether text decoding succeeds. Therefore an undecodable file is not
 misreported as a missing file.
 
 TR/master equality is checked from raw byte SHA-256 values, not decoded text.
+
+
+## Parser registry
+
+Cross-language TSV comparison is now fail-closed and allowlisted. A file is
+compared only when its format is explicitly registered in config.json.
+
+Examples:
+
+- locale_game / locale_interface / locale_string: single logical key
+- locale_quiz: composite key (category, question id)
+- shop_deco: composite key (category, entry)
+- guildbuildinglist: only the NAME column is treated as translatable
+- pet_skill: only name and description columns are treated as translatable
+- skilldesc: key and column shape checks only for now; token comparison is
+  intentionally disabled until the skill column schema is fully mapped
+
+Unknown TSV formats are listed in report.unparsed_tsv_files and are not
+silently interpreted with a generic parser.
+
+TR_FOREIGN_LANGUAGE_SUSPECT is heuristic-only and is therefore informational,
+not a blocking warning.
