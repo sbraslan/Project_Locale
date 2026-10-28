@@ -1,0 +1,58 @@
+{
+  "canonical_language": "en",
+  "turkish_language": "tr",
+  "master_directory": "master",
+  "languages": [
+    "ae",
+    "cz",
+    "de",
+    "dk",
+    "en",
+    "es",
+    "fr",
+    "gr",
+    "hu",
+    "it",
+    "nl",
+    "pl",
+    "pt",
+    "ro",
+    "ru",
+    "tr"
+  ],
+  "translation_language_codes": {
+    "ae": "ar",
+    "cz": "cs",
+    "de": "de",
+    "dk": "da",
+    "en": "en",
+    "es": "es",
+    "fr": "fr",
+    "gr": "el",
+    "hu": "hu",
+    "it": "it",
+    "nl": "nl",
+    "pl": "pl",
+    "pt": "pt",
+    "ro": "ro",
+    "ru": "ru",
+    "tr": "tr"
+  },
+  "metadata_keys": [
+    "alsoExportToCharset"
+  ],
+  "generated_or_binary_paths": [
+    "item_proto",
+    "mob_proto"
+  ],
+  "policy": {
+    "write_mode": "disabled_in_v1",
+    "canonical_semantics": "en",
+    "validated_master_source": "tr",
+    "fail_closed": true,
+    "preserve_tabs": true,
+    "preserve_placeholders": true,
+    "preserve_markup_tokens": true,
+    "preserve_newlines_and_bom": true
+  }
+}
