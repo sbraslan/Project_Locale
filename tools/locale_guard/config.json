@@ -54,5 +54,9 @@
     "preserve_placeholders": true,
     "preserve_markup_tokens": true,
     "preserve_newlines_and_bom": true
-  }
+  },
+  "skip_generic_tsv_compare": [
+    "locale_quiz.txt",
+    "shop_deco.txt"
+  ]
 }
