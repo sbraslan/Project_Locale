@@ -1,6 +1,7 @@
 import tempfile
 import unittest
 from pathlib import Path
+from tools.locale_guard.contract_probe import base_logical_key, literal_fragments, search_terms
 from tools.locale_guard.repair_plan import build_repair_plan
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
@@ -187,7 +188,32 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertEqual(plan["categories"]["turkish_backfill"]["count"], 1)
         self.assertEqual(plan["categories"]["runtime_contract_review"]["count"], 1)
         self.assertEqual(plan["categories"]["encoding_integrity"]["count"], 1)
+        self.assertEqual(plan["categories"]["canonical_backfill"]["hard_count"], 0)
+        self.assertEqual(plan["categories"]["turkish_backfill"]["hard_count"], 0)
+        self.assertEqual(plan["categories"]["runtime_contract_review"]["hard_count"], 1)
+        self.assertEqual(plan["categories"]["encoding_integrity"]["hard_count"], 1)
         self.assertEqual(plan["hard_blocker_count"], 2)
+
+    def test_contract_probe_uses_symbolic_key_and_source_literals(self):
+        issue = {
+            "key": "GAME_PICK_MONEY@@0",
+            "source_value": "You have received %d Yang.",
+            "target_value": "%s Yang aldın.",
+        }
+        self.assertEqual(base_logical_key(issue["key"]), "GAME_PICK_MONEY")
+        terms = search_terms(issue)
+        self.assertIn(("key", "GAME_PICK_MONEY"), terms)
+        self.assertIn(("source_text", "You have received Yang."), terms)
+
+    def test_contract_probe_numeric_key_uses_text_fragments(self):
+        issue = {
+            "key": "276",
+            "source_value": "Round %lu",
+            "target_value": "%u. Tur",
+        }
+        terms = search_terms(issue)
+        self.assertFalse(any(kind == "key" for kind, _ in terms))
+        self.assertTrue(any(kind == "source_text" for kind, _ in terms))
 
     def test_cp1250_fallback_is_lossless(self):
         data = "Příliš žluťoučký kůň".encode("cp1250")
