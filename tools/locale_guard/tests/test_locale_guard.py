@@ -58,6 +58,10 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertEqual(printf_contract_tokens("%d %s %lu"), ["d", "s", "lu"])
         self.assertNotEqual(printf_contract_tokens("%d"), printf_contract_tokens("%s"))
 
+    def test_percent_before_turkish_word_is_not_printf(self):
+        self.assertEqual(printf_tokens("15% düşürür"), [])
+        self.assertEqual(printf_tokens("20% deneyim"), [])
+
     def test_printf_contract_allows_visual_flag_difference(self):
         self.assertEqual(printf_contract_tokens("% d"), ["d"])
         self.assertEqual(printf_contract_tokens("%d"), ["d"])
