@@ -18,6 +18,7 @@ from tools.locale_guard.runtime_dry_run import (
     parse_occurrence_key,
 )
 from tools.locale_guard.runtime_apply import backup_token
+from tools.locale_guard.canonical_review import canonical_backfill_groups
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
@@ -470,6 +471,25 @@ class LocaleGuardTests(unittest.TestCase):
         reports_b = list(reversed(reports_a))
         self.assertEqual(backup_token(reports_a), backup_token(reports_b))
         self.assertEqual(len(backup_token(reports_a)), 16)
+
+    def test_canonical_backfill_groups_are_sorted_and_sampled(self):
+        plan = {
+            "categories": {
+                "canonical_backfill": {
+                    "issues": [
+                        {"path": "en/itemdesc.txt", "key": "100"},
+                        {"path": "en/item_names.txt", "key": "200"},
+                        {"path": "en/itemdesc.txt", "key": "101"},
+                    ]
+                }
+            }
+        }
+        rows = canonical_backfill_groups(plan)
+        self.assertEqual(rows[0]["path"], "en/itemdesc.txt")
+        self.assertEqual(rows[0]["count"], 2)
+        self.assertEqual(rows[0]["sample_keys"], ["100", "101"])
+        self.assertEqual(rows[1]["path"], "en/item_names.txt")
+        self.assertEqual(rows[1]["count"], 1)
 
     def test_runtime_decision_check_accepts_intrinsic_malformed_fix(self):
         plan = {
