@@ -186,3 +186,35 @@ The verifier fails closed when:
 
 A successful verification only means the resolved subset is eligible for a
 future dry-run patch. It never applies locale changes.
+
+
+## Runtime patch dry run
+
+After the runtime decision gate reports zero errors and
+ready_for_dry_run_patch=true, generate a byte-safe preview only:
+
+    python -m tools.locale_guard.runtime_dry_run --root . --workspace ..
+
+Outputs:
+
+    .locale_guard/runtime_dry_run.json
+    .locale_guard/runtime_dry_run.diff
+
+The dry-run tool has no apply mode and never writes locale files. It:
+
+- includes only decisions marked resolved,
+- skips every unresolved decision,
+- maps source-side decisions to canonical EN when the audit issue originated
+  from a TR comparison,
+- checks that patch-target locale files are Git-clean,
+- validates the audited column and current value before changing the
+  in-memory copy,
+- preserves the original encoding, BOM state and newline style,
+- preserves repeated-key occurrence identity,
+- treats structural callable metadata as a separate TSV column,
+- round-trips the simulated bytes through the same decoder,
+- records original/simulated SHA-256 hashes,
+- emits a unified diff for manual review.
+
+Any drift, mixed newline target, encoding failure, ambiguous decision or dirty
+patch target aborts the dry run without modifying locale content.
