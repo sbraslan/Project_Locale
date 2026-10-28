@@ -90,19 +90,35 @@ def newline_style(data: bytes) -> str:
         return "CR"
     return "none"
 
-def decode_text(data: bytes, *, language: str) -> tuple[str, str, bool]:
+def decode_text(
+    data: bytes,
+    *,
+    language: str,
+    legacy_encodings: Sequence[str] = (),
+) -> tuple[str, str, bool]:
     bom = data.startswith(b"\xef\xbb\xbf")
     if bom:
         return data.decode("utf-8-sig"), "utf-8-sig", True
+
     try:
         return data.decode("utf-8"), "utf-8", False
-    except UnicodeDecodeError:
-        if language in {"tr", "master"}:
+    except UnicodeDecodeError as utf8_error:
+        for encoding in legacy_encodings:
             try:
-                return data.decode("cp1254"), "cp1254", False
-            except UnicodeDecodeError:
-                pass
-        raise
+                text = data.decode(encoding)
+            except (UnicodeDecodeError, LookupError):
+                continue
+
+            # A fallback is accepted only when it is lossless for the original bytes.
+            try:
+                if text.encode(encoding) != data:
+                    continue
+            except (UnicodeEncodeError, LookupError):
+                continue
+
+            return text, encoding, False
+
+        raise utf8_error
 
 def protected_tokens(text: str) -> list[str]:
     tokens: list[tuple[int, str]] = []
@@ -175,12 +191,21 @@ def relative_txt_paths(base: Path) -> set[str]:
         if path.is_file()
     }
 
-def inspect_file(path: Path, lang: str, relative: str) -> tuple[FileInfo | None, str | None, list[Issue]]:
+def inspect_file(
+    path: Path,
+    lang: str,
+    relative: str,
+    legacy_encodings: Sequence[str] = (),
+) -> tuple[FileInfo | None, str | None, list[Issue]]:
     issues: list[Issue] = []
     display_path = f"{lang}/{relative}"
     data = path.read_bytes()
     try:
-        text, encoding, bom = decode_text(data, language=lang)
+        text, encoding, bom = decode_text(
+            data,
+            language=lang,
+            legacy_encodings=legacy_encodings,
+        )
     except UnicodeDecodeError as exc:
         issues.append(Issue(
             "error", "ENCODING_UNDECODABLE", display_path,
@@ -298,10 +323,13 @@ def audit_repository(root: Path, config: dict) -> dict:
     master = config["master_directory"]
     metadata_keys = set(config.get("metadata_keys", []))
     skip_generic_tsv = set(config.get("skip_generic_tsv_compare", []))
+    legacy_decodings = config.get("legacy_decodings", {})
 
     issues: list[Issue] = []
     files: dict[str, list[dict]] = {}
     texts: dict[tuple[str, str], str] = {}
+    path_manifests: dict[str, set[str]] = {}
+    raw_hashes: dict[tuple[str, str], str] = {}
 
     for language in languages + [master]:
         language_dir = root / language
@@ -314,9 +342,19 @@ def audit_repository(root: Path, config: dict) -> dict:
             continue
 
         language_infos: list[dict] = []
-        for relative in sorted(relative_txt_paths(language_dir)):
+        manifest = relative_txt_paths(language_dir)
+        path_manifests[language] = manifest
+        encoding_candidates = tuple(legacy_decodings.get(language, []))
+
+        for relative in sorted(manifest):
             path = language_dir / relative
-            info, text, file_issues = inspect_file(path, language, relative)
+            raw_hashes[(language, relative)] = sha256_bytes(path.read_bytes())
+            info, text, file_issues = inspect_file(
+                path,
+                language,
+                relative,
+                encoding_candidates,
+            )
             issues.extend(file_issues)
             if info:
                 language_infos.append(asdict(info))
@@ -326,11 +364,11 @@ def audit_repository(root: Path, config: dict) -> dict:
                     issues.extend(audit_turkish_text(f"{language}/{relative}", text, language))
         files[language] = language_infos
 
-    canonical_paths = {item["path"] for item in files.get(canonical, [])}
+    canonical_paths = path_manifests.get(canonical, set())
     for language in languages:
         if language == canonical:
             continue
-        language_paths = {item["path"] for item in files.get(language, [])}
+        language_paths = path_manifests.get(language, set())
         for relative in sorted(canonical_paths - language_paths):
             issues.append(Issue(
                 "error", "TARGET_FILE_MISSING", f"{language}/{relative}",
@@ -344,7 +382,7 @@ def audit_repository(root: Path, config: dict) -> dict:
                 language=language
             ))
 
-    turkish_paths = {item["path"] for item in files.get(turkish, [])}
+    turkish_paths = path_manifests.get(turkish, set())
     for relative in sorted(canonical_paths & turkish_paths):
         en_text = texts.get((canonical, relative))
         tr_text = texts.get((turkish, relative))
@@ -365,17 +403,17 @@ def audit_repository(root: Path, config: dict) -> dict:
                 turkish,
             ))
 
-    master_paths = {item["path"] for item in files.get(master, [])}
+    master_paths = path_manifests.get(master, set())
     for relative in sorted(turkish_paths | master_paths):
-        tr_info = next((item for item in files.get(turkish, []) if item["path"] == relative), None)
-        master_info = next((item for item in files.get(master, []) if item["path"] == relative), None)
-        if tr_info is None or master_info is None:
+        if relative not in turkish_paths or relative not in master_paths:
             issues.append(Issue(
                 "error", "MASTER_TR_PATH_MISMATCH", f"{master}/{relative}",
                 "TR/master file manifest differs.",
                 language=master
             ))
-        elif tr_info["sha256"] != master_info["sha256"]:
+            continue
+
+        if raw_hashes.get((turkish, relative)) != raw_hashes.get((master, relative)):
             issues.append(Issue(
                 "error", "MASTER_TR_CONTENT_MISMATCH", f"{master}/{relative}",
                 "master/ is not byte-identical to tr/.",
@@ -383,12 +421,20 @@ def audit_repository(root: Path, config: dict) -> dict:
             ))
 
     counts = collections.Counter(issue.severity for issue in issues)
+    encoding_summary = {
+        language: dict(collections.Counter(
+            item["encoding"] for item in language_files
+        ))
+        for language, language_files in files.items()
+    }
+
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "canonical_language": canonical,
         "turkish_language": turkish,
         "master_directory": master,
         "summary": dict(counts),
+        "encoding_summary": encoding_summary,
         "files": files,
         "issues": [asdict(issue) for issue in issues],
     }
