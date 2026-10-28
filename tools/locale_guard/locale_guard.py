@@ -611,7 +611,10 @@ def compare_registered_tsv(
         for column_index in columns_to_check:
             en_value = en_columns[column_index]
             tr_value = tr_columns[column_index]
-            for malformed in MALFORMED_PRINTF_RE.finditer(en_value):
+            en_malformed = list(MALFORMED_PRINTF_RE.finditer(en_value))
+            tr_malformed = list(MALFORMED_PRINTF_RE.finditer(tr_value))
+
+            for malformed in en_malformed:
                 issues.append(Issue(
                     "error", "MALFORMED_PRINTF_SYNTAX", en_path,
                     f"Malformed printf syntax in canonical EN column {column_index}: "
@@ -623,7 +626,7 @@ def compare_registered_tsv(
                     target_value=tr_value,
                 ))
 
-            for malformed in MALFORMED_PRINTF_RE.finditer(tr_value):
+            for malformed in tr_malformed:
                 issues.append(Issue(
                     "error", "MALFORMED_PRINTF_SYNTAX", tr_path,
                     f"Malformed printf syntax in TR column {column_index}: "
@@ -635,31 +638,32 @@ def compare_registered_tsv(
                     target_value=tr_value,
                 ))
 
-            en_printf_contract = printf_contract_tokens(en_value)
-            tr_printf_contract = printf_contract_tokens(tr_value)
-            if en_printf_contract != tr_printf_contract:
-                issues.append(Issue(
-                    "error", "PRINTF_CONTRACT_MISMATCH", tr_path,
-                    f"Printf argument contract differs from EN in column {column_index}: "
-                    f"EN={en_printf_contract} TR={tr_printf_contract}",
-                    key=key, language=tr_language,
-                    column=column_index,
-                    source_value=en_value,
-                    target_value=tr_value
-                ))
-            else:
-                en_printf_raw = printf_tokens(en_value)
-                tr_printf_raw = printf_tokens(tr_value)
-                if en_printf_raw != tr_printf_raw:
+            if not en_malformed and not tr_malformed:
+                en_printf_contract = printf_contract_tokens(en_value)
+                tr_printf_contract = printf_contract_tokens(tr_value)
+                if en_printf_contract != tr_printf_contract:
                     issues.append(Issue(
-                        "warning", "PRINTF_FORMAT_DIFFERENCE", tr_path,
-                        f"Printf formatting differs but argument contract matches in "
-                        f"column {column_index}: EN={en_printf_raw} TR={tr_printf_raw}",
+                        "error", "PRINTF_CONTRACT_MISMATCH", tr_path,
+                        f"Printf argument contract differs from EN in column {column_index}: "
+                        f"EN={en_printf_contract} TR={tr_printf_contract}",
                         key=key, language=tr_language,
                         column=column_index,
                         source_value=en_value,
                         target_value=tr_value
                     ))
+                else:
+                    en_printf_raw = printf_tokens(en_value)
+                    tr_printf_raw = printf_tokens(tr_value)
+                    if en_printf_raw != tr_printf_raw:
+                        issues.append(Issue(
+                            "warning", "PRINTF_FORMAT_DIFFERENCE", tr_path,
+                            f"Printf formatting differs but argument contract matches in "
+                            f"column {column_index}: EN={en_printf_raw} TR={tr_printf_raw}",
+                            key=key, language=tr_language,
+                            column=column_index,
+                            source_value=en_value,
+                            target_value=tr_value
+                        ))
 
             en_markup = markup_tokens(en_value)
             tr_markup = markup_tokens(tr_value)
