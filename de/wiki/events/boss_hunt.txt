@@ -1,0 +1,50 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/bosshunt.tga]
+[CENTER_ALIGN;FONT_SIZE=18]Boss-Jagd-Event
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen
+*2. Event-Anweisungen
+*3. Trefferzähler Belohnungen
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=85; CENTER_ALIGN]
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen
+
+Das Ereignis ist nur für Lv30+ Spieler.
+Ein Treffer verursacht 1 Schaden an den HP des Bosses und Sie erhalten Punkte, die Sie in der 
+unteren linken Ecke der Benutzeroberfläche, über Ihrer HP-Leiste, angezeigt werden.
+
+Sie können die Punkte, die Sie beim Uriel gesammelt haben, für verschiedene Truhen einlösen.
+Während Sie diesen Boss angreifen, wird Ihre Angriffsgeschwindigkeit um 100 reduziert.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=210; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Ereignis-Anweisungen:
+
+Der Schattenkrieger wird in den Neuralgebieten des Orktals und des Berges Sohan erscheinen, 
+Doyyumhwaji Paper und Yongbi-Wüste (2 für jeden Kanal).
+In der Nähe des Schattenkriegers ist der PvP-Modus deaktiviert.
+Für jeden Treffer auf einen Schattenkrieger erhalten Sie 1 Punkt. 
+
+Brutale Schattenkrieger erscheinen in den Beta-Gebieten Kap Drachenfeuer, Donnergebirge, 
+Nephrite-Bucht und Guatama-Klippe (2 für jeden Kanal).
+Um den Brutalen Schattenkrieger herum ist der PvP-Modus aktiviert.
+Für jeden Treffer auf einen brutalen Schattenkrieger erhalten Sie 2 Punkte.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=400; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Hit Counter Belohnungen
+
+Ihre Punkte können Sie dann bei Uriel entweder gegen eine Bronzene Decimus-Truhe, eine Silberne Decimus-Truhe 
+Goldene Decimus-Truhe oder eine Prächtige Decimus-Truhe.
+
+Achtung! Die Punkte verschwinden, sobald das Event zu Ende ist, also stellen Sie sicher, dass Sie sie rechtzeitig einlösen.
+
+*500 Punkte: Bronzene Decimus-Truhe
+*1000 Punkte: Silberne Decimus-Truhe
+*2000 Punkte: Goldene Dezimus-Truhe
+*5000 Punkte: Prächtige Decimus-Truhe
+
+

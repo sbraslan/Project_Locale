@@ -1,0 +1,87 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/okeycard.tga]
+[CENTER_ALIGN;FONT_SIZE=18]Okey Card Game
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen
+*2. Spielanleitung
+*3. Runden-Belohnungen
+*4. Kombinationen und Punkte
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=120; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen
+
+Durch das Besiegen von Monstern sammeln Sie während dieses Ereignisses Okey-Sammelkarten.
+Die Okey-Sammelkarten sind ein alternativer Drop, was bedeutet, dass jedes Monster zwischen +/- 15 Leveln 
+sie fallen lassen kann. Sobald Sie 24 Karten gesammelt haben, erhalten Sie automatisch ein Okey-Kartenset.
+Von da an dürfen Sie das Minispiel spielen. 
+Wenn das Ereignis aktiv ist, erscheint ein Okey-Kartenspiel-Symbol neben Ihrer Minimap, 
+von dem aus Sie das Spiel öffnen und spielen können.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=250; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Spielanleitung
+
+Das Ziel ist es, eine Kombination aus Sets und Runs zu erhalten.
+Ein Set besteht aus drei Karten mit der gleichen Zahl (z. B. 7, 7, 7).
+Je niedriger die Zahl auf den Karten ist, desto weniger Punkte erhalten Sie für den Satz.
+
+Ein Durchgang besteht aus mindestens drei aufeinanderfolgenden Karten (z. B. 6, 7, 8 ).
+Je niedriger die Zahl auf den Karten ist, desto weniger Punkte erhalten Sie für das Set.
+Läufe in derselben Farbe bringen mehr Punkte als mehrfarbige Läufe.
+
+Klicken Sie mit der linken Maustaste auf den Stapel, um die ersten 5 Karten aufzudecken.
+Sammeln Sie Punkte, indem Sie 3 Karten auswählen. (HINWEIS: Links-Klick = Karte auswählen, Rechts-Klick = Karte permanent ablegen)
+Je mehr Punkte Sie bis zum Ende des Spiels gesammelt haben, desto besser ist Ihr Preis.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=450; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Runden-Belohnungen
+
+Die Belohnung für jedes Spiel ist eine Truhe, die von Ihrer Punktzahl abhängt.
+Um diese Truhe nach jeder Runde zu erhalten, drücken Sie die Taste "Ende".
+
+*Score < 300: Bronze-Okey-Truhe
+*Score 300-399: Silberne Okey-Truhe
+*Score = 400: Goldene Okey-Truhe
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=590; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Kombinationen und Punkte
+
+[COLOR=ef4f00;FONT_SIZE=15]4.1 Punkte setzen
+
+*1-1-1 : 20 Punkte
+*2-2-2 : 30 Punkte
+*3-3-3 : 40 Punkte
+*4-4-4 : 50 Punkte
+*5-5-5 : 60 Punkte
+*6-6-6 : 70 Punkte
+*7-7-7 : 80 Punkte
+*8-8-8 : 90 Punkte
+
+[COLOR=ef4f00;FONT_SIZE=15]4.2 Laufpunkte
+
+[COLOR=ef4f00]4.2.1 Run Points - Karten mit unterschiedlicher Farbe:
+
+*1-2-3 : 10 Punkte
+*2-3-4 : 20 Punkte
+*3-4-5 : 30 Punkte
+*4-5-6 : 40 Punkte
+*5-6-7 : 50 Punkte
+*6-7-8 : 60 Punkte
+
+[COLOR=ef4f00]4.2.2 Run Points - Karten mit gleicher Farbe:
+
+*1-2-3 : 100 Punkte
+*2-3-4 : 100 Punkte
+*3-4-5 : 100 Punkte
+*4-5-6 : 100 Punkte
+*5-6-7 : 100 Punkte
+*6-7-8 : 100 Punkte
+

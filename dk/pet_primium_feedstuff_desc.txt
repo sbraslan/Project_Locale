@@ -1,0 +1,7 @@
+[DELAY value;0]
+Du kan genoplive dit afdøde kæledyr, ved at kombinere[ENTER]
+Guddommelige Protein Bidder med dit afdøde kæledyr.\n[ENTER]
+Antallet af nødvendige genstande, kommer an på dit kæledyrs[ENTER]
+alder.\n[ENTER]
+Det afdøde kæledyr vil blive genoplivet med 80% af dens[ENTER]
+oprindelige alder.\n

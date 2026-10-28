@@ -1,0 +1,27 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/spiderbaroness.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 50-85
+*Eintrittskarte: Arachnids Key (nur Gruppenleiter)
+[RIGHT_ALIGN]Arachniden-Schlüssel 
+[IMG=d:/ymir work/ui/wiki/30324.tga; Y=5; X=493]
+[COLOR=0xffd700;FONT_SIZE=15]Eigentümlichkeit:
+*Das Nest der Spinnenbaronin hat eine 60-minütige Abklingzeit.
+*Der Dungeon kann mit oder ohne eine Gruppe betreten werden. 
+*Sie haben insgesamt 20 Minuten Zeit, um das Nest der Spinnenbaronin abzuschließen.
+*Das Wechseln des Gruppenleiters verkürzt die Abklingzeit nicht.
+
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=143; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Töten Sie den Spinnenbaron und aktivieren Sie die Arachniden-Pfeife, die er fallen lässt.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Töten Sie die Spinnenbaronin.

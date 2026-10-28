@@ -1,0 +1,154 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/dragonstone.tga]
+[CENTER_ALIGN]Die Drachenseelen-Alchemie ist ein System, das für hochstufige Spieler entwickelt wurde, mit dem Ziel 
+[CENTER_ALIGN]um Ihren Char in eine bestimmte Richtung zu stärken.
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen
+*2. Cor Draconis
+*3. Boni der Drachensteine
+*4. Wie man Drachensteine aufwertet
+*5. Wie man die Dauer des Drachensteins wieder auffüllt.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=130; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen
+
+Ab Patch 3.1 haben Sie die Drachenstein-Alchemie ab Lv1. Sie können täglich bis zu 200 Cor Draconis farmen mit der 
+Quest 'Macht des Drachenauges'. 10 Drachensteinsplitter werden automatisch in ein Cor Draconis (grob) umgewandelt.
+Das Drachenstein-Alchemie-Fenster kann über den grünen Button im Inventar oder mit der Taste "O" geöffnet werden.
+Die erste Alchemie-Seite aktivieren Sie mit "STRG + O" und die zweite Alchemie-Seite mit "STRG + P".
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=250; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Cor Draconis
+
+Ein Cor Draconis (roh) enthält einen zufälligen Drachenstein (roh) zwischen allen Arten (Diamant, Rubin, Jade, Saphir,
+Granat, Onyx). Es gibt verschiedene Arten von Cors, wie z. B.: Cor Draconis (roh), Cor Draconis (geschliffen), Cor Draconis (selten), 
+Cor Draconis (antik) und Cor Draconis (legendär). Cor Alrum (norm.), Cor Diamas (norm.), Cor Granatum (norm.), 
+Kor Jadeit (norm.), Kor Rubinum (norm.), Kor Sapphirum (norm.). Jede dieser 6 enthält ein Cor in ihrer Farbe.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=360; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Boni
+
+[CENTER_ALIGN]Die Drachensteine haben 4 verschiedene Aspekte, die verbessert werden können:
+[CENTER_ALIGN]Klasse: Grob, Geschliffen, Selten, Antik, Legendär.
+[CENTER_ALIGN]Je höher die Klasse, desto mehr Boni hat der Drachenstein.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]3.1 Clarity: Matt, Klar, Lupenrein, Brillant, Exzellent.
+
+[X_PADDING=20]Je höher die Klarheit, desto höher sind die Boni auf den Drachenstein.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]3.2 Level: +0 bis +6
+
+[X_PADDING=20]Je höher die Stufe, desto höher ist der Bonus auf den Drachenstein.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]3.3 Bonus: 2-5 Boni.
+
+[X_PADDING=20]Ein legendärer Drachenseele-Stein hat 2 Grundboni und kann bis zu 3 zusätzliche Boni haben für eine 
+[X_PADDING=20]insgesamt 5 Boni. Die Boni eines Drachensteins können mit einer 'Verfeinerten Verzauberung' ausgetauscht werden.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]3.4 Maximale Boni.
+
+[COLOR=ef4f00]*3.4.1 Diamant (alle Steine):
+
+[X_PADDING=20]*Intelligence +10
+[X_PADDING=20]*Eiswiderstand +10%
+[X_PADDING=20]*Widerstand gegen Geschicklichkeits-Schaden 15%
+[X_PADDING=20]*Skill-Schaden 15%
+[X_PADDING=20]*Magischer Angriffswert +15
+[X_PADDING=20]*Magische Verteidigung +15
+
+[COLOR=ef4f00]*3.4.2 Rubin (alle Steine):
+
+[X_PADDING=20]*Stärke +10
+[X_PADDING=20]*Feuerwiderstand +10%
+[X_PADDING=20]*Durchschnittlicher Schaden +15%
+[X_PADDING=20]*Verteidigung +100
+[X_PADDING=20]*Angriffswert +120
+[X_PADDING=20]*Durchschnittliche Schadensresistenz +15%
+
+[COLOR=ef4f00]*3.4.3 Jade (alle Steine):
+
+[X_PADDING=20]*+500 SP
+[X_PADDING=20]*Windwiderstand +10%
+[X_PADDING=20]*Max. HP +2500
+[X_PADDING=20]*Max. HP +15% [X_PADDING=20]*MAX.
+[X_PADDING=20]*10% Schaden wird von HP absorbiert
+[X_PADDING=20]*HP-Regeneration +10%
+
+[COLOR=ef4f00]*3.4.4 Saphir (alle Steine):
+
+[X_PADDING=20]*Geschicklichkeit +10
+[X_PADDING=20]*Widerstand gegen Erde +10%
+[X_PADDING=20]*Stärke gegen Sura/Krieger/Shaman/Ninja +15%
+[X_PADDING=20]*Abwehr gegen Ninja-Angriffe +15%
+
+[COLOR=ef4f00]*3.4.5 Granat (alle Steine):
+
+[X_PADDING=20]*Max. HP +1500
+[X_PADDING=20]*Blitzresistenz +10%
+[X_PADDING=20]*Max. SP +1800
+[X_PADDING=20]*Max. SP +15% [X_PADDING=20]*MAX.
+[X_PADDING=20]*10% Schaden wird durch SP absorbiert
+[X_PADDING=20]*Sp Regeneration +10%
+
+[COLOR=ef4f00]*3.4.6 Onyx (alle Steine):
+
+[X_PADDING=20]*Vitalität +10
+[X_PADDING=20]*Widerstand gegen Dunkelheit +10 %.
+[X_PADDING=20]*Verteidigung gegen Crit. Treffer +10 %.
+[X_PADDING=20]*Verteidigung gegen Pen. Treffer +10% [X_PADDING=20
+X_PADDING=20]*Chance, einen Nahkampfangriff zu blocken +10% [X_PADDING=20
+[X_PADDING=20]*Chance, einen Nahkampfangriff zu reflektieren +10%.
+X_PADDING=20]*Chance, Pfeilen auszuweichen +10%.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1330; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Wie man Drachensteine aufwertet.
+
+Wie bereits erwähnt, hat ein maximaler Drachenstein alle 4 Aspekte maximiert. Zu Beginn müssen Sie sie in der richtigen Reihenfolge maximieren 
+der richtigen Reihenfolge maximieren: Klasse -> Klarheit -> Stufe. Um die Klasse eines Drachensteins zu erhöhen, benötigen Sie weitere 
+Drachensteine der gleichen Klasse. Setzen Sie die benötigten Drachensteine in die entsprechenden Slots und klicken Sie auf 
+"Verfeinern" oder "Alle verfeinern". Sobald Ihr Drachenstein legendär geworden ist, können Sie damit beginnen, seine Klarheit zu verbessern. 
+Um die Klarheit eines Drachensteins zu verbessern, benötigen Sie weitere Drachensteine der gleichen Klarheit. Legen Sie die benötigten Drachen
+Stein in die entsprechenden Slots und klicken Sie auf "Verfeinern". Sobald Ihr Drachenstein exzellent ist, können Sie ihn aufwerten. 
+Stufe zu verbessern. Um die Stufe eines Drachensteins zu erhöhen, benötigen Sie eine Grüne Drachenbohne oder Blaue Drachenbohne oder 
+Rosa Drachenbohne. Setzen Sie die Bohne und einen Drachenstein in die entsprechenden Slots und wählen Sie "Verfeinern". Der Vorgang 
+kann fehlschlagen und in diesem Fall wird die Stufe des Drachensteins um 1 reduziert. Beachten Sie, dass blaue und 
+Pinke Drachenbohnen haben eine höhere Erfolgsrate, aber sie senken die Stufe des Drachensteins im Falle eines Fehlschlags trotzdem.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1525; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]5. Wie Sie die Dauer des Drachensteins wieder auffüllen.
+
+Mit der Zange der Zeit können Sie ein Zeitelixier (S) herstellen. Um es zu erzeugen, müssen Sie es auf einen nicht ausgerüsteten 
+Drachenseelenstein ziehen (der Stein wird aus Ihrem DSS-Inventar entfernt und das Elixier erscheint in Ihrem Inventar). 
+Dieser Vorgang kann fehlschlagen. Sie können das Zeitelixier (m) auch als Belohnung aus der Goldenen Decimus-Truhe erhalten, 
+König der Kristalldrachen, Kampfpass des Baumes (Mission: 'Meerjungfraueninsel'), Missionsbuch (schwer) und von 
+Bei Kawuco können Sie auch ein Zeit-Elixier (L) herstellen. Wenn die Zeit in einem Drachenstein abläuft, wird er 
+unbrauchbar und Sie erhalten seine Boni nicht mehr. Er verschwindet aber nicht.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1660; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]6. Alchemie-Set-Bonus
+
+Wenn Sie 6 Drachensteine+6 ausgerüstet haben, erhalten Sie einen Alchemie-Set-Bonus von: 
+
+*Max. HP +2500 
+*Stark gegen Halbmenschen +10%
+*Stark gegen Metinstones +10%
+
+
+

@@ -1,0 +1,23 @@
+1	Weerstand (Krijger)	jijoong	PASSIVE	Weerstand tegen aanvallen van Krijgers (passief)	0
+2	Weerstand (Sura)	jijoong	PASSIVE	Weerstand tegen aanvallen van Sura (passief)	0
+3	Weerstand (Ninja)	jijoong	PASSIVE	Weerstand tegen aanvallen van Ninja's (passief)	0
+4	Weerstand (Sjamaan)	jijoong	PASSIVE	Weerstand tegen aanvallen van Sjamanen (passief)	0
+5	Weerstand (Lycanen)	jijoong	PASSIVE	Weerstand tegen aanvallen van Lycanen (passief)	0
+6	Berserker	pacheon	PASSIVE	Aanvalswaarde is verhoogd (passief)	0
+7	Anti-Magie	cheonryeong	PASSIVE	Verminder de magieweerstand van de vijand (passief)	0
+8	Haast	banya	PASSIVE	Afkoelperiode van vaardigheden is verminderd (passief)	0
+9	Boor	choehoenbimu	PASSIVE	Verhoogde kans op perforerende slagen (passief)	0
+10	Restoratie	heal	AUTO	LP wordt hersteld zodra het onder 20% zakt	480
+11	Vampirisme	stealhp	PASSIVE	Absorbeer LP van de vijand (passief)	0
+12	Spiritualisme	stealmp	PASSIVE	Absorbeer TP van de vijand (passief)	0
+13	Bolwerk	block	PASSIVE	Fysieke schade is geblokkeerd (passief)	0
+14	Reflectie	reflect_melee	PASSIVE	Opgelopen schade wordt gereflecteerd naar de vijand (passief)	0
+15	Yang Drop	gold_drop	PASSIVE	De 'drop' kans van Yang is verhoogd (passief)	0
+16	Bereik	bow_distance	PASSIVE	Bereik vergroot (passief)	0
+17	Onsterfelijk	invincibility	AUTO	Kans op tijdelijke onkwetsbaarheid	600
+18	Wondermiddel	removal	AUTO	Kans om de effecten bloeden, langzaam en gif te verwijderen.	480
+19	Meesterbrouwer	potion	PASSIVE	Verhoogt effectiviteit van regeneratiedrankjes (passief)	0
+20	Monsterjager	mob_bonus	PASSIVE	Verhoogt het kracht tegen monsters effect (passief)	0
+21	Adelaarsogen	exp	PASSIVE	Verhoogt ERV-vergaring (passief)	0
+22	Levensroof	hp_recover	PASSIVE	Absorbeert LP van gedode monsters (passief)	0
+23	Vederlicht	feather	AUTO	Activeert Vederlicht Lopen voor een korte periode	180

@@ -1,0 +1,10 @@
+[DELAY value;0]
+1. Du kan satse flere dæk per spil for at vinde den samme antal[ENTER]
+kister.[ENTER]
+[ENTER]
+2. Du kan satse op til 5 Konge Dæk.[ENTER]
+[ENTER]
+3. Konge Dæk kan ikke blive genvundet når spillet starter.[ENTER]
+[ENTER]
+4. Nogen mere detaljerede spille instruktioner kan findes under[ENTER]
+'Regler'.

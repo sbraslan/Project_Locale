@@ -1,0 +1,62 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner_weapons.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Voraussetzungen:
+*Erforderliches Level: 110
+*Eintrittskarte: *Passageticket+
+[RIGHT_ALIGN]Passageticket+
+[IMG=d:/ymir work/ui/wiki/93264.tga; Y=5; X=500]
+
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Du hast nur 45 Minuten Zeit, um den Dungeon zu beenden!
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=145; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Besiegen Sie alle Monster und zerstören Sie dann den Metinstein.
+[X_PADDING=20]Ziehen Sie das Gift in das Fass.
+[X_PADDING=20]Öffnen Sie dann das Tor mit dem Schlüssel.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Zerstören Sie die 4 Metinstones und dann die Monsterwelle.
+[X_PADDING=20]Zerstören Sie schließlich die Pflanze und öffnen Sie das Tor mit dem Schlüssel.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 3
+
+[X_PADDING=20]Das Ziel dieses Levels ist es, alle Fässer zu zerstören.
+[X_PADDING=20]Besiegen Sie alle Monster und dann den Metinstein.
+[X_PADDING=20]Ziehen Sie den Lymphstein, den Sie fallen gelassen haben, zum verzauberten Springbrunnen.
+[X_PADDING=20]Zerstören Sie dann erneut die Metinsteine und ziehen Sie den Lymphstein
+[X_PADDING=20]zurück zum Verzauberten Brunnen am Ende der Etage.
+[X_PADDING=20]Besiegen Sie alle Monster und dann den Metinstein.
+[X_PADDING=20]Ziehen Sie den fallengelassenen Lymphstein zum Brunnen und dann
+[X_PADDING=20]besiegen Sie die 2 Pflanzen.
+[X_PADDING=20]Ziehen Sie den Lymphstein zurück zum Brunnen und dann 
+[X_PADDING=20]besiegen Sie die Busch-Pflanzen.
+[X_PADDING=20]Ziehen Sie zum Schluss den fallen gelassenen Lymphstein zum letzten Brunnen
+[X_PADDING=20]und öffnen Sie das Tor mit dem Schlüssel.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 4
+
+[X_PADDING=20]Zerstören Sie die 4 Metinstones und dann die Monsterwelle.
+[X_PADDING=20]Dann wiederholen Sie den Vorgang und zerstören alle Metinstones und die neue Monsterwelle.
+[X_PADDING=20]Zuletzt besiegen Sie Raguwan und öffnen das Tor mit dem fallengelassenen Schlüssel.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 5
+
+[X_PADDING=20]Klicken Sie auf den vergifteten Botani am Anfang der Etage.
+[X_PADDING=20]Besiegen Sie dann alle Monster und beide Buschpflanzen.
+[X_PADDING=20]Ziehen Sie das Gartenwasser, das Sie erhalten haben, auf den Poisoned Botani und lassen Sie es dort fallen.
+[X_PADDING=20]Suchen Sie nun nach Pilzen, klicken Sie diese an und bringen Sie den Pilz zurück zum Poisoned Botani.
+[X_PADDING=20]Öffnen Sie zum Schluss das Tor mit dem Schlüssel.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 6
+
+[X_PADDING=20]Besiegen Sie alle Monster und dann die Metinstones, bis Sie das Evil Garden Fire erhalten.
+[X_PADDING=20]Heben Sie es auf und legen Sie es in den Honigbienenstock. 
+[X_PADDING=20]Besiegen Sie nun die infizierten Bienen.
+[X_PADDING=20]Wiederholen Sie diesen Vorgang, bis Sie alle Bienenstöcke auf die gleiche Weise zerstört haben.
+[X_PADDING=20]Besiegen Sie beide Raguwans und dann den Endboss.

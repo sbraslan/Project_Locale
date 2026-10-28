@@ -1,0 +1,3695 @@
+ACCE_ABSORB_COST	Стоимость сочетания: %d
+ACCE_ALREADY_REGISTER	Этот предмет уже используется.
+ACCE_DEL_ABSORDITEM	Поглотить предмет и этим его уничтожить?
+ACCE_DEL_SERVEITEM	Шарф 2 будет уничтожен если комбинирование не удастся.
+ACCE_DEL_SERVEITEM2	Шарф 2 будет уничтожен если комбинирование не удастся.
+ACCE_INITEM	Переместите предмет в это окно.
+ACCE_MAXGRADE	Это уже индивидуального пошива.
+ACCE_MAX_DRAINRATE	Макс. доля поглощения
+ACCE_NOTABSORBITEM	Если оружие или броня уже использовались в процессе поглощения, то их больше невозможно применить в данной процедуре.
+ACCE_NOT_SEALITEM	Предмет зачарованный оковами души невозможно использовать.
+ACCE_NOT_USINGITEM	Снаряженный предмет невозможно использовать в процессе комбинирования.
+ACCE_NOT_WINDOWOPEN	Вы не может использовать этот предмет если окно комбинирования открыто.
+ACCE_POSSIBLE_ACCE	Использовать можно лишь шарфы.
+ACCE_POSSIBLE_ACCEITEM	Извлечь бонусы можно только из оружия или брони.
+AFF_LOVE_POINT	Очки любви: %d%%
+ALIGNMENT_NAME	Ранг:
+alsoExportToCharset	windows-1251
+ATTACK_ERROR_UNKNOWN	Неизвестная ошибка атаки: %s
+ATTENDANCE_REWARD_QUESTION	Хотите получить награду сейчас?
+ATTR_6TH_7TH_ADD_QUESTION1	Вы не можете использовать предмет, пока добавляется бонус.
+ATTR_6TH_7TH_ADD_QUESTION2	Вы точно хотите добавить бонус?
+ATTR_6TH_7TH_CHANGE_FAIL	Вы не можете изменить бонус.
+ATTR_6TH_7TH_DESC1	а. Вам нужно добавить материалы, необходимые для предмета, чтобы добавить 6-й или 7-й бонус.
+ATTR_6TH_7TH_DESC2	б. Каждый фрагмент повышает вероятность успеха на 2%.
+ATTR_6TH_7TH_DESC3	в. Примените дополнение, чтобы еще больше повысить вероятность успеха.
+ATTR_6TH_7TH_DESC4	г. Добавление бонуса занимает 24 часа. NPC забирает себе предмет, к которому добавляется бонус. Когда процесс завершается, вы можете вновь забрать предмет.
+ATTR_6TH_7TH_POSSIBILITY	Вы можете добавить дополнительный бонус.
+ATTR_6TH_7TH_TOTAL_SUCCESS_PERCENT	Вероятность успеха: %.1f%%
+AURA_DRAIN_PER	Доля поглощения %.1f%%
+AURA_EVOLUTION_GOLD	[Аура] Недостаточно янг, чтобы развить.
+AURA_IMPOSSIBLE_ABSORBITEM	[Аура] Больше бонусов перенести нельзя.
+AURA_IMPOSSIBLE_EQUIPITEM	[Аура] Надетые и выбранные предметы нельзя переносить.
+AURA_IMPOSSIBLE_EVOLUTION_ITEM	[Аура] Нельзя развить.
+AURA_IMPOSSIBLE_EVOLUTION_ITEMCOUNT	[Аура] Не хватает предметов для развития.
+AURA_IMPOSSIBLE_GROWTHITEM	[Аура] Нельзя улучшить.
+AURA_IMPOSSIBLE_REFINEITEM	[Аура] Только одеяние ауры, щит, ожерелье, серьги или браслет.
+AURA_IMPOSSIBLE_SEALITEM	[Аура] Зачарованные оковами души предметы нельзя переносить.
+AURA_ITEM_NEED_REGISTER	[Аура] Нужно добавить предметы.
+AURA_LEVEL_STEP	Ур. %d (ступень %d)
+AURA_MAX_LEVEL	[Аура] У одеяния ауры максимальный уровень.
+AURA_NOTICE_DEL_ABSORDITEM	[Аура] Переносимый предмет уничтожается.
+AURA_OPEN_OTHER_WINDOW	Это нельзя сделать, пока открыто окно улучшения, развития или передачи параметров.
+AURA_POSSIBLE_AURAITEM	[Аура] Только одеяние ауры.
+AURA_POSSIBLE_REGISTER_AURAITEM	[Аура] Сначала нужно добавить одеяние ауры.
+AURA_TITLE_ABSORB	Перенести параметры на одеяние ауры
+AURA_TITLE_EVOLUTION	Развить одеяние ауры
+AURA_TITLE_GROWTH	Улучшить одеяние ауры
+AURA_TOOLTIP_EXP	Опыт (%d%% / 100%%)
+AURA_TOOLTIP_LEVEL	Ур. %d (ступень %d) (доля поглощения %.1f%%)
+AURA_TOOLTIP_NEED_YANG	%s янг
+AURA_TOOLTIP_NEXT	Нов.
+AURA_TOOLTIP_NOW	Текущ.
+AURA_TOOLTIP_RESOURCE	Расходный предмет
+AURA_TOOLTIP_RESOURCE_ITEM	%s * %d
+AUTO_TOOLTIP_CLEAR	Сбросить
+AUTO_TOOLTIP_LINE1	Навыки: выберите навыки для боя и перетащите их в ячейки. (Премиум)
+AUTO_TOOLTIP_LINE2	Примечание: для некоторых навыков можно изменять интервал срабатывания (в секундах).
+AUTO_TOOLTIP_LINE3	Зелья: выберите зелья для боя и перетащите их в ячейки. (Премиум)
+AUTO_TOOLTIP_LINE4	Примечание: ХП- и МП-зелья срабатывают, когда значения ХП или МП в процентах становятся ниже, чем указанные под зельем.
+AUTO_TOOLTIP_LINE5	Внимание: автоматическое использование навыков, зелий и оживления можно включить в магазине.
+AUTO_TOOLTIP_TITLE	Помощь при автоохоте
+BATTLE_POINT	Очки боя
+BATTLE_ROYALE_ALIVE_COUNT	В живых: %d
+BATTLE_ROYALE_APPLICATION_TITLE	Королевская битва
+BATTLE_ROYALE_CANNOT_OPEN_MALL	Это нельзя здесь открывать.
+BATTLE_ROYALE_KILL_COUNT	Убито врагов: %d
+BATTLE_ROYALE_MAINBUTTON_APPLICATION	Участвовать
+BATTLE_ROYALE_MAINBUTTON_CANCEL	Прервать
+BATTLE_ROYALE_MAINBUTTON_EXIT	Выйти
+BATTLE_ROYALE_MAINBUTTON_STARTABLE	Начать
+BATTLE_ROYALE_NOTIFY_APPLICATED	Вы заявились на Королевскую битву. Вы сможете присоединиться, когда соберется достаточно участников.
+BATTLE_ROYALE_NOTIFY_ENTRY_CLOSED	Регистрация на участие в Королевской битве закрыта.
+BATTLE_ROYALE_NOTIFY_STARTABLE	Вы можете присоединиться к Королевской битве. Нажмите на кнопку события, чтобы участвовать.
+BATTLE_ROYALE_NOTIFY_WINNER	Вы победили.
+BATTLE_ROYALE_PERSONAL_RANK	Личный ранг: %d
+BATTLE_ROYALE_QUESTION_USE_INFINITE_STAMINA	Хотите применить Бесконечную выносливость?
+BATTLE_ROYALE_WHO_KILLED	Вас убил игрок %s
+BATTLE_ROYALE_WINNER_1	Вы победили в Королевской битве!
+BATTLE_ROYALE_WINNER_2	Через несколько секунд вы перенесетесь в деревню.
+BEAD	Анимасфера
+BEAD_TIME_REMAINING_TO_GET	Анимасфера загрузится через: %d мин.
+BELT_RENEWAL_BANN_SIGN	Нельзя продолжить.
+BELT_RENEWAL_INVENTORY_FULL	В вашем инвентаре не хватает места.
+BNW_COIN	Монета провидца
+BUY_LIMIT_LEVEL	Лимит на покупку: %s
+CANNOT_ATTACK_DEST_IN_SAFE	Противник слишком далеко.
+CANNOT_ATTACK_SELF_IN_SAFE	Я не могу атаковать.
+CANNOT_DOING_PRIVATE_SHOP_OPEN	Вы не можете делать ничего другого, пока ваша лавка открыта.
+CANNOT_EQUIP_IN_EXCHANGE	Вы не можете менять снаряжение во время торга.
+CANNOT_EQUIP_IN_SHOP	Вы не можете менять снаряжение во время торга.
+CANNOT_OPEN_PRIVATE_SHOP_IN_SAFE_AREA	Открытие лавки на общем месте невозможно.
+CANNOT_SHOOT_DEST_IN_SAFE	Противник слишком далеко.
+CANNOT_SHOOT_EMPTY_ARROW	Мне нужна стрела.
+CANNOT_SHOOT_SELF_IN_SAFE	Я не могу сделать этого.
+CANNOT_SKILL_APPROACH	Я уверен, что не могу подойти ближе.
+CANNOT_SKILL_ATTACK	Я не могу атаковать.
+CANNOT_SKILL_BLUE	Пока активирована Огненная душа волка, Небесную душу волка активировать невозможно.
+CANNOT_SKILL_DEST_IN_SAFE	Противник слишком далеко.
+CANNOT_SKILL_EQUIP_FISHING_ROD	Без выбранного удилища рыбы не поймать.
+CANNOT_SKILL_HAVE_TO_RIDE	Мне нужен конь, чтобы применить это.
+CANNOT_SKILL_NEED_EMPTY_BOTTLE	У меня нет пустого кувшина.
+CANNOT_SKILL_NEED_POISON_BOTTLE	У меня нет кувшина с ядом.
+CANNOT_SKILL_NEED_TARGET	Кто цель?
+CANNOT_SKILL_NOT_ENOUGH_HP	Мне не хватает ХП!
+CANNOT_SKILL_NOT_ENOUGH_SP	Мне не хватает MП!
+CANNOT_SKILL_NOT_HORSE_SKILL	Я не могу применить это, когда я на коне.
+CANNOT_SKILL_NOT_MATCHABLE_WEAPON	Я не могу применить этот навык, пользуясь этим оружием.
+CANNOT_SKILL_NOT_YET_LEARN	Я не изучил этот Навык.
+CANNOT_SKILL_ONLY_FOR_ALLIANCE	Это распространяется только на участников группы.
+CANNOT_SKILL_ONLY_FOR_CORPSE	Это распространяется только на убитых.
+CANNOT_SKILL_RED	Пока активирована Небесная душа волка, Огненную душу волка активировать невозможно.
+CANNOT_SKILL_REMOVE_FISHING_ROD	Я не могу применить этот навык, пользуясь удочкой.
+CANNOT_SKILL_SELF_IN_SAFE	Я не могу атаковать противника с этой позиции.
+CANNOT_SKILL_USE_SELF	Я не могу применить это на себе.
+CANNOT_SKILL_WAIT_COOLTIME	Я пока не могу пользоваться этим навыком.
+CANNOT_USE	Использовать его невозможно.
+CANNOT_WHISPER_DEST_REFUSE	%s шептание заблокировано.	SA
+CANNOT_WHISPER_NOT_LOGON	%s вне сети.	SA
+CANNOT_WHISPER_SELF_REFUSE	Вы не можете использовать режим шепнуть, полностью блокировав его.	SNA
+CATEGORY_ARMOR_ARMOR_BODY	Доспехи
+CATEGORY_ARMOR_ARMOR_GLOVE	Перчатки
+CATEGORY_ARMOR_ARMOR_HEAD	Шлемы
+CATEGORY_ARMOR_ARMOR_SHIELD	Щиты
+CATEGORY_COSTUMES	Костюмы
+CATEGORY_COSTUMES_COSTUME_BODY	Костюмы
+CATEGORY_COSTUMES_COSTUME_HAIR	Прически
+CATEGORY_COSTUMES_COSTUME_WEAPON	Облики оружия
+CATEGORY_COSTUMES_ETC	Прочее
+CATEGORY_COSTUMES_SASH	Шарфы
+CATEGORY_DRAGON_STONE	Алхимия камней дракона
+CATEGORY_DRAGON_STONE_DRAGON_DIAMOND	Алмаз
+CATEGORY_DRAGON_STONE_DRAGON_GARNET	Гранат
+CATEGORY_DRAGON_STONE_DRAGON_JADE	Нефрит
+CATEGORY_DRAGON_STONE_DRAGON_ONYX	Оникс
+CATEGORY_DRAGON_STONE_DRAGON_RUBY	Рубин
+CATEGORY_DRAGON_STONE_DRAGON_SAPPHIRE	Сапфир
+CATEGORY_DRAGON_STONE_ETC	Прочее
+CATEGORY_EQUIPMENT_ARMOR	Снаряжение
+CATEGORY_EQUIPMENT_JEWELRY	Украшения
+CATEGORY_EQUIPMENT_WEAPON	Оружия
+CATEGORY_ETC	Прочее
+CATEGORY_ETC_ETC	Прочее
+CATEGORY_ETC_EVENT	Предметы для эвентов
+CATEGORY_ETC_GIFTBOX	Ларцы | Шкатулки
+CATEGORY_ETC_MATRIMORY	Свадьба
+CATEGORY_ETC_PARTI	Книги боевых искуств
+CATEGORY_ETC_POLYMORPH	Шары полиморфа
+CATEGORY_ETC_RECIPE	Изготовление зелий
+CATEGORY_ETC_SEAL	Оковы души
+CATEGORY_FISHING_PICK	Рыболовство | Горное дело
+CATEGORY_FISHING_PICK_EQUIPMENT_PICK	Кирки
+CATEGORY_FISHING_PICK_ETC	Прочее
+CATEGORY_FISHING_PICK_FISHING_POLE	Удилища
+CATEGORY_FISHING_PICK_FOOD	Рыба
+CATEGORY_FISHING_PICK_PICK_BOOK	Книги горного ремесла
+CATEGORY_FISHING_PICK_STONE	Руда
+CATEGORY_JEWELRY_ARMOR_EAR	Серьги
+CATEGORY_JEWELRY_ARMOR_FOOTS	Обувь
+CATEGORY_JEWELRY_ARMOR_NECK	Ожерелья
+CATEGORY_JEWELRY_ARMOR_PENDANT	Талисман
+CATEGORY_JEWELRY_ARMOR_WRIST	Браслеты
+CATEGORY_JEWELRY_ITEM_BELT	Пояса
+CATEGORY_MOUNT_PET	Ездовые животные | Питомцы
+CATEGORY_MOUNT_PET_CHARGED_PET	Питомцы
+CATEGORY_MOUNT_PET_EGG	Яйца питомцев
+CATEGORY_MOUNT_PET_FREE_PET	Питомцы со способностью повышения уровня
+CATEGORY_MOUNT_PET_MOUNT	Ездовые животные
+CATEGORY_POTION	Зелья
+CATEGORY_POTION_ABILITY	Расходные материалы
+CATEGORY_POTION_ETC	Прочее
+CATEGORY_POTION_HAIRDYE	Краска для волос
+CATEGORY_SKILL	Навыки
+CATEGORY_SKILL_BOOK_OF_OBLIVION	Книги забвения
+CATEGORY_SKILL_ETC	Прочее
+CATEGORY_SKILL_HORSE_SKILL_BOOK	Книга навыков коня
+CATEGORY_SKILL_PAHAE	Контратака | Усиление
+CATEGORY_SKILL_SKILL_BOOK	Книги навыков
+CATEGORY_TUNING	Улучшения
+CATEGORY_TUNING_ETC	Прочее
+CATEGORY_TUNING_RESOURCE	Материалы
+CATEGORY_TUNING_STONE	Камни духов
+CATEGORY_UNIQUE	Особые предметы
+CATEGORY_UNIQUE_ABILITY	Расходные материалы
+CATEGORY_UNIQUE_ETC	Прочее
+CATEGORY_WEAPON_WEAPON_ARROW	Стрелы
+CATEGORY_WEAPON_WEAPON_BELL	Колокольчики
+CATEGORY_WEAPON_WEAPON_BOW	Луки
+CATEGORY_WEAPON_WEAPON_CLAW	Когти
+CATEGORY_WEAPON_WEAPON_DAGGER	Кинжалы
+CATEGORY_WEAPON_WEAPON_FAN	Веера
+CATEGORY_WEAPON_WEAPON_MOUNT_SPEAR	Копья
+CATEGORY_WEAPON_WEAPON_QUIVER	Колчаны
+CATEGORY_WEAPON_WEAPON_SWORD	Одноручные оружия
+CATEGORY_WEAPON_WEAPON_TWO_HANDED	Двуручные оружия
+CHANGE_ALREADY_REGISTER	[Отображение] Этот предмет уже зарегистрирован.
+CHANGE_LOOK_CHANGE_ITEM	Хотите применить Отображение для предмета?
+CHANGE_LOOK_CHECK_OUT_REGISTER_ITEM	[Отображение] Сначала уберите предмет, для которого следует применить Отображение.
+CHANGE_LOOK_COST	Цена за Отображение: %s янг
+CHANGE_LOOK_DEL_ITEM	Использованный предмет пропадает.
+CHANGE_LOOK_DO_NOT_CHANGE_LOOK_ITEM	[Отображение] На предмет нельзя применить Отображение.
+CHANGE_LOOK_DO_NOT_EQUIP_ITEM	[Отображение] Нельзя применять Отображение на снаряженный предмет.
+CHANGE_LOOK_DO_NOT_REGISTER_ITEM	[Отображение] Предмет нельзя зарегистрировать.
+CHANGE_LOOK_DO_NOT_SEAL_ITEM	[Отображение] Предмет зачарован оковами души.
+CHANGE_LOOK_INSERT_CHANGE_LOOK_ITEM	[Отображение] Зарегистрируйте предмет, для которого хотите применить Отображение.
+CHANGE_LOOK_INSERT_ITEM	[Отображение] Сначала нужно зарегистрировать предмет.
+CHANGE_LOOK_NEED_MONEY	У вас не хватает либо янг, либо предметов.
+CHANGE_LOOK_OPEN_OTHER_WINDOW	[Отображение] Невозможно выполнить действие при открытом окне «Отображение».
+CHANGE_LOOK_TITLE	Отображение
+CHANGE_LOOK_TITLE2	Преображение ездового животного
+CHANGE_PET_PLEASE_APPEND_FIRST	Сначала нужно выбрать питомца.
+CHANGE_TOOLTIP2_LINE1	Приложите слева целевой предмет, а справа материал.
+CHANGE_TOOLTIP2_LINE2	Нажмите на галочку, чтобы использовать янг или марку преображения и изменить внешний вид ездового животного.
+CHANGE_TOOLTIP2_LINE3	Марка преображения меняет внешний вид ездового животного, не расходуя янг. (Марка при этом уничтожается)
+CHANGE_TOOLTIP2_LINE4	Если изменяется внешний вид ездового животного со сроком действия, исходный срок действия остается.
+CHANGE_TOOLTIP2_LINE5	В случае, если целевое ездовое животное – постоянное, а у животного-материала есть срок действия, измененный внешний вид сохранится на срок действия животного-материала.
+CHANGE_TOOLTIP_LINE1	Положите предмет, на который будет наложено Отображение, слева.
+CHANGE_TOOLTIP_LINE2	Положите второй предмет справа.
+CHANGE_TOOLTIP_LINE3	Облик предмета слева изменится, когда вы подтвердите
+CHANGE_TOOLTIP_LINE4	Отображение (V) и с вашего счета спишутся янг.
+CHANGE_TOOLTIP_LINE5	Использовав этот предмет,
+CHANGE_TOOLTIP_LINE6	вы можете применить Отображение не используя янг.
+CHANGE_TOOLTIP_TITLE	Отображение
+CHANNEL	Канал
+CHANNELING_CANNOT_LOGOUT	Выход обратно к окну регистрации невозможен.
+CHANNEL_EMPTY_SERVER	Сервер отсутствует.
+CHANNEL_NORMAL	Канал %d
+CHANNEL_NOTIFY_FULL	Этот канал перегружен.  Пожалуйста выберите другой.
+CHANNEL_NOT_FIND_INFO	Вы не можете получить информацию на этом канале.
+CHANNEL_PVP	Свободный поединок
+CHANNEL_SELECT_CHANNEL	Выберите канал
+CHANNEL_SELECT_REGION	Выберите регион.
+CHANNEL_SELECT_SERVER	Выбрать сервер
+CHANNEL_STATUS_BUSY	Сильно загружен
+CHANNEL_STATUS_FULL	Заполнен
+CHANNEL_STATUS_OFFLINE	Неизвестно
+CHANNEL_STATUS_RECOMMENDED	Рекомендуется
+CHANNEL_STATUS_VACANT	Слабо загружен
+CHANNEL_TEST_SERVER	Тестовый сервер
+CHANNEL_TEST_SERVER_ADDR	Тест %s:%d
+CHARACTER_CREATE_MODE	Создание персонажа
+CHARACTER_NAME	Название
+CHARACTER_SELECT_MODE	Выбор персонажа
+CHARGE_BEAD_QUESTION	Нужны анимасферы: %d. Хотите продолжить?
+CHATTING_SETTING_ADD	Добавить вкладку
+CHATTING_SETTING_ADD_MAX	Нельзя больше ничего добавить.
+CHATTING_SETTING_CHANGE_TITLE_NAME	Хотите сохранить название этого чата?
+CHATTING_SETTING_CHANGE_TITLE_NOT	Имя общего чата нельзя изменять.
+CHATTING_SETTING_CLEAR_QUESTION	Сбросить?
+CHATTING_SETTING_DEL	Удалить поле
+CHATTING_SETTING_LANGUAGE_OFF	Выкл
+CHATTING_SETTING_LANGUAGE_ON	Вкл
+CHATTING_SETTING_QUESTION_DESC_1	1. Закрепите сообщение о полученном за убийство монстров или потерянном опыте.
+CHATTING_SETTING_QUESTION_DESC_2	2. Закрепите сообщение о выпавшей добыче или заработанных янг.
+CHATTING_SETTING_RETURN	Восстановить поле
+CHATTING_SETTING_SETTING	Настройки
+CHAT_ALL	Все
+CHAT_BLOCK	Заблокировать
+CHAT_DICE_INFO	Бросок
+CHAT_GUILD	Гильдия
+CHAT_INFORMATION	Инфо
+CHAT_INSULT_STRING	Фраза содержит недопустимые слова.
+CHAT_LOG	Показывать все сообщения [L]
+CHAT_LOG_TITLE	Показать лог чата.
+CHAT_NORMAL	Норм.
+CHAT_NOTICE	Сервер
+CHAT_PARTY	Группа
+CHAT_SEND_CHAT	Отправить
+CHAT_SEND_MEMO	Шепнуть [Shift+Enter]
+CHAT_SHOUT	Крикнуть
+CHAT_SHOUT_LIMIT	Крикнуть можно только один раз в 15 секунд.
+CHAT_WHISPER	Шепнуть
+CHEQUE_SYSTEM_DO_NOT_DROP_MONEY	Вы не можете выбросить деньги.
+CHEQUE_SYSTEM_PICK_WON	Получено %d вон.
+CHEQUE_SYSTEM_SELL_PRICE	[Розничная цена]
+CHEQUE_SYSTEM_UNIT_WON	Воны
+CHEQUE_SYSTEM_UNIT_YANG	Янг
+CHEQUE_SYSTEM_WON	%s вон
+CHEQUE_SYSTEM_YANG	%s янг
+CLEAR_FLOOR	Этаж
+CLEAR_TIME	Время
+ClosePetChangeWndButton	Закрыть
+COMB_ACCE_IS_CONTINUE_PROCESS	Хотите продолжить?
+COMB_ACCE_WARNING_MESSAGE	При успехе или частичном успехе исходник уничтожается. Передача может не удаться. При неудаче или частичном успехе доля поглощения адресата уменьшается.
+COMB_ACCE_WARNING_MESSAGE1	При успехе или частичном успехе исходник уничтожается.
+COMB_ACCE_WARNING_MESSAGE2	Передача может не удаться.
+COMB_ACCE_WARNING_MESSAGE3	При неудаче или частичном успехе доля поглощения адресата уменьшается.
+COMB_ACCE_WILL_REMOVE_MATERIAL	При успехе или частичном успехе исходник уничтожается.
+COMB_ALREADY_APPEND	Этот предмет уже выбран.
+COMB_CANT_APPEND_ITEM	Этот предмет невозможно использовать.
+COMB_CANT_APPEND_SEALED_ITEM	Предмет зачарованный оковами души невозможно использовать.
+COMB_CANT_BASE_ITEM	Шарф, у которого уже есть бонус, не может быть адресатом.
+COMB_CANT_MATCH_DRAINRATE	Для передачи бонуса у обоих предметов должна быть одинаковая доля поглощения.
+COMB_CANT_MATCH_GRADE	Для передачи бонуса оба предмета должны быть одинакового качества.
+COMB_CANT_MATERIAL_ITEM	У исходного предмета должен быть бонус.
+COMB_COST	Цена: %s
+COMB_IS_CONTINUE_PROCESS	Желаете продолжить?
+COMB_NOTICE	Во время обмена книг открыть свою лавку невзоможно.
+COMB_NOTICE_NOT_OPEN	Обмен книг невозможен пока у вас открыта лавка.
+COMB_NOT_ALL_SLOT_APPEND_ITEM	Для передачи бонусов вам нужны предмет-исходник, предмет-адресат и предмет для перемещения.
+COMB_NOT_FULL_BOOK	Нет, так сделка не получится. Как я уже говорил, для обмена вы должны принести 10 книг.
+COMB_NOT_ITEM_IN_INVENTORY	Вы не можете использовать снаряженные предметы.
+COMB_NOT_MEDIUM_ITEM	Этот предмет невозможно использовать.
+COMB_WILL_REMOVE_MATERIAL	Исходник в случае успеха уничтожается.
+CREATE_ERROR_GM_NAME	Имя персонажа не должно содержать ,ГМ‘ .
+CREATE_ERROR_INSULT_NAME	Это имя недопустимо.
+CREATE_ERROR_LIMIT_LEVEL	Ваш персонаж должен достигнуть как минимум 80 уровня.
+CREATE_ERROR_TIME_LIMIT	Создание персонажа возможно лишь каждые 30 сек.
+CREATE_ERROR_WRONG_STRING	Недопустимое имя персонажа.
+CREATE_EXIST_SAME_NAME	Персонаж с таким именем уже существует.
+CREATE_FAILURE	Создание персонажа невозможно.
+CREATE_FULL	Создание дальнейших персонажей невозможно.
+CREATE_GM_NAME	ГМ
+CREATE_INPUT_NAME	Введите имя.
+CREATE_PLUS_STAT	Очки статуса пока доступны.
+CUBE_CATEGORY_ACCESSORY	Украшения
+CUBE_CATEGORY_ARMOR	Броня
+CUBE_CATEGORY_ARMOR_GLOVE	Перчатки
+CUBE_CATEGORY_BELT	Пояса
+CUBE_CATEGORY_ETC	Прочее
+CUBE_CATEGORY_EVENT	Событие
+CUBE_CATEGORY_JOB	Класс
+CUBE_CATEGORY_PET	Питомец
+CUBE_CATEGORY_SETADD_ARMOR	Изготовить набор-броню
+CUBE_CATEGORY_SETADD_HELMET	Изготовить набор-шлем
+CUBE_CATEGORY_SETADD_WEAPON	Изготовить набор-оружие
+CUBE_CATEGORY_WEAPON	Оружие
+CUBE_CATEGOR_SKILL_BOOK	Книга навыков
+CUBE_LIST_TEXT_ITEM_INFO	%s ( %d%% )
+CUBE_LIST_TEXT_MAKE_QUANTITY	[%d]
+CUBE_MAKE_CONFIRM_QUESTION_1	Хотя бы один используемый предмет крайне ценный (у него больше %d бонусов).
+CUBE_MAKE_CONFIRM_QUESTION_2	Вы точно хотите продолжить?
+CUBE_NOT_ENOUGH_GEM	У вас не хватает Gaya.
+CUBE_NOT_ENOUGH_GOLD	Не хватает янг для изготовления.
+CUBE_NOT_ENOUGH_MATERIAL	Не хватает материала для изготовления.
+CUBE_PLEASE_SELECT	Предметы не выбраны.
+CUBE_TOOLTIP_PASSIVE_JOB_LEFT_TIME	Осталось: {0}–{1} ч.
+CZ_REWARD_QUESTION_COMPLETE	Вы хотите получить это поле?
+CZ_REWARD_TOOLTIP_10GAN	Зодиак-регалии
+CZ_REWARD_TOOLTIP_10GAN_COUNT	Число в инвентаре
+CZ_REWARD_TOOLTIP_10GAN_NEED_COUNT	Нужное число
+CZ_REWARD_TOOLTIP_12ZI	Регалии стражников
+CZ_REWARD_TOOLTIP_12ZI_COUNT	Число в инвентаре
+CZ_REWARD_TOOLTIP_12ZI_NEED_COUNT	Нужное число
+CZ_REWARD_TOOLTIP_ALL_BOX	Звездное сокровище
+CZ_REWARD_TOOLTIP_CAN_GET_ALL_BOX	Нажмите сюда, чтобы получить в награду Звездное сокровище.
+CZ_REWARD_TOOLTIP_CAN_GET_GREEN_BOX	Нажмите сюда, чтобы получить в награду Авантюриновое сокровище.
+CZ_REWARD_TOOLTIP_CAN_GET_YELLOW_BOX	Нажмите сюда, чтобы получить в награду Ауреолиновое сокровище.
+CZ_REWARD_TOOLTIP_COMPLETABLE	Получить
+CZ_REWARD_TOOLTIP_GREEN_BOX	Авантюриновое сокровище
+CZ_REWARD_TOOLTIP_GREEN_BOX_COMP_CNT	Авантюриновых сокровищ получено: %d
+CZ_REWARD_TOOLTIP_WEEKLY	День
+CZ_REWARD_TOOLTIP_WEEKLY_FRI	Пятница
+CZ_REWARD_TOOLTIP_WEEKLY_MON	Понедельник
+CZ_REWARD_TOOLTIP_WEEKLY_SAT	Суббота
+CZ_REWARD_TOOLTIP_WEEKLY_SAT_SUN	Суббота/Воскресенье
+CZ_REWARD_TOOLTIP_WEEKLY_THU	Четверг
+CZ_REWARD_TOOLTIP_WEEKLY_TUE	Вторник
+CZ_REWARD_TOOLTIP_WEEKLY_WED	Среда
+CZ_REWARD_TOOLTIP_YELLOW_BOX	Ауреолиновое сокровище
+CZ_REWARD_TOOLTIP_YELLOW_BOX_COMP_CNT	Ауреолиновых сокровищ получено: %d
+DAY	Д
+DETAILS_0	Сила пр. метинов
+DETAILS_1	Сила пр. полулюдей
+DETAILS_2	Сопр. полулюдям
+DETAILS_3	Сила против орков
+DETAILS_4	Сила против нежити
+DETAILS_5	Сила против монстров
+DETAILS_6	Сила пр. зодиак-мон.
+DETAILS_7	Сила против зверей
+DETAILS_8	Сила против мистиков
+DETAILS_9	Сила против дьяволов
+DETAILS_10	Сила пр монстр.пуст.
+DETAILS_11	Сила пр. насекомых
+DETAILS_12	Показатель атаки
+DETAILS_13	Показатель защиты
+DETAILS_14	Средн. уровень урона
+DETAILS_15	Сопр ср. ур-ню урона
+DETAILS_16	Урон от навыков
+DETAILS_17	Сопротивл. урону навыков
+DETAILS_18	Магич./физич. атака
+DETAILS_19	Магическая атака
+DETAILS_20	Шанс крит. удара
+DETAILS_21	Пронз. удар
+DETAILS_22	Сопр. крит. удару
+DETAILS_23	Сопр. пронз. удару
+DETAILS_24	Сопр-ть молниям
+DETAILS_25	Сопр-ть льду
+DETAILS_26	Сопр-ть тьме
+DETAILS_27	Сопр-ть огню
+DETAILS_28	Сопр-ть ветру
+DETAILS_29	Сопр-ть земле
+DETAILS_30	Сила молний
+DETAILS_31	Сила льда
+DETAILS_32	Сила тьмы
+DETAILS_33	Сила огня
+DETAILS_34	Сила ветра
+DETAILS_35	Сила земли
+DETAILS_36	Сила против Воинов
+DETAILS_37	Сила против Ниндзя
+DETAILS_38	Сила против Сур
+DETAILS_39	Сила против Шаманов
+DETAILS_40	Сила против Ликанов
+DETAILS_41	Защита против Воинов
+DETAILS_42	Защита против Ниндзя
+DETAILS_43	Защита против Сур
+DETAILS_44	Защита пр. Шаманов
+DETAILS_45	Защита пр. Ликанов
+DETAILS_46	Защита от уд. мечом
+DETAILS_47	Защ. от двуруч.оруж.
+DETAILS_48	Защ. от удара кинж.
+DETAILS_49	Защита от когтей
+DETAILS_50	Защ. от удара колок.
+DETAILS_51	Защ. от удара веером
+DETAILS_52	Защита от стрел
+DETAILS_53	Шанс на головокруж.
+DETAILS_54	Шанс на замедление
+DETAILS_55	Шанс на отравление
+DETAILS_56	Сопр-ть яду
+DETAILS_57	Атака с кровотеч.
+DETAILS_58	Сопр. ат. с кровотеч
+DETAILS_59	Кража жизни
+DETAILS_60	Кража МП
+DETAILS_61	Восстановление ХП
+DETAILS_62	Восстановление МП
+DETAILS_63	Блокировать атаку
+DETAILS_64	Уклониться от стрел
+DETAILS_65	Отражение физ. атаки
+DETAILS_66	Восст ХП при убийст.
+DETAILS_67	Восст МП при убийст.
+DETAILS_68	Двойной опыт
+DETAILS_69	Двойные янг
+DETAILS_70	Шанс добычи
+DETAILS_71	Показатель атаки
+DETAILS_72	Защита
+DETAILS_73	Опыт
+DETAILS_74	Шанс добычи
+DETAILS_75	Двойные янг
+DETAILS_76	Сопр-ть магии
+DETAILS_77	Рассеивание магии
+DETAILS_78	Сопротивл. монстрам
+DETAILS_79	Бонус к маг. атаке
+DETAILS_ATTBONUS_BELL	Надлом против колокольчиков
+DETAILS_ATTBONUS_BOW	Надлом против стрел
+DETAILS_ATTBONUS_CLAW	Надлом против когтей
+DETAILS_ATTBONUS_DAGGER	Надлом против кинжалов
+DETAILS_ATTBONUS_FAN	Надлом против вееров
+DETAILS_ATTBONUS_SWORD	Надлом против мечей
+DETAILS_ATTBONUS_TWOHAND	Надлом против двуручного оружия
+DETAILS_CATE_1	Урон/защита
+DETAILS_CATE_2	Стихийные бонусы
+DETAILS_CATE_3	Бонусы класса
+DETAILS_CATE_4	Бонусы оружия
+DETAILS_CATE_5	Прочие бонусы
+DETAILS_CATE_6	Особые бонусы
+DETAILS_HIT_PCT	Меткость
+DETAILS_RESIST_MOUNT_FALL	Сопротивляемость падению
+DETAILS_TITLE	Детали
+DETAILS_TOOLTIP_0	Сила против камней метина: вы наносите им больше урона.
+DETAILS_TOOLTIP_1	Сила против полулюдей: вы наносите больший урон полулюдям.
+DETAILS_TOOLTIP_2	Сопротивляемость полулюдям: снижает получаемый от полулюдей урон.
+DETAILS_TOOLTIP_3	Сила против орков: вы наносите больше урона оркам.
+DETAILS_TOOLTIP_4	Сила против нежити: вы наносите больше урона нежити.
+DETAILS_TOOLTIP_5	Сила против монстров: вы наносите больше урона монстрам.
+DETAILS_TOOLTIP_6	Сила против зодиак-монстров: вы наносите больше урона зодиак-монстрам.
+DETAILS_TOOLTIP_7	Сила против зверей: вы наносите больше урона диким зверям.
+DETAILS_TOOLTIP_8	Сила против мистиков: вы наносите больше урона мистикам.
+DETAILS_TOOLTIP_9	Сила против дьяволов: вы наносите больше урона дьяволам.
+DETAILS_TOOLTIP_10	Сила против монстров пустыни: вы наносите больше урона монстрам пустыни.
+DETAILS_TOOLTIP_11	Сила против насекомых: вы наносите больше урона насекомым.
+DETAILS_TOOLTIP_12	Повышает показатель атаки.
+DETAILS_TOOLTIP_13	Повышает показатель защиты.
+DETAILS_TOOLTIP_14	Повышает средний уровень урона, который вы наносите врагам при атаке.
+DETAILS_TOOLTIP_15	Сопротивляемость среднему уровню урона: снижает получаемый урон при атаке на вас.
+DETAILS_TOOLTIP_16	Повышает урон, наносимый навыками.
+DETAILS_TOOLTIP_17	Сопротивляемость урону от навыков: снижает получаемый от навыков урон.
+DETAILS_TOOLTIP_18	Повышает показатели и магической, и физической атаки.
+DETAILS_TOOLTIP_19	Повышает урон, который вы наносите при магической атаке.
+DETAILS_TOOLTIP_20	Повышает шанс нанести критический удар.
+DETAILS_TOOLTIP_21	Шанс на пронзающий удар: увеличивает шанс нанести пронзающий удар.
+DETAILS_TOOLTIP_22	Сопротивляемость критическим ударам: снижает урон от критических ударов.
+DETAILS_TOOLTIP_23	Сопротивляемость пронзающим ударам: снижает урон от пронзающих ударов.
+DETAILS_TOOLTIP_24	Снижает получаемый от определенных монстров урон.
+DETAILS_TOOLTIP_25	Снижает получаемый от определенных монстров урон.
+DETAILS_TOOLTIP_26	Сопротивляемость тьме: снижает получаемый от определенных монстров урон.
+DETAILS_TOOLTIP_27	Снижает получаемый от определенных монстров урон.
+DETAILS_TOOLTIP_28	Снижает получаемый от определенных монстров урон.
+DETAILS_TOOLTIP_29	Снижает получаемый от определенных монстров урон.
+DETAILS_TOOLTIP_30	Силой молнии повышает урон, который вы наносите.
+DETAILS_TOOLTIP_31	Силой льда повышает урон, который вы наносите.
+DETAILS_TOOLTIP_32	Силой тьмы повышает урон, который вы наносите.
+DETAILS_TOOLTIP_33	Силой огня повышает урон, который вы наносите.
+DETAILS_TOOLTIP_34	Силой ветра повышает урон, который вы наносите.
+DETAILS_TOOLTIP_35	Силой земли повышает урон, который вы наносите.
+DETAILS_TOOLTIP_36	Сила против воинов: вы наносите больше урона воинам.
+DETAILS_TOOLTIP_37	Сила против ниндзя: вы наносите больше урона ниндзя.
+DETAILS_TOOLTIP_38	Сила против сур: вы наносите больше урона сурам.
+DETAILS_TOOLTIP_39	Сила против шаманов: вы наносите больше урона шаманам.
+DETAILS_TOOLTIP_40	Сила против ликанов: вы наносите больше урона ликанам.
+DETAILS_TOOLTIP_41	Шанс на отражение атак воинов: снижает получаемый от воинов урон.
+DETAILS_TOOLTIP_42	Шанс на отражение атак ниндзя: снижает получаемый от ниндзя урон.
+DETAILS_TOOLTIP_43	Шанс на отражение атак сур: снижает получаемый от cур урон.
+DETAILS_TOOLTIP_44	Шанс на отражение атак шаманов: снижает получаемый от шаманов урон.
+DETAILS_TOOLTIP_45	Шанс на отражение атак ликанов: снижает получаемый от ликанов урон.
+DETAILS_TOOLTIP_46	Снижает получаемый от мечей урон.
+DETAILS_TOOLTIP_47	Снижает получаемый от двуручного оружия урон.
+DETAILS_TOOLTIP_48	Снижает получаемый от кинжалов урон.
+DETAILS_TOOLTIP_49	Снижает получаемый от когтей урон.
+DETAILS_TOOLTIP_50	Снижает получаемый от колокольчиков урон.
+DETAILS_TOOLTIP_51	Снижает получаемый от вееров урон.
+DETAILS_TOOLTIP_52	Снижает получаемый от луков и стрел урон.
+DETAILS_TOOLTIP_53	Повышает шанс устроить врагу головокружение.
+DETAILS_TOOLTIP_54	Повышает шанс замедлить врага.
+DETAILS_TOOLTIP_55	Повышает шанс отравить врага.
+DETAILS_TOOLTIP_56	Снижает получаемый от яда урон.
+DETAILS_TOOLTIP_57	Повышает шанс провести атаку с кровотечением.
+DETAILS_TOOLTIP_58	Сопротивляемость атакам с кровотечением: снижает получаемый от атак с кровотечением урон.
+DETAILS_TOOLTIP_59	Попадая по врагу, вы крадете его ХП.
+DETAILS_TOOLTIP_60	Попадая по врагу, вы крадете его МП.
+DETAILS_TOOLTIP_61	Ускоряет восстановление ваших очков жизненной энергии (ХП).
+DETAILS_TOOLTIP_62	Ускоряет восстановление ваших очков маны (МП).
+DETAILS_TOOLTIP_63	Шанс поставить блок физической атаке: повышает шанс избежать физической атаки противника.
+DETAILS_TOOLTIP_64	Шанс увернуться от стрелы: повышает шанс избежать стрелы или дальней атаки монстра.
+DETAILS_TOOLTIP_65	Шанс отразить физическую атаку противника: часть урона от физической атаки врага перейдет на него самого.
+DETAILS_TOOLTIP_66	Восстановление ХП при убийстве: вы получаете очки жизненной энергии за убийства врагов.
+DETAILS_TOOLTIP_67	Восстановление МП при убийстве: вы получаете очки маны за убийства врагов.
+DETAILS_TOOLTIP_68	Шанс получить вдвое больше опыта: повышает шанс на бонусный опыт при победе над противником.
+DETAILS_TOOLTIP_69	Шанс получить вдвое больше янг: повышает вероятность получить вдвое больше янг в добыче.
+DETAILS_TOOLTIP_70	Шанс на выпадание предметов: повышает шанс получить вдвое больше предметов в добыче.
+DETAILS_TOOLTIP_71	Повышает показатель атаки.
+DETAILS_TOOLTIP_72	Повышает показатель защиты.
+DETAILS_TOOLTIP_73	Повышает сбор опыта.
+DETAILS_TOOLTIP_74	Шанс на выпадание предметов: повышает ваши шансы добыть предметы.
+DETAILS_TOOLTIP_75	Шанс на выпадание янг: повышает ваши шансы получить янг в добыче.
+DETAILS_TOOLTIP_76	Снижает урон, получаемый при магической атаке.
+DETAILS_TOOLTIP_77	Снижает сопротивляемость магии вашего противника.
+DETAILS_TOOLTIP_78	Получаемый от монстров урон уменьшается.
+DETAILS_TOOLTIP_79	Повышает показатель магической атаки.
+DETAILS_TOOLTIP_ATTBONUS_BELL	Надлом защиты от удара колокольчиком: снижает защиту вашего противника от удара колокольчиком.
+DETAILS_TOOLTIP_ATTBONUS_BOW	Надлом защиты от удара стрелой: снижает защиту вашего противника от удара стрелой.
+DETAILS_TOOLTIP_ATTBONUS_CLAW	Надлом защиты от удара когтем: снижает защиту вашего противника от удара когтем.
+DETAILS_TOOLTIP_ATTBONUS_DAGGER	Надлом защиты от удара кинжалом: снижает защиту вашего противника от удара кинжалом.
+DETAILS_TOOLTIP_ATTBONUS_FAN	Надлом защиты от удара веером: снижает защиту вашего противника от удара веером.
+DETAILS_TOOLTIP_ATTBONUS_SWORD	Надлом защиты от удара мечом: снижает защиту вашего противника от удара мечом.
+DETAILS_TOOLTIP_ATTBONUS_TWOHAND	Надлом защиты от удара двуручным оружием: снижает защиту вашего противника от удара двуручным оружием.
+DETAILS_TOOLTIP_HIT_PCT	Повышает шанс попасть во врага
+DETAILS_TOOLTIP_RESIST_MOUNT_FALL	Сопротивляемость падению: уменьшает вероятность упасть с ездового животного.
+DONT_USE_ITEM_WHEN_SHOW_CONFIRM	Во время запроса невозможно перемещать предметы.
+DO_NOT_INSERT_UPBRINGING_PET	Нельзя выбрать активного питомца.
+DO_YOU_BUY_ITEM1	Купить %s за %s янг?
+DO_YOU_BUY_ITEM2	Купить %s (%s шт.) за %s янг?
+DO_YOU_BUY_ITEM3	Купить %s за %s вон и %s янг?
+DO_YOU_BUY_ITEM4	Купить %s (%s штук) за %s вон и %s янг?
+DO_YOU_DROP_MONEY	Хотите выбросить %d янг?
+DO_YOU_SELL_ITEM1	Продать %s за %s янг?
+DO_YOU_SELL_ITEM2	Продать %s (%s шт.) за %s янг?
+DRAGON_GATE_AUTO_REINFORCE_QUESTION	
+DRAGON_GATE_CLEAR	
+DRAGON_GATE_CLEAR_NOT_ENOUGH_MAX_REINFORCE	
+DRAGON_GATE_CLEAR_QUESTION	
+DRAGON_GATE_CLEAR_SELECT	
+DRAGON_GATE_CLEAR_TOOLTIP	
+DRAGON_GATE_DEFENSE	
+DRAGON_GATE_ENCHANT_DARK	
+DRAGON_GATE_ENCHANT_EARTH	
+DRAGON_GATE_ENCHANT_ELECTRIC	
+DRAGON_GATE_ENCHANT_FIRE	
+DRAGON_GATE_ENCHANT_ICE	
+DRAGON_GATE_ENCHANT_WIND	
+DRAGON_GATE_EXPERIENCE	
+DRAGON_GATE_HEALTH	
+DRAGON_GATE_ITEM_CLEAR	
+DRAGON_GATE_ITEM_CLEAR_QUESTION	
+DRAGON_GATE_MARK	
+DRAGON_GATE_MASTER_STEP_CHECK	
+DRAGON_GATE_MY_POINT_TOOLTIP	
+DRAGON_GATE_NEED_POINT_TOOLTIP	
+DRAGON_GATE_PAEWANG	
+DRAGON_GATE_POINT_CLEAR	
+DRAGON_GATE_POINT_CLEAR_NOT_ENOUGH_POINT	
+DRAGON_GATE_POINT_CLEAR_QUESTION	
+DRAGON_GATE_POWER	
+DRAGON_GATE_REINFORCE_APPLY_DEFAULT_TOOLTIP	
+DRAGON_GATE_REINFORCE_BONUS	
+DRAGON_GATE_REINFORCE_BONUS_APPLY	
+DRAGON_GATE_REINFORCE_COUNT_TOOLTIP	
+DRAGON_GATE_REINFORCE_MAX	
+DRAGON_GATE_REINFORCE_NOT_BONUS_APPLY	
+DRAGON_GATE_REINFORCE_NOT_BONUS_APPLY2	
+DRAGON_GATE_REINFORCE_NOT_ENOUGH_POINT	
+DRAGON_GATE_REINFORCE_QUESTION	
+DRAGON_GATE_REINFORCE_RESULT	
+DRAGON_GATE_REINFORCE_TOOLTIP	
+DRAGON_GATE_REINFORCE_TOOLTIP_LINE1	
+DRAGON_GATE_REINFORCE_TOOLTIP_LINE2	
+DRAGON_GATE_REINFORCE_TOOLTIP_TITLE	
+DRAGON_GATE_RESIST_DARK	
+DRAGON_GATE_RESIST_EARTH	
+DRAGON_GATE_RESIST_ELECTRIC	
+DRAGON_GATE_RESIST_FIRE	
+DRAGON_GATE_RESIST_ICE	
+DRAGON_GATE_RESIST_WIND	
+DRAGON_GATE_STEP_CLEAR_INITIALIZE_FIRST	
+DRAGON_GATE_STEP_CLEAR_QUESTION_1	
+DRAGON_GATE_STEP_CLEAR_QUESTION_2	
+DRAGON_GATE_STEP_CLEAR_TOOLTIP	
+DRAGON_GATE_STEP_CLEAR_WARNING_QUESTION_1	
+DRAGON_GATE_STEP_CLEAR_WARNING_QUESTION_2	
+DRAGON_GATE_STEP_UPGRADE_NOT_ENOUGH_POINT	
+DRAGON_GATE_STEP_UPGRADE_QUESTION_1	
+DRAGON_GATE_STEP_UPGRADE_QUESTION_2	
+DRAGON_GATE_STEP_UPGRADE_TOOLTIP	
+DRAGON_GATE_SUNGMA_HP	
+DRAGON_GATE_SUNGMA_IMMUNE	
+DRAGON_GATE_SUNGMA_MOVE	
+DRAGON_GATE_SUNGMA_STR	
+DRAGON_GATE_TOOLTIP_LINE1	
+DRAGON_GATE_TOOLTIP_LINE2	
+DRAGON_GATE_TOOLTIP_LINE3	
+DRAGON_GATE_TOOLTIP_LINE4	
+DRAGON_GATE_TOOLTIP_LINE5	
+DRAGON_GATE_TOOLTIP_LINE6	
+DRAGON_GATE_TOOLTIP_LINE7	
+DRAGON_GATE_TOOLTIP_LINE8	
+DRAGON_GATE_TOOLTIP_LINE9	
+DRAGON_GATE_TOOLTIP_LINE10	
+DRAGON_GATE_TOOLTIP_LINE11	
+DRAGON_GATE_TOOLTIP_NOT_ENOUGH_REINFORCE	
+DRAGON_GATE_TOOLTIP_TITLE	
+DRAGON_GATE_TUGWI	
+DRAGON_SOUL_CANNOT_REFINE	Улучшение этого Камня Дракона невозможно.
+DRAGON_SOUL_CANNOT_REFINE_MORE	Этот Камень Дракона уже достиг наивысшего уровня.
+DRAGON_SOUL_EQUIP_WARNING1	Удаление Камня Дракона, сложный процесс.
+DRAGON_SOUL_EQUIP_WARNING2	И все же вы желаете попробовать?
+DRAGON_SOUL_EXPIRED	Использованный Камень Дракона
+DRAGON_SOUL_INVALID_DRAGON_SOUL	Это не тот Камень Дракона.
+DRAGON_SOUL_IS_NOT_DRAGON_SOUL	Это не Камень Дракона.
+DRAGON_SOUL_NOT_DRAGON_SOUL_REFINE_STONE	Это не тот Камень Дракона.
+DRAGON_SOUL_NOT_ENOUGH_MATERIAL	У вас недостаточно материалов для улучшения.
+DRAGON_SOUL_NOT_ENOUGH_MATERIAL2	Для ваш. %s\n нужно: %s %dx
+DRAGON_SOUL_NOT_ENOUGH_MONEY	У вас не хватает янг, чтобы сменить бонус.
+DRAGON_SOUL_NOT_MATCHED_SLOT	Камень Дракона не помещается в эту ячейку.
+DRAGON_SOUL_STEP_LEVEL1	Чистота: матовый.
+DRAGON_SOUL_STEP_LEVEL2	Чистота: прозрачный.
+DRAGON_SOUL_STEP_LEVEL3	Чистота: безупречный.
+DRAGON_SOUL_STEP_LEVEL4	Чистота: бриллиантовый.
+DRAGON_SOUL_STEP_LEVEL5	Чистота: великолепный.
+DRAGON_SOUL_STRENGTH	Уровень: +%d	SA
+DRAGON_SOUL_UNEQUIP_WARNING1	Камень Дракона может быть уничтожен.
+DRAGON_SOUL_UNEQUIP_WARNING2	И все же вы желаете попробовать?
+DRAGON_SOUL_UNMATCHED_SLOT	Это не та ячейка.
+DRAGON_SOUL_UNQUALIFIED	Вы пока не можете использовать алхимию Дракона.
+DROP_ITEM_FAILURE_EQUIP_ITEM	Вы не можете выбросить снаряженный предмет.
+DROP_ITEM_FAILURE_PRIVATE_SHOP	Вы не можете выбросить снаряженный предмет во время открытия лавки.
+DROP_MONEY_FAILURE_1000_OVER	Вы можете выбросить не больше 999 янг.
+DS_SYSTEM_MSG_1	Вам нужно %s %d раз(а).
+DUTCH_AUCTION_CLOSE_OTHER_WINDOW	Прежде чем открыть блиц-аукцион, закройте все окна.
+ELEMENT_BUFF_DARK_TOOLTIP	Вы можете наносить больше урона, пока находитесь под влиянием цветка мощи (тьма).
+ELEMENT_BUFF_EARTH_TOOLTIP	Вы можете наносить больше урона, пока находитесь под влиянием цветка мощи (земля).
+ELEMENT_BUFF_ELECT_TOOLTIP	Вы можете наносить больше урона, пока находитесь под влиянием цветка мощи (молния).
+ELEMENT_BUFF_FIRE_TOOLTIP	Вы можете наносить больше урона, пока находитесь под влиянием цветка мощи (огонь).
+ELEMENT_BUFF_ICE_TOOLTIP	Вы можете наносить больше урона, пока находитесь под влиянием цветка мощи (лед).
+ELEMENT_BUFF_NONE_TOOLTIP	Вы можете наносить больше урона, пока находитесь под влиянием цветка мощи.
+ELEMENT_BUFF_WIND_TOOLTIP	Вы можете наносить больше урона, пока находитесь под влиянием цветка мощи (ветер).
+EMOTION_ALCOHOL	Ваше здоровье!
+EMOTION_ANGRY	Досада
+EMOTION_ATTRACTIVE	Соблазнение
+EMOTION_BANTER	Ирония
+EMOTION_BUSY	Стресс
+EMOTION_CALL	Звонок
+EMOTION_CELEBRATION	Вечеринка
+EMOTION_CHARGING	Зарядка
+EMOTION_CHEERS_1	Ликование
+EMOTION_CHEERS_2	Ликование 2
+EMOTION_CHEERUP	Ликование
+EMOTION_CHOOSE_ONE	Выберите цель.
+EMOTION_CLAP	Апплодисмент
+EMOTION_CLAP_KISS	Поцелуй
+EMOTION_CONGRATULATION	Одобрение
+EMOTION_DANCE_1	Танец 1
+EMOTION_DANCE_2	Танец 2
+EMOTION_DANCE_3	Танец 3
+EMOTION_DANCE_4	Танец 4
+EMOTION_DANCE_5	Танец 5
+EMOTION_DANCE_6	Gumsan Style
+EMOTION_DANCE_7	Самба
+EMOTION_DOZE	Дремота
+EMOTION_EXERCISE	Разминка
+EMOTION_FORGIVE	Мольба о прощении
+EMOTION_FRENCH_KISS	Поцелуй языками
+EMOTION_HUNGRY	Голод
+EMOTION_JOY	Радость
+EMOTION_LETTER	Письмо
+EMOTION_NOSAY	Нет слов
+EMOTION_PUSH_UP	Отжимания
+EMOTION_SAD	Печаль
+EMOTION_SELFIE	Селфи
+EMOTION_SHY	Отказ
+EMOTION_SIREN	Сирена
+EMOTION_SLAP	Удар
+EMOTION_SMH	Адская башня Сунг Махи
+EMOTION_WEATHER_1	Солнце
+EMOTION_WEATHER_2	Радуга
+EMOTION_WEATHER_3	Луна
+EMOTION_WHIRL	Путаница
+EMPIRE_A	Империя Шиньзо
+EMPIRE_B	Империя Хунджо
+EMPIRE_C	Империя Джинно
+EMPIRE_SELECT_MODE	Выбор империи
+EQUIPMENT_ADDITIONAL_PAGE_ACTIVE	Дополнительная страница снаряжения активирована. Ее можно найти в окне снаряжения.
+EQUIPMENT_ALREADY_USE_ITEM	Нельзя использовать еще раз.
+EQUIPMENT_CANNOT_ADDITIONAL_EQUIPMENT_PAGE	Вы не можете менять страницу снаряжения, пока заняты чем-то еще.
+EQUIPMENT_CANNOT_ADDITIONAL_EQUIPMENT_PAGE_ITEM	Вы не можете сменить страницу снаряжения, поскольку выбрали недопустимый предмет.
+EQUIPMENT_CHANGE_PAGE_COOLTIME_FAIL	Попробуйте еще раз через 1 минуту.
+EQUIPMENT_CHANGE_PAGE_SUCCESS	Вы поменяли страницу снаряжения.
+EQUIPMENT_TITLE_NAME	Окно снаряжения
+EXCHANGE_CANNOT_GIVE	Торговать этим предметом нельзя.
+EXCHANGE_CANT_EDIT_MONEY	Изменить стоимость в данный момент невозможно.
+EXCHANGE_FAILURE_EQUIP_ITEM	Вы не можете сменить используемые предметы..
+EXCHANGE_MONEY	Стоимость
+EXCHANGE_TITLE	Произвести сделку с %s (%d)
+EXINVEN_USE_ITEM_FAIL_FALL_SHORT	Вам требуется еще %d расширение(-я, -ий) инвентаря.
+EXINVEN_USE_ITEM_FAIL_FOURTH_PAGE_STAGE_MAX	Ваш инвентарь уже расширен до максимальных размеров.
+EXINVEN_USE_ITEM_QUESTION	Хотите увеличить инвентарь, используя %d расширение (-я, -ий) инвентаря?
+FISHING_FAILURE	Вы потеряли наживку.
+FISHING_NOTIFY1	Похоже, что %s клюнула.
+FISHING_NOTIFY2	Похоже, что %s поймана.
+FISHING_RENEWAL_CANNOT_EMOTION	Вы не можете пользоваться эмоциями, пока рыбачите.
+FISHING_RENEWAL_CANNOT_OPEN_1	Нельзя открыть, пока вы рыбачите.
+FISHING_RENEWAL_CANNOT_OPEN_2	Вы не можете выполнить это действие, пока рыбачите.
+FISHING_RENEWAL_QUESTION	Рыба клюнула. Хотите ее поймать?
+FISHING_RENEWAL_TIMEOUT	Вы промедлили. Рыба ушла.
+FISHING_SUCCESS1	Вы поймали %s!
+FISHING_SUCCESS2	%s принадлежит вам!
+FISHING_UNKNOWN	Я немогу разглядеть что я поймал.
+FISHING_WRONG_PLACE	Я не могу здесь рыбачить.
+FLOWER_EVENT_GET_SHOOT_CHRYSANTHEMUM	Вы получили ростки хризантемы.
+FLOWER_EVENT_GET_SHOOT_DAFFODIL	Вы получили ростки нарцисса.
+FLOWER_EVENT_GET_SHOOT_ENVELOPE	Вы получили цветочные семена.
+FLOWER_EVENT_GET_SHOOT_LILY	Вы получили ростки лилии.
+FLOWER_EVENT_GET_SHOOT_MAY_BELL	Вы получили ростки ландыша.
+FLOWER_EVENT_GET_SHOOT_SUNFLOWER	Вы получили ростки подсолнуха.
+FLOWER_EVENT_ITEM_FULL_AND_NOT_USE	Вы не можете использовать этот предмет — у вас уже максимальное число ростков.
+FLOWER_EVENT_NOT_ENOUGH_EVENTORY_SPACE	У вас не хватает места в инвентаре.
+FLOWER_EVENT_NOT_ENOUGH_SHOOT_COUNT	У вас не хватает ростков.
+FLOWER_EVENT_NOT_ENOUGH_SHOOT_ENVELOPE	У вас не хватает цветочных семян.
+FLOWER_EVENT_USE_ITEM_TEXT1	Хотите заменить активированный эффект?
+FLOWER_EVENT_USE_ITEM_TEXT2	Попытка может провалиться, а цветок при этом завянет.
+FOR_FEMALE	Для женщин
+FOR_MALE	Для мужчин
+FRAGMENT_COMB_COST	Стоимость сочетания: %s
+GAME_CANNOT_MINING	Сбор руды невозможен, пока вы на коне.
+GAME_CANNOT_PICK_ITEM	Забрать предмет невозможно, поскольку он был захвачен не вами.
+GAME_GUILDWAR_NOW_JOIN	Хотите присоединиться к войне гильдий?
+GAME_INIT_ERROR_CURSOR	Курсор не установлен.
+GAME_INIT_ERROR_DIRECTX	Для игры необходимо установить DirectX 8.1. \nУстановите DirectX версии 8.1 или выше.
+GAME_INIT_ERROR_GRAPHICS_BAD_PERFORMANCE	Видеоадаптер не найден. \nПроверьте правильность установки видеокарты.
+GAME_INIT_ERROR_GRAPHICS_NOT_EXIST	Видеоадаптер не установлен.\nПроверьте, вставлена ли видеокарта.\nЛибо включите аппаратное ускорение.\n(Установите ползунок аппаратного ускорения на максимум в \nПанель управления - Экран - Параметры - Дополнительно - Диагностика)
+GAME_INIT_ERROR_GRAPHICS_NOT_SUPPORT_32BIT	Ваша видеокарта не поддерживает 32-битную цветопередачу в оконном режиме. \nУстановите 16-битную цветопередачу или полноэкранный режим.
+GAME_INIT_ERROR_ITEM_PROTO	Не найдены данные о предметах. \nПереустановите игру.
+GAME_INIT_ERROR_MAIN_WINDOW	Приложение вызвало ошибку и будет закрыто.
+GAME_INIT_ERROR_MOB_PROTO	Не найдены данные о существах. \nПереустановите игру.
+GAME_INIT_ERROR_NETWORK	Сетевые устройства не установлены. \nПроверьте соединение с интернетом.
+GAME_PICK_MONEY	Вы получили %d янг.
+GEM_SYSTEM_ADD_SLOT	Требуется предмет: %s.\nХотите использовать %d таких, чтобы открыть еще одно место?
+GEM_SYSTEM_BUY_ITEM	Хотите купить этот предмет?
+GEM_SYSTEM_NAME	Gaya
+GEM_SYSTEM_NOT_ENOUGHT_REFRESHITEM	[Gaya] У вас недостаточно «Сбросить биржу Gaya».
+GEM_SYSTEM_NOT_ENOUGH_HP_GEM	[Gaya] У вас недостаточно Gaya.
+GEM_SYSTEM_NO_MORE_ADDSLOT	[Gaya] Больше мест открывать нельзя.
+GEM_SYSTEM_OPEN_GEMSHOP	[Gaya] Сначала откройте биржу Gaya.
+GEM_SYSTEM_PICK_GEM	[Gaya] Число Gaya: %d
+GEM_SYSTEM_REFRESH_SHOP_ITEMS	Хотите сбросить?
+GIVEUP_QUESTION	Вы точно хотите отказаться?
+GUILDBANK_CLEARBANK	Внимание! Склад гильдии должен быть пуст!
+GUILDBANK_DONT_MONEY_OUT	В банке гильдии нет ни янга!
+GUILDBANK_GOLD_IN	Внесение
+GUILDBANK_GOLD_OUT	Выплата
+GUILDBANK_ITEM_IN	Положить
+GUILDBANK_ITEM_OUT	Забрать
+GUILDBANK_MONEYIN	Внести янг
+GUILDBANK_MONEYOUT	Получить янг
+GUILDBANK_NOTUSE	У вас не хватает для этого прав.
+GUILDBANK_NOT_ENOUGH_MONEY	У вас не хватает янг для внесения.
+GUILDBANK_OVER_INCOME	Достигнут лимит по счету.
+GUILDBANK_OVER_MONEY	Счет гильдии полон.
+GUILDLAND_ABANDON	Отказаться от земли гильдии
+GUILDLAND_ABANDON_TEXT1	Хотите отказаться от земли гильдии?
+GUILDLAND_ABANDON_TEXT2	Вы точно хотите отказаться от земли гильдии?
+GUILDLAND_ABANDON_TEXT3	Склад гильдии и все постройки будут удалены.
+GUILDLAND_ACCEPT	Да
+GUILDLAND_DONTHAVE_LAND	У вас нет земли гильдии.
+GUILDLAND_NOT	Нет
+GUILDLIST_APPLICANT	Хотите стать претендентом?
+GUILDMARK_UPLOADER_ERROR_12_HEIGHT	Высота изображения не 12 пикселей.
+GUILDMARK_UPLOADER_ERROR_16_WIDTH	Ширина изображения не 16 пикселей.
+GUILDMARK_UPLOADER_ERROR_64_WIDTH	Ширина изображения не 64 пикселей
+GUILDMARK_UPLOADER_ERROR_128_HEIGHT	Высота изображения не 128 пикселей.
+GUILDMARK_UPLOADER_ERROR_FILE_FORMAT	Игра не поддерживает данное изображение.
+GUILDMARK_UPLOADER_ERROR_PATH	Скопируйте файлы в папку metin2/upload.
+GUILDMARK_UPLOADER_ERROR_SELECT	Файл изображения не выбран.
+GUILDWAR_ALL	Сражения (С)
+GUILDWAR_CTF_TITLE	Сражение за флаги
+GUILDWAR_DRAW	Ничьи (Н)
+GUILDWAR_GAINSCORE_FIFTY	50 очков
+GUILDWAR_GAINSCORE_HUNDRED	100 очков
+GUILDWAR_GAINSCORE_THIRTY	30 очков
+GUILDWAR_GAMETIME_SIXTY	60 минут
+GUILDWAR_GAMETIME_TEN	10 минут
+GUILDWAR_GAMETIME_THIRTY	30 минут
+GUILDWAR_INPUT_OTHERGUILD	Введите имя гильдии-соперника.
+GUILDWAR_LADDER	Очки ранга
+GUILDWAR_LIMIT_MEMBER_FIVE	Минимальное число участников: 5
+GUILDWAR_LOSE	Поражения (П)
+GUILDWAR_NORMAL_TITLE	Поле битвы
+GUILDWAR_OVER_MEMBERCOUNT	У вас макс. число участников.
+GUILDWAR_QUESTION_LINE_1	Гильдия %s объявила войну вашей гильдии.
+GUILDWAR_QUESTION_LINE_2	Принять? (%s)
+GUILDWAR_RANKING	Ранг
+GUILDWAR_RECODE_ALL	%d С, %d В, %d П, %d Н
+GUILDWAR_SELECT_MEMBER_COUNT	Выберите число участников.
+GUILDWAR_TYPE_DEFENSE	Защита объекта
+GUILDWAR_TYPE_TIGER	Уничтожение
+GUILDWAR_TYPE_TIME	Гонка за победой
+GUILDWAR_UNKNOWN_TITLE	...
+GUILDWAR_WARP_TITLE	Арена войны гильдий
+GUILDWAR_WIN	Выигрыши (В)
+GUILDWAR_WIN_FIVE	Пять раундов
+GUILDWAR_WIN_ONE	Один раунд
+GUILDWAR_WIN_THREE	Три раунда
+GUILDWINDOW_BUTTON_BANKGOLDINFO	Журнал склада гильдии
+GUILDWINDOW_BUTTON_BASEABANDON	Отказаться от земли гильдии
+GUILDWINDOW_BUTTON_BASEDEAL	Продать землю гильдии
+GUILDWINDOW_BUTTON_BOARD	Заметки гильдии
+GUILDWINDOW_BUTTON_CHANGEMASTER	Сменить Лидера гильдии
+GUILDWINDOW_BUTTON_DECLARE	Объявление войны
+GUILDWINDOW_BUTTON_DONATE	Взнос
+GUILDWINDOW_BUTTON_GOLDIN	Внесение
+GUILDWINDOW_BUTTON_GOLDOUT	Выплата
+GUILDWINDOW_BUTTON_GRADE	Управление правами
+GUILDWINDOW_BUTTON_GUILDLIST	Список гильдий
+GUILDWINDOW_BUTTON_HEALGSP	Восстановить Мощь дракона
+GUILDWINDOW_BUTTON_INFO	Информация о гильдии
+GUILDWINDOW_BUTTON_LANDINFO	Информация о земле
+GUILDWINDOW_BUTTON_MARK	Загрузить символ гильдии
+GUILDWINDOW_BUTTON_MEMBER	Участники
+GUILDWINDOW_BUTTON_OFFER	Потратить опыт
+GUILDWINDOW_BUTTON_OUTMEMBER	Исключение участника
+GUILDWINDOW_BUTTON_SKILL	Навыки гильдии
+GUILDWINDOW_BUTTON_SYMBOL	Загрузить флаг гильдии
+GUILDWINDOW_BUY_GUILD_LAND	Купить землю
+GUILDWINDOW_CHANGE_BLACKSMITH	Изменить профессию
+GUILDWINDOW_CHANGE_OBJECT	Переустройство
+GUILDWINDOW_CHANGE_SMELTER	Сменить печь
+GUILDWINDOW_CREATE_OBJECT	Строительство
+GUILDWINDOW_DEAL_GUILD_LAND	Продать землю
+GUILDWINDOW_GRADE_BANK	Может использовать банк и склад гильдии
+GUILDWINDOW_GRADE_DRIVEOUTAUTHORITY	Может исключать участников из гильдии
+GUILDWINDOW_GRADE_GRADENAME	Имя в ранге
+GUILDWINDOW_GRADE_GRADENUMBER	Номер в ранге
+GUILDWINDOW_GRADE_GUILDWAR	Может выбирать тех участников, кто сможет участвовать в сражениях
+GUILDWINDOW_GRADE_INVITEAUTHORITY	Может принимать игроков в гильдию
+GUILDWINDOW_GRADE_NOTICEAUTHORITY	Может прикреплять заметки гильдии
+GUILDWINDOW_GRADE_SKILLAUTHORITY	Может использовать навыки гильдии
+GUILDWINDOW_INFO_LEVEL5	+5% опыта за взнос в гильд.
+GUILDWINDOW_INFO_LEVEL10	Повышает макс. число участ.
+GUILDWINDOW_INFO_LEVEL15	Скидка: Мощь дракона
+GUILDWINDOW_INFO_LEVEL20	Банк: освобожд. от налогов
+GUILDWINDOW_LAND_TAX	Аренда
+GUILDWINDOW_LIST_ALL	Все империи
+GUILDWINDOW_LIST_ALREADY_REGISTER	[Гильдия] Вы уже в претендентах.
+GUILDWINDOW_LIST_APPLICANT_LIST	Список претендентов
+GUILDWINDOW_LIST_CHRACTER_JOB	Класс
+GUILDWINDOW_LIST_CHRACTER_LV	Уровень
+GUILDWINDOW_LIST_CHRACTER_NAME	Имя персонажа
+GUILDWINDOW_LIST_CHRACTER_SUB_JOB	Учение
+GUILDWINDOW_LIST_EMPIRE_A	Шиньзо
+GUILDWINDOW_LIST_EMPIRE_B	Хунджо
+GUILDWINDOW_LIST_EMPIRE_C	Джинно
+GUILDWINDOW_LIST_GUILDMEMBER	Участники
+GUILDWINDOW_LIST_GUILD_LIST	Список гильдий
+GUILDWINDOW_LIST_GUILD_LV	Уровень
+GUILDWINDOW_LIST_GUILD_NAME	Гильдия
+GUILDWINDOW_LIST_INPUT_GUILDNAME	[Гильдия] Введите имя гильдии.
+GUILDWINDOW_LIST_LADDER	Очки ранга
+GUILDWINDOW_LIST_NOTPROMOTEGUILD	[Гильдия] У этой гильдии нет объявлений.
+GUILDWINDOW_LIST_PROMOTE_GUILD	Заявка
+GUILDWINDOW_LIST_PROMOTE_GUILD_LIST	Список гильдий
+GUILDWINDOW_LIST_RANKING	Положение
+GUILDWINDOW_LIST_RANKING_COUNT	Положение
+GUILDWINDOW_LIST_REGISTER	Заявки
+GUILDWINDOW_LIST_REGISTER_GUILD	Подать заявку на вступление в гильдию
+GUILDWINDOW_LIST_SEARCH	Поиск
+GUILDWINDOW_LIST_SELECT_GUILD	[Гильдия] Выберите гильдию, в которую хотите подать заявку.
+GUILDWINDOW_PROMOTE_REFRESH	Реклама
+GUILDWINDOW_PROMOTE_REGISTER	Реклама
+GUILDWINDOW_SP_RECOVER	Мощь Дракона
+GUILDWINDOW_UPGRADE_ALTEROFPOWER	Расширить алтарь
+GUILDWINDOW_UPGRADE_GUILDBANK	Расширить банк
+GUILD_ATTENDANCE_FAIL_ALREADY	Сегодня вы уже участвовали.
+GUILD_ATTENDANCE_FAIL_JOIN_TIME	Сейчас вы не можете участвовать. Участие сбрасывается каждый день в 5:00.
+GUILD_BANKINFO_CLOSE	Закрыть
+GUILD_BANKINFO_NAME	Участник
+GUILD_BANKINFO_TYPE	Предмет/Валюта
+GUILD_BANKINFO_USETYPE	Действие
+GUILD_BANK_CLOSE	Закрыть
+GUILD_BANK_INFO	Журнал склада гильдии
+GUILD_BOARD_ID	Участник
+GUILD_BOARD_TEXT	Сообщение
+GUILD_BUILDING_FIX_CHANGE	Вы точно хотите изменить положение?
+GUILD_BUILDING_FIX_CHANGE_GOLD	Стоимость: 1 000 000 янг
+GUILD_BUILDING_FIX_DELETE	Вы точно хотите удалить объект?
+GUILD_BUILDING_FIX_NEED_BUILDING	Нет зданий.
+GUILD_BUILDING_GRADE	Ранг
+GUILD_BUILDING_LOG_PLUS	Бревно+
+GUILD_BUILDING_NAME	Название здания
+GUILD_BUILDING_PLY_PLUS	Фанера+
+GUILD_BUILDING_SMELT_STONE	Рунный камень
+GUILD_BUILDING_STONE_PLUS	Фундаментальный камень+
+GUILD_CANNOT_HEAL_GSP_ANYMORE	Энергия Духа Дракона полностью востановлена.
+GUILD_CHANGEMASTER_TEXT1	Новым лидером станет: %s
+GUILD_CHANGEMASTER_TEXT2	Хотите назначить нового лидера гильдии?
+GUILD_CHANGEMASTER_TEXT3	Вы точно хотите передать
+GUILD_CHANGEMASTER_TEXT4	позицию лидера гильдии?
+GUILD_COMMENT	Писать
+GUILD_CREATE_ERROR_INSULT_NAME	Имя гильдии недопустимо.
+GUILD_DEFAULT_GRADE	Член гильдии
+GUILD_DELETE	Удалить
+GUILD_DEPOSIT	Отложить
+GUILD_DONATE_FAIL_NOT_ENOUGH_HIGH_ITEM	У вас не хватает купонов на высокий взнос.
+GUILD_DONATE_FAIL_NOT_ENOUGH_INVENTORY	Ваш инвентарь полон. Вы не можете делать взнос.
+GUILD_DONATE_FAIL_NOT_ENOUGH_LEVEL	Чтобы жертвовать, нужно набрать хотя бы 30 уровень.
+GUILD_DONATE_FAIL_NOT_ENOUGH_MIDDLE_ITEM	У вас не хватает купонов на средний взнос.
+GUILD_DONATE_FAIL_NOT_ENOUGH_YANG	Не хватает янг.
+GUILD_DONATE_FAIL_TIME	Вы не можете жертвовать 24 часа после вступления в гильдию.
+GUILD_DONATE_QUESTION_HIGH	Вы хотите сделать большой взнос?
+GUILD_DONATE_QUESTION_MIDDLE	Вы хотите сделать средний взнос?
+GUILD_DONATE_QUESTION_NORMAL	Вы хотите сделать малый взнос?
+GUILD_DO_YOU_HEAL_GSP	Желаете восстановить за %d янг %d Духа Дракона?
+GUILD_DO_YOU_JOIN	 хотите присоединиться к гильдии?
+GUILD_DRAGONLAIR_MIN	Мин.
+GUILD_DRAGONLAIR_PARTY_ALL	Общий список лучших
+GUILD_DRAGONLAIR_PARTY_LINE_FOUR	С 11 места: 100 Gaya
+GUILD_DRAGONLAIR_PARTY_LINE_HELP	Помощь
+GUILD_DRAGONLAIR_PARTY_LINE_ONE	1 место: 400 Gaya
+GUILD_DRAGONLAIR_PARTY_LINE_THREE	4-10 места: 200 Gaya
+GUILD_DRAGONLAIR_PARTY_LINE_TWO	2-3 места: 300 Gaya
+GUILD_DRAGONLAIR_PARTY_MEMBER	Участники
+GUILD_DRAGONLAIR_PARTY_NOW	Список лучших за неделю
+GUILD_DRAGONLAIR_PARTY_PAST	Прошлый список лучших
+GUILD_DRAGONLAIR_PARTY_TIME	Время
+GUILD_DRAGONLAIR_PARTY_TOOLTIP_TITLE	Награда
+GUILD_DRAGONLAIR_RANKING_FAIL	НЕУДАЧА
+GUILD_DRAGONLAIR_RANKING_NONE	НОВ.
+GUILD_DRAGONLAIR_RANKING_SUCCESS	УСПЕХ
+GUILD_DRAGONLAIR_SECOND	Сек.
+GUILD_EMPTY_AREA	Пустая Земля
+GUILD_ENEMY_GUILD_NAME	Имя гильдии противника
+GUILD_FACILITY	Пристройка
+GUILD_GEM	Самоцвет
+GUILD_HEADQUARTER	Главный корпус
+GUILD_HEAL_GSP	Восстановить Дух Дракона
+GUILD_INFO_ENEMY_GUILD_EMPTY	нет
+GUILD_MARK_NOT_ENOUGH_LEVEL	Требуется мин. 3 уровень
+GUILD_MARK_UPLOAD_NOTICE	Для регистрации логотипа гильдии надо немного подождать.
+GUILD_MEMBEROUT_AUTH	Вы не можете удалять участников.
+GUILD_MEMBEROUT_NOMAL	Вы хотите удалить этого участника?
+GUILD_MEMBER_JOB	Класс
+GUILD_MEMBER_KNIGHT	Воины
+GUILD_MEMBER_LEVEL	Уровень
+GUILD_MEMBER_NAME	Участник
+GUILD_MEMBER_RANK	Ранг
+GUILD_MEMBER_SPECIFIC_GRAVITY	Пожертвованный опыт
+GUILD_NAME	Имя гильдии
+GUILD_NOT_ENOUGH_MATERIAL	У вас недостаточно строительного материала, чтобы построить это здание.
+GUILD_NOT_ENOUGH_MONEY	У вас недостаточно янг для  этого сооружения.
+GUILD_NO_NOTICE_PERMISSION	Вы не вправе делать уведомления.
+GUILD_OBJECT	Объекты
+GUILD_OBJECT_POSSIBLE_NEWWORLD	Эта постройка доступна только на континенте Yohara.
+GUILD_OFFER_EXP	Инвестировать опыт
+GUILD_SELECT_ONE	Выберите члена гильдии.
+GUILD_SHORT_EXP	Недостаточно опыта
+GUILD_SITE_AUCTION_END_TIME	Земельный аукцион: %02d/%02d (месяц/день) в %02d:%02d
+GUILD_SITE_AUCTION_END_TIME_DEFAULT	Земельный аукцион: Н/Д
+GUILD_SITE_AUCTION_INFO	Предлагается земля: %s / %d,%d
+GUILD_SITE_AUCTION_INFO_DEFAULT	Предлагается земля: Н/Д
+GUILD_SITE_AUCTION_MAP_INFO	Дата (месяц/день): %02d/%02d; Время: %02d:%02d
+GUILD_SITE_AUCTION_STATE_NONE	Все ставки сделаны.
+GUILD_SITE_AUCTION_STATE_REGIST	В области %s продается земля %s,%s. Только лидеры гильдии могут регистрироваться на земельный аукцион.
+GUILD_SITE_AUCTION_STATE_RUN	Земельный аукцион закончится %02d/%02d (месяц/день) в %02d:%02d.
+GUILD_SITE_AUCTION_STATE_WAIT	%02d/%02d (месяц/день) в %02d:%02d начнется земельный аукцион за %s, страна %d,%d.
+GUILD_SITE_AUTO_ABNDON_TIME	Автоматический отказ от земли: %s
+GUILD_SITE_TAX_INFO	Земля гильдии будет сдана через %s. Все предметы на складе гильдии пропадут.
+GUILD_TILE_BASEINFO	Информация о земле
+GUILD_TILE_BOARD	Заметки гильдии
+GUILD_TILE_GRADE	Управление позицией
+GUILD_TILE_INFO	Гильдия-инфо
+GUILD_TILE_MEMBER	Участники
+GUILD_TILE_SKILL	Навыки гильдии
+GUILD_USE_MASTER_ONLY	Это право есть только у Лидера гильдии.
+GUILD_VILLAGE_01	Мирйанг
+GUILD_VILLAGE_02	Сонгпа
+GUILD_VILLAGE_03	Даэйами
+GUILD_WAR1	Территория войны гильдий
+GUILD_WAR2	Территория войны гильдий
+GUILD_WAR3	Территория войны гильдий
+GUILD_WAR4	Территория войны гильдий
+GUILD_WAR_GAINSCORE_FIFTY	50 очков
+GUILD_WAR_GAINSCORE_HUNDRED	100 очков
+GUILD_WAR_GAINSCORE_THIRTY	30 очков
+GUILD_WAR_GAMETIME_SIXTY	60 минут
+GUILD_WAR_GAMETIME_TEN	10 минут
+GUILD_WAR_GAMETIME_THIRTY	30 минут
+GUILD_WAR_LIMIT_30MIN	Время: 30 минут
+GUILD_WAR_REWARD_POTION	Награда: победитель получает зелье
+GUILD_WAR_SELECT_WAR	Выбрать вид сражения
+GUILD_WAR_TYPE_DEFENSE	Защита объекта
+GUILD_WAR_TYPE_DIE	Сражение на арене
+GUILD_WAR_TYPE_FLAG	Сражение за флаги
+GUILD_WAR_TYPE_NORMAL	Поле битвы
+GUILD_WAR_TYPE_TIGER	Уничтожение
+GUILD_WAR_TYPE_TIME	Гонка за победой
+GUILD_WAR_USE_BATTLE_MAP	Местность: арена войны гильдий
+GUILD_WAR_USE_NORMAL_MAP	Местонахождение: стандартная карта
+GUILD_WAR_WIN_CHECK_SCORE	Лучший результат приносит победу в войне.
+GUILD_WAR_WIN_FIVE	Пять раундов
+GUILD_WAR_WIN_ONE	Один раунд
+GUILD_WAR_WIN_TAKE_AWAY_FLAG1	Захватите флаг противника
+GUILD_WAR_WIN_TAKE_AWAY_FLAG2	и принесите его к Вашей базе.
+GUILD_WAR_WIN_THREE	Три раунда
+GUILD_WAR_WIN_WIPE_OUT_GUILD	Устраните всех противников, чтобы победить.
+GUILD_WITHDRAW	Отвод
+GUILD_YOU_DO_NOT_JOIN	Вы не состоите ни в одной гильдии.
+HACK_USER_MESSAGE	Эта функция недоступна, поскольку обнаружена программа для взлома.
+HORSE_HEALTH0	Убит
+HORSE_HEALTH1	Голоден
+HORSE_HEALTH2	Умирает от голода
+HORSE_HEALTH3	перегружен
+HORSE_LEVEL1	Обычный конь
+HORSE_LEVEL2	Броневой конь
+HORSE_LEVEL3	Боевой конь
+HORSE_LEVEL4	Могучий боевой конь
+HOUR	Ч.
+HOW_MANY_ITEM_DO_YOU_DROP1	Хотите выбросить %s?
+HOW_MANY_ITEM_DO_YOU_DROP2	Хотите выбросить %s %d ?
+ICECREAM_EVENT_EXCHANGE_SCOOP_SUCCESS	Вы перенесли ледяные пули (%d) в новое меню события.
+ICECREAM_EVENT_GET_SCOOP	Вы получили ледяную пулю.
+ICECREAM_EVENT_SCOOP_MAX_COUNT	Вы не можете получить больше ледяных пуль.
+INPUT_MATRIX_CARD_NUMBER	Введите номер "матрица"-карты.
+INPUT_MATRIX_CARD_TITLE	"Матрица"-карта
+INPUT_PRIVATE_CODE_DIALOG_DESCRIPTION	Введите код удаления из управления учётной записью.
+INPUT_PRIVATE_CODE_DIALOG_TITLE	Удалить персонаж
+INVENTORY_DO_NOT_PACK_WARP_SCROLL	Комбинирование свитка Возвращения невозможно.
+INVENTORY_REALLY_USE_ITEM	Применить на этом предмете?
+INVENTORY_REALLY_USE_ITEM2	Вы точно хотите использовать этот предмет?
+INVENTORY_REALLY_USE_PET_BAG_ITEM	Желаете действительно поместить своего питомца в Транспортную клетку?
+INVENTORY_REALLY_USE_PET_BAG_TAKE_OUT	Желаете открыть Транспортную клетку?
+INVENTORY_REALLY_USE_PET_FEEDSTUFF_ITEM	Желаете %s скормить %s?
+IS_NOT_PET_CHANGE_ITEM	Это не предмет «Зачаровать питомца».
+IS_NOT_PET_ITEM	Это не питомец.
+JOB_ASSASSIN	Ниндзя
+JOB_ASSASSIN0	Никакой
+JOB_ASSASSIN1	Ниндзя-мечник
+JOB_ASSASSIN2	Ниндзя-лучник
+JOB_SHAMAN	Шаман
+JOB_SHAMAN0	Никакой
+JOB_SHAMAN1	Шаман-дракон
+JOB_SHAMAN2	Шаман-лекарь
+JOB_SURA	Сура
+JOB_SURA0	Никакой
+JOB_SURA1	Сура-воин
+JOB_SURA2	Сура-маг
+JOB_WARRIOR	Воин
+JOB_WARRIOR0	Нет
+JOB_WARRIOR1	Воин физического боя
+JOB_WARRIOR2	Воин духовного боя
+JOB_WOLFMAN	Ликан
+JOB_WOLFMAN0	Ликан любитель
+JOB_WOLFMAN1	Инстинкт
+JOB_WOLFMAN2	N.A.
+KEYCHANGE_DONT_SAVE_EXIT	Закрыть не сохранив?
+KEYCHANGE_IMPOSSIBLE_CHANGE	[Ctrl], [Alt], [Shift] здесь не допускаются!
+KEYCHANGE_SAVE_EXIT	Сохранить и закрыть?
+KEY_0	0
+KEY_0_LALT	ALT + 0
+KEY_0_LCONTROL	CTRL + 0
+KEY_0_LSHIFT	SHIFT + 0
+KEY_1	1
+KEY_1_LALT	ALT + 1
+KEY_1_LCONTROL	CTRL + 1
+KEY_1_LSHIFT	SHIFT + 1
+KEY_2	2
+KEY_2_LALT	ALT + 2
+KEY_2_LCONTROL	CTRL + 2
+KEY_2_LSHIFT	SHIFT + 2
+KEY_3	3
+KEY_3_LALT	ALT + 3
+KEY_3_LCONTROL	CTRL + 3
+KEY_3_LSHIFT	SHIFT + 3
+KEY_4	4
+KEY_4_LALT	ALT + 4
+KEY_4_LCONTROL	CTRL + 4
+KEY_4_LSHIFT	SHIFT + 4
+KEY_5	5
+KEY_5_LALT	ALT + 5
+KEY_5_LCONTROL	CTRL + 5
+KEY_5_LSHIFT	SHIFT + 5
+KEY_6	6
+KEY_6_LALT	ALT + 6
+KEY_6_LCONTROL	CTRL + 6
+KEY_6_LSHIFT	SHIFT + 6
+KEY_7	7
+KEY_7_LALT	ALT + 7
+KEY_7_LCONTROL	CTRL + 7
+KEY_7_LSHIFT	SHIFT + 7
+KEY_8	8
+KEY_8_LALT	ALT + 8
+KEY_8_LCONTROL	CTRL + 8
+KEY_8_LSHIFT	SHIFT + 8
+KEY_9	9
+KEY_9_LALT	ALT + 9
+KEY_9_LCONTROL	CTRL + 9
+KEY_9_LSHIFT	SHIFT + 9
+KEY_A	A
+KEY_ADD	+
+KEY_A_LALT	ALT + A
+KEY_A_LCONTROL	CTRL + A
+KEY_A_LSHIFT	SHIFT + A
+KEY_B	B
+KEY_B_LALT	ALT + B
+KEY_B_LCONTROL	CTRL + B
+KEY_B_LSHIFT	SHIFT + B
+KEY_C	C
+KEY_COMMA	,
+KEY_COMMA_LALT	ALT + ,
+KEY_COMMA_LCONTROL	CTRL + ,
+KEY_COMMA_LSHIFT	SHIFT + ,
+KEY_C_LALT	ALT + C
+KEY_C_LCONTROL	CTRL + C
+KEY_C_LSHIFT	SHIFT + C
+KEY_D	D
+KEY_DOWN	СТРЕЛКА ВНИЗ
+KEY_D_LALT	ALT + D
+KEY_D_LCONTROL	CTRL + D
+KEY_D_LSHIFT	SHIFT + D
+KEY_E	E
+KEY_E_LALT	ALT + E
+KEY_E_LCONTROL	CTRL + E
+KEY_E_LSHIFT	SHIFT + E
+KEY_F	F
+KEY_F1	F1
+KEY_F1_LALT	ALT + F1
+KEY_F1_LCONTROL	CTRL + F1
+KEY_F1_LSHIFT	SHIFT + F1
+KEY_F2	F2
+KEY_F2_LALT	ALT + F2
+KEY_F2_LCONTROL	CTRL + F2
+KEY_F2_LSHIFT	SHIFT + F2
+KEY_F3	F3
+KEY_F3_LALT	ALT + F3
+KEY_F3_LCONTROL	CTRL + F3
+KEY_F3_LSHIFT	SHIFT + F3
+KEY_F4	F4
+KEY_F4_LALT	ALT + F4
+KEY_F4_LCONTROL	CTRL + F4
+KEY_F4_LSHIFT	SHIFT + F4
+KEY_F5	F5
+KEY_F5_LALT	ALT + F5
+KEY_F5_LCONTROL	CTRL + F5
+KEY_F5_LSHIFT	SHIFT + F5
+KEY_F6	F6
+KEY_F6_LALT	ALT + F6
+KEY_F6_LCONTROL	CTRL + F6
+KEY_F6_LSHIFT	SHIFT + F6
+KEY_F7	F7
+KEY_F7_LALT	ALT + F7
+KEY_F7_LCONTROL	CTRL + F7
+KEY_F7_LSHIFT	SHIFT + F7
+KEY_F8	F8
+KEY_F8_LALT	ALT + F8
+KEY_F8_LCONTROL	CTRL + F8
+KEY_F8_LSHIFT	SHIFT + F8
+KEY_F9	F9
+KEY_F9_LALT	ALT + F9
+KEY_F9_LCONTROL	CTRL + F9
+KEY_F9_LSHIFT	SHIFT + F9
+KEY_F10	F10
+KEY_F10_LALT	ALT + F10
+KEY_F10_LCONTROL	CTRL + F10
+KEY_F10_LSHIFT	SHIFT + F10
+KEY_F_LALT	ALT + F
+KEY_F_LCONTROL	CTRL + F
+KEY_F_LSHIFT	SHIFT + F
+KEY_G	G
+KEY_GRAVE	`
+KEY_GRAVE_LALT	ALT + `
+KEY_GRAVE_LCONTROL	CTRL + `
+KEY_GRAVE_LSHIFT	SHIFT + `
+KEY_G_LALT	ALT + G
+KEY_G_LCONTROL	CTRL + G
+KEY_G_LSHIFT	SHIFT + G
+KEY_H	H
+KEY_H_LALT	ALT + H
+KEY_H_LCONTROL	CTRL + H
+KEY_H_LSHIFT	SHIFT + H
+KEY_I	I
+KEY_I_LALT	ALT + I
+KEY_I_LCONTROL	CTRL + I
+KEY_I_LSHIFT	SHIFT + I
+KEY_J	J
+KEY_J_LALT	ALT + J
+KEY_J_LCONTROL	CTRL + J
+KEY_J_LSHIFT	SHIFT + J
+KEY_K	K
+KEY_K_LALT	ALT + K
+KEY_K_LCONTROL	CTRL + K
+KEY_K_LSHIFT	SHIFT + K
+KEY_L	L
+KEY_LALT	ALT
+KEY_LCONTROL	CTRL
+KEY_LEFT	СТРЕЛКА ВЛЕВО
+KEY_LSHIFT	SHIFT
+KEY_L_LALT	ALT + L
+KEY_L_LCONTROL	CTRL + L
+KEY_L_LSHIFT	SHIFT + L
+KEY_M	M
+KEY_M_LALT	ALT + M
+KEY_M_LCONTROL	CTRL + M
+KEY_M_LSHIFT	SHIFT + M
+KEY_N	N
+KEY_NUMLOCK	NUMLOCK
+KEY_NUMPAD0	NUMPAD 0
+KEY_NUMPAD1	NUMPAD 1
+KEY_NUMPAD2	NUMPAD 2
+KEY_NUMPAD3	NUMPAD 3
+KEY_NUMPAD4	NUMPAD 4
+KEY_NUMPAD5	NUMPAD 5
+KEY_NUMPAD6	NUMPAD 6
+KEY_NUMPAD7	NUMPAD 7
+KEY_NUMPAD8	NUMPAD 8
+KEY_NUMPAD9	NUMPAD 9
+KEY_N_LALT	ALT + N
+KEY_N_LCONTROL	CTRL + N
+KEY_N_LSHIFT	SHIFT + N
+KEY_O	O
+KEY_O_LALT	ALT + O
+KEY_O_LCONTROL	CTRL + O
+KEY_O_LSHIFT	SHIFT + O
+KEY_P	P
+KEY_PERIOD	.
+KEY_PERIOD_LALT	ALT + .
+KEY_PERIOD_LCONTROL	CTRL + .
+KEY_PERIOD_LSHIFT	SHIFT + .
+KEY_PGDN	PAGE DOWN
+KEY_PGUP	PAGE UP
+KEY_P_LALT	ALT + P
+KEY_P_LCONTROL	CTRL + P
+KEY_P_LSHIFT	SHIFT + P
+KEY_Q	Q
+KEY_Q_LALT	ALT + Q
+KEY_Q_LCONTROL	CTRL + Q
+KEY_Q_LSHIFT	SHIFT + Q
+KEY_R	R
+KEY_RIGHT	СТРЕЛКА ВПРАВО
+KEY_R_LALT	ALT + R
+KEY_R_LCONTROL	CTRL + R
+KEY_R_LSHIFT	SHIFT + R
+KEY_S	S
+KEY_SPACE	ПРОБЕЛ
+KEY_SUBTRACT	-
+KEY_SYSRQ	PRNT SCRN
+KEY_S_LALT	ALT + S
+KEY_S_LCONTROL	CTRL + S
+KEY_S_LSHIFT	SHIFT + S
+KEY_T	T
+KEY_TAB	TAB
+KEY_T_LALT	ALT + T
+KEY_T_LCONTROL	CTRL + T
+KEY_T_LSHIFT	SHIFT + T
+KEY_U	U
+KEY_UP	СТРЕЛКА ВВЕРХ
+KEY_U_LALT	ALT + U
+KEY_U_LCONTROL	CTRL + U
+KEY_U_LSHIFT	SHIFT + U
+KEY_V	V
+KEY_V_LALT	ALT + V
+KEY_V_LCONTROL	CTRL + V
+KEY_V_LSHIFT	SHIFT + V
+KEY_W	W
+KEY_W_LALT	ALT + W
+KEY_W_LCONTROL	CTRL + W
+KEY_W_LSHIFT	SHIFT + W
+KEY_X	X
+KEY_X_LALT	ALT + X
+KEY_X_LCONTROL	CTRL + X
+KEY_X_LSHIFT	SHIFT + X
+KEY_Y	Y
+KEY_Y_LALT	ALT + Y
+KEY_Y_LCONTROL	CTRL + Y
+KEY_Y_LSHIFT	SHIFT + Y
+KEY_Z	Z
+KEY_Z_LALT	ALT + Z
+KEY_Z_LCONTROL	CTRL + Z
+KEY_Z_LSHIFT	SHIFT + Z
+LEADER_NAME	Имя лидера
+LEFT_TIME	Остав.время
+LIMIT_LEVEL_GUILD	Уровень гильдии: %d
+LOGIN_CONNECT_FAILURE	Ошибка при соединении с сервером.
+LOGIN_CONNECT_SUCCESS	Вы соединены с сервером.
+LOGIN_CONNETING	Подождите. Идет соединение с сервером.
+LOGIN_FAILURE_ALREAY	Ваш аккаунт уже подключен.
+LOGIN_FAILURE_BACKEND_ERR	Произошла ошибка. Свяжитесь со службой поддержки.
+LOGIN_FAILURE_BE_SAME_KEY	Проблема с регистрацией
+LOGIN_FAILURE_BLOCK_ID	Ваш аккаунт заблокирован.
+LOGIN_FAILURE_BLOCK_LOGIN	Закрытый сервер: Выберите другой сервер!
+LOGIN_FAILURE_COUNTRY_ERR	Код страны неверный.\nСвяжитесь со службой поддержки.
+LOGIN_FAILURE_INTEGRTING	Идет слияние вашего аккаунта. Повторите попытку позже.
+LOGIN_FAILURE_IOVATION_ERR	Чтобы зайти на этот сервер, включите двухфакторную аутентификацию.
+LOGIN_FAILURE_NOBILL	На вашем аккаунте нет игрового времени.
+LOGIN_FAILURE_NOT_AVAIL	Аккаунт недоступен.
+LOGIN_FAILURE_NOT_EXIST_ID	Неверное имя или пароль.
+LOGIN_FAILURE_NOT_MAIL_CONFIRM	Требуется подтверждение по электронной почте.
+LOGIN_FAILURE_REPAIR_ID	Предметы для этого аккаунта восстанавливаются.
+LOGIN_FAILURE_SAMELOGIN	Кто-то подключился через ваш аккаунт.
+LOGIN_FAILURE_SERVER_GRADE	Это закрытый сервер, к которому у этого аккаунта нет доступа.
+LOGIN_FAILURE_SHUTDOWN	Сервер пока ещё закрыт.
+LOGIN_FAILURE_STEAM_SESSION	Вход в перенесенные аккаунты и регистрация невозможны.
+LOGIN_FAILURE_TNT_SESSION	Не удалось открыть клиент. Перезапустите игру и войдите в систему.
+LOGIN_FAILURE_TOO_MANY_USER	В соединении отказано. Сервер переполнен.
+LOGIN_FAILURE_UNKNOWN	Регистрация  не состоялась по неизвестным причинам.
+LOGIN_FAILURE_WEB_BLOCK	Вас заблокировали на сайте. Пожалуйста проверьте  свой Email.
+LOGIN_FAILURE_WRONG_MATRIX_CARD_NUMBER	Введён неверный номер.
+LOGIN_FAILURE_WRONG_MATRIX_CARD_NUMBER_TRIPLE	Неверный номер введён трижды. Связь будет прервана.
+LOGIN_FAILURE_WRONG_PASSWORD	Неправильное имя или пароль.
+LOGIN_INPUT_ID	Введите номер идентификации.
+LOGIN_INPUT_PASSWORD	Введите пароль.
+LOGIN_PROCESSING	Происходит регистрация...
+LOOTING_SYSTEM_CANNOT_OPEN_MAP	Это нельзя открывать здесь.
+LOOTING_TICKET_DURATION	Осталось: %s
+LUCKY_BOX_DIALOG_RECV_TEXT	Хотите принять предмет?
+LUCKY_BOX_DIALOG_RETRY_TEXT	Хотите еще раз испытать удачу?
+MAILBOX_FAIL_USE_TIME_LIMIT	Почтовый ящик обновляется. Повторите попытку позже.
+MAILBOX_POST_ALL_DELETE_FAIL_EMPTY	Нет писем
+MAILBOX_POST_ALL_DELETE_QUESTION1	Удалить все письма?
+MAILBOX_POST_ALL_DELETE_QUESTION2	Письма с приложениями не будут удалены.
+MAILBOX_POST_ALL_GET_ITEMS_FAIL_EMPTY	В вашем почтовом ящике нет писем с приложениями.
+MAILBOX_POST_ALL_GET_ITEMS_QUESTION	Принять приложение? (за вычетом 5% налога на янг)
+MAILBOX_POST_DELETE_FAIL_EXIST_ITEMS	Не удалось удалить письмо. Сначала примите приложение.
+MAILBOX_POST_DELETE_QUESTION	Вы точно хотите удалить это письмо?
+MAILBOX_POST_GET_ITEMS_NOT_ENOUGHT_INVENTORY	Не удалось взять предметы. Ваш инвентарь полон.
+MAILBOX_POST_GET_ITEMS_QUESTION	Принять приложение? (за вычетом 5% налога на янг)
+MAILBOX_POST_GET_ITEMS_WON_OVERFLOW	Вы не можете принять еще вон.
+MAILBOX_POST_GET_ITEMS_YANG_OVERFLOW	Вы не можете принять еще янг.
+MAILBOX_POST_GM_ARRIVE	Письмо от ГМ
+MAILBOX_POST_NOT_CONFIRM_INFO_1	Непрочитаннные: %d
+MAILBOX_POST_NOT_CONFIRM_INFO_2	Без приложений: %d / С приложениями: %d
+MAILBOX_POST_READ_BLOCK	Вы точно хотите блокировать %s?
+MAILBOX_POST_WRITE_ALREADY_ITEM	Вы можете отправлять по одному предмету на письмо.
+MAILBOX_POST_WRITE_CAN_NOT_SPLIT_ITEM	Чтобы отправить что-то как приложение к письму, сначала отложите нужное количество в инвентаре.
+MAILBOX_POST_WRITE_CONFIRM_FAIL	Неизвестный получатель. Не удалось отправить письмо.
+MAILBOX_POST_WRITE_CONFIRM_FULL_MAILBOX	Почтовый ящик получателя полон. Не удалось отправить письмо.
+MAILBOX_POST_WRITE_LEVEL_LIMIT	Вы можете отправлять письма начиная с 20 уровня.
+MAILBOX_POST_WRITE_MONEY_NOT_ENOUGHT	У вас недостаточно янг, чтобы отправить это письмо.
+MAILBOX_POST_WRITE_NAME_CHECK	Подтвердите имя получателя, нажав на «Проверить получателя».
+MAILBOX_POST_WRITE_NAME_EMPTY	Укажите имя получателя.
+MAILBOX_POST_WRITE_OK	Сообщение успешно отправлено.
+MAILBOX_POST_WRITE_QUESTION1	Отправить письмо игроку %s сейчас?
+MAILBOX_POST_WRITE_QUESTION2	Плата за отправку: %d янг
+MAILBOX_POST_WRITE_SEND_FAIL_EMPTY_NAME	Укажите имя получателя.
+MAILBOX_POST_WRITE_SEND_FAIL_EMPTY_TITLE	Укажите тему.
+MAILBOX_POST_WRITE_SEND_MONEY_TITLE	Сумма
+MAILBOX_POST_WRITE_WRONG_ITEM	Нельзя отправлять зачарованные оковами души предметы.
+MAILBOX_POST_WRITE_WRONG_MESSAGE	В сообщении есть недопустимые слова.
+MAILBOX_POST_WRITE_WRONG_TITLE	В теме есть недопустимые слова.
+MALL_CANNOT_INSERT	Вы не можете  внести предмет.
+MALL_PASSWORD_TITLE	Пароль
+MAP_A1	Земля Йонган
+MAP_A2	Долина Сеунгрийонг
+MAP_A2_1	
+MAP_A3	Земля Яянг
+MAP_AG	Юнгранг
+MAP_B1	Земля Йоан
+MAP_B2	Долина Имджи
+MAP_B3	Земля Бокъюнг
+MAP_BATTLE_FIELD	Поле боя
+MAP_BATTLE_ROYALE	Королевская битва
+MAP_BAY	Нефритовый залив
+MAP_BAYBLACKSAND	Нефритовый залив
+MAP_BG	Варйонг
+MAP_BOSS_AWAKEN_DAWNMIST	ПР: Зачарованный лес
+MAP_BOSS_AWAKEN_FLAME	ПР: Крепость Красного дракона
+MAP_BOSS_AWAKEN_SKIPIA	ПР: Грот изгнанников
+MAP_BOSS_AWAKEN_SNOW	ПР: Башня Немера
+MAP_BOSS_CRACK_DAWNMIST	ХР: Зачарованный лес
+MAP_BOSS_CRACK_FLAME	ХР: Крепость Красного дракона
+MAP_BOSS_CRACK_SKIPIA	ХР: Грот изгнанников
+MAP_BOSS_CRACK_SNOW	ХР: Башня Немера
+MAP_BOSS_LABYRINTH	Плато иллюзий
+MAP_C1	Земля Пуингмо
+MAP_C2	Долина Бангзан
+MAP_C3	Земля Бакра
+MAP_CAPE	Мыс пламя дракона
+MAP_CAPEDRAGONHEAD	Мыс пламя дракона
+MAP_CG	Имха
+MAP_CZ_DUNGEON	Храм Зодиака
+MAP_DAWN	Утес Гаутама
+MAP_DAWNMISTWOOD	Утес Гаутама
+MAP_DAWNMIST_DUNGEON_01	Зачарованный лес
+MAP_DEFENSE_WAVE	Защита корабля
+MAP_DEFENSE_WAVE_PORT	Гавань
+MAP_DESERT	Пустыня Йонгби
+MAP_DEVILCATACOMB	Катакомбы дьявола
+MAP_DEVILTOWER1	Башня демонов
+MAP_DUEL	Арена для учебных боев
+MAP_E	Колония
+MAP_EASTPLAIN_01	Равнина Донган
+MAP_EASTPLAIN_02	Пустошь Сёган
+MAP_EASTPLAIN_03	Намган-ущелье
+MAP_ELEMENTAL_DUNGEON	Мир стихий
+MAP_ELEMENTAL_DUNGEON_DARK	Мир стихий (тьма)
+MAP_ELEMENTAL_DUNGEON_ELECTRICITY	Мир стихий (молния)
+MAP_ELEMENTAL_DUNGEON_FIRE	Мир стихий (огонь)
+MAP_EMPIRECASTLE	Заброшенная твердыня
+MAP_EMPIREWAR01	Битва Замков
+MAP_EMPIREWAR02	Битва Замков
+MAP_EMPIREWAR03	Битва Замков
+MAP_FARMING_DUNGEON	Таинственное подземелье
+MAP_FLAME	Доюмхван
+MAP_GUILD_01	Юнгранг
+MAP_GUILD_02	Варйонг
+MAP_GUILD_03	Имха
+MAP_GUILD_PVE	Дворец короля драконов
+MAP_HOLYPLACE_DESERT	Битва Империй-Пустынные земли
+MAP_HOLYPLACE_FLAME	Битва Империй-Огненные земли
+MAP_HOLYPLACE_ICE	Битва Империй-Ледяные земли
+MAP_ICE_CRYSTALS_CAVE	Лощина северного ветра
+MAP_MAZE_DUNGEON_01	Гнолльи пещеры – 1 уровень
+MAP_MAZE_DUNGEON_02	Гнолльи пещеры – 2 уровень
+MAP_MAZE_DUNGEON_03	Гнолльи пещеры – 3 уровень
+MAP_MILGYO	Храм Хванг
+MAP_MILGYO_A	
+MAP_MINIBOSS_01	Синее подземелье – ур. 40-80
+MAP_MINIBOSS_02	Красное подземелье – с ур. 81
+MAP_MISTS_OF_ISLAND	Туманные острова
+MAP_MONKEY_DUNGEON	Хасун Донг
+MAP_MONKEY_DUNGEON2	Юнгсун Донг
+MAP_MONKEY_DUNGEON3	Сангсун Донг
+MAP_MONKEY_DUNGEON_11	Хасун Донг
+MAP_MONKEY_DUNGEON_12	Хасун Донг
+MAP_MONKEY_DUNGEON_13	Хасун Донг
+MAP_MT_THUNDER	Горы грома
+MAP_MT_TH_DUNGEON_01	Храм Окао
+MAP_NUSLUCK	Земля Громил
+MAP_NUSLUCK01	Земля Громил
+MAP_N_DESERT_01	Пустыня Йонгби
+MAP_N_DESERT_02	
+MAP_N_FLAME_01	Огненные земли
+MAP_N_FLAME_02	
+MAP_N_FLAME_DRAGON	Сокровищница Мелеи
+MAP_N_FLAME_DUNGEON_01	Крепость красного дракона
+MAP_N_SNOWM_01	Гора Сохан
+MAP_N_SNOWM_02	
+MAP_N_SNOW_DUNGEON_01	Башня Немера
+MAP_N_THREEWAY	Долина Сеунгрийонг
+MAP_OTHER_WORLD_01	Искупление
+MAP_OTHER_WORLD_02	Тот свет
+MAP_OTHER_WORLD_03	Зал испытаний
+MAP_OTHER_WORLD_04	Погибель
+MAP_OXEVENT	OX-соревнование
+MAP_PATHWAY_DESERT_01	Битва Империй-Пустынные земли
+MAP_PATHWAY_DESERT_02	Битва Империй-Пустынные земли
+MAP_PATHWAY_DESERT_03	Битва Империй-Пустынные земли
+MAP_PATHWAY_FLAME_01	Битва Империй-Огненные земли
+MAP_PATHWAY_FLAME_02	Битва Империй-Огненные земли
+MAP_PATHWAY_FLAME_03	Битва Империй-Огненные земли
+MAP_PATHWAY_ICE_01	Битва Империй-Ледяные земли
+MAP_PATHWAY_ICE_02	Страна Развлечений
+MAP_PATHWAY_ICE_03	Битва Империй-Ледяные земли
+MAP_PRIVATE_SHOP_MAP	Базар
+MAP_SECRET_DUNGEON	Храм загадки
+MAP_SKELTOWER	Башня Гумсан
+MAP_SKIPIA_DUNGEON_01	Грот изгнанников
+MAP_SKIPIA_DUNGEON_011	
+MAP_SKIPIA_DUNGEON_012	
+MAP_SKIPIA_DUNGEON_013	
+MAP_SKIPIA_DUNGEON_02	Грот изгнанников 2
+MAP_SKIPIA_DUNGEON_021	
+MAP_SKIPIA_DUNGEON_022	
+MAP_SKIPIA_DUNGEON_023	
+MAP_SKIPIA_DUNGEON_BOSS	Логово дракона
+MAP_SKIPIA_DUNGEON_BOSS_1	Подземелье пауков 1
+MAP_SKIPIA_DUNGEON_BOSS_2	Подземелье пауков 2
+MAP_SKIPIA_DUNGEON_BOSS_3	Подземелье пауков 3
+MAP_SNAKE_TEMPLE_1	1 уровень Храма змеи
+MAP_SNAKE_TEMPLE_2	Храм змеи
+MAP_SNAKE_VALLEY	Проход Йилад
+MAP_SNOW	Гора Сохан
+MAP_SPIDER	Куало Донг
+MAP_SPIDERDUNGEON	Подземелье пауков 1
+MAP_SPIDERDUNGEON_02	Подземелье пауков 2
+MAP_SPIDERDUNGEON_02_1	Подземелье пауков 2
+MAP_SPIDERDUNGEON_03	Подземелье пауков 3
+MAP_SUNGMAHEE_GATE_A1	Земля Йонган (Вторжение Сунг Ма)
+MAP_SUNGMAHEE_GATE_B1	Земля Йоан (Вторжение Сунг Ма)
+MAP_SUNGMAHEE_GATE_C1	Земля Пуингмо (Вторжение Сунг Ма)
+MAP_SUNGMAHEE_GATE_DAWNMIST	Зачарованный лес (Вторжение Сунг Ма)
+MAP_SUNGMAHEE_GATE_DESERT	Пустыня Йонгби (Вторжение Сунг Ма)
+MAP_SUNGMAHEE_GATE_DEVILS	Катакомбы Дьявола (Вторжение Сунг Ма)
+MAP_SUNGMAHEE_GATE_FLAME	Доюмхван (Вторжение Сунг Ма)
+MAP_SUNGMAHEE_GATE_SNOW	Гора Сохан (Вторжение Сунг Ма)
+MAP_SUNGMAHEE_GATE_THREEWAY	Долина Сеунгрийонг (Вторжение Сунг Ма)
+MAP_SUNGMAHEE_TOWER_DUNGEON	Адская башня Сунг Махи
+MAP_SUNGMAHEE_TOWER_WAIT	Вестибюль
+MAP_SUNGZI	Битва Империй
+MAP_SUNGZI_DESERT_01	Битва Империй-Пустынные земли
+MAP_SUNGZI_DESERT_HILL_01	Битва Империй-Пустынные земли
+MAP_SUNGZI_DESERT_HILL_02	Битва Империй-Пустынные земли
+MAP_SUNGZI_DESERT_HILL_03	Битва Империй-Пустынные земли
+MAP_SUNGZI_FLAME_HILL_01	Битва Империй-Огненные земли
+MAP_SUNGZI_FLAME_HILL_02	Битва Империй-Огненные земли
+MAP_SUNGZI_FLAME_HILL_03	Битва Империй-Огненные земли
+MAP_SUNGZI_SNOW	Битва Империй-Ледяные земли
+MAP_SUNGZI_SNOW_PASS01	Битва Империй-Ледяные земли
+MAP_SUNGZI_SNOW_PASS02	Битва Империй-Ледяные земли
+MAP_SUNGZI_SNOW_PASS03	Битва Империй-Ледяные земли
+MAP_T1	Территория войны гильдий
+MAP_T2	Территория войны гильдий
+MAP_T3	Территория войны гильдий
+MAP_T4	Территория войны гильдий
+MAP_TEMPLE	Храм Хванг
+MAP_THUNDER	Горы грома
+MAP_TREE	Лунгсам
+MAP_TRENT	Призрачный лес
+MAP_TRENT02	Красный лес
+MAP_TRENT02_A	Красный лес
+MAP_TRENT_A	
+MAP_WEDDING_01	Свадебная локация
+MAP_WHITE_DRAGON_CAVE_01	Оплот северного ветра
+MAP_WHITE_DRAGON_CAVE_02	Спуск северного ветра
+MAP_WHITE_DRAGON_CAVE_BOSS	Бездна северного ветра
+MAP_WHITE_DRAGON_VALLEY	Теснина душ
+MAP_WL	Змеиное поле
+MAP_WL_01	Змеиное Поле
+MC_ACCUMULATION_COUNT	Собрано карт монстров: %d
+MC_ACHIEV_NAME	%s (%d)
+MC_ACHIEV_REGIST_ABLE	Вы выполнили требования достижения %s (%d зв.).
+MC_ACHIEV_REGIST_FAIL	Сейчас вы не можете забрать достижение.
+MC_ACHIEV_REGIST_FAIL_CHECK_COUNT	Не получается забрать достижение. Закройте окно и попробуйте еще раз.
+MC_ACHIEV_REGIST_QUESTION_1	Хотите забрать достижение %s? Для этого нужны подходящие карты монстров (%d шт.).
+MC_ACHIEV_REGIST_QUESTION_2	Этот выбор нельзя будет отменить. Хотите продолжить?
+MC_ACHIEV_SHOW_APPLYS	Показать статус
+MC_ACHIEV_SHOW_MONSTER	Показать изображение
+MC_ALTER_TEXT	Уровень задания %d
+MC_CARD_FALL_SHORT	Зарегистрированных карт не хватает.
+MC_CARD_SHUFFLE	Хотите выбрать новые карты?
+MC_INIT_ITEM_FALL_SHORT	Вам нужны Карты рестарта: %d
+MC_MISSION_FAIL_MSG	Нет активных заданий или превышен лимит.
+MC_MISSION_INIT	Хотите поменять уровень задания на 1?
+MC_MISSION_NO_CLEAR	Сначала нужно закончить задание.
+MC_MOTION_BUTTON_OVER_MSG	Эта опция доступна только со 2 звезды.
+MC_POLY_BUTTON_OVER_MSG	Эта опция доступна только с 3 звезды.
+MC_POLY_FAIL	Сейчас вы не можете превратиться.
+MC_POLY_QUESTION	Вы хотите превратиться в этого монстра?
+MC_PROMOTION_MAX	Улучшение больше невозможно.
+MC_PROMOTION_QUESTION	Хотите повысить уровень?
+MC_QUESTION_BUTTON_DESC1	Изменение возможно только 6 раз в течение 24 часов.
+MC_QUESTION_BUTTON_DESC2	Для каждого следующего изменения нужны Карты рестарта.
+MC_QUESTION_BUTTON_DESC3	Нажмите сюда, чтобы узнать оставшееся время перезарядки.
+MC_REWARD_FAIL	У вас недостаточно места в инвентаре.
+MC_REWARD_MISSION	Хотите получить вашу карту монстра?
+MC_SHUFFLE_NO_ITEM	У вас нет Карт изменения.
+MC_TIME	Время перезарядки:%s
+MC_TRADE_QUESTION	У вас пропадут карты: %d Хотите продолжить?
+MC_USE_ITEM_FAIL	Эту карту нельзя добавить.
+MC_USE_ITEM_QUESTION	Вы хотите добавить эту карту монстра?
+MC_WARP_BUTTON_OVER_MSG	Эта опция доступна только с 4 звезды.
+MC_WARP_FAIL	Вы больше не можете телепортироваться.
+MC_WARP_LIMIT_LEVEL	Ваш текущий уровень недостаточно высок для телепортации.
+MC_WARP_QUESTION	Вы хотите телепорт. в район обитания этого монстра?
+MD_POPUP_MSG_1	Вы можете зайти только из Храма Зодиака.
+MD_POPUP_MSG_2	Стражи Зодиака должны восстановить свои силы.\nДайте им время.
+MD_SYSTEM_MSG_1	Вы не зомби. Вы не можете драться, когда мертвы.
+MEDAL_OF_HONOR	Медаль за храбрость
+MEDAL_OF_HONOR_SYSTEM_PICK	Получен предмет: Медаль за храбрость x %d
+MERCENARY_ADD_REWARD	Шанс на доп. награду + %.1f%%
+MERCENARY_CHAT_AUTO_DISPATCH_FAIL	У вас нет наемников для этого задания.
+MERCENARY_CHAT_DISPATCH	Отправлен(а) в: %s
+MERCENARY_CHAT_DISPATCH_JOIN_WARNING	Вы выбрали неподходящего наемника.
+MERCENARY_CHAT_DISPATCH_MAX_COUNT	Вы выбрали слишком много наемников.
+MERCENARY_CHAT_DISPATCH_NOT_ENOUGHT_ACTIVE	У вас не хватает сил.
+MERCENARY_CHAT_DISPATCH_SELECT_MERCENARY	Нужно выбрать наемника.
+MERCENARY_CHAT_DISPATCH_SELECT_MISSION	Задания не выбраны
+MERCENARY_CHAT_DONT_CLEAR_QUEST	Вы еще не выполнили условия для этого задания.
+MERCENARY_CHAT_DRAIN_MAIN_EXP_MERCENARY	Этот наемник годится только для обучения других.
+MERCENARY_CHAT_DRAIN_MAX_LEVEL	Этот наемник уже достиг максимального уровня.
+MERCENARY_CHAT_DRAIN_MERCENARY_REGISTER	Выберите наемника, которого хотите обучить, и тех, кого хотите использовать для обучения.
+MERCENARY_CHAT_DRAIN_NEED_MAIN	Выбрать наемника-ученика
+MERCENARY_CHAT_DRAIN_SUB_MAX_COUNT	Можно регистрировать до 10 наемников.
+MERCENARY_CHAT_EXIST_COMPLETE_MISSION	[Наемник] У вас есть и другие завершенные задания.
+MERCENARY_CHAT_GIVEUP	Задания отменены: %s.
+MERCENARY_CHAT_MAIN_DRAIN_MERCENARY_WARNING	Один из выбранных наемников ранен.
+MERCENARY_CHAT_MAX_ACTIVE_INCREASE_FOR_LEVELUP	Ваш запас сил увеличился, поскольку вы набрали новый чемпионский уровень.
+MERCENARY_CHAT_MAX_EXPAND_SLOT	У вас уже максимальное число мест.
+MERCENARY_CHAT_MAX_MERCENARY_EMPLOY	Нельзя вербовать новых наемников.
+MERCENARY_CHAT_MAX_YANG	Вы не можете посмотреть результаты, если у вас больше 2 миллиардов янг.
+MERCENARY_CHAT_MERCENARY_ADD_DONE	%s завербован(а).
+MERCENARY_CHAT_MERCENARY_CURE_DONE	%s исцелен(а).
+MERCENARY_CHAT_MERCENARY_DRAIN_DONE	%s достиг(ла) %d уровня.
+MERCENARY_CHAT_MERCENARY_FIRE_DONE	%s уволен.
+MERCENARY_CHAT_MERCENARY_NO_MORE_REGIST	Вы не можете обучать больше наемников.
+MERCENARY_CHAT_MERCENARY_SKILL_ADD_DONE	Вы завербовали %s с навыком %s.
+MERCENARY_CHAT_MERCENARY_SLOT_EXPAND	У вас стало больше мест для наемников.
+MERCENARY_CHAT_MISSION_ACTIVE_GAIN	Вы получили %d сил. Общий запас сил:%d
+MERCENARY_CHAT_MISSION_COMPLETE_NOTICE	[Наемник] У вас есть и другие завершенные задания.
+MERCENARY_CHAT_MISSION_REFRESH_FAIL_STATE_COMPLETE	Этого нельзя сделать, пока у вас есть завершенные задания.
+MERCENARY_CHAT_MISSION_REFRESH_FAIL_STATE_RUN	Этого нельзя сделать, пока у вас есть отправленные наемники.
+MERCENARY_CHAT_NOT_ENOUGHT_CONQUEROR_LEVEL	Это доступно только игрокам чемпионского уровня.
+MERCENARY_CHAT_NOT_ENOUGHT_EXPAND_ITEM	Вам нужны лицензии на расширение: %d.
+MERCENARY_CHAT_NOT_ENOUGHT_INVENTORY	Ваш инвентарь полон.
+MERCENARY_CHAT_NOT_ENOUGHT_YANG	Не хватает %s янг.
+MERCENARY_CHAT_OVER_MAX_ACTIVE	Это нельзя применить — вы уже достигли максимально возможного запаса сил.
+MERCENARY_CHAT_SPECIFICITY_GAIN	Вы получили: %s %s
+MERCENARY_CHAT_SUB_DRAIN_MERCENARY_WARNING	Выбран отправленный или травмированный наемник.
+MERCENARY_CHAT_TIME_CURE_START	Начать лечение, используя %s.
+MERCENARY_CONQUEROR_EXP_BONUS	Чемпионский опыт: %.1f%%
+MERCENARY_CURE_ALREADY	Этот наемник уже лечится.
+MERCENARY_CURE_DELAY_ASK	Хотите начать медленно лечить %s?
+MERCENARY_CURE_DELAY_NEED_ITEM	Вам нужно Долгое лечение наемника.
+MERCENARY_CURE_DONE	Этот наемник уже вылечился.
+MERCENARY_CURE_IMMEDIATELY_ASK	Хотите мгновенно вылечить %s?
+MERCENARY_CURE_IMMEDIATELY_NEED_ITEM	Вам нужно Быстрое лечение наемника.
+MERCENARY_CURE_NOT_INJURY	Этот наемник не ранен.
+MERCENARY_CURE_WILL_DONE	Нельзя лечить наемника, который уже постепенно лечится.
+MERCENARY_DECREASE_INJURY_PCT	Риск ранения -%.1f%%
+MERCENARY_DECREASE_TIME	Длит-ть задания -%.1f%%
+MERCENARY_EXP	Очки опыта наемника:
+MERCENARY_EXP_MAX	Максимум
+MERCENARY_FIRA_DISPATCH	Нельзя уволить отправленного наемника.
+MERCENARY_FIRE_ASK	Хотите уволить %s? Уволенных наемников нельзя вербовать снова.
+MERCENARY_INCREASE_SUCCESS_PCT	Шанс на успех +%.1f%%
+MERCENARY_INJURY_DANGER_BENEFITS	Риск ранения +%.1f%%
+MERCENARY_LEVEL	Уровень: %d
+MERCENARY_LOCK_SLOT_INFO	Число ячеек наемников можно увеличивать с помощью лицензий на расширение.
+MERCENARY_MISSION	Задание
+MERCENARY_MISSION_BUTTON_GIVEUP	Сдаться
+MERCENARY_MISSION_BUTTON_RESULT	Результаты
+MERCENARY_MISSION_BUTTON_START	Начать задание
+MERCENARY_MISSION_MAP_DAWNMIST	Зачарованный лес
+MERCENARY_MISSION_MAP_DESERT	Пустыня Йонгби
+MERCENARY_MISSION_MAP_DEVILCATACOMB	Катакомбы дьявола
+MERCENARY_MISSION_MAP_DEVILTOWER	Башня демонов
+MERCENARY_MISSION_MAP_EASTPLAIN	Равнина Донган
+MERCENARY_MISSION_MAP_FLAME	Сокровищница Мелеи
+MERCENARY_MISSION_MAP_MAZE	Гнолльи пещеры
+MERCENARY_MISSION_MAP_MILLGYO	Храм Хванг
+MERCENARY_MISSION_MAP_NONE	Нет
+MERCENARY_MISSION_MAP_SKIPIA	Грот изгнанников
+MERCENARY_MISSION_MAP_SNAKETEMPLE	Храм змеи
+MERCENARY_MISSION_MAP_SNAKEVALLEY	Проход Йилад
+MERCENARY_MISSION_MAP_SNOW	Башня Немера
+MERCENARY_MISSION_MAP_SPIDER	Куало Донг (Подземелье пауков)
+MERCENARY_MISSION_MAP_THREE	Долина Сеунгрийонг
+MERCENARY_MISSION_MAP_WHITECAVE	Оплот северного ветра
+MERCENARY_MISSION_NAME_PUNITIVE_DESTROY	Разрушение
+MERCENARY_MISSION_NAME_PUNITIVE_EXPLORE	Разведка
+MERCENARY_MISSION_NAME_PUNITIVE_LOW	Покорение (легко)
+MERCENARY_MISSION_NAME_PUNITIVE_NONE	Нет
+MERCENARY_MISSION_NAME_PUNITIVE_UPPER	Покорение (сложно)
+MERCENARY_MISSION_REFRESH_FAIL_MERCENARY	Нечего актуализировать, когда нет доступных наемников.
+MERCENARY_MISSION_STATE_COMPLETE_1	Задание %s%s выполнено.
+MERCENARY_MISSION_STATE_COMPLETE_2	Выберите «Результаты»
+MERCENARY_MISSION_STATE_END	Задание выполнено
+MERCENARY_MISSION_STATE_GIVEUP	Задание, от которого вы отказались, нельзя брать еще раз.
+MERCENARY_MISSION_STATE_NONE	Вы можете начинать задание.
+MERCENARY_MISSION_STATE_RUN	%s %s как раз началось.
+MERCENARY_NAME_COLLECTOR	Сборщик
+MERCENARY_NAME_EXP	Учитель
+MERCENARY_NAME_LUCKY	Счастливчик
+MERCENARY_NAME_NIMBLE	Талант
+MERCENARY_NAME_NORMAL	Обычный
+MERCENARY_NAME_STRONG	Сильный
+MERCENARY_NAME_TRAINED	Опытный
+MERCENARY_NONE	Нет
+MERCENARY_POPUP_DISPATCH_DONT_USING_ITEM	Хотите отправить наемника на задание, не расходуя на это силы?
+MERCENARY_POPUP_DISPATCH_START	Хотите отправить наемника на задание?
+MERCENARY_POPUP_DISPATCH_USING_ITEM	Хотите уменьшить число сил, нужное для этого задания?
+MERCENARY_POPUP_DRAIN_ASK	Наемник-учитель уйдет со службы и покинет вас. Точно продолжить?
+MERCENARY_POPUP_DRAIN_ASK_EXP	Опыт наемника-учителя пропадет. Точно продолжить?
+MERCENARY_POPUP_DRAIN_DEL_LEFT_EXP	Оставшийся опыт будет потерян.
+MERCENARY_POPUP_DRAIN_NEED_SUB	Выберите наемника, который станет учителем.
+MERCENARY_POPUP_DRAIN_SUB_LEVEL_WARNING	Вы выбрали наемника с высоким уровнем. Точно продолжить?
+MERCENARY_POPUP_EMPLOY_ASK_1	Хотите завербовать наемника?
+MERCENARY_POPUP_EMPLOY_ASK_2	Вам нужны лицензия наемника и %s янг.
+MERCENARY_POPUP_EXPAND_SLOT_QUESTION	Хотите добавить ячейки наемника? Вам нужно: %d.
+MERCENARY_POPUP_MISSION_FAIL	Задание наемника %s провалено!
+MERCENARY_POPUP_MISSION_GIVEUP_1	Хотите отменить задание наемника?
+MERCENARY_POPUP_MISSION_GIVEUP_2	Задание, которое вы отменили, нельзя давать еще раз.
+MERCENARY_POPUP_MISSION_MERCENARY_INJURE	У вас есть раненый наемник
+MERCENARY_POPUP_MISSION_REFRESH	Все задания наемников актуализируются. Точно продолжить?
+MERCENARY_POPUP_MISSION_RESULT	Хотите увидеть результат завершенного задания?
+MERCENARY_POPUP_MISSION_RESULT_DONT_USING_ITEM	Хотите увидеть результаты, не потратив эссенцию командира легиона?
+MERCENARY_POPUP_MISSION_RESULT_USING_ITEM	Хотите потратить эссенцию командира легиона, чтобы получить больше наград?\nОна не потратится, если ваши наемники не справятся с заданием.
+MERCENARY_POPUP_MISSION_REWARD_EXP	Вы собрали чемпионский опыт: %d
+MERCENARY_POPUP_MISSION_REWARD_YANG	Вы получили %s янг.
+MERCENARY_POPUP_MISSION_SUCCESS	Задание %s успешно выполнено!
+MERCENARY_POPUP_MISSION_USE_ITEM	Вы получили больше наград благодаря эссенции командира легиона.
+MERCENARY_SKILL	Навыки: %s
+MERCENARY_SKILL_CONQUEROR_EXP_BONUS	Больше опыта чемп. уровня
+MERCENARY_SKILL_DECREASE_INJURY_PCT	Уменьшает вероятность ранения
+MERCENARY_SKILL_DECREASE_TIME	Снижает длительность задания.
+MERCENARY_SKILL_INCREASE_SUCCESS_PCT	Повышает шанс на успех.
+MERCENARY_SKILL_INJURY_DANGER_BENEFITS	Рискнуть и выиграть
+MERCENARY_SKILL_UNIQUE	Уникальный
+MERCENARY_SPECIFICITY	Специализация: %s
+MERCENARY_SPECIFICITY_COLLECTOR	Сборщик
+MERCENARY_SPECIFICITY_EXPLAIN_GAIN	Ваш наемник может с вероятностью в 50%% получить специализацию, набрав %d уровень.
+MERCENARY_SPECIFICITY_EXPLAIN_UP	Набирая уровень %d, вы можете с вероятностью в 50%% получить %s.
+MERCENARY_SPECIFICITY_FIGHTER	Воин
+MERCENARY_SPECIFICITY_GRADE_LOWER	(легко)
+MERCENARY_SPECIFICITY_GRADE_MIDDLE	(средне)
+MERCENARY_SPECIFICITY_GRADE_UPPER	(высоко)
+MERCENARY_SPECIFICITY_LUCKY	Везунчик
+MERCENARY_SPECIFICITY_NONE	Нет
+MERCENARY_SPECIFICITY_RESCUE	Спаситель
+MERCENARY_SPECIFICITY_SPY	Шпион
+MERCENARY_TOOLTIP_CLOSE	Закрыть
+MERCENARY_TOOLTIP_DISPATCH	Отправлен
+MERCENARY_TOOLTIP_INJURE	Ранение
+MERCENARY_TOOLTIP_MANAGE	Управление наемником
+MERCENARY_TOOLTIP_MISSION	Список заданий
+MERCENARY_TOOLTIP_MISSION_COMPLETE	Завершено
+MERCENARY_TOOLTIP_MISSION_DISPATCH	Отправлен
+MERCENARY_TOOLTIP_MISSION_END	Завершить
+MERCENARY_TOOLTIP_MISSION_GIVEUP	Отмена
+MERCENARY_TOOLTIP_MISSION_LOCKSLOT_1	Чтобы это открыть, ваш чемпионский уровень должен быть выше %d.
+MERCENARY_TOOLTIP_MISSION_LOCKSLOT_2	Чем выше уровень, тем лучше награды, которые вы можете получить за задания.
+MERCENARY_TOOLTIP_MISSION_REFRESH	Повторить задание
+MERCENARY_TOOLTIP_MISSION_WAIT	Доступен
+MERCENARY_TOOLTIP_POSSIBLE_MERCENARY	Доступные наемники
+MERCENARY_UNDER_TREATMENT	Наемник лечится. (Еще %02d ч. %02d мин.)
+MERCENARY_UNIQUE_1	Шанс на успех +%.1f%%
+MERCENARY_UNIQUE_2	Шанс на успех +%.1f%%
+MESSENGER_ADD_BLOCK_FRIEND	Добавить
+MESSENGER_ADD_FRIEND	Добавить друга
+MESSENGER_BLOCK	Заблокировано
+MESSENGER_DO_YOU_ACCEPT_ADD_FRIEND_1	%s принял вас в список друзей.
+MESSENGER_DO_YOU_ACCEPT_ADD_FRIEND_2	Принять?
+MESSENGER_DO_YOU_DELETE	Удалить?
+MESSENGER_DO_YOU_DELETE_PHONE_NUMBER	Удалить номер моб.телефона?
+MESSENGER_DO_YOU_MOVE	Дальше?
+MESSENGER_EMPTY_LIST	Пусто
+MESSENGER_FAMILY	Семья
+MESSENGER_FRIEND	Друзья
+MESSENGER_GUILD	Гильдия
+MESSENGER_INPUT_MOBILE_AUTHORITY_DESCRIPTION	Введите номер подтверждения, посланный на ваш мобильный.
+MESSENGER_INPUT_MOBILE_AUTHORITY_TITLE	Ввести номер подтверждения.
+MESSENGER_INPUT_MOBILE_PHONE_NUMBER_1	Введите номер своего мобильного тел.для передачи смс.
+MESSENGER_INPUT_MOBILE_PHONE_NUMBER_2	Ввести номер сейчас?
+MESSENGER_INPUT_MOBILE_PHONE_NUMBER_TITLE	Ввести номер мобильного телефона
+MESSENGER_SEND_MOBILE_MESSAGE_TITLE	Отправить сообщение.
+METIN_TEST	
+MINIGAMEUI_CALENDAR	Календарь событий
+MINIGAME_FISH_EVENT_ADD_ACCEPT	Хотите это добавить?
+MINIGAME_FISH_EVENT_DROP_ACCEPT	Вы точно хотите бросить этот предмет?
+MINIGAME_FISH_EVENT_REWARD_MSG	Получено %s.
+MINIGAME_FISH_EVENT_USE_ACCEPT	Хотите это применить?
+MINIMAP	Открыть мини-карту
+MINIMAP_CANNOT_SEE	Показ мини-карты невозможен.
+MINIMAP_CAN_NOT_SHOW_AREAMAP	Показ карты невозможен.
+MINIMAP_DEC_SCALE	Уменьшить
+MINIMAP_INC_SCALE	Увеличить
+MINIMAP_OBSERVER_COUNT	%d Наблюдатель
+MINIMAP_OPEN_INGAMEEVENT	События
+MINIMAP_SHOW_AREAMAP	Открыть большую карту
+MINI_GAME_BNW_DONATE_QUESTION1	Хотите сделать взнос?
+MINI_GAME_BNW_DONATE_QUESTION2	Для взноса нужно 15 монет провидца.
+MINI_GAME_BNW_FONT	Arial:15
+MINI_GAME_BNW_GAME_GIVEUP_MSG1	Вы точно хотите прервать игру?
+MINI_GAME_BNW_GAME_GIVEUP_MSG2	Награды вы получите, только если выиграете.
+MINI_GAME_BNW_GAME_RESULT_DRAW	Ничья! Вы получаете монеты провидца: %d.
+MINI_GAME_BNW_GAME_RESULT_LOSE	Поражение! Вы получаете монеты провидца: %d.
+MINI_GAME_BNW_GAME_RESULT_SCORE	Итоговый результат: %d
+MINI_GAME_BNW_GAME_RESULT_WIN	Победа! Вы получаете монеты провидца: %d.
+MINI_GAME_BNW_NOT_ENOUGH_INVEN	У вас не хватает места в инвентаре.
+MINI_GAME_BNW_NOT_ENOUGH_ITEM	Для игры вам нужен набор карт таро.
+MINI_GAME_BNW_NOT_ENOUGH_YANG	У вас не хватает янг для начала игры.
+MINI_GAME_BNW_RESULT_DRAW1	У вас одинаковые числа.
+MINI_GAME_BNW_RESULT_DRAW2	Ничья!
+MINI_GAME_BNW_RESULT_LOSE1	Ваше число меньше.
+MINI_GAME_BNW_RESULT_LOSE2	Поражение!
+MINI_GAME_BNW_RESULT_WIN1	Ваше число больше.
+MINI_GAME_BNW_RESULT_WIN2	Победа!
+MINI_GAME_BNW_START_QUESTION	Для игры вам нужны 30 000 янг и набор карт таро. Хотите участвовать в состязании?
+MINI_GAME_CATCHKING_CHALLENGE_TOOLTIP1	%s: если использовать несколько, получите столько же ларцов в награду.
+MINI_GAME_CATCHKING_CHALLENGE_TOOLTIP2	Колод короля в одной игре: не больше %d.
+MINI_GAME_CATCHKING_HELP_MSG1	Увы! Ваша карта младше.\nВы не получаете очков. Выберите новую карту из своей колоды.
+MINI_GAME_CATCHKING_HELP_MSG2	Неплохо! У карт одинаковые значения.\n Ваш ход заканчивается. Выберите новую карту из своей колоды.
+MINI_GAME_CATCHKING_HELP_MSG3	Так держать! Ваша карта старше.\nВыберите еще одну карту на поле.
+MINI_GAME_CATCHKING_HELP_MSG4	Рядом с открытой вами картой лежала пятерка ([5]).\nВы не получаете очков. Теперь выберите своего короля [K].
+MINI_GAME_CATCHKING_POPUP_CATCH_FAIL	Король вышел! Игра окончена. \nЕсли вы набрали 10 очков или больше, то теперь можете забрать приз.
+MINI_GAME_CATCHKING_POPUP_REWARD_FAIL	Можете забрать приз.
+MINI_GAME_CATCHKING_SEARCH_NUMBER5	Рядом лежит пятерка ([5]).
+MINI_GAME_CATCHKING_START_QUESTION	За этот кон с вас спишут: %d янг и %s: %d шт.\nХотите сыграть?
+MINI_GAME_CATCHKING_TOOLTIP_CARD1	Бьет следующие карты: [1]
+MINI_GAME_CATCHKING_TOOLTIP_CARD2	Бьет следующие карты: [1], [2]
+MINI_GAME_CATCHKING_TOOLTIP_CARD3	Бьет следующие карты: [1], [2], [3]
+MINI_GAME_CATCHKING_TOOLTIP_CARD4	Бьет следующие карты: [1], [2], [3], [4]
+MINI_GAME_CATCHKING_TOOLTIP_CARD5	Бьет следующие карты: [1], [2], [3], [4], [5]\nЕсли рядом с открытой вами картой лежит еще одна [5],\n ход заканчивается, а вы не получаете очков.
+MINI_GAME_CATCHKING_TOOLTIP_CARD6	Бьет следующие карты: [K]
+MINI_GAME_CATCHKING_TOOLTIP_SCORE1	%s: 550 или больше
+MINI_GAME_CATCHKING_TOOLTIP_SCORE2	%s: 400 – 549
+MINI_GAME_CATCHKING_TOOLTIP_SCORE3	%s: 10 – 399
+MINI_GAME_CATCHKING_TOOLTIP_SCORE4	Вы получаете 10 бонусных очков, если открываете все карты в одном ряду.
+MINI_GAME_GIVEUP_QUESTION	Вы точно хотите прервать игру? В этом случае вы не получите награду.
+MINI_GAME_NOTICE_1	Нажмите на «Бросить», чтобы узнать, кто начнет.
+MINI_GAME_NOTICE_2	Бросьте ют-палочки
+MINI_GAME_NOTICE_3	Компьютер бросает ют-палочки, чтобы узнать, кто начинает.
+MINI_GAME_NOTICE_4	Начинает компьютер — он выкинул меньше или столько же очков.
+MINI_GAME_NOTICE_5	Вы выкинули меньше очков и начинаете.
+MINI_GAME_NOTICE_6	Ваш бросок: %s. Перейдите на %d пол. вперед.
+MINI_GAME_NOTICE_7	Ваш бросок: %s. Перейдите на 1 поле назад.
+MINI_GAME_NOTICE_8	Бросок: %s
+MINI_GAME_NOTICE_9	Ходит компьютер.
+MINI_GAME_NOTICE_10	Ха! Ваш бросок лучше, чем у компьютера.
+MINI_GAME_NOTICE_11	Вот так так! Ваш бросок хуже, чем у компьютера.
+MINI_GAME_NOTICE_12	У вас выпала Йут или Мо; вы можете бросить еще раз.
+MINI_GAME_NOTICE_13	Игра окончена. Получите свою награду.
+MINI_GAME_RUMI_DISCARD_QUESTION	Вы действительно хотите сбросить эту карту?
+MINI_GAME_RUMI_EXIT_QUESTION	Желаете завершить игру и получить свой выигрыш?\nВ этом случае ваши оставшиеся карты и очки будут обнулены!
+MINI_GAME_RUMI_START_QUESTION	Для игры вам потребуется %d янг. Кроме того требуется %d колод(а/ы) карт.\nЖелаете начать игру?
+MINI_GAME_YUTNORI_COM_WIN	Иногда ты проигрываешь, а другие выигрывают.
+MINI_GAME_YUTNORI_PC_WIN	Видите? Вот так выглядит победитель!
+MINI_GAME_YUTNORI_PC_WIN_SCORE	Результат: %d
+MINI_GAME_YUTNORI_RETHROW_BUTTON	Бросить
+MINI_GAME_YUTNORI_RETHROW_POPUP	Вот так удача! Можно бросать еще раз.
+MINI_GAME_YUTNORI_SCORE_FONT	Tahoma:24b
+MINI_GAME_YUTNORI_START_QUESTION	Чтобы сыграть в ютнори, вам нужны %d янг и %d доска ютнори. \n Сыграть сейчас?
+MINUTE	Мин.
+MISTS_ISLAND_BUFF_MSG_01	Энергия +2
+MISTS_ISLAND_BUFF_MSG_02	Шанс выпадения предметов +10%
+MISTS_ISLAND_BUFF_MSG_03	Сила, интеллект, здоровье, подвижность +3
+MISTS_ISLAND_BUFF_MSG_04	Шанс выпадения янг +10%
+MISTS_ISLAND_BUFF_MSG_05	Бонусы костюма повышаются на 3%
+MISTS_ISLAND_INFO_01	У вас слишком низкий уровень.
+MISTS_ISLAND_INFO_02	Не хватает янг.
+MISTS_ISLAND_INFO_03	Сейчас битвы нет.
+MISTS_ISLAND_MSG_01	%s: уничтожено %s!
+MISTS_ISLAND_MSG_02	%s захватывает %s!
+MISTS_ISLAND_MSG_03	%s занимает %s!
+MISTS_ISLAND_MSG_04	%s нападает на %s!
+MISTS_ISLAND_MSG_05	%s улучшает %s до уровня %d!
+MISTS_ISLAND_MSG_06	%s появляется на поле боя!
+MISTS_ISLAND_QUESTION_01	Вы хотите выйти из Битвы пяти святынь?
+MISTS_ISLAND_QUESTION_02	Вы хотите перенестись к недавно атакованной святыне? \n Стоимость: %s янг
+MISTS_ISLAND_TOOLTIP_01	[%s]
+MISTS_ISLAND_TOOLTIP_02	Империя-владелец: %s
+MISTS_ISLAND_TOOLTIP_03	Уровень улучшения: +%d
+MISTS_ISLAND_TOOLTIP_04	Усиление за захват: %s
+MISTS_ISLAND_TOOLTIP_05	Захват святынь
+MISTS_ISLAND_TOOLTIP_06	1. Чтобы занять святыню, ее сначала нужно уничтожить.
+MISTS_ISLAND_TOOLTIP_07	2. Империя, у которой больше всего бойцов рядом со святыней через 1 минуту, захватывает ее.
+MISTS_ISLAND_TOOLTIP_08	3. Через 3 минуты святыня появляется в цветах захватившей ее империи.
+MISTS_ISLAND_TOOLTIP_09	4. Чем дольше святыня находится под контролем одной и той же империи, тем сложнее ее уничтожить.
+MONETARY_UNIT0	янг
+MONETARY_UNIT1	десять тысяч
+MONETARY_UNIT2	сто миллионов
+MONEY_INPUT_DIALOG_SELLPRICE	Продажная цена:
+MOUNT_UPGRADE_SYSTEM_BANN_WHILE_MOUNTING	Это нельзя делать верхом на ездовом животном.
+MOUNT_UPGRADE_SYSTEM_CONQUEROR_LEVEL_MSG	Вы сможете повысить уровень коня, когда наберете чемпионский уровень.
+MOUNT_UPGRADE_SYSTEM_LEVEL_UP_POPUP_COST	Вам нужны: %d ед. корма для коня и %d янг.
+MOUNT_UPGRADE_SYSTEM_LEVEL_UP_POPUP_MSG_LEVEL	Хотите попробовать повысить уровень своего коня до %d?
+MOUNT_UPGRADE_SYSTEM_LEVEL_UP_POPUP_RETRY_COST	Чтобы повысить уровень коня, вам нужны %d ед. корма для коня, %d Gaya и %d янг.
+MOUNT_UPGRADE_SYSTEM_LEVEL_UP_RESULT_GEM_NOT_ENOUGH	У вас не хватает Gaya.
+MOUNT_UPGRADE_SYSTEM_LEVEL_UP_RESULT_PERCENT_FAIL	Не удалось повысить уровень коня
+MOUNT_UPGRADE_SYSTEM_LEVEL_UP_RESULT_PERCENT_SUCCESS	Уровень коня повышен до %d.
+MOUNT_UPGRADE_SYSTEM_LEVEL_UP_RESULT_YANG_OR_FEED_NOT_ENOUGH	У вас не хватает янг или корма для коня.
+MOUNT_UPGRADE_TOOLTIP_SKILL_NEXT_LEVEL	След. уровень: %d (макс. %d)
+MOVE_CHANNEL_99	К0
+MOVE_CHANNEL_CANCEL	Отменить
+MOVE_CHANNEL_NOTICE	Вы подключены по каналу %d.
+MOVE_CHANNEL_NOT_MOVE	Вы не можете сменить канал.
+MOVE_CHANNEL_SELECT	ОК
+MOVE_CHANNEL_TITLE	Выбор канала
+MOVE_ITEM_FAILURE_PRIVATE_SHOP	Вы не можешь перемещать предмет, когда открыта ваша лавка.
+MUSIC_EMPTY_MUSIC_LIST	Без фоновой музыки.
+MUSIC_METIN2_DEFAULT_THEMA	Метин 2-стандартная музыка
+MUSIC_NOT_SELECT_MUSIC	Музыкальный файл не выбран.
+NEEFD_REST	Сперва вы должны отдохнуть.
+NOT_YET_SUPPORT	Не поддерживается.
+OPEN_THE_SPECIAL_ACTION_KIT	%s: добавлено к эмоциям.
+OPTION_PVPMODE_CANNOT_SET_GUILD_MODE	Вы не можете активировать режим Гильдии, пока не являетесь её членом.
+OPTION_PVPMODE_NOT_SUPPORT	Вы не можете выбрать режим PvP.
+OPTION_PVPMODE_PROTECT	Чтобы использовать PvP Режим, нужно достигнуть хотя бы уровень %d.
+OTHER_WORLD_DUNGEON_EXIT_QUESTION	Хотите выйти из боя?
+OTHER_WORLD_EXCHANGE_COOLTIME	Повторите попытку позже.
+OTHER_WORLD_EXCHANGE_FAIL	Вы ничего не получили за обмен.
+OTHER_WORLD_EXCHANGE_MAX_OVER_FAIL	Нельзя применять предметы больше максимально допустимого числа.
+OTHER_WORLD_EXCHANGE_WISP_TOOLTIP	Обмен огоньков мертвых
+OTHER_WORLD_GET_DEAD_SOUL	Вы получаете душу мертвеца x %d.
+OTHER_WORLD_GET_HELL_GATE_KEY	Вы получаете ключ Асмодея x %d.
+OTHER_WORLD_GET_LIFE_AND_DEATH_LIST	Вы получаете черное письмо x %d.
+OTHER_WORLD_GET_REINCARNATION_WATER	Вы получаете живую воду x %d.
+OTHER_WORLD_GET_WISP	Вы получаете огонек мертвых x %d.
+OTHER_WORLD_INFO_BOARD_TYPE_EAST_REAPER_ROOM	Выберите посланника земли, с которым хотите сразиться.
+OTHER_WORLD_INFO_BOARD_TYPE_NORTH_REAPER_ROOM	Когда погибает любой персонаж, таймер подземелья уменьшается на 1 минуту.
+OTHER_WORLD_INFO_BOARD_TYPE_PARADISE	Живая вода недоступна.
+OTHER_WORLD_INFO_BOARD_TYPE_SOUTH_REAPER_ROOM	Убейте всех монстров за отведенное время.
+OTHER_WORLD_INFO_BOARD_TYPE_WEST_REAPER_ROOM	Победите посланника ночи, не погибнув при этом.
+OTHER_WORLD_INFO_BOARD_TYPE_YEOMWANG_ROOM	Победите Асмодея, пока не истекло время.
+PARTY_ANSWER_TIMEOVER	Приглашение отклонено.
+PARTY_BONUS_ATTACKER	Показатель атаки: +%d	SA
+PARTY_BONUS_BERSERKER	Скорость атаки: +%d	SA
+PARTY_BONUS_BUFFER	Продолжительность действия навыков: +%d	SA
+PARTY_BONUS_DEFENDER	Защита +%d%%	SA
+PARTY_BONUS_EXP	Бонус к опыту: %d%%	SA
+PARTY_BONUS_SKILL_MASTER	Восстановление ХП за убийство +%d%%	SA
+PARTY_BONUS_TANKER	Макс. ХП: +%d	SA
+PARTY_BREAK_UP	Ликвидировать группу
+PARTY_DO_YOU_ACCEPT	---LOCA::SPACE--хотел бы присоединиться к группе.
+PARTY_DO_YOU_JOIN	 пригласил(а) вас в группу. Принять приглашение?
+PARTY_EXP_DISTRIBUTION_MODE	Распределение опыта
+PARTY_EXP_DISTRIBUTION_MODE_LEVEL	В зависимости от уровня
+PARTY_EXP_DISTRIBUTION_MODE_LEVEL_TOOLTIP	Участники группы с более высоким уровнем получают больше опыта.
+PARTY_EXP_DISTRIBUTION_MODE_PARITY	равномерно
+PARTY_EXP_DISTRIBUTION_MODE_PARITY_TOOLTIP	Все участники группы получают одинаковое количество опыта.
+PARTY_HEAL_ALL_MEMBER	Восстановить всё
+PARTY_INCREASE_AREA_150	Диапазон группы увеличен в 1,5 раза.	SNA
+PARTY_INCREASE_AREA_200	Диапазон группы увеличен в 2 раза.	SNA
+PARTY_LEAVE	Покинуть группу
+PARTY_LONGTIME_BONUS_EXP	Бонус к опыту за долгую групповую игру: +%d%%	SA
+PARTY_MATCH_CANCEL	Поиск группы для [%s] прекращен.
+PARTY_MATCH_FAIL_FULL_MEMBER	В вашу группу больше нельзя набирать участников.
+PARTY_MATCH_FAIL_IMPOSSIBLE_MAP	Вы не можете регистрироваться для этого подземелья.
+PARTY_MATCH_FAIL_LEVEL	У вас слишком низкий уровень.
+PARTY_MATCH_FAIL_MEMBER_NOT_CONDITION	Участник %s не соответствует требованиям.
+PARTY_MATCH_FAIL_NONE_MAP_INDEX	Сначала выберите подземелье.
+PARTY_MATCH_FAIL_NOT_LEADER	Регистрировать группу может только лидер группы.
+PARTY_MATCH_FAIL_NO_ITEM	У вас недостаточно %s.
+PARTY_MATCH_SEARCHING	Поиск
+PARTY_MATCH_START	Вы зарегистрировали свою группу для подземелья [%s]!
+PARTY_MEMBER_OFFLINE	[оффлайн]
+PARTY_RECALL_MEMBER	Позвать участника группы.
+PARTY_REGEN_BONUS	Бонус за ХП- + МП-регенерация: +%d%%	SA
+PARTY_REQUEST_DENIED	Ваше приглашение не принято.
+PARTY_RK_CATEGORY_CZ_CHICKEN	Ранги по Стражнику Юй
+PARTY_RK_CATEGORY_CZ_COW	Ранги по Стражнику Чжоу
+PARTY_RK_CATEGORY_CZ_DOG	Ранги по Стражнику Сюй
+PARTY_RK_CATEGORY_CZ_DRAGON	Ранги по Стражнику Чжэнь
+PARTY_RK_CATEGORY_CZ_HORSE	Ранги по Стражнику У
+PARTY_RK_CATEGORY_CZ_MONKEY	Ранги по Стражнику Шэнь
+PARTY_RK_CATEGORY_CZ_MOUSE	Ранги по Стражнику Ци
+PARTY_RK_CATEGORY_CZ_PIG	Ранги по Стражнику Хай
+PARTY_RK_CATEGORY_CZ_RABBIT	Ранги по Стражнику Мао
+PARTY_RK_CATEGORY_CZ_SHEEP	Ранги по Стражнику Вэй
+PARTY_RK_CATEGORY_CZ_SNAKE	Ранги по Стражнику Сы
+PARTY_RK_CATEGORY_CZ_TIGER	Ранги по Стражнику Инь
+PARTY_SET_ATTACKER	Определить Бойцом атаки.
+PARTY_SET_BERSERKER	Определить  Берсеркером.
+PARTY_SET_BUFFER	Определить  Блокирующим.
+PARTY_SET_DEFENDER	Определить Защитником.
+PARTY_SET_NORMAL	Отменить установку.
+PARTY_SET_SKILL_MASTER	Определить  Мастером навыков.
+PARTY_SET_TANKER	Определить Бойцом ближнего боя.
+PARTY_SKILL_ATTACKER	Базовый показатель атаки Нападающий +%.0f
+PARTY_SKILL_BERSERKER	Скорость атаки Берсеркер +%.0f
+PARTY_SKILL_BUFFER	Длительность навыка Блокирущий +%.0f
+PARTY_SKILL_DEFENDER	Защита в роли защитника +%.0f%%
+PARTY_SKILL_HP_REGEN	ХП-регенерация +%.0f%%
+PARTY_SKILL_PARTY_AREA	Диапазон группы +%d%%
+PARTY_SKILL_SKILL_MASTER	Регенерация ХП как Мастеру навыка +%.0f%%
+PARTY_SKILL_SP_REGEN	МП-регенерация +%.0f%%
+PARTY_SKILL_TANKER	Максим. ХП Боец ближнего боя +%.0f
+PARTY_SKILL_WARP	Вправе вызвать участника группы.
+PASSIVE_ATTR_ADD_FAIL	Неудача! Бонусы не перенеслись на реликт души.
+PASSIVE_ATTR_ADD_FAIL_MAX_ATTR	Реликт души больше не вместит бонусов.
+PASSIVE_ATTR_ADD_FAIL_NOT_ENOUGH_JOB_ITEM	Для этого нужен реликт души вашего класса.
+PASSIVE_ATTR_ADD_SUCCESS	Успешно! Бонусы перенеслись на реликт души.
+PASSIVE_ATTR_CHARGE_FAIL_FULL_TIME	Реликт души уже заряжен.
+PASSIVE_ATTR_CHARGE_FAIL_NOT_ENOUGH_JOB_ITEM	Заряжать реликт души не нужно.
+PASSIVE_ATTR_CHARGE_QUESTION	Хотите зарядить реликт души?
+PASSIVE_ATTR_CHARGE_SUCCESS_MSG	Время реликта полностью заряжено.
+PASSIVE_ATTR_CONTROL_FAIL_MSG	Во время заряда нельзя ничего делать.
+PASSIVE_ATTR_COOLTIME_FAIL_MSG	Повторите попытку позже.
+PASSIVE_ATTR_NOT_ENOUGH_SUB_ITEM	Для этого нужна подходящая душа.
+PASSIVE_JOB_ACTIVATE_FAIL_NOT_FOUND_ITEM	Для этого нужен реликт души вашего класса.
+PASSIVE_JOB_DESTROY_POPUP	Если сдать реликт души, он уничтожается. Вы уверены?
+PASSIVE_JOB_FIRST_ACTIVATE_POPUP1	После активации реликт нельзя будет передавать.
+PASSIVE_JOB_FIRST_ACTIVATE_POPUP2	При этом теряются предметы. Вы уверены?
+PASSIVE_JOB_LEFT_TIME	Осталось: %s
+PASSIVE_JOB_MAX_TIME	Макс. время реликта: %s
+PASSWORD_TITLE	Пароль для склада
+PET_ATTR_CHANGE_DIALOG_TEXT	Хотите изменить параметры своего питомца?\n При этом тратится предмет «Зачаровать питомца».\n Можно потерпеть неудачу
+PET_ATTR_CHANGE_USE	Пока параметры питомца изменяются, это действие выполнять нельзя.
+PET_ATTR_DETERMINE_TYPE1	Тип питомца 1: неуклюжий. Не слишком сильный.\nСо временем его навыки можно развить.
+PET_ATTR_DETERMINE_TYPE2	Тип питомца 2: любопытный. Не слишком сильный.\nВерный спутник, чьи навыки растут со временем.
+PET_ATTR_DETERMINE_TYPE3	Тип питомца 3: отважный. Достаточно сильный.\nСо временем его навыки можно развить.
+PET_ATTR_DETERMINE_TYPE4	Тип питомца 4: храбрый. Достаточно сильный.\nВерный спутник, чьи навыки еще растут со временем.
+PET_ATTR_DETERMINE_TYPE5	Тип питомца 5: безрассудный. Сильный.\nСо временем его навыки можно развить.
+PET_ATTR_DETERMINE_TYPE6	Тип питомца 6: легендарный. Сильный.\nВерный спутник, чьи навыки еще больше растут со временем.
+PET_ATTR_DETERMINE_TYPE7	Тип питомца 7: мифический. Очень сильный.\nСо временем раскроет весь свой потенциал.
+PET_ATTR_DETERMINE_TYPE8	Тип питомца 8: призматический. Невероятно сильный.\nВерный спутник, на которого можно положиться.
+PET_BAG_DESC	%s
+PET_CANNOT_FEED_CUBEOPEN	Вы не можете кормить питомца, пока открыто окно улучшения.
+PET_CAN_NOT_ATTRCHANGE_BECUASE_LIFE_TIME_END	Вы не можете изменять параметры мертвого питомца.
+PET_CAN_NOT_EGG_ITEM_USE	Вы не можете открыть инкубатор во время торга, пока открыт ваш склад или лавка.
+PET_CAN_NOT_FEED_SPLIT_ITEM	Вы не можете поместить в это окно разделенный предмет.
+PET_CAN_NOT_FEED_TYPE	Так вы, к сожалению, не можете кормить питомца. Попробуйте еще раз с помощью другого действия.
+PET_CAN_NOT_OPEN_EVOL_BUTTON	Для того, чтобы обучить и повысить степень питомца до следующего уровня, уровень питомца должен быть %d.
+PET_CAN_NOT_OPEN_EVOL_BUTTON_EXP_LACK	Для того, чтобы обучить и повысить степень развития питомца, у него должно быть 100% опыта.
+PET_CAN_NOT_OPEN_EVOL_BUTTON_LEVEL_MAX	Ваш питомец уже достиг высшего уровня.
+PET_CAN_NOT_OPEN_SHOP_BECAUSE_SUMMON	Вы не можете открыть лавку если призвали питомца.
+PET_CAN_NOT_OPEN_SPECIAL_EVOL_BUTTON	Для того, чтобы обучить и повысить степень питомца до следующего уровня, питомцу должно быть %d дней.
+PET_CAN_NOT_SUMMON_BECAUSE_LIFE_TIME_END	Вы не можете призвать питомца так как его срок действия уже истек.
+PET_CAN_NOT_USE_BAG	Вы не можете использвоть Транспортную клетку так как срок действия вашего питомца истек.
+PET_EMPTY_SKILL_SLOT_USE_ITEM	У питомца нет навыков, которые можно сбросить.
+PET_HATCHING_ACCEPT	Желаете назвать своего питомца "%s"?
+PET_HATCHING_MONEY	Цена: %s
+PET_HATCHING_WINDOW_OPEN_CAN_NOT_USE	Когда у вас открыт инкубатор, вы не можете выполнять какие-либо взаимодействия.
+PET_INFORMATION_STAGE1	Молодой
+PET_INFORMATION_STAGE2	Дикий
+PET_INFORMATION_STAGE3	Отважный
+PET_INFORMATION_STAGE4	Героический
+PET_INFO_EXP	Текущий опыт:
+PET_INFO_ITEM_EXP	Текущие очки опыта предмета
+PET_INFO_NEXT_EXP	Оставшийся опыт:
+PET_INFO_NEXT_ITEM_EXP	Оставшиеся очки опыта предмета
+PET_MSG_NOT_ENOUGH_MONEY	У вас недостаточно янг.
+PET_NAME_CHANGE_ACCEPT	Хотите поменять имя питомца на «%s»?
+PET_NAME_MIN	Введенное имя слишком коротко.
+PET_REVIVE_FAIL_EMPTY_PET_SLOT	Нет питомца для оживления.
+PET_REVIVE_FAIL_NOT_ENOUGHT_MATERIAL	У вас недостаточно материалов.
+PET_REVIVE_UI_MATERIAL_COUNT	%d/%d
+PET_SKILL_DELETE_QUESTION_DLG_MSG	Навыки теперь доступны.
+PET_SKILL_DELETE_QUESTION_DLG_MSG1	Сброс навыка(-ов) вашего питомца нельзя отменить.
+PET_SKILL_DELETE_QUESTION_DLG_MSG2	Хотите продолжить?
+PET_SKILL_LEARN_FAIL_CONDITIONS	Ваш питомец слишком молод или слишком низкой ступени. Навыки могут изучать только героические питомцы.
+PET_SKILL_LEARN_QUESTION_DLG_MSG	Желаете начать обучение с "%s"?
+PET_SKILL_TOOLTIP_COOLTIME	Время перезарядки: %d секунд
+PET_SKILL_TOOLTIP_DURATION	Длительность: %d с.
+PET_SKILL_TOOLTIP_FEATHER	Питомец активирует Легкую походку с вероятностью в %d%% на %.1f сек.\n Атака %d - %d	SAAAA
+PET_SKILL_TOOLTIP_HEAL	Как только ваши ХП снижаются до 20%%, вы получаете \n %d%% шанс на восстановление %d ХП.	SAA
+PET_SKILL_TOOLTIP_INVINVIBILITY	Ваш персонаж становится непобедим с  %d%% шансом,\n если ваши ХП упадут ниже  10%%. \n Срок действия эффекта: %.1f секунд.	SAA
+PET_SKILL_TOOLTIP_REMOVAL	Мгновенно устраняет негативные эффекты такие как, отравление, замедление \n или кровотечение с %d%% шансом, если ваш персонаж поражен.	SAN
+PET_SKILL_UPGRADE_QUESTION_DLG_MSG1	Повысить обучение героя на следующую ступень развития?
+PET_SKILL_UPGRADE_QUESTION_DLG_MSG2	Затраты: %s
+PET_TOOLTIP_COSTUME_BONUS	
+PET_TOOLTIP_DEF	Защита
+PET_TOOLTIP_HP	ХП
+PET_TOOLTIP_LEVEL	Уровень
+PET_TOOLTIP_LIFETIME_OVER	Время истекло
+PET_TOOLTIP_SKILL_BONUS_VALUE	в процессе обучения героя
+PET_TOOLTIP_SKILL_CUR_LEVEL	Уровень: %d
+PET_TOOLTIP_SKILL_NEXT_LEVEL	Следующий уровень: %d (макс. %d)
+PET_TOOLTIP_SP	МП
+PET_TOOLTIP_TRADABLE	Подлежит торгу
+PET_TOOLTIP_SKILL	%s (Ступень %d)
+PICK_ITEM_TITLE	Номер предмета
+PICK_MONEY_TITLE	Стоимость
+PREMIUM_PRIVATE_ITEM_ADD_LIMIT_WON	Общая стоимость выставленных вами на продажу предметов не может превышать допустимой.
+PREMIUM_PRIVATE_ITEM_ADD_LIMIT_YANG	Общая стоимость выставленных вами на продажу предметов не может превышать допустимой.
+PREMIUM_PRIVATE_MODIFY_LIMIT_WON	Это больше 999 вон. Сначала заберите деньги.
+PREMIUM_PRIVATE_MODIFY_LIMIT_YANG	Это больше 2 миллиардов янг. Сначала заберите деньги.
+PREMIUM_PRIVATE_SHOP_CANNOT_OPEN_MAP	Это нельзя открывать на этой карте.
+PREMIUM_PRIVATE_SHOP_CLOSE_QUESTIONG	Хотите закрыть личную лавку?
+PREMIUM_PRIVATE_SHOP_DURATION	Длительность: %s
+PREMIUM_PRIVATE_SHOP_MODIFY_STATE_OPEN_FAIL	Лавка сейчас закрыта, потому что там идут изменения.
+PREMIUM_PRIVATE_SHOP_NO_BUFF	Это кнопка для вашей личной премиум-лавки. Чтобы ее использовать, купите премиум-лавку в магазине.
+PREMIUM_PRIVATE_SHOP_PASSWORD_TITLE	Пароль
+PREMIUM_PRIVATE_SHOP_POSITION	%s (%d,%d) - CH-%d
+PREMIUM_PRIVATE_SHOP_USE_ITEM	Хотите использовать предмет «Личная премиум-лавка»?
+PREMIUM_PRIVATE_TAX_ADJUSTMENT_LIMIT_WON	Вы не можете забрать деньги, потому что у вас больше 999 вон.
+PREMIUM_PRIVATE_TAX_ADJUSTMENT_LIMIT_YANG	Вы не можете забрать деньги, потому что у вас больше 2 миллиардов янг.
+PREMIUM_PRIVATE_TAX_ADJUSTMENT_NONE	Нет денег, чтобы их забрать.
+PREMIUM_PRIVATE_TAX_ADJUSTMENT_OVERFLOW_WON	Вы внесли больше вон, чем можете снять.
+PREMIUM_PRIVATE_TAX_ADJUSTMENT_OVERFLOW_YANG	Вы внесли больше янг, чем можете снять.
+PREMIUM_PRIVATE_TAX_ADJUSTMENT_WRONG_INPUT	Вы не можете забрать деньги; вы ввели слишком большую сумму.
+PRIVATESHOPSEARCH_ABLITY_POTION	Роса
+PRIVATESHOPSEARCH_ACCESSORY_SOCKET	Тонкое сукно
+PRIVATESHOPSEARCH_ARMOR	Снаряжение
+PRIVATESHOPSEARCH_ARROW	Стрелы
+PRIVATESHOPSEARCH_BELL	Колокольчики
+PRIVATESHOPSEARCH_BELT	Пояса
+PRIVATESHOPSEARCH_BLEND	Зелья
+PRIVATESHOPSEARCH_BLOOD_PEARL	Алая жемчужина
+PRIVATESHOPSEARCH_BLUE_PEARL	Голубая жемчужина
+PRIVATESHOPSEARCH_BODY	Доспехи
+PRIVATESHOPSEARCH_BOW	Луки
+PRIVATESHOPSEARCH_BUYTIME	Желаете купить выбранный предмет?
+PRIVATESHOPSEARCH_CLAW	Когти
+PRIVATESHOPSEARCH_CLEAR_POTION	Эликсиры
+PRIVATESHOPSEARCH_COSTUME	Костюмы
+PRIVATESHOPSEARCH_COSTUMEBODY	Костюмы
+PRIVATESHOPSEARCH_COSTUMEHAIR	Прическа
+PRIVATESHOPSEARCH_COSTUME_ACCE	Шарфы
+PRIVATESHOPSEARCH_COSTUME_MOUNT	Ездовое животное
+PRIVATESHOPSEARCH_CRYSTAL	Кристалл
+PRIVATESHOPSEARCH_DAGGER	Кинжалы
+PRIVATESHOPSEARCH_DEAD	мертвый
+PRIVATESHOPSEARCH_DETACHMENT	Книга Камня
+PRIVATESHOPSEARCH_DIAMOND	Алмаз
+PRIVATESHOPSEARCH_DS	Алхимия Камней Дракона
+PRIVATESHOPSEARCH_DS_BLACK	Оникс
+PRIVATESHOPSEARCH_DS_BLUE	Сапфир
+PRIVATESHOPSEARCH_DS_GREEN	Нефрит
+PRIVATESHOPSEARCH_DS_RED	Рубин
+PRIVATESHOPSEARCH_DS_WHITE	Алмаз
+PRIVATESHOPSEARCH_DS_YELLOW	Гранат
+PRIVATESHOPSEARCH_EAR	Серьги
+PRIVATESHOPSEARCH_FAN	Веера
+PRIVATESHOPSEARCH_FISH	Рыба
+PRIVATESHOPSEARCH_FOOTS	Обувь
+PRIVATESHOPSEARCH_GEM	Самоцветы
+PRIVATESHOPSEARCH_GIFTBOX	Подарочные ларцы
+PRIVATESHOPSEARCH_HEAD	Шлемы
+PRIVATESHOPSEARCH_LIVE	живой
+PRIVATESHOPSEARCH_MATERIAL	Требуемые материалы
+PRIVATESHOPSEARCH_METIN	Камни духа
+PRIVATESHOPSEARCH_NECK	Ожерелья
+PRIVATESHOPSEARCH_NEED_ITEM_BUY	Без нужного узелка вы не можете покупать предметы.
+PRIVATESHOPSEARCH_NEED_ITEM_FIND	Без нужного узелка вы не можете искать предметы.
+PRIVATESHOPSEARCH_NODELAY_POTION	Предметы для ХП
+PRIVATESHOPSEARCH_ORE	Руда
+PRIVATESHOPSEARCH_PET	Система улучшения питомца
+PRIVATESHOPSEARCH_PETAGG	Яйца питомцев
+PRIVATESHOPSEARCH_PETSKILLBOOK	Книга навыков питомца
+PRIVATESHOPSEARCH_PICK	Кирки
+PRIVATESHOPSEARCH_POTION	Зелья
+PRIVATESHOPSEARCH_QUEST	Задание
+PRIVATESHOPSEARCH_QUIVER	Колчаны
+PRIVATESHOPSEARCH_RESOURCE	Улучшение предметов
+PRIVATESHOPSEARCH_ROD	Рыбная ловля
+PRIVATESHOPSEARCH_SELECTITEM	Выберите предмет.
+PRIVATESHOPSEARCH_SHIELD	Щиты
+PRIVATESHOPSEARCH_SKILLBOOK	Книги навыков
+PRIVATESHOPSEARCH_SKILLFORGET	Книга забвения
+PRIVATESHOPSEARCH_SPECIAL	Прочее
+PRIVATESHOPSEARCH_STONE	Энергетический фрагмент
+PRIVATESHOPSEARCH_SWORD	Одноручные мечи
+PRIVATESHOPSEARCH_TREASUREBOX	Ларцы
+PRIVATESHOPSEARCH_TUNING	Свитки
+PRIVATESHOPSEARCH_TWOSWORD	Двуручные мечи
+PRIVATESHOPSEARCH_UNIQUE	Уникальный
+PRIVATESHOPSEARCH_USEITEM	Расходные материалы
+PRIVATESHOPSEARCH_USESPECIAL	Прочее
+PRIVATESHOPSEARCH_WEAPON	Оружия
+PRIVATESHOPSEARCH_WHITE_PEARL	Белая жемчужина
+PRIVATESHOPSEARCH_WRIST	Браслеты
+PRIVATE_SHOP_CANNOT_SELL_ITEM	Этот предмет нельзя купить в лавке.
+PRIVATE_SHOP_CLOSE_QUESTION	Хотите закрыть лавку?
+PRIVATE_SHOP_INPUT_NAME_DIALOG_TITLE	Имя лавки
+PRIVATE_SHOP_INPUT_PRICE_DIALOG_TITLE	Цена
+PRIVATE_SHOP_SEARCH_VNUM_ITEM_NOT_FOUND	Нет результатов.
+PRIVATE_SHOP_SEARCH_VNUM_ITEM_NOT_SELECTED	Выберите предмет, чтобы выполнить поиск.
+PVP_LEVEL0	по-рыцарски
+PVP_LEVEL1	благородно
+PVP_LEVEL2	хорошо
+PVP_LEVEL3	дружелюбный
+PVP_LEVEL4	нейтральный
+PVP_LEVEL5	агрессивный
+PVP_LEVEL6	коварный
+PVP_LEVEL7	злобный
+PVP_LEVEL8	жестокий
+PVP_MODE_GUILD	PvP-Режим гильдии активирован
+PVP_MODE_KILL	Свободное PvP активировано
+PVP_MODE_NORMAL	PvP-мир активирован
+PVP_MODE_PROTECT	PvP-защита активирована
+PVP_MODE_REVENGE	PvP-враждебный активировано
+PVP_OPTION_KILL	Свободный
+PVP_OPTION_NORMAL	Мир
+PVP_OPTION_PROTECT	Защита
+PVP_OPTION_REVENGE	враждебный
+PVP_TOURNAMENT_DO_NOT_AUTO	Во время PvP-турнира нельзя использовать автоатаку.
+QUEST_APPEND	Новое задание  принято.
+QUEST_HOUR	Час(ы)
+QUEST_MIN	Мин.
+QUEST_SEC	Сек.
+QUEST_TIMEOVER	Время исстекло.
+QUEST_UNLIMITED_TIME	Без ограничения времени
+QUEST_ZEROSEC	0 сек.
+QUICKSLOT_REGISTER_DISABLE_ITEM	Этот предмет не может быть добавлен в поле быстрого доступа.
+RAMADAN_EVENT_BREAD_MAX_COUNT	У вас уже максимум хлебов.
+RAMADAN_EVENT_FIG_MAX_COUNT	У вас уже максимум плодов благословения.
+RAMADAN_EVENT_GET_BREAD	Вы получили 1 хлеб.
+RAMADAN_EVENT_GET_FIG	Вы получили 1 плод благословения.
+RAMADAN_EVENT_NOT_ENOUGH_BREAD	Вам нужно еще 10 хлебов.
+RANKING	Ранг
+RANKING_BOARD_MEMBER	Участники
+RECEIVE_MESSAGE	%s отправил вам сообщение.
+REFINE_COST	Затраты на улучшение: %d янг
+REFINE_DESTROY_WARNING	Вероятность разрушения предмета при его улучшении.
+REFINE_DESTROY_WARNING_WITH_BONUS_PERCENT_1	Вы точно хотите улучшить предмет?
+REFINE_DESTROY_WARNING_WITH_BONUS_PERCENT_2	В случае неудачи предмет будет разрушен. Хотите продолжить?
+REFINE_DOWN_GRADE_WARNING	Вероятность потери некоторых свойств предмета при попытке его улучшить.
+REFINE_DO_YOU_SEPARATE_METIN	Вы хотите удалить Камень духа?
+REFINE_ELEMENT_CHANGE_TEXT	У %s теперь стихия %s!
+REFINE_ELEMENT_DOWNGRADE_TEXT	Степень заклятия стихий понижена.
+REFINE_ELEMENT_EXIST	У этого предмета уже есть другая стихия.
+REFINE_ELEMENT_GRADE_MAX	Уже достигнута максимальная степень заклятия стихий.
+REFINE_ELEMENT_NOT_ENOUGHT_GRADE	Заклятие стихий доступно только для оружия +7 или выше.
+REFINE_ELEMENT_NOT_ENOUGHT_YANG	Не хватает янг.
+REFINE_ELEMENT_NOT_EXSIT	Нельзя использовать с этим предметом.
+REFINE_ELEMENT_TEXT_DARK	Тьма +%d
+REFINE_ELEMENT_TEXT_EARTH	Земля +%d
+REFINE_ELEMENT_TEXT_ELECT	Молния +%d
+REFINE_ELEMENT_TEXT_FIRE	Огонь +%d
+REFINE_ELEMENT_TEXT_ICE	Лед +%d
+REFINE_ELEMENT_TEXT_WIND	Ветер +%d
+REFINE_ELEMENT_UPGRADE_FAIL_TEXT	Заклятие стихий не удалось.
+REFINE_ELEMENT_UPGRADE_SUCCESS_TEXT	Заклятие стихий успешно!
+REFINE_FAILURE	Да уж, не сработало. Мы не справились.
+REFINE_FAILURE_CAN_NOT_ATTACH	%s нельзя приложить к этому предмету.
+REFINE_FAILURE_DEL_ITEM	Улучшение не удалось. Предмет уничтожен.
+REFINE_FAILURE_EQUIP_ITEM	Вы не можете улучшить снаряженный предмет.
+REFINE_FAILURE_GRADE_DOWN	Улучшение не удалось. Качество предмета ухудшено.
+REFINE_FAILURE_KEEP_GRADE	Улучшение не удалось.\nВам повезло, и предмет остался прежним.
+REFINE_FAILURE_METIN_INSEPARABLE_ITEM	Нет камня духа для удаления.
+REFINE_FAILURE_NEED_BETTER_SCROLL	Вам необходим лучший Свиток улучшения.
+REFINE_FAILURE_NO_GOLD_SOCKET	Добавление %s невыполнимо из-за отсутствия золотой оправы.
+REFINE_FAILURE_NO_MORE_REINFORCE	Больше усилить нельзя.
+REFINE_FAILURE_NO_MORE_SOCKET	Добавление последующих ячеек невозможно.
+REFINE_FAILURE_NO_SOCKET0	Добавление %s невыполнимо из-за отсутствия ячейки.
+REFINE_FAILURE_SOCKET_DISABLE_ITEM	Добавление ячеек к этому предмету невозможно.
+REFINE_FAILURE_UPGRADE_DISABLE_ITEM	Этот предмет нельзя улучшить.
+REFINE_QUESTION_CONFIRM	Хотите продолжить?
+REFINE_QUESTION_WARNING_DOWN_GRADE_AND_REFIX_REMOVE	Если улучшение не удастся, уровень предмета упадет ниже необходимого для эффекта за набор, и эффект пропадет.
+REFINE_QUESTION_WARNING_PREFIX_REMOVE	Когда вы улучшаете предмет, эффект за набор пропадает.
+REFINE_SUCCESS	Улучшение предмета прошло успешно.
+REFINE_SUCCESS_PROBALITY	Шанс на улучшение: %d%%
+REFINE_WARNING2	Продолжить?
+RESTART_HERE_BUTTON_TEXT_SUNGMAHEE_GATE	Случайное оживление
+RESTART_POPUP_GIVEUP_ELEMENTAL_DUNGEON	Вы погибли. \nВозвращайтесь из Мира стихий!
+RESTART_POPUP_GIVEUP_MIST_ISLAND	Вы пали в Битве пяти святынь.\n Вы возвращаетесь в деревню.
+RESTART_POPUP_GIVEUP_OTHER_WORLD_DUNGEON	Ваш персонаж погиб. \nСкоро вы перенесетесь в город.
+RESTART_POPUP_GIVEUP_SUNGMAHEE_TOWER	Горькое поражение! Здесь ваш путь заканчивается.
+RESTART_POPUP_RESTART_HERE_SUNGMAHEE_GATE	Вы оживете в случайном месте этой земли.
+REVIVE_QUESTION	Хотите оживить %s? Число Призм пробуждения: %d шт.
+REVIVE_SELF_QUESTION	Хотите провести оживление? Число Призм пробуждения: %d шт.
+ROULETTE_REWARD_TEXT	Получить предмет
+SAFEBOX_ERROR	Введён неверный пароль.
+SAFEBOX_NEED_CHANGE_PASSWORD	Ваш пароль истек.\nВыберите новый.
+SAFEBOX_SELL_DISABLE_SAFEITEM	Продажа сохраннёных предметов невозможна.
+SAFEBOX_UNAVILABLE_PASSWORD_01	Вы не можете использовать этот пароль.
+SAFEBOX_UNAVILABLE_PASSWORD_02	Пароль должен содержать не менее %d символов.
+SAFEBOX_UNAVILABLE_PASSWORD_03	Вы ввели свой действующий пароль. Выберите новый.
+SAFEBOX_UNAVILABLE_PASSWORD_04	Пароль не может содержать %d одинак. или идущ. подряд цифр(ы).
+SAFEBOX_UNAVILABLE_PASSWORD_05	Специальные символы запрещены. Разрешены символы: a-z, A-Z, 0-9
+SAFEBOX_WRONG_PASSWORD	Пароли должны быть идентичными.
+SCREENSHOT_SAVE1	сохранен в
+SCREENSHOT_SAVE2	Файл скриншота
+SCREENSHOT_SAVE_FAILURE	Скриншот не сохранён.
+SECOND	Сек
+SECOND_CONFIRM_PET_FEED_QUESTION_1	У вашего предмета %d или более бонусов.
+SECOND_CONFIRM_PET_FEED_QUESTION_2	Вы точно хотите скормить его вашему питомцу?
+SECOND_CONFIRM_SELL_ITEM_QUESTION_1	У вашего предмета %d или более бонусов.
+SECOND_CONFIRM_SELL_ITEM_QUESTION_2	Вы точно хотите скормить его вашему питомцу?
+SECRET_DUNGEON_CREATE_REWARD_IMPOSSIBLE	Хотите войти в Храм загадки?\nВы больше не можете получать награды дня (осталось: %s)
+SECRET_DUNGEON_CREATE_REWARD_POSSIBLE	Хотите войти в Храм загадки?\nВы можете получить награду дня.
+SECRET_DUNGEON_ENTER_DUNGEON_RE_REQUEST	Вы должны покинуть группу, если откажетесь входить.\nХотите войти?
+SECRET_DUNGEON_ENTER_LIMIT_TIME	Время до входа: %d сек.
+SECRET_DUNGEON_ENTER_MEMBER_REWARD_IMPOSSIBLE	Создано подземелье «Храм загадки». Хотите в него войти?\nВы больше не можете получать награды дня (осталось: %s)
+SECRET_DUNGEON_ENTER_MEMBER_REWARD_POSSIBLE	Создано подземелье «Храм загадки». Хотите в него войти?\nВы можете получить награду дня.
+SECRET_DUNGEON_ENTER_QUESTION_ANSWER_TIMEOVER	Вы решили не входить.
+SECRET_DUNGEON_ENTER_QUESTION_NO	Нет
+SECRET_DUNGEON_ENTER_QUESTION_YES	Да
+SELECT_ATTR_NOTICE	Вы не можете открыть лавку во время использования Зачаровать предмет+.
+SELECT_ATTR_NOT_OPEN	Вы не можете использовать предмет Зачаровать предмет+ пока у вас открыта лавка.
+SELECT_ATTR_NOT_SELECT	Выбирайте, желаете ли оставить старые бонусы или сменить их на новые.
+SELECT_CAN_NOT_DELETE	Удаление персонажа невозможно.
+SELECT_CAN_NOT_DELETE_ATTR67	Вы не можете удалить своего персонажа,\nпока добавляется бонус.
+SELECT_CAN_NOT_DELETE_GUILD_MEMBER	Вы не можете удалить своего персонажа, пока он состоит в гильдии.
+SELECT_CAN_NOT_DELETE_HAVE_SEALED_ITEM	Вы не можете удалить своего персонажа, ведь у него есть зачарованные оковами души предметы.
+SELECT_CAN_NOT_DELETE_LAST_CHAR_SAFEBOX	Вы не можете удалить своего единственного персонажа, ведь у вас на складе еще есть предметы.
+SELECT_CAN_NOT_DELETE_LIMITE_LEVEL	Вы можете удалить персонажа до 119 уровня включительно.
+SELECT_CAN_NOT_DELETE_MARRIAGE	Нельзя удалять женатого/замужнего персонажа.
+SELECT_CAN_NOT_DELETE_PREMIUM_PRIVATE_SHOP	В вашей личной лавке еще есть товары.
+SELECT_CAN_NOT_DELETE_PRIVATE_CODE_ERROR	Неверный код удаления.
+SELECT_CAN_NOT_DELETE_REMAIN_TIME	Вы не можете удалить этого персонажа сразу после создания. Время ожидания: %s
+SELECT_CHANGED_NAME	Вы изменили имя персонажа.
+SELECT_CHANGE_FAILURE_ALREADY_EXIST_NAME	Персонаж с таким именем уже существует.
+SELECT_CHANGE_FAILURE_STRANGE_INDEX	Попробуйте еще раз.
+SELECT_CHANGE_FAILURE_STRANGE_NAME	Это неверное имя персонажа.
+SELECT_CHANGE_NAME_TITLE	Изменить имя персонажа.
+SELECT_DELEING	Удаление запускается...
+SELECT_DELETED	Удаление прошло успешно.
+SELECT_DO_YOU_DELETE_REALLY	Продолжить?
+SELECT_EMPTY_SLOT	Это пустое поле.
+SELECT_GM_NAME	ГМ
+SELECT_INPUT_CHANGING_NAME	Введите новое имя персонажа.
+SELECT_NOT_JOIN_GUILD	Гильдия отсутсвует
+SERVER_NOTIFY_CLOSED	Закрытый сервер: могут войти только владельцы учетных записей, созданных до закрытия.
+SERVER_STATUS_CLOSE	ЗАКРЫТЫЙ
+SERVER_STATUS_NEW	НОВЫЙ
+SERVER_STATUS_SPECIAL	ОСОБЫЙ
+SERVER_STATUS_STANDBY	ЗАКРЫТЫЙ
+SET_ITEM_CLEAR_CONFIRM_QUESTION	Хотите убрать эффект набора?
+SET_ITEM_CLEAR_CONFIRM_QUESTION_1	У этого предмета есть бонусы/камни духа (%d).
+SET_ITEM_CLEAR_CONFIRM_QUESTION_2	Вы уверены?
+SET_ITEM_DO_NOT_EQUIP_ITEM	Надетым предметам снаряжения нельзя добавлять эффекты набора.
+SET_ITEM_DO_NOT_SEAL_ITEM	Это нельзя делать с зачарованными оковами души предметами.
+SHOP_BUY_INFO	Выберите в окне магазина, предмет который хотите купить.
+SHOP_CANNOT_SELL_EQUIPMENT	Вы не можете продать снаряженный предмет.
+SHOP_CANNOT_SELL_ITEM	Этот предмет не продаётся.
+SHOP_ERROR_UNKNOWN	Неизвестная ошибка магазина: %s
+SHOP_EXCEED_LIMIT_TODAY	Вы уже превысили дневной лимит использования очков.
+SHOP_INVALID_POS	Применить этот предмет невозможно.
+SHOP_INVENTORY_FULL	В инвентаре нет свободного места.
+SHOP_LIMITED_DATA_LOADING	Загружаются данные. Попробуйте еще раз позже!
+SHOP_LIMITED_ITEM_REMAIN_COUNT	Осталось предметов: %d
+SHOP_LIMITED_PURCHASE_OVER	Продано
+SHOP_LIMIT_TODAY	Дневной лимит: %d / %d
+SHOP_MY_BATTLE_POINT	Очки боя: %d
+SHOP_MY_MEDAL_OF_HONOR	Медаль за храбрость: %d
+SHOP_NOT_ENOUGH_10TH_COIN	У вас недостаточно юбилейных монет.
+SHOP_NOT_ENOUGH_BATTLE_POINT	У вас недостаточно очков боя.
+SHOP_NOT_ENOUGH_BNW	У вас не хватает монет провидца.
+SHOP_NOT_ENOUGH_GUILD_LEVEL	Уровень гильдии слишком низкий.
+SHOP_NOT_ENOUGH_MEDAL_OF_HONOR	Не хватает медалей за храбрость.
+SHOP_NOT_ENOUGH_MONEY	Недостаточно вон или янг
+SHOP_NOT_ENOUGH_MONEY_EX	У вас недостаточно янг.
+SHOP_SELL_INFO	Выберите в окне инвентаря предмет, который хотите продать.
+SHOP_SOLDOUT	Продано
+SHOT_ERROR_UNKNOWN	Неизвестная ошибка дальней атаки: %s
+SKILL_BLEEDING	Кровотечение
+SKILL_BOHO	Отражать
+SKILL_BUDONG	Больше не используется
+SKILL_CANNOT_LEVEL_UP_ANYMORE_BY_BOOK	Вам необходим опыт, чтобы обучиться этому навыку.
+SKILL_CANNOT_LEVEL_UP_ANYMORE_BY_STAT	Вам необходима книга, обучающая этому навыку.
+SKILL_CHEONGEUN	Сильное тело.
+SKILL_CRITICAL	Критический удар
+SKILL_ENCHANT_POISON	Использовать яд
+SKILL_EUNHYEONG	Невидимый
+SKILL_FAINT	Головокружение
+SKILL_FIND_TRAP	Искать западню
+SKILL_FIRE	Сжечь
+SKILL_FISHMIND	Рыба-шар активен
+SKILL_GAMJI	взять
+SKILL_GEOMGYEONG	Аура меча
+SKILL_GEONGON	SKILL_GEONGON больше не применяется
+SKILL_GICHEON	Помощь Дракона
+SKILL_GIGONG	Циркуляция Ши
+SKILL_GONGPO	Страх
+SKILL_GRADE_NAME_GRAND_MASTER	%s Большой мастер
+SKILL_GRADE_NAME_MASTER	%s Мастер
+SKILL_GRADE_NAME_PERFECT_MASTER	%s  Великий мастер
+SKILL_GROUP_ASSASSIN_1	Клинок
+SKILL_GROUP_ASSASSIN_2	Лук
+SKILL_GROUP_HORSE	Исскуство наездника
+SKILL_GROUP_SHAMAN_1	Драконы
+SKILL_GROUP_SHAMAN_2	Исцеление
+SKILL_GROUP_SURA_1	Оружие
+SKILL_GROUP_SURA_2	Магия
+SKILL_GROUP_WARRIOR_1	Тело
+SKILL_GROUP_WARRIOR_2	Умственный
+SKILL_GWIGEOM	Заколдованный клинок
+SKILL_GYEONGGONG	Легкая походка
+SKILL_HEUKSIN	Защита тёмных сил
+SKILL_HOSIN	Благословение
+SKILL_HWAYEOM	SKILL_HWAYEOM больше не применятся
+SKILL_HYEOLMA	SKILL_HYEOLMA больше не применяется
+SKILL_INC_ATKSPD	Скорость атаки повышена
+SKILL_INC_MOVSPD	Скорость движения повышена
+SKILL_INMA	SKILL_INMA больше не применяется
+SKILL_JEOJU	Заклинание
+SKILL_JEONGEOP	Лечение
+SKILL_JEONGWI	Берсерк
+SKILL_JEONSINBANGEO	Полная защита
+SKILL_JEONSINGONGGYEOK	Полная атака
+SKILL_JEUNGCHE	SKILL_JEUNGCHE больше не применяется
+SKILL_JEUNGHON	SKILL_JEUNGHON больше не применяется
+SKILL_JEUNGRYEOK	Атака+
+SKILL_JEUNGSOK	Скорость+
+SKILL_JIGAM	SKILL_JIGAM больше не применяется
+SKILL_JIPJUNG	SKILL_JIPJUNG больше не применяется
+SKILL_JUMAGAP	Заколдованная броня
+SKILL_JUMAGEOM	SKILL_JUMAGEOM больше не применяется
+SKILL_KWAEGEOM	SKILL_KWAEGEOM больше не применяется
+SKILL_KWAESOK	Быстрота
+SKILL_LEGBOUND	SKILL_LEGBOUND больше не применяется
+SKILL_MUSA	SKILL_MUSA больше не применяется
+SKILL_MUYEONG	Дух Огня
+SKILL_NEED_EMPTY_BOTTLE	У меня нет пустого кувшина.
+SKILL_NEED_POISON_BOTTLE	У меня нет бутылки с ядом.
+SKILL_ONLY_FOR_GUILD_WAR	Вы  можете пользоваться этим навыком только в Войне Гильдий.
+SKILL_PABEOP	Отменить волшебство.
+SKILL_POWERFUL_STRIKE	Парализирующая атака
+SKILL_SEOMGWANG	Бомба-молния
+SKILL_SINCHAK	SKILL_SINCHAK больше не применяется
+SKILL_SLEEP	Сон
+SKILL_SLOW	Медленно
+SKILL_STUN	Парализовать
+SKILL_SUHO	Стражник
+SKILL_SUMMON_DESCRIPTION	Шанс на вызов: %d%%
+SKILL_TOOLTIP_INT	Интеллект
+SKILL_TOOLTIP_LEVEL	Уровень
+SKILL_TOXICDIE	Отравление
+SKILL_TOXICPOWER	Показатель атаки ядом улучшен
+SKILL_TUSOK	Удар Духа
+SKILL_WONSIN	SKILL_WONSIN больше не применяется
+SKILL_YONGSIN	SKILL_YONGSIN больше не применяется
+SOLO_RK_CATEGORY_BATTLE_ROYALE	Королевская битва
+SOLO_RK_CATEGORY_BATTLE_ROYALE_RECORD_0	Победы
+SOUL_ITEM_TOOLTIP_APPLY	Эффект активирован
+SOUL_ITEM_TOOLTIP_BLUE1	Время игры: %d/%d мин. 
+SOUL_ITEM_TOOLTIP_BLUE2	По достижении времени игры урон навыков увеличивается в %.1f раза
+SOUL_ITEM_TOOLTIP_COMMON	Не для: PvP, превращения
+SOUL_ITEM_TOOLTIP_RED1	Время игры: %d/%d мин. 
+SOUL_ITEM_TOOLTIP_RED2	По достижении времени игры урон от атаки увеличивается в %.1f раза
+SOUL_ITEM_TOOLTIP_REMAIN_COUNT	Осталось атак: %d
+SOUL_ITEM_TOOLTIP_REMOVE_TIME	Душа пропадет через
+SOUL_ITEM_TOOLTIP_UNAPPLIED	Эффект не активирован
+SOUL_REFINE_FAILURE	Развитие не удалось.
+SOUL_REFINE_SUCCESS	Успешное развитие!
+STAT_MINUS_CON	Регулировка здоровья (Остающ. шанс: %d)
+STAT_MINUS_DEX	Регулировка подвижности ( Оставш. шанс: %d)
+STAT_MINUS_INT	Регулировка интеллекта (Оставш. шанс:%d)
+STAT_MINUS_STR	Регулировка силы (Оставш.шанс: %d)
+STAT_TOOLTIP_ACTION	Действия
+STAT_TOOLTIP_ATT	Показатель атаки
+STAT_TOOLTIP_ATT_SPEED	Скорость атаки
+STAT_TOOLTIP_BASE_LEVEL	Уровень
+STAT_TOOLTIP_CAST_SPEED	Скорость заклинания
+STAT_TOOLTIP_CON	Повышает ХП и защиту
+STAT_TOOLTIP_CONQUEROR_LEVEL	Чемпионский уровень
+STAT_TOOLTIP_DEF	Защита
+STAT_TOOLTIP_DEX	Повышает Атаку и Уклон
+STAT_TOOLTIP_DODGE_PER	Шанс увернуться от стрелы
+STAT_TOOLTIP_EXP	Опыт
+STAT_TOOLTIP_HP	ХП
+STAT_TOOLTIP_IMG_CON	ЗДОР: повышает число ХП и защиту
+STAT_TOOLTIP_IMG_DEX	ПОДВ: улучшает атаку и уклонение
+STAT_TOOLTIP_IMG_INT	ИНТ: повышает число МП, магическую атаку и защиту.
+STAT_TOOLTIP_IMG_STR	СИЛ: повышает показатель атаки и урон
+STAT_TOOLTIP_INT	Повышает МП, магическую атаку и магическую защиту.
+STAT_TOOLTIP_LEVEL	Уровень
+STAT_TOOLTIP_MAG_ATT	Показатель магической атаки
+STAT_TOOLTIP_MAG_DEF	Магическая защита
+STAT_TOOLTIP_MOVE_SPEED	Скорость передвижения
+STAT_TOOLTIP_PASSIVE	Реликтовый бонус
+STAT_TOOLTIP_POINT	Очки
+STAT_TOOLTIP_REACTION	Реакции
+STAT_TOOLTIP_SHP	На континенте Yohara у вас вычитается меньше ХП из максимального запаса.
+STAT_TOOLTIP_SIMMUNE	На континенте Yohara у вас меньше ослабевает сопротивление изменениям статуса.
+STAT_TOOLTIP_SMOVE	На континенте Yohara у вас меньше снижается скорость передвижения.
+STAT_TOOLTIP_SP	МП
+STAT_TOOLTIP_SPECIAL_ACTION	Особые действия
+STAT_TOOLTIP_SSTR	На континенте Yohara меньше снижается урон от ваших атак.
+STAT_TOOLTIP_STAT	Параметры
+STAT_TOOLTIP_STR	Повышает Показатель Атаки и Урон
+STAT_TOOLTIP_SUNGMA_HP	Изменяет число ХП в зависимости от воли Сунг Ма (ЗДОР) у врага и карты
+STAT_TOOLTIP_SUNGMA_IMMUNE	Изменяет уязвимость к эффектам статуса в зависимости от воли Сунг Ма (ИНТ) у врага и карты
+STAT_TOOLTIP_SUNGMA_MOVE	Изменяет скорость передвижения в зависимости от воли Сунг Ма (СОПР) у врага и карты
+STAT_TOOLTIP_SUNGMA_STR	Изменяет атаку в зависимости от воли Сунг Ма (СИЛ) у врага и карты
+STAT_TOOLTIP_SUPPORT_SKILL	Вторичные навыки
+STAT_TOOLTIP_TAB_CHARACTER	Персонаж
+STAT_TOOLTIP_TAB_EMOTICON	Эмоции
+STAT_TOOLTIP_TAB_QUEST	Задания
+STAT_TOOLTIP_TAB_SKILL	Навыки
+SUNGMAHEE_GATE_ACHIEV_TOOLTIP_ACHIEV_0	Трофей можно заработать за Портал вторжения Сунг Ма в земле Йонган.
+SUNGMAHEE_GATE_ACHIEV_TOOLTIP_ACHIEV_1	Трофей можно заработать за Портал вторжения Сунг Ма в земле Йоан.
+SUNGMAHEE_GATE_ACHIEV_TOOLTIP_ACHIEV_2	Трофей можно заработать за Портал вторжения Сунг Ма в земле Пуингмо.
+SUNGMAHEE_GATE_ACHIEV_TOOLTIP_ACHIEV_3	Трофей можно заработать за Портал вторжения Сунг Ма в долине Сеунгрийонг.
+SUNGMAHEE_GATE_ACHIEV_TOOLTIP_ACHIEV_4	Трофей можно заработать за Портал вторжения Сунг Ма в пустыне Йонгби.
+SUNGMAHEE_GATE_ACHIEV_TOOLTIP_ACHIEV_5	Трофей можно заработать за Портал вторжения Сунг Ма в Доюмхване (Огненная земля).
+SUNGMAHEE_GATE_ACHIEV_TOOLTIP_ACHIEV_6	Трофей можно заработать за Портал вторжения Сунг Ма на горе Сохан.
+SUNGMAHEE_GATE_ACHIEV_TOOLTIP_ACHIEV_7	Трофей можно заработать за Портал вторжения Сунг Ма в Катакомбах Дьявола.
+SUNGMAHEE_GATE_ACHIEV_TOOLTIP_ACHIEV_8	Трофей можно заработать за Портал вторжения Сунг Ма в Зачарованном лесу.
+SUNGMAHEE_GATE_ALREADY_OPEN	[Портал вторжения Сунг Ма] Открылся Портал вторжения Сунг Ма. Скорее уничтожьте его! (Открыт еще %s)
+SUNGMAHEE_GATE_ALREADY_OPEN_1M	[Портал вторжения Сунг Ма] Открылся Портал вторжения Сунг Ма. Скорее уничтожьте его! (Будет открыт еще менее 1 минуты)
+SUNGMAHEE_GATE_MAP_ELEMENT_DARK	Тьма
+SUNGMAHEE_GATE_MAP_ELEMENT_EARTH	Земля
+SUNGMAHEE_GATE_MAP_ELEMENT_ELECT	Молния
+SUNGMAHEE_GATE_MAP_ELEMENT_FIRE	Огонь
+SUNGMAHEE_GATE_MAP_ELEMENT_ICE	Лед
+SUNGMAHEE_GATE_MAP_ELEMENT_NONE	Нет стихии
+SUNGMAHEE_GATE_MAP_ELEMENT_WIND	Ветер
+SUNGMAHEE_GATE_MESSAGE_CANNOT_OPEN_ACHIEV_CONQUEROR_LEVEL	Чтобы это открыть, надо набрать чемпионский уровень.
+SUNGMAHEE_GATE_MESSAGE_CANNOT_OPEN_ACHIEV_IN_BATTLE_ROYALE	Это нельзя открыть в этой земле.
+SUNGMAHEE_GATE_MESSAGE_DUNGEON_ELEMENT_INFO	Эта земля находится под влиянием стихии: %s
+SUNGMAHEE_GATE_MESSAGE_NOTICE_BEFORE_OPEN_1	Скоро откроется Портал вторжения Сунг Ма на равнине Донган.
+SUNGMAHEE_GATE_MESSAGE_NOTICE_BEFORE_OPEN_2	Откройте большую карту, чтобы увидеть доступные места для этой империи.
+SUNGMAHEE_GATE_MESSAGE_NOTICE_DUNGEON_END_TIME	Время вышло, сейчас вы перенесетесь наружу.
+SUNGMAHEE_GATE_MESSAGE_NOTICE_DUNGEON_REMAIN_TIME	До закрытия Портала вторжения Сунг Ма осталось еще %d мин.
+SUNGMAHEE_GATE_MESSAGE_NOTICE_END	Все Порталы вторжения Сунг Ма закрываются.
+SUNGMAHEE_GATE_MESSAGE_NOTICE_ENTRY_CLOSE	Портал вторжения Сунг Ма закрыт.
+SUNGMAHEE_GATE_MESSAGE_NOTICE_ENTRY_OPEN	Портала вторжения Сунг Ма открылся, теперь в него можно войти. Он будет открыт до %d:%d.
+SUNGMAHEE_GATE_MESSAGE_REGION_ACHIEVED_SUCCESS	Вы получили трофей за %s!
+SUNGMAHEE_GATE_REMAIN_TIME_TO_OPEN	[Портал вторжения Сунг Ма] Портал вторжения Сунг Ма откроется \n через %s мин.
+SUNGMAHEE_GATE_REMAIN_TIME_TO_OPEN_1M	[Портал вторжения Сунг Ма] Портал вторжения Сунг Ма откроется \n менее чем через 1 минуту.
+SUNGMAHEE_TOWER_ENTER_FAIL_FLOOR	Сначала нужно пройти этаж ниже.
+SUNGMAHEE_TOWER_ENTER_RESULT_FAIL_MOUNT	Вы не можете войти, пока вы верхом.
+SUNGMAHEE_TOWER_ENTER_RESULT_FAIL_NOT_ENOUGH_CONQUEROR_LEVEL	Чтобы войти, нужно набрать нужный чемпионский уровень.
+SUNGMAHEE_TOWER_ENTER_RESULT_FAIL_NOT_ENOUGH_ITEM	Чтобы войти, нужно знамя с черепом.
+SUNGMAHEE_TOWER_ENTER_RESULT_FAIL_PARTY	Вы не можете войти в адскую башню Сунг Махи в составе группы.
+SUNGMAHEE_TOWER_ENTER_RESULT_FAIL_POLYMORPH	Вы не можете войти, пока превращены.
+SUNGMAHEE_TOWER_FLOOR_TEXT	Этаж {0}
+SUNGMAHEE_TOWER_MY_RANK_TEXT	Ранг {0}
+SYMBOLLIST_TITLE	Регистрировать флаг Гильдии
+TARGET_BUTTON_ACCEPT_FIGHT	Согласиться
+TARGET_BUTTON_AVENGE	Отмщение
+TARGET_BUTTON_BLOCK	Блокировать
+TARGET_BUTTON_BLOCK_REMOVE	Разблокировать
+TARGET_BUTTON_BUILDING_DESTROY	Разрушить
+TARGET_BUTTON_DISMOUNT	Пасовать
+TARGET_BUTTON_EMOTION_ALLOW	Эмоции
+TARGET_BUTTON_EXCHANGE	Торговать
+TARGET_BUTTON_EXCLUDE	Исключить
+TARGET_BUTTON_EXIT_OBSERVER	Прервать Режим наблюдателя
+TARGET_BUTTON_FIGHT	Поединок
+TARGET_BUTTON_FRIEND	Друг
+TARGET_BUTTON_INVITE_GUILD	Приглашение гильдии
+TARGET_BUTTON_INVITE_PARTY	Пригласить
+TARGET_BUTTON_LEAVE_PARTY	Покинуть группу
+TARGET_BUTTON_REQUEST_ENTER_PARTY	Вступить в группу
+TARGET_BUTTON_REVIVE	Оживить
+TARGET_BUTTON_VIEW_EQUIPMENT	Снаряжение
+TARGET_BUTTON_WHISPER	Шептание
+TARGET_LEVEL_BOSS	Босс
+TARGET_LEVEL_KING	Уровень 5.
+TARGET_LEVEL_KNIGHT	Уровень 3.
+TARGET_LEVEL_PAWN	Уровень 1.
+TARGET_LEVEL_S_KNIGHT	Уровень 4.
+TARGET_LEVEL_S_PAWN	Уровень 2.
+TARGET_TOOLTIP_ATTACK_COUNT	Всего очков: %d
+TASKBAR_ATTACK	Атаковать
+TASKBAR_AUTO	Нападать автоматически
+TASKBAR_CAMERA	Камера
+TASKBAR_EXP	Опыт
+TASKBAR_HP	ХП
+TASKBAR_MOVE	Двигать
+TASKBAR_SKILL	Навык
+TASKBAR_SP	МП
+TASKBAR_ST	СП
+TENTH_COIN	Юбилейная(ые) монета(ы)
+TENTH_EVENT_ASK_EXCHANGE	Нужно еще юбилейных флагов: %d. Хотите продолжить?
+THING_COUNT	все
+TIGER_COIN_ITEM_USE_QUESTION	Вы хотите поменять купон на Тигровые монеты. Точно продолжить?
+TOOLTIP_AFFECT_ATT_GRADE_DOWN	Уменьшить урон	SNA
+TOOLTIP_AFFECT_CHEONUN	Щит эфира	SNA
+TOOLTIP_AFFECT_CONFUSION	Вы оглушены.
+TOOLTIP_AFFECT_CRITICAL_GRADE_DOWN	Уменьшить шанс на крит. удар	SNA
+TOOLTIP_AFFECT_CZ_UNLIMIT_ENTER	Метка Стражников	SNA
+TOOLTIP_AFFECT_DEFENSEWAVE_LASER	Не удалось прервать Гидропоток.
+TOOLTIP_AFFECT_DEF_GRADE_DOWN	Снизить защиту	SNA
+TOOLTIP_AFFECT_ELECTRIC_SHOCK	Молния
+TOOLTIP_AFFECT_ELEMENT_BUFF_CRACK	Тип бонуса к урону: %s
+TOOLTIP_AFFECT_ELEMENT_BUFF_CRACK_DARK	Сила тьмы
+TOOLTIP_AFFECT_ELEMENT_BUFF_CRACK_EARTH	Сила земли
+TOOLTIP_AFFECT_ELEMENT_BUFF_CRACK_ELECT	Сила молний
+TOOLTIP_AFFECT_ELEMENT_BUFF_CRACK_FIRE	Сила огня
+TOOLTIP_AFFECT_ELEMENT_BUFF_CRACK_ICE	Сила льда
+TOOLTIP_AFFECT_ELEMENT_BUFF_CRACK_NONE	Без эффекта
+TOOLTIP_AFFECT_ELEMENT_BUFF_CRACK_WIND	Сила ветра
+TOOLTIP_AFFECT_FISHING_GOLD_TUNA	Бонус за золотого тунца	SNA
+TOOLTIP_AFFECT_FISHING_MOVE_SPEED_DOWN	Мокрая одежда\nСкорость передвижения -50	SNA
+TOOLTIP_AFFECT_FLAG_CANNOT_ATTACK	Обычные атаки заблокированы
+TOOLTIP_AFFECT_FLAG_CANNOT_USE_SKILL	Навыки заблокированы
+TOOLTIP_AFFECT_FLOWER_OF_DESTRUCTION	Эффект цветов мощи
+TOOLTIP_AFFECT_FLOWER_OF_DESTRUCTION_ANIMAL	Эффект цветов мощи: сила против зверей +%d %%	SA
+TOOLTIP_AFFECT_FLOWER_OF_DESTRUCTION_DARK	Эффект цветов мощи: сила против тьмы +%d%%	SA
+TOOLTIP_AFFECT_FLOWER_OF_DESTRUCTION_EARTH	Эффект цветов мощи: сила против земли +%d%%	SA
+TOOLTIP_AFFECT_FLOWER_OF_DESTRUCTION_ELECT	Эффект цветов мощи: сила против молний +%d%%	SA
+TOOLTIP_AFFECT_FLOWER_OF_DESTRUCTION_FIRE	Эффект цветов мощи: сила против огня +%d%%	SA
+TOOLTIP_AFFECT_FLOWER_OF_DESTRUCTION_ICE	Эффект цветов мощи: сила против льда +%d%%	SA
+TOOLTIP_AFFECT_FLOWER_OF_DESTRUCTION_WIND	Эффект цветов мощи: сила против ветра +%d%%	SA
+TOOLTIP_AFFECT_FLOWER_OF_GALE	Эффект цветов бури: скорость передвижения +%d	SA
+TOOLTIP_AFFECT_GARRISON_BUFF	Иммунитет против влияния Сунг Махи	SNA
+TOOLTIP_AFFECT_GARRISON_DEBUFF	Влияние Сунг Махи	SNA
+TOOLTIP_AFFECT_ICECREAM	Рожок мороженого\nСкорость передвижения +10\nУрон +5%\nОпыт +10%.	SNA
+TOOLTIP_AFFECT_LATE_SUMMER_EVENT_BUFF	Души (%d/20)	SA
+TOOLTIP_AFFECT_LATE_SUMMER_EVENT_PRIMIUM_BUFF	Ценные души (%d/150)	SA
+TOOLTIP_AFFECT_LOOTING_SYSTEM	Пропуск добычи	SNA
+TOOLTIP_AFFECT_MERCENARY_MAX_ACTIVE_INCREASE	Повышает макс. запас сил на +%d	SA
+TOOLTIP_AFFECT_MI_BUFF	Усиление за захват \n%s
+TOOLTIP_AFFECT_MOUNT_FALL	Падение с ездового животного	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_ATTACK_SPEED	Бурный натиск	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_EFFECT_UP	Усиливает эффект скачки	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_EXP	Опыт	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_GYEONGGONG	Легкая походка	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_HIT_PCT	Меткость	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_INVINCIBILITY	Непобедимость	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_JOB_ASSASIN	Сила против Ниндзя
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_JOB_SHAMAN	Сила против Шаманов
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_JOB_SURA	Сила против сур
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_JOB_WARRIOR	Сила против Воинов
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_JOB_WOLF	Сила против Ликанов
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_KNOCKBACK	Без отдачи	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_NIMBLE	Ловкие копыта	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_ANIMAL	Сила против зверей
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_CZ	Сила против зодиак-монстров
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_DESSERT	Сила против монстров пустыни
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_DEVIL	Сила против дьяволов
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_HUMAN	Сила против полулюдей
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_INSECT	Сила против насекомых
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_MILGYO	Сила против мистиков
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_MONSTER	Сила против всех монстров
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_UNDEAD	Сила против нежити
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_RANDOM_WONGGUI	Сила против орков
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_SUNGMA_HP	Воля Сунг Ма (ЗДОР)	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_SUNGMA_IMMUNE	Воля Сунг Ма (ИНТ)	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_SUNGMA_MOVE	Воля Сунг Ма (СОПР)	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_SUNGMA_STR	Воля Сунг Ма (СИЛ)	SNA
+TOOLTIP_AFFECT_MOUNT_UPGRADE_SKILL_TO_STRONG	Скачка	SNA
+TOOLTIP_AFFECT_OTHER_WORLD_DEAD_SOUL	Макс. запас ХП Асмодея снижен на %d%%.	SA
+TOOLTIP_AFFECT_OTHER_WORLD_GOBLIN_PROTECTION	На карте «Погибель» на вас не действует заклятие Асмодея.	SNA
+TOOLTIP_AFFECT_OTHER_WORLD_YEOMWANG_CURSE	Урон монстрам снижен на 30%.	SNA
+TOOLTIP_AFFECT_PASWAE	На 5 секунд снижает защиту и скорость передвижения.
+TOOLTIP_AFFECT_POLYMORPH	Превращение	SNA
+TOOLTIP_AFFECT_PREMIUM_PRIVATE_SHOP	Личная премиум-лавка	SNA
+TOOLTIP_AFFECT_RCAST_SPEED	Увеличить время перезарядки	SNA
+TOOLTIP_AFFECT_RED_DRAGONLAIR_BUFF	Сопротивление урону от навыков +15% | Сопротивление урону от обычных атак +15%	SNA
+TOOLTIP_AFFECT_RESEARCHER_ELIXIR	Эликсир Исследователя	SNA
+TOOLTIP_AFFECT_RHP_REGEN	Отдыхать нельзя	SNA
+TOOLTIP_AFFECT_SAFEBOX_BUFF_01	Бонус склада\n +3% к опыту	SNA
+TOOLTIP_AFFECT_SAFEBOX_BUFF_02	Бонус склада\n+20 к защите	SNA
+TOOLTIP_AFFECT_SAFEBOX_BUFF_03	Бонус склада\n+1% к очкам жизн. энергии	SNA
+TOOLTIP_AFFECT_SAFEBOX_BUFF_04	Бонус склада\n+3% к силе против монстров	SNA
+TOOLTIP_AFFECT_SECRET_DUNGEON_BUFF_A	Успешно пройдя Храм змеи или Бездну северного ветра, вы получите бонусный ящик с сокровищами.	SNA
+TOOLTIP_AFFECT_SECRET_DUNGEON_BUFF_B	Успешно пройдя Храм Зодиака или победив Йотун Трима, вы получите бонусный ящик с сокровищами.	SNA
+TOOLTIP_AFFECT_SECRET_DUNGEON_BUFF_C	Победив Азраэля или Беран-Сету, вы получите бонусный ларец с сокровищами.	SNA
+TOOLTIP_AFFECT_SECRET_DUNGEON_BUFF_POINT_A	Прогресс по Храму загадки (бонус A): %d	SA
+TOOLTIP_AFFECT_SECRET_DUNGEON_BUFF_POINT_B	Прогресс по Храму загадки (бонус B): %d	SA
+TOOLTIP_AFFECT_SECRET_DUNGEON_BUFF_POINT_C	Прогресс по Храму загадки (бонус C): %d	SA
+TOOLTIP_AFFECT_SET_ITEM_1	Священный бонус за набор	SNA
+TOOLTIP_AFFECT_SET_ITEM_2	Роскошный бонус за набор	SNA
+TOOLTIP_AFFECT_SET_ITEM_3	Рыцарский бонус за набор	SNA
+TOOLTIP_AFFECT_SET_ITEM_4	Царский бонус за набор	SNA
+TOOLTIP_AFFECT_SET_ITEM_5	Выдающийся бонус за набор	SNA
+TOOLTIP_AFFECT_SHACKLE	Кандалы
+TOOLTIP_AFFECT_SUNGMAHEE_TOWER_CURSE	Заклятие Сунг Махи (накоплено: %d). Ваше число ОЗ с каждым зарядом уменьшается на 10%% каждые 10 сек. Может накапливаться до 10 раз.	SA
+TOOLTIP_AFFECT_SUNGMA_ALL	Повышает все показатели Сунг Ма на 10%.	SNA
+TOOLTIP_AFFECT_SUNGMA_DESC	Это место наполнено волей Сунг Махи.
+TOOLTIP_AFFECT_SUNGMA_HP	Воля Сунг Ма (ЗДОР): %d
+TOOLTIP_AFFECT_SUNGMA_HP_BUFF	Повышает вашу волю Сунг Ма (ЗДОР) на +%d.	SA
+TOOLTIP_AFFECT_SUNGMA_IMMUNE	Воля Сунг Ма (ИНТ): %d
+TOOLTIP_AFFECT_SUNGMA_IMMUNE_BUFF	Повышает вашу волю Сунг Ма (ИНТ) на +%d.	SA
+TOOLTIP_AFFECT_SUNGMA_MOVE	Воля Сунг Ма (СОПР): %d
+TOOLTIP_AFFECT_SUNGMA_MOVE_BUFF	Повышает вашу волю Сунг Ма (СОПР) на +%d.	SA
+TOOLTIP_AFFECT_SUNGMA_MOVE_DEBUFF	-20 к воле Сунг Ма (СОПР)	SNA
+TOOLTIP_AFFECT_SUNGMA_STR	Воля Сунг Ма (СИЛ): %d
+TOOLTIP_AFFECT_SUNGMA_STR_BUFF	Повышает вашу волю Сунг Ма (СИЛ) на +%d.	SA
+TOOLTIP_AFFECT_SUNGMA_STR_DEBUFF	-20 к воле Сунг Ма (СИЛ)	SNA
+TOOLTIP_AFFECT_WORLD_BOSS_DAILY_REWARD	Ежедневный бонус за мирового босса\n Показатель атаки +%d%%	SA
+TOOLTIP_AFFECT_WORLD_BOSS_REWARD	Ранговый бонус за мирового босса\n Выпадение предметов +%d	SA
+TOOLTIP_ALIGNMENT_DAMAGE_BONUS	При малом числе очков рейтинга повышается наносимый урон.	SNA
+TOOLTIP_ANTI_CRITICAL_PCT	Сопротивление критическим ударам +%d%%	SA
+TOOLTIP_ANTI_PENETRATE_PCT	Сопротивление пронзающим ударам +%d%%	SA
+TOOLTIP_ANTI_SELL	В магазине не продаётся.
+TOOLTIP_APPLY_ACCEDRAIN_RATE	Доля поглощения: %d%%	SA
+TOOLTIP_APPLY_ATTBONUS_ANIMAL	Сила против зверей +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_ASSASSIN	Сила против Ниндзя +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_BELL	Надлом защиты от колокольчиков +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_BOW	Надлом защиты от стрел +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_CLAW	Надлом защиты от когтей +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_CZ	Сила против зодиак-монстров +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_DAGGER	Надлом защиты от кинжалов +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_DESERT	Сила против монстров пустыни +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_DEVIL	Сила против Дьявола +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_FAN	Надлом защиты от вееров +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_HUMAN	Сила против  Полулюдей +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_INSECT	Сила против насекомых +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_MILGYO	Сила против Мистиков +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_MONSTER	Сила против Монстров +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_ORC	Сила против Орков +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_SHAMAN	Сила против Шаманов +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_SURA	Сила против Сура +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_SWORD	Надлом защиты от мечей +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_TWOHAND	Надлом защиты от двуручного оружия +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_UNDEAD	Сила против Нежити +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_WARRIOR	Сила против Воинов +%d%%	SA
+TOOLTIP_APPLY_ATTBONUS_WOLFMAN	Сила против ликана + %d%%	SA
+TOOLTIP_APPLY_BLEEDING_PCT	Вызвать кровотечение + %d%%	SA
+TOOLTIP_APPLY_BLEEDING_REDUCE	Сопротивление кровотечению + %d%%	SA
+TOOLTIP_APPLY_BLOCK	Шанс на блокацию физической атаки %d%%	SA
+TOOLTIP_APPLY_COMBAT_SP_RECOVER	Восстановление МП в бою каждые 5 Сек. %d	SA
+TOOLTIP_APPLY_CRITICAL_PCT	%d%% шансов на Критический удар	SA
+TOOLTIP_APPLY_DAMAGE_SP_RECOVER	%d%% шансов восстановить МП при попадании	SA
+TOOLTIP_APPLY_DODGE	Шанс на увернуться от стрелы %d%%	SA
+TOOLTIP_APPLY_ENCHANT_DARK	Сила тьмы +%d%%	SA
+TOOLTIP_APPLY_ENCHANT_DARK2	Сила тьмы +%d%% ~ +%d%%
+TOOLTIP_APPLY_ENCHANT_EARTH	Сила земли +%d%%	SA
+TOOLTIP_APPLY_ENCHANT_EARTH2	Сила земли +%d%% ~ +%d%%
+TOOLTIP_APPLY_ENCHANT_ELECT	Сила молний +%d%%	SA
+TOOLTIP_APPLY_ENCHANT_ELECT2	Сила молний +%d%% ~ +%d%%
+TOOLTIP_APPLY_ENCHANT_FIRE	Сила огня +%d%%	SA
+TOOLTIP_APPLY_ENCHANT_FIRE2	Сила огня +%d%% ~ +%d%%
+TOOLTIP_APPLY_ENCHANT_ICE	Сила льда +%d%%	SA
+TOOLTIP_APPLY_ENCHANT_ICE2	Сила льда +%d%% ~ +%d%%
+TOOLTIP_APPLY_ENCHANT_WIND	Сила ветра +%d%%	SA
+TOOLTIP_APPLY_ENCHANT_WIND2	Сила ветра +%d%% ~ +%d%%
+TOOLTIP_APPLY_EXP_DOUBLE_BONUS	%d%% шансов на бонус к опыту	SA
+TOOLTIP_APPLY_GOLD_DOUBLE_BONUS	%d%% шансов выбросить вдвое больше янг	SA
+TOOLTIP_APPLY_IMMUNE_BLEEDING100	Иммунитет против кровотечения	SNA
+TOOLTIP_APPLY_IMMUNE_FALL	Иммунный против падения	SNA
+TOOLTIP_APPLY_IMMUNE_POISON100	Иммунитет против яда	SNA
+TOOLTIP_APPLY_IMMUNE_SLOW	Защита от замедления	SNA
+TOOLTIP_APPLY_IMMUNE_STUN	Защита от головокружения	SNA
+TOOLTIP_APPLY_ITEM_DROP_BONUS	%d%% шансов выбросить вдвое больше предметов	SA
+TOOLTIP_APPLY_KILL_HP_RECOVER	%d%% шансов восстановить ХП	SA
+TOOLTIP_APPLY_KILL_SP_RECOVER	%d%% шансов восстановить МП	SA
+TOOLTIP_APPLY_MANA_BURN_PCT	%d%% шансов забрать MP противника	SA
+TOOLTIP_APPLY_MAX_HP_PCT	Макс. ХП +%d%%	SA
+TOOLTIP_APPLY_MAX_SP_PCT	Макс. МП +%d%%	SA
+TOOLTIP_APPLY_MONSTER_DEFEND_BONUS	Сопротивление атакам монстров %d	SA
+TOOLTIP_APPLY_NOAFFECT	Без результата
+TOOLTIP_APPLY_NO_DEATH_PENALTY	Отсутствие потери опыта в случае смерти.	SNA
+TOOLTIP_APPLY_NO_DEATH_PENALTY_PLUS	Бог-Дракон распростер над вами свои крылья. Когда вас оживляют на борту, вы не теряете очки опыта.	SNA
+TOOLTIP_APPLY_PENETRATE_PCT	%d%% шансов на нанесение пронзающего удара	SA
+TOOLTIP_APPLY_POISON_PCT	Шансы на отравление :%d%%	SA
+TOOLTIP_APPLY_POISON_REDUCE	Сопротивление яду %d%%	SA
+TOOLTIP_APPLY_POTION_BONUS	Зелье %d%% рост эффекта	SA
+TOOLTIP_APPLY_REFLECT_CURSE	%d%% шансов отразить заклинание	SA
+TOOLTIP_APPLY_REFLECT_MELEE	%d%%  шансов отразить физическую атаку	SA
+TOOLTIP_APPLY_RESIST_ASSASSIN	Шансы на отражение Ниндзя %d%%	SA
+TOOLTIP_APPLY_RESIST_BELL	Защита от удара колокольчиком  %d%%	SA
+TOOLTIP_APPLY_RESIST_CLAW	Защита от когтей + %d%%	SA
+TOOLTIP_APPLY_RESIST_DAGGER	Защита от удара кинжалом %d%%	SA
+TOOLTIP_APPLY_RESIST_FAN	Защита от удара веером %d%%	SA
+TOOLTIP_APPLY_RESIST_HUMAN	Сопротивляемость полулюдям%d%%	SA
+TOOLTIP_APPLY_RESIST_MOUNT_FALL	Сопротивляемость к падению +%d%%	SA
+TOOLTIP_APPLY_RESIST_SHAMAN	Шансы на отражение атаки Шаманов  %d%%	SA
+TOOLTIP_APPLY_RESIST_SURA	Шансы на отражение атаки Сура %d%%	SA
+TOOLTIP_APPLY_RESIST_SWORD	Защита от удара мечом %d%%	SA
+TOOLTIP_APPLY_RESIST_TWOHAND	Защита от двуручного оружия %d%%	SA
+TOOLTIP_APPLY_RESIST_WARRIOR	Шансы на отражение атак Воинов %d%%	SA
+TOOLTIP_APPLY_RESIST_WIND	Сопротивляемость ветру %d%%	SA
+TOOLTIP_APPLY_RESIST_WOLFMAN	Шанс отразить атаку ликана %d%%	SA
+TOOLTIP_APPLY_SKILL_BOOK_BONUS	Шансы при обучении по книгам увеличены в 2,5 раза	SNA
+TOOLTIP_APPLY_SKILL_BOOK_NO_DELAY	Если обучение не удалось, Вы можете тут же попробовать еще раз.	SNA
+TOOLTIP_APPLY_SLOW_PCT	Шансы на замедление: %d%%	SA
+TOOLTIP_APPLY_STEAL_HP	Урон %d%% добавляется к ХП.	SA
+TOOLTIP_APPLY_STEAL_SP	Урон %d%% добавляется к МП.	SA
+TOOLTIP_APPLY_STUN_PCT	Шансы на головокружение:  %d%%	SA
+TOOLTIP_ARMOR	Броня
+TOOLTIP_ARROW	Стрела
+TOOLTIP_ASSASSIN	Ниндзя
+TOOLTIP_ATTBONUS_PER_ANIMAL	Сила против зверей (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_CZ	Сила против зодиак-монстров (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_DESERT	Сила против монстров пустыни (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_DEVIL	Сила против дьяволов (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_HUMAN	Сила против полулюдей (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_INSECT	Сила против насекомых (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_MILGYO	Сила против мистиков (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_MONSTER	Сила против монстров (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_ORC	Сила против орков (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_STONE	Сила против камней метина (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_PER_UNDEAD	Сила против нежити (+%d%% от общего значения)	SA
+TOOLTIP_ATTBONUS_STONE	+%d%% силы против камней метина	SA
+TOOLTIP_ATT_GRADE	Показатель атаки +%d	SA
+TOOLTIP_ATT_SPEED	Скорость атаки +%d%%	SA
+TOOLTIP_ATT_SPEED_SLOW	Скорость атаки снижена	SNA
+TOOLTIP_AUTO_PICKUP	У вас есть шанс в %d%% автоматически подбирать предметы поблизости в течение 30 секунд	SA
+TOOLTIP_AUTO_POTION_HP	Эликсир солнца
+TOOLTIP_AUTO_POTION_REST	Остаток: %.2f%%
+TOOLTIP_AUTO_POTION_SP	Эликсир луны
+TOOLTIP_AUTO_POTION_USING	Активен
+TOOLTIP_AUTO_SYSTEM_PRIMIUM	Автоохота	SNA
+TOOLTIP_BATTLE_POTION	Боевое зелье для поля боя	SNA
+TOOLTIP_BATTLE_ROYALE_AFFECT_INFINITE_STAMINA	Бесконечная выносливость	SNA
+TOOLTIP_BATTLE_ROYALE_AFFECT_MOVE_SPEED	Скорость передвижения повышена	SNA
+TOOLTIP_BATTLE_ROYALE_AFFECT_SLOW	Скорость передвижения понижена	SNA
+TOOLTIP_BOW_DISTANCE	Радиус действия +%dm	SA
+TOOLTIP_BUYPRICE	Цена: %s
+TOOLTIP_CAST_SPEED	Скорость заклинания +%d%%	SA
+TOOLTIP_CON	Здоровье +%d	SA
+TOOLTIP_COSTUME_ATTR_BONUS	Бонус костюма %d%%	SA
+TOOLTIP_CURSE_OF_ELEMENTAL	Стихийное проклятие (накоплено %d раз(а)) Число ваших ОЗ постоянно уменьшается. Может накапливаться до 10 раз.	SA
+TOOLTIP_DAMAGE_HP_RECOVERY	Превращает %d%% полученного урона в ХП	SA
+TOOLTIP_DAMAGE_SP_RECOVERY	Превращает %d%% полученного урона в МП	SA
+TOOLTIP_DEF_GRADE	Защита +%d	SA
+TOOLTIP_DEX	Подвижность+%d	SA
+TOOLTIP_DISMOUNT_MOVE_SPEED_BONUS_PER	Когда вы слезаете с ездового животного, ваша скорость передвижения на 10 секунд повышается на %d%%	SA
+TOOLTIP_DRAGON_SOUL_DECK1	Небеса	SNA
+TOOLTIP_DRAGON_SOUL_DECK2	Земля	SNA
+TOOLTIP_DS_SET	Эффект за набор КД	SNA
+TOOLTIP_DURATION	Длительность
+TOOLTIP_EAR	Серьги
+TOOLTIP_ENCHANT_PER_DARK	Сила тьмы (+%d%% от общего значения)	SA
+TOOLTIP_ENCHANT_PER_EARTH	Сила земли (+%d%% от общего значения)	SA
+TOOLTIP_ENCHANT_PER_ELECT	Сила молний (+%d%% от общего значения)	SA
+TOOLTIP_ENCHANT_PER_FIRE	Сила огня (+%d%% от общего значения)	SA
+TOOLTIP_ENCHANT_PER_ICE	Сила льда (+%d%% от общего значения)	SA
+TOOLTIP_ENCHANT_PER_WIND	Сила ветра (+%d%% от общего значения)	SA
+TOOLTIP_ENERGY	Энергия %d	SA
+TOOLTIP_ETC	и т.д.
+TOOLTIP_EXP_BONUS_EVENT	Опыт +%d%%	SA
+TOOLTIP_FIFTH_ATTRIBUTE_BONUS	5-й добавленный бонус +%d%%	SA
+TOOLTIP_FIRST_ATTRIBUTE_BONUS	1-й добавленный бонус +%d%%	SA
+TOOLTIP_FISHINGROD_EXP	Очки: %d / %d
+TOOLTIP_FISHINGROD_LEVEL	Уровень:  %d
+TOOLTIP_FISHINGROD_UPGRADE1	Отдать рыбаку,
+TOOLTIP_FISHINGROD_UPGRADE2	чтобы получить
+TOOLTIP_FISHINGROD_UPGRADE3	улучшеное удилище.
+TOOLTIP_FISH_LEN	Длина: %.2f см.
+TOOLTIP_FLOWER_EVENT_SHOOT_ENVELOPE	Цветочные семена
+TOOLTIP_FOURTH_ATTRIBUTE_BONUS	4-й добавленный бонус +%d%%	SA
+TOOLTIP_GLOVE	Перчатки
+TOOLTIP_GUILD_SKILL_ACCEL	Ускорение +%d	SA
+TOOLTIP_GUILD_SKILL_BLESS	Благословение Бога-Дракона +%d	SA
+TOOLTIP_GUILD_SKILL_BLOOD	Кровь Бога-Дракона +%d	SA
+TOOLTIP_GUILD_SKILL_BUNNO	Ярость Бога-Дракона +%d%%	SA
+TOOLTIP_GUILD_SKILL_JUMUN	Помощь сотворения заклинаний +%d%%	SA
+TOOLTIP_GUILD_SKILL_SEONGHWI	Священная защита +%d	SA
+TOOLTIP_HALLOWEEN_EVENT_BUFF	+20% к опыту | +5% к выпадению предметов | +10% к силе против монстров	SNA
+TOOLTIP_HELMET	Шлем
+TOOLTIP_HIT_AUTO_HP_RECOVERY	Во время боя вы получаете эффект Эликсира солнца	SNA
+TOOLTIP_HIT_AUTO_SP_RECOVERY	Во время боя вы получаете эффект Эликсира луны	SNA
+TOOLTIP_HIT_BUFF_ENCHANT_DARK	Получите на %d сек. в бою силу тьмы	SA
+TOOLTIP_HIT_BUFF_ENCHANT_EARTH	Получите на %d сек. в бою силу земли	SA
+TOOLTIP_HIT_BUFF_ENCHANT_ELEC	Получите на %d сек. в бою силу молний	SA
+TOOLTIP_HIT_BUFF_ENCHANT_FIRE	Получите на %d сек. в бою силу огня	SA
+TOOLTIP_HIT_BUFF_ENCHANT_ICE	Получите на %d сек. в бою силу льда	SA
+TOOLTIP_HIT_BUFF_ENCHANT_WIND	Получите на %d сек. в бою силу ветра	SA
+TOOLTIP_HIT_BUFF_RESIST_DARK	Получите на %d сек. в бою сопротивляемость тьме	SA
+TOOLTIP_HIT_BUFF_RESIST_EARTH	Получите на %d сек. в бою сопротивляемость земле	SA
+TOOLTIP_HIT_BUFF_RESIST_ELEC	Получите на %d сек. в бою сопротивляемость молниям	SA
+TOOLTIP_HIT_BUFF_RESIST_FIRE	Получите на %d сек. в бою сопротивляемость огню	SA
+TOOLTIP_HIT_BUFF_RESIST_ICE	Получите на %d сек. в бою сопротивляемость льду	SA
+TOOLTIP_HIT_BUFF_RESIST_WIND	Получите на %d сек. в бою сопротивляемость ветру	SA
+TOOLTIP_HIT_BUFF_SUNGMA_HP	Повышает волю Сунг Ма (ЗДОР) в бою на 15 ед. на %d сек.	SA
+TOOLTIP_HIT_BUFF_SUNGMA_IMMUNE	Повышает волю Сунг Ма (ИНТ) в бою на 15 ед. на %d сек.	SA
+TOOLTIP_HIT_BUFF_SUNGMA_MOVE	Повышает волю Сунг Ма (СОПР) в бою на 15 ед. на %d сек.	SA
+TOOLTIP_HIT_BUFF_SUNGMA_STR	Повышает волю Сунг Ма (СИЛ) в бою на 15 ед. на %d сек.	SA
+TOOLTIP_HIT_PCT	Меткость +%d	SA
+TOOLTIP_HIT_STONE_ATTBONUS_STONE	Атакуя камень метина, вы на 5 секунд получаете +%d%% к урону (сила против камней метина)	SA
+TOOLTIP_HIT_STONE_DEF_GRADE_BONUS	Атакуя камень метина, вы на 5 секунд получаете +%d к защите	SA
+TOOLTIP_HP_REGEN	ХП-регенерация +%d%%	SA
+TOOLTIP_INSIGHT_SKILL_LEVEL	Актуальный уровень: %d
+TOOLTIP_INT	Интеллект +%d	SA
+TOOLTIP_ITEM_ATT_GRADE	Показатель атаки %d
+TOOLTIP_ITEM_ATT_POWER	Показатель атаки %d - %d
+TOOLTIP_ITEM_ATT_POWER_ONE_ARG	Показатель атаки  %d
+TOOLTIP_ITEM_ATT_POWER_REFINE	Показатель атаки %d - %d (+%d)
+TOOLTIP_ITEM_ATT_SPEED	Скорость атаки %s
+TOOLTIP_ITEM_DEF_GRADE	Защита %d
+TOOLTIP_ITEM_FAST	Быстро
+TOOLTIP_ITEM_LIMIT_CON	Предел здоровья: %d
+TOOLTIP_ITEM_LIMIT_DEX	Предел подвижности: %d
+TOOLTIP_ITEM_LIMIT_INT	Предел интеллекта: %d
+TOOLTIP_ITEM_LIMIT_LEVEL	с уровня: %d
+TOOLTIP_ITEM_LIMIT_NEWWORLD_LEVEL	Мин. чемпионский уровень: %d
+TOOLTIP_ITEM_LIMIT_STR	Предел силы: %d
+TOOLTIP_ITEM_MAGIC_ATT_POWER	Показатель магической атаки %d - %d
+TOOLTIP_ITEM_MAGIC_ATT_POWER_ONE_ARG	Показатель магической атаки %d
+TOOLTIP_ITEM_MAGIC_DEF_POWER	Магическая защита %d
+TOOLTIP_ITEM_NORMAL	нормально
+TOOLTIP_ITEM_SLOW	медленно
+TOOLTIP_ITEM_VERY_FAST	очень быстро
+TOOLTIP_ITEM_VERY_SLOW	очень медленно
+TOOLTIP_ITEM_WEARABLE_JOB	[можно снаряжать]
+TOOLTIP_KILL_BOSS_ITEM_BONUS	При победе над боссом ваш шанс на добычу повышается на %d%%	SA
+TOOLTIP_LOTTERY_STEP_NUMBER	%d
+TOOLTIP_LOTTO_NUMBER	Счастливое число: %d
+TOOLTIP_MAGIC_ATTBONUS_PER	Магическая атака +%d%%	SA
+TOOLTIP_MAGIC_ATT_GRADE	Показатель магической атаки +%d	SA
+TOOLTIP_MAGIC_DEF_GRADE	Магическая защита +%d	SA
+TOOLTIP_MALL_ATTBONUS	Показатель атаки +%d%%	SA
+TOOLTIP_MALL_ATTBONUS_STATIC	Показатель атаки	SNA
+TOOLTIP_MALL_AUTOLOOT	Янг принимается автом.	SNA
+TOOLTIP_MALL_DEFBONUS	Защита +%d%%	SA
+TOOLTIP_MALL_DEFBONUS_STATIC	Защита	SNA
+TOOLTIP_MALL_EXPBONUS	Опыт +%d%%	SA
+TOOLTIP_MALL_EXPBONUS_P_STATIC	иКафе бонус к опыту +%d%%	SA
+TOOLTIP_MALL_EXPBONUS_STATIC	на 50% больше опыта	SNA
+TOOLTIP_MALL_FISH_MIND	Повышенный шанс поймать рыбу.	SNA
+TOOLTIP_MALL_GOLDBONUS	Шансы на выпадение янг увеличены на %d%%	SA
+TOOLTIP_MALL_GOLDBONUS_STATIC	Удвоенные шансы на выпадение янг	SNA
+TOOLTIP_MALL_ITEMBONUS	Шансы на выпадение предметов увеличены на %d%%	SA
+TOOLTIP_MALL_ITEMBONUS_P_STATIC	иКафе-шанс на получение предметов плюс %.1f%%	SA
+TOOLTIP_MALL_ITEMBONUS_STATIC	Шанс на выпадение предметов увеличен на 200%.	SNA
+TOOLTIP_MALL_MARRIAGE_FAST	Очки любви возрастают быстрее.	SNA
+TOOLTIP_MALL_SAFEBOX	В вашем распоряжении больше складских помещений.	SNA
+TOOLTIP_MAX_HP	Максим. ХП +%d	SA
+TOOLTIP_MAX_HP_PCT	Максим. ХП +%d%%	SA
+TOOLTIP_MAX_SP	Максим. МП +%d	SA
+TOOLTIP_MAX_SP_PCT	Максим. МП +%d%%	SA
+TOOLTIP_MAX_STAMINA	Максим. выносливость +%d	SA
+TOOLTIP_MELEE_MAGIC_ATTBONUS_PER	Магическая, ближняя атака +%d%%	SA
+TOOLTIP_MEMORIZED_POSITION	%s(%d, %d)
+TOOLTIP_MEMORIZED_POSITION_ERROR	GPS-ошибка(%d, %d)
+TOOLTIP_MOB_HIT_MOB_AGGRESSIVE	При атаке на вас с вероятностью в %d%% нападут все монстры поблизости (Плащ смелости)	SA
+TOOLTIP_MORE_THEN_HP90_DAMAGE_REDUCE	Если у вас больше 90%% ХП, получаемый урон снижается на %d%%.	SA
+TOOLTIP_MOUNT_MELEE_MAGIC_ATTBONUS_PER	Запрыгивая на ездовое животное, вы на 10 секунд получаете +%d%% к урону	SA
+TOOLTIP_MOUNT_NO_KNOCKBACK	При атаке с ездового животного у вас есть шанс в %d%% на 20 секунд смять врага	SA
+TOOLTIP_MOUNT_UPGRADE_SKILLBOOK_USE	Хотите изучить навык коня %s?
+TOOLTIP_MOUNT_UPGRADE_SKILL_LEVEL_UP	Хотите улучшить навык своего коня? \n На это нужно %d Gaya и %d янг
+TOOLTIP_MOV_SPEED	Скорость движения %d%%	SA
+TOOLTIP_NECK	Ожерелье
+TOOLTIP_NEED_ALL_SP	Необходимые МП: Максим.
+TOOLTIP_NEED_GSP	Необходимо Дух Дракона: %d
+TOOLTIP_NEED_HP	Необходимые ХП: %d
+TOOLTIP_NEED_HP_PER_SEC	ХП: %d / Сек.
+TOOLTIP_NEED_SKILL_POINT	Необходимые очки навыков:
+TOOLTIP_NEED_SP	Необходимые МП: %d
+TOOLTIP_NEED_SP_PER_SEC	МП / Сек.: %d
+TOOLTIP_NEXT_SKILL_LEVEL_1	Следующий уровень:%d (Максим. %d)
+TOOLTIP_NEXT_SKILL_LEVEL_2	Следующий уровень: %d (Максим. %d-%d)
+TOOLTIP_NORMAL_DAMAGE_GUARD	Урон от атаки блокируется с вероятностью в %d%%	SA
+TOOLTIP_NORMAL_HIT_DAMAGE_BONUS	Средний урон %d%%	SA
+TOOLTIP_NORMAL_HIT_DAMAGE_BONUS_BOSS_OR_MORE	Урон от атаки против боссов +%d%%	SA
+TOOLTIP_NORMAL_HIT_DEFEND_BONUS	Средн.устойчивость урону %d%%	SA
+TOOLTIP_NORMAL_HIT_DEFEND_BONUS_BOSS_OR_MORE	Урон от атаки против боссов -%d%%	SA
+TOOLTIP_NO_DEATH_AND_HP_RECOVERY30	У вас есть шанс в %d%% избежать смерти и вернуть 30%% общего запаса ХП	SA
+TOOLTIP_PARTY_INFO_GRADE_UP1	Больше чем %d участников группы
+TOOLTIP_PARTY_INFO_GRADE_UP2	Ступень атаки +%d
+TOOLTIP_PARTY_INFO_GRADE_UP3	Ступень защиты +%d
+TOOLTIP_PARTY_INFO_HEAL_18_LEVEL	Восстановить ХП/МП всех участников группы через 60 Минут.
+TOOLTIP_PARTY_INFO_HEAL_40_LEVEL	Восстановить ХП/МП всех участников группы через 30 Минут.
+TOOLTIP_PARTY_INFO_RECALL_12_LEVEL	Время ожидания после смерти участника группы составляет 3 минуты.
+TOOLTIP_PARTY_INFO_RECALL_20_LEVEL	Созвать участников группы на одном и том же сервере можно в любое время.
+TOOLTIP_PARTY_INFO_SET_ATTACKER	Ступень атаки +(кол.участников группы/ 2) Бойцы атаки %d могут быть выбранны.
+TOOLTIP_PARTY_INFO_SET_TANKER	Ступень защиты+(кол.участников группы). Бойцы ближнего боя 1 могут быть выбраны.
+TOOLTIP_PARTY_SKILL_LEVEL	Актуальный уровень: %d
+TOOLTIP_PARTY_TITLE_GRADE_UP	[Атака/Защита улучшены]
+TOOLTIP_PARTY_TITLE_HEAL	[Восстановить]
+TOOLTIP_PARTY_TITLE_INFO_BONUS_EXP	Больше %d  участников группы дают бонус к опыту %d%%.
+TOOLTIP_PARTY_TITLE_MEMBER_BONUS_EXP	[Бонус к опыту]
+TOOLTIP_PARTY_TITLE_RECALL	[Созвать]
+TOOLTIP_PARTY_TITLE_SET_ATTACKER	[Определить бойцов атаки]
+TOOLTIP_PARTY_TITLE_SET_TANKER	[Определить Бойцом ближнего боя]
+TOOLTIP_PASSIVE_JOB_DECK	Реликтовый бонус	SNA
+TOOLTIP_PEPSI_EVENT	+5% к опыту и +5% к шансу получить предметы.	SNA
+TOOLTIP_PICK_EXP	Очки:  %d / %d
+TOOLTIP_PICK_LEVEL	Уровень: %d
+TOOLTIP_PICK_UPGRADE1	Отдать лесорубу
+TOOLTIP_PICK_UPGRADE2	чтобы к лучшей
+TOOLTIP_PICK_UPGRADE3	Улучшить Кирку
+TOOLTIP_POTION_CURE	Убрать негативные эффекты.
+TOOLTIP_POTION_MIN	Мин.
+TOOLTIP_POTION_OF_ELEMENTAL	Защитное зелье стихий. +5% к физической и магической атаке ближнего боя | +10% к сопротивлениям стихиям	SNA
+TOOLTIP_POTION_PLUS_ATTACK_SPEED	Скорость атаки: +%d
+TOOLTIP_POTION_PLUS_ATTBONUS_MONSTER	АТК-БОНУС МОНСТРАМ: +%d%%
+TOOLTIP_POTION_PLUS_ATT_POINT	АТК: +%d
+TOOLTIP_POTION_PLUS_ATT_POINT_PER	АТК: +%d%%
+TOOLTIP_POTION_PLUS_DEF_POINT	ЗАЩ: +%d
+TOOLTIP_POTION_PLUS_DEX_POINT	ПОДВ: +%d
+TOOLTIP_POTION_PLUS_EXP_BONUS	ОПЫТ: +%d%%
+TOOLTIP_POTION_PLUS_HIT_DEFEND_POINT	СОПРОТИВЛЕНИЕ УРОНУ: +%d%%
+TOOLTIP_POTION_PLUS_HP_PERCENT	ХП: +%d%%
+TOOLTIP_POTION_PLUS_HP_POINT	ХП: +%d
+TOOLTIP_POTION_PLUS_MOVING_SPEED	Скорость движения +%d
+TOOLTIP_POTION_PLUS_RESIST_DARK	СОПР. ТЬМЕ: +%d%%
+TOOLTIP_POTION_PLUS_RESIST_EARTH	СОПР. ЗЕМЛЕ: +%d%%
+TOOLTIP_POTION_PLUS_RESIST_ICE	СОПР. ЛЬДУ: +%d%%
+TOOLTIP_POTION_PLUS_RESIST_MAGIC	СОПР. МАГИИ: +%d%%
+TOOLTIP_POTION_PLUS_SP_PERCENT	МП +%d%%
+TOOLTIP_POTION_PLUS_SP_POINT	МП +%d
+TOOLTIP_POTION_PLUS_STR_POINT	СИЛА: +%d
+TOOLTIP_POTION_SEC	Сек.
+TOOLTIP_POTION_TIME	Длительность:
+TOOLTIP_PROTECTION_OF_ELEMENTAL	Иммунитет против стихийного проклятия	SNA
+TOOLTIP_PVP_TOURNAMENT_ENTER	Участие в PvP-турнире
+TOOLTIP_PVP_TOURNAMENT_EXPBONUS	Опыт за PvP-турнир +%d%%	SA
+TOOLTIP_REQUIREMENT_21_LEVEL	Необходимо достигнуть хотя бы 21 уровень.
+TOOLTIP_REQUIREMENT_41_LEVEL	Необходимо достигнуть хотя бы 41 уровень.
+TOOLTIP_REQUIREMENT_LEVEL	Необходимо достигнуть хотя бы уровень %d
+TOOLTIP_REQUIREMENT_SKILL_LEVEL	%s уровень %d обязателен.
+TOOLTIP_REQUIREMENT_STAT_LEVEL	%s %d обязателен
+TOOLTIP_RESIST_BOW	Защита от стрел %d%%	SA
+TOOLTIP_RESIST_DARK	Сопротивление темноте +%d%%	SA
+TOOLTIP_RESIST_EARTH	Сопротивление земле +%d%%	SA
+TOOLTIP_RESIST_ELEC	Сопротивляемость молниям %d%%	SA
+TOOLTIP_RESIST_FIRE	Сопротивляемость огню %d%%	SA
+TOOLTIP_RESIST_ICE	Сопротивление льду +%d%%	SA
+TOOLTIP_RESIST_MAGIC	Сопротивляемость Магии %d%%	SA
+TOOLTIP_RESIST_MAGIC_REDUCTION	Рассеивание магии %d%%	SA
+TOOLTIP_RESIST_PER_DARK	Сопротивление темноте (+%d%% от общего значения)	SA
+TOOLTIP_RESIST_PER_EARTH	Сопротивление земле (+%d%% от общего значения)	SA
+TOOLTIP_RESIST_PER_ELEC	Сопротивление молниям (+%d%% от общего значения)	SA
+TOOLTIP_RESIST_PER_FIRE	Сопротивление огню (+%d%% от общего значения)	SA
+TOOLTIP_RESIST_PER_HUMAN	Сопротивление полулюдям (+%d%% от общего значения)	SA
+TOOLTIP_RESIST_PER_ICE	Сопротивление льду (+%d%% от общего значения)	SA
+TOOLTIP_RESIST_PER_MAGIC	Сопротивление магии (+%d%% от общего значения)	SA
+TOOLTIP_RESIST_PER_WIND	Сопротивление ветру (+%d%% от общего значения)	SA
+TOOLTIP_REST_USABLE_COUNT	Осталось: %d
+TOOLTIP_ROLE_PROFICIENCY_LEADER_EFFECT	Бонус лидера: %d%%
+TOOLTIP_ROLE_PROFICIENCY_SKILL_LEVEL	Актуальный уровень: %d
+TOOLTIP_SEALED	Предмет зачарован оковами души
+TOOLTIP_SEASON_PVE_BUFF	Повышает PvE-урон на 10 минут на 40%.	SNA
+TOOLTIP_SEASON_RANKING_BUFF	На 20% больше очков ранга (10 минут).	SNA
+TOOLTIP_SECOND_ATTRIBUTE_BONUS	2-й добавленный бонус +%d%%	SA
+TOOLTIP_SECRET_DUNGEON_SCROLL_INFO	%s : %d, %d
+TOOLTIP_SECRET_DUNGEON_SCROLL_PLACE_INFO	Здесь можно применить предмет:
+TOOLTIP_SELLPRICE	Цена: %s
+TOOLTIP_SET_ITEM	Бонус за набор	SNA
+TOOLTIP_SET_ITEM_1	Свящ. 
+TOOLTIP_SET_ITEM_2	Роскош. 
+TOOLTIP_SET_ITEM_3	Рыцар. 
+TOOLTIP_SET_ITEM_4	Царск. 
+TOOLTIP_SET_ITEM_5	Выдающ. 
+TOOLTIP_SHAMAN	Шаман
+TOOLTIP_SHIELD	Щит
+TOOLTIP_SHOES	Туфли
+TOOLTIP_SKILL	Навык	SNA
+TOOLTIP_SKILLBOOK_NAME	Книга навыков
+TOOLTIP_SKILL_AFFECT_ATT_GRADE	Показатель атаки: +
+TOOLTIP_SKILL_AFFECT_ATT_POWER	Показатель атаки:
+TOOLTIP_SKILL_AFFECT_ATT_SPEED	Скорость атаки: +
+TOOLTIP_SKILL_AFFECT_DEF_GRADE	Защита:
+TOOLTIP_SKILL_AFFECT_DODGE	Показатель атаки противника: -
+TOOLTIP_SKILL_AFFECT_HEAL	Восстановить ХП:
+TOOLTIP_SKILL_AFFECT_MOV_SPEED	Скорость движения: +
+TOOLTIP_SKILL_AFFECT_REFLECT_MELEE	Шанс отразить физическую атаку:
+TOOLTIP_SKILL_AFFECT_RESIST_NORMAL	Сопротивляемость физическому урону:
+TOOLTIP_SKILL_COOL_TIME	Время загрузки: 
+TOOLTIP_SKILL_DAMAGE_AMSEOP	Урон от Засады +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_BIPABU	Урон от Летающего талисмана +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_BONUS	Урон навыков %d%%	SA
+TOOLTIP_SKILL_DAMAGE_BONUS_BOSS_OR_MORE	Урон от навыков против боссов +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_BYEURAK	Урон от Вызова молнии +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_CHAIN	Урон от Когтей молнии +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_CHARYUN	Урон от Крутящегося кинжала +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_CHAYEOL	Урон от Безумия зверя +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_GEOMPUNG	Урон от Взмаха мечом +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_GIGONGCHAM	Урон от Призрачного удара +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_GIGUNG	Урон от Ядовитой стрелы +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_GONGDAB	Урон от Рывка зверя +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_GUNGSIN	Урон от Молниеносной атаки +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_GYOKSAN	Урон от Сильного удара +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_HWAJO	Урон от Горящей стрелы +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_HWAYEOMPOK	Урон от Огненного удара +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_KWANKYEOK	Урон от Потока стрел +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_MAHWAN	Урон от Темного орба +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_MARYUNG	Урон от Темной атаки +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_NOEJEON	Урон от Броска молнии +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_PABEOB	Урон от Рассеивания +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_PAERYONG	Урон от Рева дракона +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_PALBANG	Урон от Вращающегося меча +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_PASWAE	Урон от Волчьих когтей +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_SALPOONG	Урон от Дыхания зверя +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_SAMYEON	Урон от Трехкратного удара +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_SANGONG	Урон от Ядовитого облака +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_SWAERYUNG	Урон от Атаки рукой +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_TANHWAN	Урон от Натиска +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_YEONSA	Урон от Повторного выстрела +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_YONGBI	Урон от Стреляющего дракона +%d%%	SA
+TOOLTIP_SKILL_DAMAGE_YONGKWON	Урон от Драконьего вихря +%d%%	SA
+TOOLTIP_SKILL_DEFEND_BONUS	Сопротивляемость урону навыков %d%%	SA
+TOOLTIP_SKILL_DEFEND_BONUS_BOSS_OR_MORE	Урон от навыков боссов -%d%%	SA
+TOOLTIP_SKILL_DURATION	Длительность: %d сек.
+TOOLTIP_SKILL_DURATION_INCREASE_EUNHYUNG	Урон от Невидимости +%d сек.	SA
+TOOLTIP_SKILL_DURATION_INCREASE_GEOMKYUNG	Урон от Ауры меча +%d сек.	SA
+TOOLTIP_SKILL_DURATION_INCREASE_GYEONGGONG	Урон от Легкой походки +%d сек.	SA
+TOOLTIP_SKILL_DURATION_INCREASE_JEOKRANG	Урон от Огненной души волка +%d сек.	SA
+TOOLTIP_SKILL_FORGET_BOOK_NAME	Лента забвения
+TOOLTIP_SKILL_LEVEL	Актуальный уровень: %d
+TOOLTIP_SKILL_LEVEL_MASTER	Актуальный уровень: %d (Мастер)
+TOOLTIP_SKILL_LEVEL_WITH_MAX	Актуальный уровень: %d ( Макс. %d)
+TOOLTIP_SKILL_NEXT_LEVEL	След. уровень: %d
+TOOLTIP_SOCKET_EMPTY	Пусто
+TOOLTIP_SOCKET_REFINABLE_ITEM	[Предмет с ячейкой]
+TOOLTIP_SP_REGEN	МП-регенерация +%d%%	SA
+TOOLTIP_STR	Сила +%d	SA
+TOOLTIP_SUNGMA_ATTR_PRIMIUM	Усилитель воли Сунг Ма	SNA
+TOOLTIP_SUNGMA_HP	%d Воля Сунг Ма (ЗДОР)	SA
+TOOLTIP_SUNGMA_IMMUNE	%d Воля Сунг Ма (ИНТ)	SA
+TOOLTIP_SUNGMA_MOVE	%d Воля Сунг Ма (СОПР)	SA
+TOOLTIP_SUNGMA_PER_HP	%d%% Воля Сунг Ма (ЗДОР)	SA
+TOOLTIP_SUNGMA_PER_IMMUNE	%d%% Воля Сунг Ма (ИНТ)	SA
+TOOLTIP_SUNGMA_PER_MOVE	%d%% Воля Сунг Ма (СОПР)	SA
+TOOLTIP_SUNGMA_PER_STR	%d%% Воля Сунг Ма (СИЛ)	SA
+TOOLTIP_SUNGMA_STR	%d Воля Сунг Ма (СИЛ)	SA
+TOOLTIP_SURA	Сура
+TOOLTIP_THIRD_ATTRIBUTE_BONUS	3-й добавленный бонус +%d%%	SA
+TOOLTIP_TIME_CHARGER_FIX	Время восстановления %d сек.	SA
+TOOLTIP_TIME_CHARGER_PER	Время восстановления %d%%	SA
+TOOLTIP_UNIQUE	Уникальный
+TOOLTIP_UNSEAL_LEFT_TIME	Разрушение оков души через: %dH %dM
+TOOLTIP_USE_SKILL_AMSEOP_HP_ABSORB	Поглощает %d%% ХП при использовании Засады	SA
+TOOLTIP_USE_SKILL_BIPABU_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Летающего талисмана: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_BIPABU_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Летающего талисмана: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_USE_SKILL_BYEURAK_HP_ABSORB	Вы поглощаете до %d%% ХП при использовании Вызова молнии.	SA
+TOOLTIP_USE_SKILL_CHAIN_HP_ABSORB	Поглощает %d%% ХП при использовании Когтя молнии	SA
+TOOLTIP_USE_SKILL_CHARYUN_STUN	Крутящийся кинжал оглушает врагов с вероятностью %d%%	SA
+TOOLTIP_USE_SKILL_CHAYEOL_CRITICAL_PCT	Повышенный шанс на критический удар на %d сек. при использовании Безумия зверя	SA
+TOOLTIP_USE_SKILL_CHAYEOL_HP_ABSORB	Поглощает %d%% ХП при использовании Безумия зверя	SA
+TOOLTIP_USE_SKILL_CHEONGRANG_CASTING_SPEED	Повышенная скорость заклинания на %d сек. при использовании Небесной души волка	SA
+TOOLTIP_USE_SKILL_CHEONGRANG_MOV_SPEED	Повышенная скорость передвижения на %d сек. при использовании Небесной души волка	SA
+TOOLTIP_USE_SKILL_CHUNKEON_CASTING_SPEED	Повышенная скорость заклинания на %d сек. при использовании Сильного тела	SA
+TOOLTIP_USE_SKILL_COOLTIME_DECREASE_ALL	С вероятностью в %d%% сбрасывает время перезарядки ваших навыков	SA
+TOOLTIP_USE_SKILL_GEOMPUNG_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Взмаха мечом: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_GEOMPUNG_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Взмаха мечом: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_USE_SKILL_GICHEON_ATT_GRADE_BONUS	Бонус к атаке на %d сек. при использовании Помощи дракона	SA
+TOOLTIP_USE_SKILL_GIGONGCHAM_STUN	Призрачный удар оглушает врагов с вероятностью %d%%	SA
+TOOLTIP_USE_SKILL_GIGUNG_ATT_GRADE_BONUS	Бонус к атаке на %d сек. при использовании Ядовитой стрелы	SA
+TOOLTIP_USE_SKILL_GIHYEOL_ATT_GRADE_BONUS	Бонус к атаке на %d сек. при использовании Силы жизни	SA
+TOOLTIP_USE_SKILL_GONGDAB_KNOCKBACK	Рывок зверя с вероятностью в %d%% отбрасывает врага	SA
+TOOLTIP_USE_SKILL_GONGDAB_STUN	Рывок зверя оглушает врагов с вероятностью %d%%	SA
+TOOLTIP_USE_SKILL_GUNGSIN_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Быстрой атаки: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_GUNGSIN_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Быстрой атаки: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_USE_SKILL_GWIGEOM_DEF_BONUS	Бонус к защите на %d сек. при использовании Волшебного клинка	SA
+TOOLTIP_USE_SKILL_GYOKSAN_KNOCKBACK	Сильный удар с вероятностью в %d%% отбрасывает врага	SA
+TOOLTIP_USE_SKILL_HOSIN_DEF_BONUS	Бонус к защите на %d сек. при использовании Благословения	SA
+TOOLTIP_USE_SKILL_HWAYEOMPOK_KNOCKBACK	Огненный удар с вероятностью в %d%% отбрасывает врага	SA
+TOOLTIP_USE_SKILL_JEOKRANG_DEF_BONUS	Бонус к защите на %d сек. при использовании Огненной души волка	SA
+TOOLTIP_USE_SKILL_JEONGEOP_ATT_GRADE_BONUS	Бонус к атаке на %d сек. при использовании Исцеления	SA
+TOOLTIP_USE_SKILL_JEUNGRYEOK_DEF_BONUS	Бонус к защите на %d сек. при использовании Атаки+	SA
+TOOLTIP_USE_SKILL_KWANKYEOK_KNOCKBACK	Поток стрел с вероятностью в %d%% отбрасывает врага	SA
+TOOLTIP_USE_SKILL_KWANKYEOK_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Потока стрел: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_KWANKYEOK_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Потока стрел: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_USE_SKILL_MAHWAN_STUN	Темный орб оглушает врагов с вероятностью %d%%	SA
+TOOLTIP_USE_SKILL_MANASHILED_CASTING_SPEED	Повышенная скорость заклинания на %d сек. при использовании Защиты тьмы	SA
+TOOLTIP_USE_SKILL_MARYUNG_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Темной атаки: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_MARYUNG_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Темной атаки: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_USE_SKILL_MUYEONG_ATT_GRADE_BONUS	Бонус к атаке на %d сек. при использовании Духа огня	SA
+TOOLTIP_USE_SKILL_NOEGEOM_ATT_GRADE_BONUS	Бонус к атаке на %d сек. при использовании Сферы клинка	SA
+TOOLTIP_USE_SKILL_NOEJEON_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Броска молнии: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_NOEJEON_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Броска молнии: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_USE_SKILL_PABEOB_STUN	Рассеивание оглушает врагов с вероятностью %d%%	SA
+TOOLTIP_USE_SKILL_PAERYONG_HP_ABSORB	Поглощает %d%% ХП при использовании Рева дракона	SA
+TOOLTIP_USE_SKILL_PALBANG_HP_ABSORB	Поглощает %d%% ХП при использовании Вращающегося меча	SA
+TOOLTIP_USE_SKILL_PASWAE_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Волчьего когтя: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_PASWAE_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Волчьего когтя: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_USE_SKILL_PASWAE_SP_ABSORB	Поглощает %d%% МП при использовании Волчьего когтя	SA
+TOOLTIP_USE_SKILL_SALPOONG_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Дыхания зверя: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_SALPOONG_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Дыхания зверя: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_USE_SKILL_SAMYEON_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Трехкратного удара: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_SAMYEON_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Трехкратного удара: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_USE_SKILL_SAMYEON_STUN	Трехкратный удар оглушает врагов с вероятностью %d%%	SA
+TOOLTIP_USE_SKILL_SANGONG_ATT_GRADE_BONUS	Бонус к атаке на %d сек. при использовании Ядовитого облака	SA
+TOOLTIP_USE_SKILL_SEOMJEON_KNOCKBACK	Поражение ядом с вероятностью в %d%% отбрасывает врага	SA
+TOOLTIP_USE_SKILL_SWAERYUNG_KNOCKBACK	Атака рукой с вероятностью в %d%% отбрасывает врага	SA
+TOOLTIP_USE_SKILL_TERROR_ATT_GRADE_BONUS	Бонус к атаке на %d сек. при использовании Страха	SA
+TOOLTIP_USE_SKILL_TUSOK_HP_ABSORB	Поглощает %d%% ХП при использовании Духовного удара	SA
+TOOLTIP_USE_SKILL_YEONSA_HP_ABSORB	Поглощает %d%% ХП при использовании Повторного выстрела	SA
+TOOLTIP_USE_SKILL_YONGBI_HP_ABSORB	Поглощает %d%% ХП при использовании Стреляющего дракона	SA
+TOOLTIP_USE_SKILL_YONGKWON_NEXT_COOLTIME_DECREASE_10PER	Время перезарядки Драконьего вихря: -%d сек. с вероятностью в 10%%	SA
+TOOLTIP_USE_SKILL_YONGKWON_NEXT_COOLTIME_DECREASE_20PER	Время перезарядки Драконьего вихря: -%d сек. с вероятностью в 20%%	SA
+TOOLTIP_WARRIOR	Воин
+TOOLTIP_WEAPON	Оружие
+TOOLTIP_WOLFMAN	Ликан
+TOOLTIP_WRISTLET	Браслет
+UI_ACCEPT	Принять
+UI_BOLD_FONT	Tahoma:12b
+UI_CANCEL	Отмена
+UI_CLOSE	Закрыть
+UI_DEF_FONT	Tahoma:12
+UI_DEF_FONT_LARGE	Tahoma:14
+UI_DEF_FONT_SMALL	Tahoma:9
+UI_DENY	Отказать
+UI_ITEM	Предмет
+UI_LEFT_TIME	Оставш.время: %d Сек.
+UI_NEXT	Дальше
+UI_NEXTPAGE	Далее
+UI_NOCONTENTS	Содержание отсутствует
+UI_NONAME	Имя отсутсвует
+UI_OK	ОК
+UI_POS_UNKNOWN	Неизвестное место
+UI_PREVPAGE	Назад
+UI_UNKNOWN	Неизвестно
+UNLIMIT_ENTER_CZ_QUESTION	Вы можете зайти в Храм Зодиака на %d мин. Хотите применить?
+UPDATE_TIME	Дата
+UPLOAD_MARK_CHECK_NEED_RECONNECT	Необходимо запустить аплоад повторно.
+UPLOAD_MARK_UPLOAD_NEED_RECONNECT	Необходимо запустить аплоад повторно.
+USE_ITEM_BUTTON_01	Прервать
+USE_ITEM_BUTTON_02	Войти
+USE_ITEM_FAILURE_PRIVATE_SHOP	Вы не можете пользоваться предметом, когда ваша лавка открыта.
+USE_ITEM_POPUP_01	Битва пяти святынь окончена. \n Следующая битва:
+USE_ITEM_QUESTION_01	Вы хотите участвовать в Битве пяти святынь?
+USE_ITEM_QUESTION_02	Вы хотите вернуться на место, где вас убили?\n Это стоит %s янг.
+USE_ITEM_QUESTION_03	Вы перенесетесь в случайное место. Хотите войти?
+USE_ITEM_QUESTION_04	При входе в Битву пяти святынь все ваши усиления деактивируются.\nВы переноситесь на случайное место.\nХотите войти?
+USE_ITEM_QUESTION_05	При входе в Битву пяти святынь все ваши усиления деактивируются.\nХотите вернуться на место своей гибели?\nСтоимость: %s янг.
+USE_SKILL_ERROR_UNKNOWN	Неизвестная ошибка навыков: %s
+WHISPER_QUEST_BLOCK	Хотите блокировать %s?
+WHISPER_QUEST_FRIEND	Хотите принять %s в список друзей?
+WHITE_DRAGON_CAVE_COOLING_CURSE	За каждый заряд: урон в {1}% от макс. ХП каждые {0} сек. - Сейчас зарядов: {2}
+WORLD_BOSS_STATE_BOSS_KILLED	Ускользнул
+WORLD_BOSS_STATE_BOSS_SPAWNED	Появился
+WORLD_BOSS_STATE_BREAK_TIME	Время перезарядки
+WORLD_BOSS_STATE_WAIT_FOR_SPAWN	Еще не появился
+WORLD_BOSS_TIER_1_SYMBOL	I
+WORLD_BOSS_TIER_2_SYMBOL	II
+WORLD_BOSS_TIER_3_SYMBOL	III
+WORLD_BOSS_TIER_4_SYMBOL	IV
+NEW_SYSTEM	----------------------------------------------------------------------------
+NEW_SYSTEM	----------------------------------------------------------------------------
+UI_DEF_FONT_SLARGE	Tahoma:13
+UI_DEF_FONT_XLARGE	Tahoma:20
+UI_DEF_FONT_XXLARGE	Tahoma:34
+UI_DEF_FONT_SMALL	Tahoma:9
+TOOLTIP_EXP_RING_REST	Remaining amount: %s experience points
+TOOLTIP_EXP_RING	Anti-Exp Active
+TOOLTIP_AFFECT_POTION_1	Potion Red SNA
+TOOLTIP_AFFECT_POTION_2	Potion Orang SNA
+TOOLTIP_AFFECT_POTION_3	Potion Yellow SNA
+TOOLTIP_AFFECT_POTION_4	Potion Green SNA
+TOOLTIP_AFFECT_POTION_5	Potion Blue SNA
+TOOLTIP_AFFECT_POTION_6	Potion White
+POLYMORPH_AFFECT_TOOLTIP	Transformation SNA
+POLYMORPH_AFFECT_REMOVE_QUESTION	Do you want to undo the transformation?
+TOOLTIP_ITEM_METIN_SUCCES_CHANCE1	Chance of success: 80%.
+TOOLTIP_ITEM_METIN_SUCCES_CHANCE2	chance of success: 70%
+TOOLTIP_ITEM_METIN_SUCCES_CHANCE3	Chance of success: 60%
+TOOLTIP_ITEM_METIN_SUCCES_CHANCE4	Chance of success: 50%
+TOOLTIP_ITEM_METIN_SUCCES_CHANCE5	Chance of success: 40%
+TOOLTIP_APPLY_RESIST_FIST	Resistance against fists %d%% SA
+TOOLTIP_NEXT_SKILL_LEVEL_3	Next level: %d (Max. P)
+REFINE_FAILURE_CAN_NOT_ATTACH0	%s cannot be attached to this item.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_AFFECT_BUFF_REMOVE
+BUFF_AFFECT_REMOVE_QUESTION	Do you really want to reset %s?
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_DESTROY_SYSTEM
+VALUABLE_ITEM_SURE	This item could be valuable to you, still execute?
+INVENTORY_REALLY_DESTROY_ITEM	Do you really want to destroy this item?
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_STATUS_PLUS
+STAT_POINTS_BUTTON_TITLE	Set status
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_RENDER_TARGET
+RENDER_INFO	Model Preview
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_MULTI_LANGUAGE_SYSTEM
+MULTI_LANG_RESTART_CLIENT	Do you really want to change the language?
+RESTART_CLIENT_LEFT_TIME	Time remaining
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_CHEQUE_EXCHANGE_WINDOW
+WONEXCHANGE_CONFIRM_QUESTION_1	Do you want to sell %d won by %s yang.
+WONEXCHANGE_CONFIRM_QUESTION_2	Want to buy %d won by %s yang.
+WONEXCHANGE_CONFIRM_QUESTION_3	Continue?
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_PREMIUM_PRIVATE_SHOP
+PRIVATE_SHOP_REOPEN_QUESTION	Do you want to reopen your private store?
+DO_YOU_REMOVE_ITEM_FROM_SHOP	Do you really want to remove %s from your private store?
+SHOP_ENTER_NEW_NAME	Enter a new name:
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_ACCE_COSTUME_SYSTEM | ENABLE_AURA_SYSTEM
+ABSORBED_ITEM_INFO	Absorbed
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_AURA_SYSTEM
+AURA_BOOST_DRAIN_PER	Extra Absorbance +%d%%
+AURA_DRAIN_BOOST_PER	Absorption rate %.1f%% (+%d%%)
+AURA_TOOLTIP_EVOLUTION_PER	Chance: %d%%
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_REFINE_RENEWAL
+REFINE_RENEWAL_KEEP_WINDOW_OPEN	Refine keep window open
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_DS_CHANGE_ATTR
+NEEDED_COUNT_TO_CHANGE_DS_ATTR	Required flames of the dragon: %s
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_GUILDRENEWAL_SYSTEM
+GUILD_DIAMANT_OVEN	diamond furnace
+GUILD_FOSSIL_OVEN	Fossil wood furnace
+GUILD_COPPER_OVEN	Copper furnace
+GUILD_SILVER_OVEN	Silver furnace
+GUILD_GOLD_OVEN	gold furnace
+GUILD_JADE_OVEN	Jade kiln
+GUILD_EBONY_OVEN	Ebony kiln
+GUILD_PEARL_OVEN	Pearl kiln
+GUILD_WHITEGOLD_OVEN	White gold furnace
+GUILD_KRISTALL_OVEN	crystal kiln
+GUILD_QUARZ_OVEN	quartz furnace
+GUILD_TEARS_OVEN	Heavenly tears furnace
+GUILD_SOULCRISTAL_OVEN	Soul crystal furnace
+GUILD_RUBIN_OVEN	Ruby furnace
+GUILD_GRANAT_OVEN	Garnet furnace
+GUILD_SMARAGD_OVEN	Emerald furnace
+GUILD_SAPHIR_OVEN	Sapphire furnace
+GUILD_TURMALIN_OVEN	Tourmaline furnace
+GUILD_WEAPON_BLACKSMITH	Weapons forge
+GUILD_ARMOR_BLACKSMITH	armor forge
+GUILD_JUWELER_BLACKSMITH	Jeweler
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_ANTIFLAG_TOOLTIP
+TOOLTIP_ANTIFLAG_DROP	Drop
+TOOLTIP_ANTIFLAG_GIVE	Trade
+TOOLTIP_ANTIFLAG_MYSHOP	Shop
+TOOLTIP_ANTIFLAG_PKDROP	PvP Drop
+TOOLTIP_ANTIFLAG_SAFEBOX	Warehouse
+TOOLTIP_ANTIFLAG_SELL	Sale
+TOOLTIP_ANTIFLAG_STACK	Stack
+NOT_POSSIBLE	not possible.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_PARTY_EXP_DISTRIBUTION_EQUAL
+PARTY_EXP_DISTRIBUTION_MODE_EQUAL	evenly*.
+PARTY_EXP_DISTRIBUTION_MODE_EQUAL_TOOLTIP	All group members get the total EXP.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_INVENTORY_SORT
+INVENTORY_SORT_QUESTION	do you really want to sort your inventory?
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_SELL_PRICE
+NPC_SELL_PRICE	Selling price: %s
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_VIEW_ITEM_VNUM
+ITEM_VNUM_TOOLTIP	ItemVnum: [%d]
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_GIVE_BASIC_ITEM
+TOOLTIP_ITEM_BASIC	Basic equipment
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_AUTOMATIC_RUNNING
+AUTO_RUNING_ACTIVE	The automatic running is active!
+AUTO_RUNING_DEACTIVE	The automatic running is deactive!
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_VALENCE_SYSTEM
+VALENCE_01	Normal
+VALENCE_02	Common
+VALENCE_03	Rare
+VALENCE_04	Artifact
+VALENCE_05	Legendary
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_RENEWAL_SHOPEX
+MONETARY_UNIT_EXP	Experience Points
+SHOP_NOT_ENOUGH_ITEM	You don't have enough items.
+SHOP_NOT_ENOUGH_EXP	You don't have enough EXP.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_12ZI
+NOT_ENOUGH_PRISM	You do not have enough items to perform revival. Number of prisms of awakening: %d
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_GEM_SYSTEM
+GEM_SYSTEM_NOT_ENOUGHT_ADDITEM	[Gaya] You don't have enough %s. You need %d more to unlock an additional slot.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_SEND_TARGET_INFO
+TARGET_INFO_RESISTS	Resistors:
+TARGET_INFO_RESISTS_LINE	Fists: %d%%
+TARGET_INFO_RESISTS_LINE0	Sword: %d%% Two-Handed: %d%% Dagger: %d%%
+TARGET_INFO_RESISTS_LINE1	Bell: %d%% Fan: %d%% Bow: %d%%
+TARGET_INFO_RESISTS_LINE2	Claws: %d%% Bleeding: %d%%
+TARGET_INFO_REGEN_INFO	TP reg. %d%% every %d sec.
+TARGET_INFO_GOLD_MIN_MAX	Yang: %s ~ %s
+TARGET_INFO_DAMAGE	Impact damage : %s - %s
+TARGET_INFO_DEFENSE	Defense : %s
+TARGET_INFO_EXP	Experience : %s
+TARGET_INFO_MAINRACE	Race : %s
+TARGET_INFO_MAX_HP	Max. Hit points : %s
+TARGET_INFO_NO_ITEM_TEXT	No available items
+TARGET_INFO_NO_RACE	No race
+TARGET_INFO_RACE_ANIMAL	Animals
+TARGET_INFO_RACE_DARK	Resistance to darkness
+TARGET_INFO_RACE_DEVIL	Devil
+TARGET_INFO_RACE_EARTH	Earth resistance
+TARGET_INFO_RACE_ELEC	Lightning resistance 
+TARGET_INFO_RACE_FIRE	Fire resistance
+TARGET_INFO_RACE_HUMAN	Half-humans
+TARGET_INFO_RACE_ICE	Ice resistance
+TARGET_INFO_RACE_METIN	Metin stone
+TARGET_INFO_RACE_MILGYO	Esoteric 
+TARGET_INFO_RACE_ORC	Orcs
+TARGET_INFO_RACE_UNDEAD	Undead
+TARGET_INFO_RACE_WIND	Wind resistance
+TARGET_INFO_STONE_NAME	Spirit stone
+TARGET_INFO_RACE_INSECT	insects
+TARGET_INFO_RACE_DESERT	Deserts
+TARGET_INFO_RACE_CZ	CzZeug
+TARGET_INFO_SUBRACE	Subgenus : %s
+TARGET_INFO_NO_SUBRACE	No subrace
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_DUNGEON_INFO_SYSTEM
+DUNGEON_INFO_TOOL_TIP	Dungeon Information
+DUNGEON_INFO_TOOL_TIP_01	In this window you will find all available dungeons.
+DUNGEON_INFO_TOOL_TIP_02	Each dungeon listed on the left shows different
+DUNGEON_INFO_TOOL_TIP_03	Information about and shows which items
+DUNGEON_INFO_TOOL_TIP_04	the last boss drops.
+DUNGEON_INFO_TOOL_TIP_05	You can also go to the entrance of the dungeon
+DUNGEON_INFO_TOOL_TIP_06	teleport (if possible).
+DUNGEON_INFO_TOOL_TIP_07	You will also find your results in the right panel
+DUNGEON_INFO_TOOL_TIP_08	and a global ranking of the top 10 players.
+DUNGEON_INFO_STATUS_CLOSED	Closed
+DUNGEON_INFO_STATUS_AVAILABLE	Available
+DUNGEON_INFO_STATUS_COOLDOWN	Cooldown
+DUNGEON_INFO_STATUS_HIGH_LEVEL	Level too low!
+DUNGEON_INFO_STATUS_LOW_LEVEL	Level too high!
+DUNGEON_INFO_DO_YOU_TELEPORT	Would you like to go to the %s entrance?
+DUNGEON_INFO_ELEMENT_ATK_BONUS	Attack bonus
+DUNGEON_INFO_ELEMENT_DEF_AND_RES_BONUS	Defense and Resistance bonus
+DUNGEON_INFO_ELEMENT_UNKOWN_BONUS	Unknown Bonus needed
+DUNGEON_INFO_TYPE_01	Global
+DUNGEON_INFO_TYPE_02	Group
+DUNGEON_INFO_TYPE_03	Guild
+DUNGEON_INFO_TYPE	Typ : %s
+DUNGEON_INFO_LEVEL_LIMIT	Level limit : %d to %d
+DUNGEON_INFO_PARTY_LIMIT	Groupmember limit : %d to %d
+DUNGEON_INFO_DURATION	Duration : %s
+DUNGEON_INFO_COOLDOWN	Cooldown : %s
+DUNGEON_INFO_LOCATION	Location : %s
+DUNGEON_INFO_ENTRACE	Entry : %s
+DUNGEON_INFO_TOTAL_FINISHED	Overall completed : %d
+DUNGEON_INFO_FASTEST_TIME	Fastest time : %s
+DUNGEON_INFO_HIGHEST_DMG	Highest Damage : %s
+DUNGEON_INFO_NONE	None
+DUNGEON_INFO_MINIMAP_TOOL_TIP	Dungeon Information
+DUNGEON_INFO_NOT_FOUND	Overall completed.
+DUNGEON_RANKING_TOTAL_FINISHED	Overall completed
+DUNGEON_RANKING_FASTEST_TIME	Fastest time
+DUNGEON_RANKING_HIGHEST_DMG	Highest Damage
+DUNGEON_RANKING_POINTS	Points
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_EMOJI_TEXTLINE
+EMOJI_TEXTLINE_VIEW_RENDER	Hold |Eemoji/key_ctrl|e for a preview.
+EMOJI_TEXTLINE_KEY_ALT	|Eemoji/key_alt|e
+EMOJI_TEXTLINE_KEY_CTRL	|Eemoji/key_ctrl|e
+EMOJI_TEXTLINE_KEY_SHIFT	|Eemoji/key_shift|e
+EMOJI_TEXTLINE_KEY_RCLICK	|Eemoji/key_rclick|e
+EMOJI_TEXTLINE_KEY_LCLICK	|Eemoji/key_lclick|e
+EMOJI_TEXTLINE_KEY_X	|Eemoji/key_x|e
+EMOJI_TEXTLINE_MOVE_SAFEBOX	to transfer items to the warehouse
+EMOJI_TEXTLINE_MULTIPLE_CHEST_OPEN	to open multiple chests
+EMOJI_TEXTLINE_MOVE_INVENTORY	to transfer items into inventory
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_SWITCHBOT
+SWITCHBOT_TITLE	Switchbot
+SWITCHBOT_START	Start
+SWITCHBOT_STOP	Stop
+SWITCHBOT_EMPTY_ATTR	- None -
+SWITCHBOT_SELECT_ATTR	Select attribute
+SWITCHBOT_CLEAR_ATTR	Remove
+SWITCHBOT_CONFIGURATION_TITLE	Saved settings
+SWITCHBOT_SAVE_BUTTON	Open memory
+SWITCHBOT_SAVE	Save
+SWITCHBOT_LOAD_CONFIGURATION	Apply
+SWITCHBOT_CLEAR_CONFIGURATION	Delete
+SWITCHBOT_NOT_SEALITEM	Soulbound
+SWITCHBOT_ALTERNATIVE	Alternatives:
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_DISABLE_SOFTWARE_TILING
+SYSTEM_OPTION_CPU_TILING_1	CPU tiling mode can improve the speed of a weaker PC.
+SYSTEM_OPTION_CPU_TILING_2	If problems with the graphics occur, select 'System Option' or 'CONFIG.exe'.
+SYSTEM_OPTION_CPU_TILING_3	to switch to GPU tiling mode.
+SYSTEM_OPTION_GPU_TILING_1	GPU tiling mode may run slowly on a weaker PC.
+SYSTEM_OPTION_GPU_TILING_2	If problems with the graphics occur, select 'System Options' or 'CONFIG.exe'.
+SYSTEM_OPTION_GPU_TILING_3	and switch to CPU tiling mode.
+SYSTEM_OPTION_TILING_EXIT	To change the tiling mode the game has to be restarted.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_SKILL_COLOR_SYSTEM
+SKILL_COLOR_SELECT_FIRST	First choose a color.
+SKILL_COLOR_PICK_TOOLTIP	Choose the desired color for %s. (HEX Code : %s)
+SKILL_COLOR_PRESET_TOOLTIP_TITLE	Color Preset
+SKILL_COLOR_PRESET_TOOLTIP_1	You can save a chosen color for your skill.
+SKILL_COLOR_PRESET_TOOLTIP_2	Save the chosen color and if you need the color again
+SKILL_COLOR_PRESET_TOOLTIP_3	just select the color code from the list.
+SKILL_COLOR_CUSTOM_HEX_CODE_TOOLTIP_TITLE	Color Code
+SKILL_COLOR_CUSTOM_HEX_CODE_TOOLTIP_1	You can input a custom color hex code.
+SKILL_COLOR_CUSTOM_HEX_CODE_TOOLTIP_2	For example #FFFFFF (White)
+SKILL_COLOR_DO_YOU_RESET	Do you want to reset the color of your skill?
+SKILL_COLOR_DO_YOU_CHANGE	Do you want to change the color of your skill?
+SKILL_COLOR_SELECT_PRESET	Select a color
+SKILL_COLOR_SELECT_PRESET_NONE	No saved colors
+SKILL_COLOR_CANNOT_SAVE	You cannot save any more colors.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_REFINE_ELEMENT
+REFINE_ELEMENT_CANT_DO_THIS	This function cannot be executed.
+TOOLTIP_APPLY_ITEM_ATT_POWER_REFINE	attack value% d -% d (+% d ~ +% d)
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_GROUP_ATTR_TOOLTIP
+GROUP_ATTR_TOOLTIP	Group Bonus: Attack Strength
+NEW_SYSTEM	-----------------------------------------------------------------------------ENABLE_HWID_BAN
+HWID_COPYRIGHT_SIB	|cFFffce00
+HWID_MAX_TEXT_LEN	|cFF7cff00%d|r / |cFFff0000%d|r
+HWID_ASK_QUESTION	Are you sure you want to do this?
+HWID_SEND_BUTTON	Send
+HWID_CLEAR_BUTTON	Delete
+HWID_CANCEL_BUTTON	Cancel
+HWID_WINDOW_TITLE	HWID Bann Manager
+HWID_TIME_IN_MIN	Time in min
+HWID_REASON_TEXT	Reason:
+HWID_BTN_UNBAN	Cancel ban
+HWID_BTN_UNBAN_TOOLTIP	With this option you can unban a player.
+HWID_BTN_BAN	Ban
+HWID_BTN_BAN_TOOLTIP	With this option you can unban a player
+HWID_BTN_HWID_BAN	HWID ban
+HWID_BTN_HWID_BAN_TOOLTIP	With this option you can ban a player from HWID
+HWID_BTN_DELETE_HWID_BAN	Delete HWID ban
+HWID_BTN_DELETE_HWID_BAN_TOOLTIP	This option allows you to delete a player ban from HWID.
+HWID_BTN_TOTAL_HWID_BAN	HWID ban total
+HWID_BTN_TOTAL_HWID_BAN_TOOLTIP	Use this option to ban all accounts of a player HWID
+HWID_BTN_CHAT_BAN	Chatban
+HWID_BTN_CHAT_BAN_TOOLTIP	With this option you can ban the chat of a player
+NEW_SYSTEM	-----------------------------------------------------------------------------ENABLE_INGAME_WIKI
+WIKI_SUBCATEGORY_EARRINGS	Earrings
+WIKI_SUBCATEGORY_BRACELET	bracelet
+WIKI_SUBCATEGORY_NECKLACE	necklace
+WIKI_SUBCATEGORY_SHOES	shoes
+WIKI_CATEGORY_CHESTS	Chests
+WIKI_SUBCATEGORY_CHESTS	Boss chests
+WIKI_SUBCATEGORY_EVENT_CHESTS	Event chests
+WIKI_SUBCATEGORY_ALTERNATIVE_CHESTS	Alternative chests
+WIKI_CATEGORY_BOSSES	Bosses
+WIKI_SUBCATEGORY_LV1_75	Lv 1-75
+WIKI_SUBCATEGORY_LV76_100	Lv 76-100
+WIKI_SUBCATEGORY_LV100	Lv 100+
+WIKI_CATEGORY_MONSTERS	Monsters
+WIKI_CATEGORY_METINSTONES	Metal stones
+WIKI_CATEGORY_SYSTEMS	Systems
+WIKI_SUBCATEGORY_REACTION_EVENT	Reaction event
+WIKI_SUBCATEGORY_RUNES	Runes
+WIKI_SUBCATEGORY_DRAGONALCHEMY	Dragonstone Alchemy
+WIKI_SUBCATEGORY_SHOULDER_SASH	shoulder strap
+WIKI_SUBCATEGORY_COSTUME_SASH	shoulder band costume
+WIKI_SUBCATEGORY_BATTLEPASS	battle passport
+WIKI_SUBCATEGORY_COSTUMES	costume
+WIKI_SUBCATEGORY_GAYA	Gaya
+WIKI_SUBCATEGORY_SKILL_COLOR	Skill color
+WIKI_SUBCATEGORY_CONTER_BOOST	Ward & Boost
+WIKI_CATEGORY_DUNGEONS	Dungeons
+WIKI_SUBCATEGORY_ORCMAZE	Orc Maze
+WIKI_SUBCATEGORY_SPIDER_BARONESS	Spider Baroness
+WIKI_SUBCATEGORY_AZRAEL	Azrael
+WIKI_SUBCATEGORY_BERAN_SETAOU	Beran-Setaou
+WIKI_SUBCATEGORY_SHIPDEFENSE	Ship defense
+WIKI_SUBCATEGORY_JOTUN_THRYM	Jotun Thrym
+WIKI_SUBCATEGORY_CRYSTAL_DRAGON	Cave of the Crystal Dragon
+WIKI_SUBCATEGORY_MELEY	Meley's hoard
+WIKI_SUBCATEGORY_THRANDUILS_LAIR	Thranduil's lair
+WIKI_SUBCATEGORY_ZODIAC	zodiac temple
+WIKI_SUBCATEGORY_HAIRSTYLES	Hairstyles
+WIKI_SUBCATEGORY_PET	Pet
+WIKI_SUBCATEGORY_MOUNT	Mounts
+WIKI_CATEGORY_COSTUMES	Costumes
+WIKI_CATEGORY_EVENTS	Events
+WIKI_SUBCATEGORY_OKAY_CARD	Okey-Card
+WIKI_SUBCATEGORY_FISHPUZZLE	fish puzzle
+WIKI_SUBCATEGORY_BOSS_HUNT	Boss hunt
+WIKI_SUBCATEGORY_MOONLIGHT_CHESTS	Moonlight Chests
+WIKI_SUBCATEGORY_HEXAGONAL_CHESTS	Hexagonal chests
+WIKI_SUBCATEGORY_TAG_TEAM	Tag Team
+WIKI_SUBCATEGORY_EMPIRE_WAR	Empire War
+WIKI_SUBCATEGORY_PVP_TOURNAMENT	PvP Tournament
+WIKI_CATEGORY_GUIDES	Guides
+WIKI_SUBCATEGORY_THE_START	The beginning
+WIKI_SUBCATEGORY_105_AND_NOW	105 and now?
+WIKI_REFINEINFO_YANG_COSTS	Yang costs
+WIKI_REFINEINFO_UPGRADE_COSTS	Upgrade costs
+WIKI_REFINEINFO_ITEM_LEVEL	Level %i
+WIKI_CHESTINFO_ORIGIN	Origin
+WIKI_CHESTINFO_CONTENTOF	Content of %s
+WIKI_CHESTINFO_COMMON_DROP	general drop
+WIKI_MONSTERINFO_DROPLISTOF	Drop list of %s
+WIKI_MONSTERINFO_LEVEL	Level: %i
+WIKI_MONSTERINFO_IMMUNE_TO	Insensitive to: %s
+WIKI_MONSTERINFO_DMG_HP	Min. damage%s | Max. Damage:%s | Max. HP: %s
+WIKI_MONSTERINFO_GOLD_EXP	Min. Yang: %s | Max. Yang: %s | EXP: %s
+WIKI_MONSTERINFO_RESISTANCES	Defenses:
+WIKI_MONSTERINFO_IMMUNE_NOTHING	nothing
+WIKI_MONSTERINFO_STATISTICSOF	statistics of %s
+WIKI_ITEMINFO_OPTAINEDFROM	Available undert
+WIKI_ITEMINFO_REFINEINFO	Improvement info from %s
+WIKI_TITLENAME	Wikipedia
+WIKI_CATEGORIES_TITLE	Categories
+WIKI_SUBCATEGORY_BELTS	belts
+WIKI_SUBCATEGORY_TALISMANS	Talisman
+WIKI_SUBCATEGORY_GLOVES	Glove
+WIKI_SUBCATEGORY_LV76_105	Lv 76-105
+WIKI_SUBCATEGORY_DEMONTOWER	Demontower
+WIKI_SUBCATEGORY_APE_DUNGEON	Apedungeon
+WIKI_SUBCATEGORY_SHIELD	Shields
+WIKI_SUBCATEGORY_HELMET	Helmets
+WIKI_SUBCATEGORY_ARMOR	Armor
+WIKI_SUBCATEGORY_WEAPONS	Weapons
+WIKI_CATEGORY_EQUIPEMENT	Equipment
+WIKI_SEARCH_OVERLAY_TEXT	Item name...
+WIKI_EXACT_SEARCH_TEXT	Exact search
+WIKI_MONSTERINFO_DAMAGE	Damage: %s-%s
+WIKI_MONSTERINFO_DEFENSE	Defense: %s
+WIKI_MONSTERINFO_EXP	Experience: %s
+WIKI_MONSTERINFO_MAINRACE	Type: %s
+WIKI_MONSTERINFO_MAX_HP	Max HP: %s
+WIKI_MONSTERINFO_NO_RACE	No
+WIKI_MONSTERINFO_RACE_ANIMAL	Animals
+WIKI_MONSTERINFO_RACE_UNDEAD	Undead
+WIKI_MONSTERINFO_RACE_DEVIL	Devil
+WIKI_MONSTERINFO_RACE_HUMAN	Half-humans
+WIKI_MONSTERINFO_RACE_ORC	Orcs
+WIKI_MONSTERINFO_RACE_MILGYO	Esoterics
+WIKI_MONSTERINFO_RACE_TREE	Tree
+WIKI_MONSTERINFO_RACE_ELEC	lightnings
+WIKI_MONSTERINFO_RACE_FIRE	Fire
+WIKI_MONSTERINFO_RACE_ICE	ice
+WIKI_MONSTERINFO_RACE_WIND	Wind
+WIKI_MONSTERINFO_RACE_EARTH	Earth
+WIKI_MONSTERINFO_RACE_DARK	Darkness
+WIKI_MONSTERINFO_RACE_METIN	Metastones
+WIKI_MONSTERINFO_STONE_NAME	spirit stone
+WIKI_MONSTERINFO_SUBRACE	subgenre: %s
+WIKI_MONSTERINFO_IMMUNE_STUN	stunning
+WIKI_MONSTERINFO_IMMUNE_SLOW	Slow
+WIKI_MONSTERINFO_IMMUNE_CURSE	Curse
+WIKI_MONSTERINFO_IMMUNE_POISON	Poison
+WIKI_MONSTERINFO_IMMUNE_TERROR	Horror
+NEW_SYSTEM	-----------------------------------------------------------------------------ENABLE_BLOCK_COMMAND_PLAYER
+CHAT_BLOCK_COMMAND	You don't have the necessary permissions to do this!
+NEW_SYSTEM	-----------------------------------------------------------------------------ENABLE_TICKET_SYSTEM
+TICKET_TITLE	Ticket
+TICKET_BTN_ERROR_OPEN	Close the log window first.
+TICKET_BTN_BAN	Ticket Ban
+TICKET_BTN_UNBAN	Ticket-Unban
+TICKET_BTN_OPEN	Open the ticket
+TICKET_BTN_CLOSED	Close the ticket
+TICKET_BTN_OPEN_STAFF	Open the page
+TICKET_TXT_SELECT_SORT	Selection of the sorting method:
+TICKET_STAFF_TITLENAME	TicketSystem - Welcome to the administration.
+TICKET_TOOLTIP_SORT_A	[Sort by date] __________________________________ This filter sorts the tickets by date. The latest ones are displayed first.
+TICKET_TOOLTIP_SORT_B	[Sort by open status] __________________________________ This filter shows which tickets are currently open.
+TICKET_TOOLTIP_SORT_C	[Sort by closed status] __________________________________ This filter shows which tickets are currently closed.
+TICKET_TOOLTIP_SORT_D	[Sort by priority] __________________________________ This filter shows which tickets have a higher priority than others. Big before small
+TICKET_USER_NAME	The name of the ticket creator: |cFFffe700
+TICKET_TITLE_REASON	Locked account
+TICKET_INPUT_REASON	Enter a reason for the lock:
+TICKET_REPLY_FROM	from:
+TICKET_ADMINISTRATION	Administrator:
+TICKET_RESET_FIELDS	Reset fields
+TICKET_SUBMIT_REPLY	Send response
+TICKET_CURRENT_PAGE_A	[!] Current page : [%d - %d]
+TICKET_CURRENT_PAGE_B	[%d - %d]
+TICKET_REPLY_MAX_LENGTH	[!] Current / Max. characters:
+TICKET_FAKE_TEXT_A	Enter a title .... (a-Z,0-9)
+TICKET_FAKE_TEXT_B	Enter a content of .... (a-Z,0-9)
+TICKET_TOOLTIP_PRIORITY_A	Low priority 
+TICKET_TOOLTIP_PRIORITY_B	Medium priority
+TICKET_TOOLTIP_PRIORITY_C	High priority
+TICKET_LEN_TITLE	Title: 
+TICKET_LEN_CONTENT	Content: 
+TICKET_LOGS_TITLE_NAME	ticket activity
+TICKET_LOGS_ID	ID
+TICKET_LOGS_TITLE	title 
+TICKET_LOGS_PRIORITY	priority
+TICKET_LOGS_DATE	date
+TICKET_LOGS_STATUS	Status
+TICKET_BUTTON_TICKETS	Ticket activity
+TICKET_BUTTON_RESET_FIELDS	Reset fields 
+TICKET_BUTTON_SUBMIT	Send ticket
+TICKET_CHOICE_PRIORITY	Ticket priority:
+TICKET_INFO_ID	ID Ticket:
+TICKET_INFO_DATE	Created on:
+TICKET_INFO_PRIORITY	Priority.
+TICKET_INFO_STATUS	[!] Current status: 
+TICKET_INFO_CONTENT	Content.
+TICKET_STATUS_OPEN	Open
+TICKET_STATUS_CLOSED	Closed
+TICKET_PRIORITY_LOW	Low
+TICKET_PRIORITY_MEDIUM	Medium
+TICKET_PRIORITY_HIGH	High
+TICKET_WARNING	You have to add an title and an text!
+NEW_SYSTEM	-----------------------------------------------------------------------------ENABLE_EVENT_SYSTEM
+STONE_EVENT_INFO_TITLE	Metin Stone-Event
+STONE_EVENT_INFO_TOOLTIP_LINE1	Player who writes the most text during the event
+STONE_EVENT_INFO_TOOLTIP_LINE2	Surprise gifts are presented.
+STONE_EVENT_INFO_TOOLTIP_LINE3	You can get your reward in the mailbox.
+STONE_KILL_TEXT	Metin write :
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_EVENT_MANAGER
+TOOLTIP_EVENT_SUNDAY	Sunday
+EVENT_MANAGER_DURATION	Start: %s ~ End: %s
+EVENT_MANAGER_DROP_TYPE	Drop-Typ: %s
+EVENT_MANAGER_DROP_TYPE_NONE	None
+EVENT_MANAGER_DROP_TYPE_GENERAL	All mobs
+EVENT_MANAGER_DROP_TYPE_BOSS_AND_MORE	Metinstone & Bosses
+EVENT_MANAGER_DROP_TYPE_BOSS	Bosses
+EVENT_MANAGER_DROP_TYPE_STONE	Metinstone
+TOOLTIP_EVENT_TYPE_SIEGE_WAR	Siege War
+TOOLTIP_EVENT_TYPE_KINGDOM_WAR	Kingdom War
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_BATTLE_PASS_SYSTEM
+EXTENDET_BATTLE_PASS_NO_PRIVILEGES	Du hast nicht die nцtigen Rechte, dafьr musst du ein VIP-Mitglied sein!
+EXTENDET_BATTLE_PASS_RANKLIST_REFRESH	Die Rankliste wurde aktualisiert.
+EXTENDET_BATTLE_PASS_RANKLIST_WAIT_TO_REFRESH	Du musst noch %d Sekunden warten um die Rankliste erneut zu aktualisieren.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_HIDE_COSTUME_SYSTEM
+HIDE_COSTUME	Hide costume
+SHOW_COSTUME	Show costume
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_GM_MESSENGER_LIST
+MESSENGER_GM	GameMaster
+NEW_SYSTEM	----------------------------------------------------------------------------KARMA_BONUS
+TOOLTIP_GOOD_KARMA_BONUS	%s Karma
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_MINI_GAME_OKEY_NORMAL
+MINI_GAME_RUMI_EXIT_QUESTION2	You get a reward based on your points.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_MINI_GAME_BNW
+SHOP_NOT_ENOUGH_BNW	You don't have enough Seer Coins.
+MINI_GAME_BLACK_AND_WHITE_WAITTING_TITLE	Duel of the Seers
+MINI_GAME_BLACK_AND_WHITE_DONATE	Donate
+MINI_GAME_BLACK_AND_WHITE_GAME_TITLE	Duel of the Seers
+MINI_GAME_BLACK_AND_WHITE_RANK_BUTTON	Rankings
+MINI_GAME_BLACK_AND_WHITE_REWARD_TRADE	Prizes
+MINI_GAME_BLACK_AND_WHITE_START_BUTTON	Start
+BNW_GAME_UI_COM	Opponent
+BNW_RANK_UI_COUNT	Donations
+BNW_RANK_UI_NAME	Name
+BNW_RANK_UI_RANK	Rank
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_MINI_GAME_FINDM
+FINDM_BUTTON_01	Fetch
+FINDM_BUTTON_02	Improve
+FINDM_POPUP_01	You don't have all the items to start the minigame.
+FINDM_POPUP_02	You don't have enough %s.
+FINDM_POPUP_03	You can no longer use this.
+FINDM_POPUP_04	This is already the best reward.
+FINDM_POPUP_05	There aren't enough Yang for the minigame.
+FINDM_POPUP_06	The three cards will be revealed automatically if you don't open them within %d seconds.
+FINDM_QUESTION_01	%d yang and %s are being consumed.\nDo you want to continue?
+FINDM_QUESTION_02	Would you like to try again using %s %d?
+FINDM_QUESTION_03	Reward: %s
+FINDM_QUESTION_04	Try again? If you fail, your current reward will remain.
+FINDM_QUESTION_05	Complete game and get reward?
+FINDM_TOOLTIP_01	If you don't try in the given time, three cards will be revealed automatically.
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_ACHIEVEMENT_SYSTEM
+SHOP_NOT_ENOUGH_ACHIEVEMENT	You don't have enough achievement points.
+ACHIEVEMENT_COIN	Achievementpoint
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_MINI_GAME_BNW | ENABLE_ACHIEVEMENT_SYSTEM
+DO_YOU_BUY_SPECIAL1	Would you like to buy %s for %s?
+DO_YOU_BUY_SPECIAL2	Would you like to buy %s (%s pieces) for %s?
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_BIOLOG_SYSTEM
+BIOLOG_MANAGER_TITLE	Biologist Research
+BIOLOG_MANAGER_TITLE2	Seon-Pyeong Research
+BIOLOG_MANAGER_REQUIRED_LEVEL	Current research level:
+BIOLOG_MANAGER_REQUIRED_ITEM_TITLE	Item needed for the investigation:
+BIOLOG_MANAGER_TIME_WAIT	Remaining time:
+BIOLOG_MANAGER_TIME_TEXT	You can now deliver the following material!
+BIOLOG_MANAGER_TIME_SELECT	You can now select the bonus!
+BIOLOG_MANAGER_TOOLTIP_LINE1	You can deliver the research items by pressing this button.
+BIOLOG_MANAGER_TOOLTIP_LINE2	If you have a Researcher's Elixir in your inventory, use it!
+BIOLOG_MANAGER_TOOLTIP_LINE3	In this way, you will increase the probability that your item
+BIOLOG_MANAGER_TOOLTIP_LINE4	will be accepted. Also, if you want to deliver the items faster,
+BIOLOG_MANAGER_TOOLTIP_LINE5	you must use a Time Spiral of 10%, 20% or 30%.
+BIOLOG_MANAGER_SELECT_BONUS1	When you complete the investigation, you will be able
+BIOLOG_MANAGER_SELECT_BONUS2	to choose from the following bonuses:
+REFINE_ITEM_CAN_BE_DROPPED_FROM	Can be dropped:
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_AUTO_SYSTEM
+AUTOHUNT_STARER_ONN	An
+AUTOHUNT_STARER_OFF	Aus
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_MULTIFARM_BLOCK
+SPECIAL_ATTR_EMPTY_ATTR_SOCKET	[kein Bonus]
+MULTI_FARM_TITLE	Multi Farm Block
+MULTI_FARM_TEXT	|Eemoji/key_lclick|e Du musst nur klicken, um es zu aktivieren/deaktivieren.
+MULTI_FARM_ACTIVE_TEXT	Mцchtest du diesen Charakter-Drop freischalten?
+MULTI_FARM_DEACTIVE_TEXT	Mцchtest du diesen Charakter-Drop blockieren?
+MULTI_FARM_ACTIVE_CHAT	|cff00A8EB[Multi-Farm]|r |cffFFFFFFDu kannst Drops bekommen.|r 
+MULTI_FARM_DEACTIVE_CHAT	|cff00A8EB[Multi-Farm]|r |cffFFFFFFDu kannst keinen Drop bekommen.|r 
+MULTI_FARM_PREMIUM_EFFECT	Anzahl der Multi-Farm-Konten erhцhen: +%d	SA
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_ADDITIONAL_EQUIPMENT_PAGE
+EQUIPMENT_VIEW_RESTART_CLIENT	Mцchtest du die Extra Ausrьstung wechseln?
+NEW_SYSTEM	----------------------------------------------------------------------------ENABLE_SUNG_MAHI_TOWER
+SUNG_MAHI_CURSE_TOOLTIP	Blestem Sung Mahi (suprapus de %d ori) Fiecare suprapunere scade PV cu 10%% la fiecare 10 secunde. Se poate suprapune de 10 ori.	SA
+SUNGMAHEE_TOWER_DENY_TELEPORT	Nu te poti teleporta la acest nivel.

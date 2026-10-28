@@ -1,0 +1,143 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/dragonstone.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen
+*2. Boni der Drachensteine
+*3. Aspekte der Drachensteine
+*4. Lebenszeit der Drachensteine
+*5. Drachenstein-Alchemie-Set Bonus
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=90; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen
+
+Die Drachenstein-Alchemie ist ab Stufe 1, Sie können sie ausrüsten und aktivieren. Sie können Drachensteine 
+von Cor Draconis. Das Fenster der Drachenstein-Alchemie kann über den grünen Knopf im Inventar geöffnet werden 
+oder mit der Taste "O". Die erste Drachenstein-Alchemieseite kann mit "STRG + O" aktiviert und deaktiviert werden 
+und die zweite mit "STRG + P". Drachensteine können von Cor Draconis erhalten werden, der von Metinstones 
+und Bossen.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=230; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Boni der Drachensteine
+
+[CENTER_ALIGN]Ein legendärer Drachenstein hat immer 2 Grundboni und kann bis zu 3 zusätzliche Boni haben 
+[CENTER_ALIGN]für insgesamt 5 Boni.
+
+[COLOR=ef4f00;FONT_SIZE=15]2.1 Mögliche Boni der Drachensteine
+Die aufgeführten Boni stammen von legendären Drachensteinen, die auf ausgezeichnet und +6 stehen.
+
+[COLOR=00ef4f;FONT_SIZE=14]2.1.1 Legendärer Drachen-Diamant:
+
+*Intelligenz +10
+*Eis-Widerstand +10%
+*Skill-Schaden +10%
+*Schaden wird durch SP absorbiert +10%
+*Stärke gegen Monster +15%
+*Magischer Angriffswert +25
+
+[COLOR=00ef4f;FONT_SIZE=14]2.1.2 Legendärer Drachen-Rubin:
+
+*Stärke +10
+*Feuerwiderstand +10
+*Verteidigung gegen Angriffe des Kriegers +10%.
+*Stärke gegen Krieger +10%
+*Chance auf EXP-Bonus +20%
+*Verteidigung +100
+*Angriffswert +150
+
+[COLOR=00ef4f;FONT_SIZE=14]2.1.3 Legendärer Drache Jade:
+
+*Max. SP +500
+*Wind-Widerstand +10%
+*Verteidigung gegen Sura-Angriffe +10%
+*Stärke gegen Sura +10%
+*Widerstand gegen Skill-Schaden +10%
+*Schaden wird durch HP absorbiert +10%
+*Magische Verteidigung +25
+
+[COLOR=00ef4f;FONT_SIZE=14]2.1.4 Legendärer Drachen-Saphir:
+
+*Geschicklichkeit +10
+*Erdwiderstand +10%
+*Verteidigung gegen Schamanenangriffe +10%.
+Stark gegen Schamanen +10% *Stark gegen Schamanen
+Stark gegen Metinstones +10% *HP-Regeneration
+*HP-Regeneration +20%
+*Max. HP +10%
+
+[COLOR=00ef4f;FONT_SIZE=14]2.1.5 Legendärer Drache Granat:
+
+*Max. HP +1500
+*Blitzresistenz +10%
+*Verteidigung gegen Ninja-Angriffe +10%
+*Stärke gegen Ninja +10%
+*Durchschnittsschadensresistenz +10%
+*Max. SP +10%
+*SP Regeneration +20%
+
+[COLOR=00ef4f;FONT_SIZE=14]2.1.6 Legendärer Drache Onyx:
+
+*Vitalität +10
+*Dunkelheitswiderstand +10%
+*Widerstand gegen kritische Treffer +15%.
+*Resistenz gegen durchschlagende Treffer +15%.
+*Durchschnittlicher Schaden +10%
+*Chance, Pfeilen auszuweichen +10%
+*Chance, Nahkampftreffer zu blocken +10%.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1080; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Aspekte der Drachensteine 
+
+Die Drachensteine haben 3 verschiedene Aspekte: Klasse, Klarheit und Stufe.
+Jeder Aspekt von ihnen ist wichtig und verstärkt den Drachenstein.
+
+[COLOR=ef4f00;FONT_SIZE=15]3.1 Die Klasse
+Der Drachenstein hat 5 verschiedene Klassen, die aufgewertet werden können:
+> Klasse: Rough, Cut, Rare, Antique und Legendary.
+Der Drachenstein erhält mehr Boni, wenn die Klasse höher wird.
+Um die Klasse eines Drachensteins zu erhöhen, benötigen Sie einen zweiten Drachenstein mit der gleichen Klasse.
+
+[COLOR=ef4f00;FONT_SIZE=15]3.1 Die Reinheit
+Die Drachensteine haben 5 verschiedene Klarheitsgrade, die aufgewertet werden können:
+> Klarheit: Matt, Klar, Lupenrein, Brillant und Exzellent.
+Der Drachenstein erhält höhere Boni, wenn die Reinheit höher ist.
+Um die Reinheit eines Drachensteins zu erhöhen, benötigen Sie einen zweiten Drachenstein mit der gleichen Reinheit.
+Es ist möglich, einen exzellenten Drachenstein auf brillant herabzustufen.
+
+[COLOR=ef4f00;FONT_SIZE=15]3.2 Die Stufe
+Ein Drachenstein der Reinheit excellent kann bis zu +6 aufgewertet werden.
+Die Stufe wird mit Grüner Drachenbohne, Blauer Drachenbohne und Rosa Drachenbohne aufgewertet.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1400; CENTER_ALIGN]
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Lebensdauer der Dragon Stones
+
+Die Drachensteine haben eine maximale Lebensdauer von 24 Stunden, die nur zählt, wenn die Drachenstein-Alchemie aktiv ist.
+Sie können die Lebensdauer mit Zeitelixier auffüllen.
+Der Drachenstein wird nicht verschwinden, wenn er 0 Minuten erreicht.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1535; CENTER_ALIGN]
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]5. Drachenstein-Alchemie-Set-Bonus
+
+Wenn Sie 6 legendäre Drachensteine auf der Klarheit "ausgezeichnet" +6 aktivieren, wird der Drachenstein-Alchemie-Set-Bonus aktiviert.
+Der Set-Bonus gibt Ihnen folgende Boni:
+
+*Max. HP +1500
+*Stark gegen Halbmenschen +5%
+*Stark gegen Monster +5%
+
+
+

@@ -1,0 +1,114 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/costume_sash.tga]
+[CENTER_ALIGN]Eine Kostümschärpe ist ein wertvoller Ausrüstungsgegenstand, der Ihre normale Schärpe mit einigen nützlichen Boni schmückt. 
+[CENTER_ALIGN]Die Kostümschärpe wird im Kostümsystem-Reiter ausgerüstet, der sich mit der Schaltfläche Kostümsystem
+[CENTER_ALIGN]im Inventar des Spielers zu finden ist.
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Verschiedene Arten von Kostümschärpen.
+*2. Wie man eine Kostümschärpe erhält.
+*3. Wie Sie eine Kostümschärpe kombinieren.
+*4. Boni.
+*5. Wie man die Boni einer Kostümschärpe übertragen kann.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=150; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Verschiedene Arten von Kostümschärpen.
+
+Die Kostümschärpen repräsentieren die 12 Götter des chinesischen Tierkreises und daher gibt es die folgenden 
+Kostümschärpen erhältlich: Schärpe von Zi, Schärpe von Chou, Schärpe von Yin, Schärpe von Mao, Schärpe von Chen, 
+Schärpe von Si, Schärpe von Wu, Schärpe von Wei, Schärpe von Shen, Schärpe von Yu, Schärpe von Xu, Schärpe von Hai
+Darüber hinaus gibt es auch einige spezielle Kostümschärpen als Sonderangebot oder Sonderaktion wie Engelsflügel, 
+Teufelsflügel, Schärpe des Dämons, Jeder Typ hat 4 verschiedene Grade: (basic), (fine), (noble), (custom).
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=265; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Wie man eine Kostümschärpe erhält.
+
+Kostümschärpen werden im Theowahdan-'Schärpenladen' verkauft und erfordern 25x feinen Stoff und 5x des 
+entsprechenden Medaillons. Um zum Beispiel eine Schärpe von Hai (Basis) zu kaufen, benötigen Sie 5x Hai-Medaillon und 25x Feines Tuch.
+Die entsprechenden Medaillons werden vom Endboss eines jeden Portals des Zodiac-Tempels fallen gelassen.
+Die Spezial-Kostümschärpen erhalten Sie von speziellen Itemshop-Angeboten oder von Events. 
+Sie können sie dort auf der Bühne bekommen (Basis).
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=395; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Wie man eine Kostümschärpe kombiniert.
+
+Der Kombinationsprozess ist ziemlich genau derselbe wie der vom Schulterschärpen-System. 
+Kostümschärpen der gleichen Qualitätsstufe können kombiniert werden, um eine höherwertige Kostümschärpe herzustellen, 
+allerdings kann dieser Vorgang auch fehlschlagen. In diesem Fall wird die zweite Kostümschärpe im Kombinationsfenster zerstört.
+Das Kombinationsfenster ist über die Option "Kombination" von Theowahdan aus erreichbar. 
+Engels- und Teufelsflügel können auch mit Kostümschärpen desselben Grades, aber unterschiedlichen Typs kombiniert werden.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=525; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Boni
+
+Eine Kostümschärpe kann je nach ihrem Grad bis zu 5 Boni erhalten. Die Boni werden mit Hilfe von 
+Traum- & Himmelssteine. Die Boni müssen in der unten genannten Reihenfolge eingesetzt werden.
+
+[COLOR=ef4f00;FONT_SIZE=15]4.1 Traum-Steine
+
+Es gibt 5 verschiedene Stufen von Traumsteinen, die jeweils einen PvM-Bonus auf Ihre Kostümschärpe gewähren. 
+Traumseelensteine (fallen gelassen von Wukongs Tempel-Metinsteinen) können gegen eine Traumseele eingetauscht werden 
+von Chuk-Sal. Traumseelen der gleichen Qualität können kombiniert werden, um einen höherwertigen 
+Traumstein von Chuk-Sal herzustellen. Der Prozess kann fehlschlagen.
+
+[COLOR=0xffd700]Traumseele
+*Stark gegen Monster 4,6,8,10 %
+
+[COLOR=0xffd700]Schimmernde Traumseele
+*Stark gegen Bosse 4,6,8,10
+
+[COLOR=0xffd700]Schillernde Traumseele
+*Stark gegen Elemente 4,6,8,10
+
+[COLOR=0xffd700]Prismatische Traumseele
+*Stark gegen Metinstones 4,6,8,10
+
+[COLOR=0xffd700]Erleuchtete Traumseele
+*Durchschnittlicher Schaden 2,4,6,8
+
+[COLOR=ef4f00;FONT_SIZE=15]4.2 Himmelssteine
+
+Es gibt 5 verschiedene Stufen von Himmelssteinen, die jeweils einen PvP-Bonus auf Ihre Kostümschärpe gewähren. 
+Himmelsseelensteine (fallen gelassen von Wukongs Tempel-Metinsteinen) können gegen eine Himmelsseele getauscht werden 
+aus Chuk-Sal (Wukongs Tempel) getauscht werden. Himmelsseelen der gleichen Qualität können kombiniert werden, um einen 
+höherwertigen Himmelsstein aus Chuk-Sal (Wukongs Tempel) herzustellen. Der Prozess kann fehlschlagen.
+
+[COLOR=0xffd700]Himmelsseele
+*Max. HP +500, +1000, +1500, +2000
+
+[COLOR=0xffd700]Schimmernde Himmelsseele
+*Zaubergeschwindigkeit 5, 10, 15, 20%
+
+[COLOR=0xffd700]Schillernde Himmelsseele
+*Chance, einen Nahkampfangriff zu blocken 2, 4, 6, 8%
+
+[COLOR=0xffd700]Prismatische Himmelsseele
+*Stärke gegen Halbmenschen 4, 6, 8, 10%
+
+[COLOR=0xffd700]Erleuchtete Himmelsseele
+*Widerstand gegen Halbmenschen 4, 6, 8, 10%
+
+
+[COLOR=ef4f00;FONT_SIZE=15]4.3 Prunous Enchanting
+
+Sie können die Boni einer Kostümschärpe mit einer Prunous Enchanting austauschen. 
+Dadurch werden alle verfügbaren Boni der Kostümschärpe ausgetauscht.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1220; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]5. Wie man die Boni einer Kostümschärpe überträgt.
+
+Sie können die Boni einer Kostümschärpe auf eine andere übertragen, indem Sie einen Kostüm-Bonustransfer bei Theowahdan durchführen. 
+Das Kostüm im linken Slot wird geleert und die Boni werden auf das Kostüm im rechten Slot übertragen.
+
+
+

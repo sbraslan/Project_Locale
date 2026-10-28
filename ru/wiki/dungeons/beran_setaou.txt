@@ -1,0 +1,30 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/beransetoul.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 75
+*Eintrittskarte: Twisted Key
+[RIGHT_ALIGN]Verdrehter Schlüssel
+[IMG=d:/ymir work/ui/wiki/30179.tga; Y=5; X=493]
+
+
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Der Drachenraum hat eine 60-minütige Abklingzeit.
+*Jedes Gruppenmitglied benötigt einen Twisted Key.
+*Jeder Metin hat einen Spezialeffekt, der durch das Vorhandensein desselben Metins verstärkt wird.
+[X_PADDING=20]*Die HP-Regenerationsmenge des Drachen wird durch das Metin der Arroganz erhöht.
+[X_PADDING=20]*Der vom Drachen zugefügte Schaden wird durch das Metin der Rache erhöht.
+[X_PADDING=20]*Die HP-Regenerationsgeschwindigkeit wird durch das Metin der Einsamkeit erhöht.
+[X_PADDING=20]*Die Verteidigung des Drachen wird durch das Metin des Berges erhöht.
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=185; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Zerstören Sie Metin-Steine, bis Ihre gewünschten Metin-Steine erscheinen.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Töten Sie Beran-Setaou.

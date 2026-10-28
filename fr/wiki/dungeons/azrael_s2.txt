@@ -1,0 +1,51 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/azrael.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 75 - 105
+*Eintrittskarte: Schrumpfkopf (nicht für den Eingang, sondern für die 3. Etage)
+[IMG=d:/ymir work/ui/wiki/rahmen.tga; Y=5; X=460]
+[IMG=d:/ymir work/ui/wiki/30319.tga; Y=15; X=482]
+
+
+[X_PADDING=463]Schrumpfkopf
+[COLOR=0xffd700;FONT_SIZE=15]Eigentümlichkeit:
+*Die Katakombe des Teufels hat eine Abklingzeit von 2 Stunden.
+*Die Teufelskatakombe kann mit oder ohne eine Gruppe betreten werden.
+*Die Teufelskatakombe hat ein Zeitlimit von 60 Minuten.
+*Jeder Spieler benötigt einen Schrumpfkopf.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=145; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 1
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=175; X=490]
+[IMG=d:/ymir work/ui/wiki/30311.tga; Y=181; X=496]
+
+[X_PADDING=20]Töten Sie das Monster, bis Sie einen Seelenkristallschlüssel fallen lassen.
+[X_PADDING=20]Ziehen Sie den Seelenkristallschlüssel am Ende des Levels auf die Kud-Statue und lassen Sie ihn fallen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 2
+
+[X_PADDING=20]Kämpfen Sie sich durch das Tor der Verdammnis, bis Sie den Schildkrötenfelsen am Ende der Etage erreichen.
+[X_PADDING=20]Klicken Sie auf den Schildkrötenfelsen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 3
+
+[X_PADDING=20]In dieser Etage finden Sie 7 Metin der Vergeltung, zerstören Sie den richtigen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 4
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=355; X=490]
+[IMG=d:/ymir work/ui/wiki/30312.tga; Y=361; X=496]
+
+[X_PADDING=20]Finden und töten Sie Tartaros, er befindet sich in einem der Räume unterhalb des Berges.
+[X_PADDING=20]Ziehen Sie das Fratzen-Totem auf der Spitze des Berges auf den Basalt-Obelisken und lassen Sie es fallen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 5
+
+[X_PADDING=20]Töten Sie alle Monster und Charon
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 6
+
+[X_PADDING=20]Töte Azrael
+[IMG=d:/ymir work/ui/wiki/Azrael.tga; Y=430; X=382]
+

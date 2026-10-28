@@ -1,0 +1,47 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/empirewar.tga]
+[CENTER_ALIGN;FONT_SIZE=18]Imperiumskrieg
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen
+*2. Ereignis-Anweisungen
+*3. Reichsbelohnungen
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=100; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen:
+
+Empire War ist ein offenes PvP-Event, das auf einer speziellen Karte ausgetragen wird.
+Jeder Spieler, der mindestens Level 75 ist, kann teilnehmen und mit seinem Königreich gegen die beiden anderen Königreiche kämpfen.
+Der Teleport zu dieser Map wird über ein Teleportfenster erreicht, das in der Mitte des Bildschirms erscheint, 
+wenn die Tore geöffnet sind. Das Reich, das nach 20 Minuten den besten K/D-Wert in % erzielt, gewinnt den Reichskrieg.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=200; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Anweisungen für das Ereignis
+
+Wenn Sie sich auf diese Spezialkarte teleportieren, werden Sie bald feststellen, dass jeder um Sie herum, außer Ihrem eigenen Königreich, 
+ein Feind ist. Hey Kumpel! Lassen Sie Ihre Waffen nicht zu Hause. Dort gibt es keine Safezones, die dich beschützen, 
+also rüsten Sie sich rechtzeitig mit den richtigen Gegenständen aus. Die Zeit läuft ab... Vergessen Sie nicht, dass es das Ziel ist, in 20 Minuten 
+den besten K/D in 20 Minuten zu erreichen. Sowohl die Zeit als auch die Leistung Ihres Königreichs sind entscheidend.
+Der Einfachheit halber sind die folgenden Gegenstände während des Kampfes deaktiviert:
+
+*Buffi-Siegel
+*Mounts
+*Hochzeitsring
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=380; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Empire-Belohnungen
+
+Das Imperium mit dem besten K/D-Wert gewinnt den Imperiumskrieg und erhält für 6 Stunden die folgenden Raten:
+
+*100% Erfahrung
+*10% Stark gegen Metinstones
+*10% Stark gegen Bosse
+
+Hinweis: Das Wechseln des Königreichs nach dem Reichskrieg ist für 6 Stunden deaktiviert.
+
+

@@ -1,0 +1,54 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/conterboost.tga]
+[CENTER_ALIGN]Das Ward & Boost Skill System zielt darauf ab, Ihren Charakter in eine bestimmte Richtung zu entwickeln. 
+[CENTER_ALIGN]Sie können Ihrem Charakter einige spezielle Fähigkeiten beibringen...
+
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen & Wie man trainiert.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=90; CENTER_ALIGN]
+
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1. Allgemeine Informationen.
+[X_PADDING=20]*Die Fertigkeiten "Ward" und "Boost" sind eine einzigartige Möglichkeit, die Verteidigung und die Stärken Ihres Charakters weiterzuentwickeln.
+[X_PADDING=20]* Sie können alle 8 Ward-Skills und 1 Boost-Skill auf P1 hochskillen.
+[X_PADDING=20]*Um eine Spezialfertigkeit von 0 auf M1 zu trainieren, müssen Sie 20 Fertigkeitspunkte investieren oder 20 Bücher der jeweiligen Fertigkeit lesen.
+[X_PADDING=20]*Um eine Spezialfähigkeit von M1 auf G1 zu trainieren, benötigen Sie insgesamt 55 Ward oder Boosts dieser speziellen Fähigkeit.
+X_PADDING=20]*Um eine Spezialfähigkeit von G1 auf P1 zu trainieren, benötigen Sie einen Seelenstein+.
+[X_PADDING=20]*Anstelle von Konzentriertes Lesen & Exorzismus-Schriftrolle müssen Sie nun Folgendes verwenden 
+[X_PADDING=20]Legendäre Konzentrierte Lesung & Legendäre Exorzismus-Schriftrolle.
+
+[IMG=d:/ymir work/ui/wiki/divider_small.tga; Y=230; CENTER_ALIGN]
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.1 Wächter-Fähigkeiten
+[X_PADDING=20]Die Ward-Fähigkeiten reduzieren den eingehenden Schaden von bestimmten Fähigkeiten, die sind: 
+[X_PADDING=20]*Schwertdrehung
+[X_PADDING=20]*Blitz beschwören
+[X_PADDING=20]*Dunkler Schlag
+[X_PADDING=20]*Feuerpfeil
+[X_PADDING=20]*Geist-Schlag
+[X_PADDING=20]*Schießender Drache
+[X_PADDING=20]*Fingerstreich
+[X_PADDING=20]*Ambush
+[X_PADDING=20]Je mehr die Stationsfertigkeit trainiert wird, desto weniger Schaden erhalten Sie von ihr.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_small.tga; Y=400; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]1.2 Boost-Fähigkeiten
+[X_PADDING=20]Die Boost-Fähigkeiten erhöhen den ausgehenden Schaden von bestimmten Fähigkeiten, welche die folgenden sind:
+[X_PADDING=20]*Kriegerkörper: Schwertschleuder.
+[X_PADDING=20]*Krieger Mental: Geisterschlag.
+[X_PADDING=20]*Sura-Waffenkunde: Finger-Schlag.
+[X_PADDING=20]*Sura Schwarze Magie: Dunkler Schlag.
+[X_PADDING=20]*Ninja Klingen-Kampf: Hinterhalt.
+[X_PADDING=20]*Ninja-Bogenschießen: Feuer-Pfeil.
+[X_PADDING=20]*Schamanen-Heilkraft: Blitz beschwören.
+[X_PADDING=20]*Schamane Drachen-Kraft: Schießender Drache.
+[X_PADDING=20]Sie haben nur 1 aktive Verstärker-Fähigkeit, abhängig von Ihrer Klasse, wie zuvor beschrieben.
+[X_PADDING=20]Je mehr die Boost-Fertigkeit trainiert wird, desto mehr Schaden erhält der Gegner von ihr.
+
+
+

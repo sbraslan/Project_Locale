@@ -1,0 +1,47 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/caveofcrystal.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Voraussetzungen:
+*Erforderliches Level: 115
+*Eintrittskarte: Roter Höllenquarz
+[RIGHT_ALIGN]Roter Höllenquarz
+[IMG=d:/ymir work/ui/wiki/31006.tga; Y=5; X=490]
+
+[COLOR=0xffd700;FONT_SIZE=15]Eigentümlichkeit:
+*Die Höhle des Kristalldrachen hat eine Abklingzeit von 180 Minuten.
+*Der Dungeon kann mit oder ohne eine Gruppe betreten werden.
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=120; CENTER_ALIGN]
+[COLOR=ef4f00;FONT_SIZE=15]Level 1
+
+[X_PADDING=20]Besiegen Sie alle Monster und dann die Metinsteine.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 2
+
+[X_PADDING=20]Besiegen Sie alle Monster und holen Sie sich einen Schlüsselstein, um das Siegel zu zerstören.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 3
+
+[X_PADDING=20]Besiegen Sie alle Monster in diesem Level und dann den Kristalldrachen.
+[X_PADDING=20]Sie haben nur 10 Minuten für diesen Level.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 4
+
+[X_PADDING=20]Zerstören Sie die Metinstones und lassen Sie den richtigen Schlüssel fallen, um das Siegel zu entsperren.
+[X_PADDING=20]Ziehen Sie den roten Kristall auf das Siegel und lassen Sie ihn fallen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 5
+
+[X_PADDING=20]Besiegen Sie alle Monster in diesem Level, um den Boss zu erwecken.
+[X_PADDING=20]Sie haben 10 Minuten Zeit, um dieses Level abzuschließen und weiterzugehen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 6
+
+[X_PADDING=20]Besiegen Sie alle Monster in diesem Level und dann den Kristall-Dinosaurier.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 7
+
+[X_PADDING=20]Zerstören Sie alle Metinsteine und dann den König der Kristalldrachen.
+
+

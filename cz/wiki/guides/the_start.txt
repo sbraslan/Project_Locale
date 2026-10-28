@@ -1,0 +1,250 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/thestart.tga]
+[CENTER_ALIGN]Hurra, Neuling! 
+[CENTER_ALIGN]In diesem Guide finden Sie Informationen zu Ihrem Neuanfang auf dem Server 
+[CENTER_ALIGN]und wie Sie von Tag zu Tag stärker werden. 
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Grundlegende Serverfunktionen/Systeme, bevor Sie anfangen.
+*2. Battlepass, erste Missionen & Ausbildung.
+*3. Gegenstände, die Sie zu sammeln beginnen & Must-Buy-Items.
+*4. Leveling Paths: 30Lv, 50Lv, 75Lv+.
+*5. Wie kann ich meinen Schaden erhöhen?
+*6. Meine ersten Dungeons.
+*7. Wie man Millionär wird...
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=160; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Grundlegende Serverfunktionen/Systeme, bevor Sie beginnen
+
+Am Anfang sollten Sie sich Zeit nehmen, um herauszufinden, was es Neues auf unserem Server gibt und wie Sie die grundlegenden Funktionen nutzen können. 
+Beeilen Sie sich nicht mit dem Aufleveln, es ist kein Wettrennen! Außerdem sollten Sie sich in der Stadt umsehen und die NPCs erkunden, bevor 
+Sie Ihre Abenteuer in Aeldra beginnen... Als Geschenk von uns haben Sie ein 7-Tage-Reittier, ein Haustier, einen Ring der Freude und anderes 
+um Dir einen reibungslosen Start zu ermöglichen.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.1. Lagerräume, Ladensuche & Switchbot
+
+Wenn Sie Ihr Inventar (I) öffnen, sollten Sie 3 neue Schaltflächen in der oberen rechten Ecke des Inventars sehen. Schauen wir mal, welche das sind.
+Die erste Schaltfläche öffnet Ihre Lagerräume. Es gibt 5 verschiedene Lagerräume: Materialien, Bücher, Steine, Verzauberungen und Kostüme. 
+Gegenstände, die Sie sammeln, werden automatisch einem Lagerraum zugewiesen, um Ihr Inventar übersichtlich zu halten. 
+Die zweite Schaltfläche öffnet die Shop-Suche. Dies wird Ihre Lieblingsfunktion sein, da Sie sie ständig benutzen werden. 
+Sie durchforstet alles, findet den gewünschten Artikel zum besten Preis und lässt Sie ihn ohne viel Aufwand kaufen. 
+Klicken Sie auf den Namen des gesuchten Artikels, um den Standort des Shops zu markieren. Probieren Sie es aus, es ist kostenlos...  Der letzte 
+Schaltfläche öffnet den Switch Bot. Die Dinge sind hier einfach. Ziehen Sie einen Artikel, wählen Sie die gewünschten Boni und lassen Sie 
+das System rollen, bis Sie sie haben.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.2. F6-Abkürzung - Quest-Timer
+
+Wir haben eine einzigartige Registerkarte entworfen, um so viele Informationen wie möglich zu sammeln und sie super funktionell zu machen. 
+Wenn Sie die F6-Taste drücken, haben Sie sie vor Augen. Jetzt finden Sie Ihre Biologen-Missionen und Ihre 
+Dungeons Eingänge & Abklingzeiten. Super cool, oder? Benutzen Sie es, um Timer zu überprüfen & sich an Orte zu teleportieren.
+
+[COLOR=ef4f00;FONT_SIZE=15]1.3 Vote4Buff
+Inzwischen haben Sie vielleicht schon bemerkt, dass Sie eine Mission namens "Vote4Buff" haben. Indem Sie sich auf unserer Website anmelden 
+können Sie für unseren Server voten und erhalten dafür einen 24-Stunden-Buff von Ihrem Panel. Aber keine Sorge... Nach 24 Stunden können Sie 
+den Vorgang wiederholen, um dauerhaft 1 der folgenden Buffs zu genießen: 
+
+*20% Erfahrungsbonus
+*20% Monster
+*20% Erhöhter Item-Drop
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.4 Privater Shop
+
+Sie haben sicherlich bemerkt, dass es in Ihrem Inventar einen Shop-Button gibt. Mit 100.000 Yang, 
+können Sie einen Shop eröffnen. Von dort aus können Sie Gegenstände verkaufen, ohne selbst online zu sein. 
+Fügen Sie sie einfach dort hinzu und warten Sie darauf, dass Sie jemand reich macht.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=703; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Battlepass, erste Missionen & Ausbildung
+
+Vielleicht haben Sie auch bemerkt, dass Sie die klassischen Lehrlingstruhen nicht haben. Wer braucht die schon? 
+Sie haben den Battlepass.
+
+[COLOR=ef4f00;FONT_SIZE=15]2.1 Battlepass
+
+Wenn Sie diesen Gegenstand anklicken, erhalten Sie 7 normale Missionen & 3 legendäre Missionen. Dies ist wahrscheinlich 
+die wichtigste Funktion, die Sie als Anfänger haben. Das Abschließen jeder Mission ist recht einfach und 
+belohnt Sie mit grundlegender Ausrüstung, wie z. B.: Runen-Gegenstände, Meister-Schärpe (normal), Cor Draconis (legendär), etc.
+Stellen Sie sicher, dass Sie die Missionen so schnell wie möglich starten.
+
+[COLOR=ef4f00;FONT_SIZE=15]2.2 Erste Missionen
+Okay, alles klar mit dem Battlepass. Was ist mit den anderen Missionen?
+Nun, in dem Moment, in dem Sie 5Lv erreichen, beginnt Ihre Missionsreise. Uriel und der Biologe werden immer 
+in Kontakt mit Ihnen, also stellen Sie sicher, dass Sie immer überprüfen, was sie brauchen. Alchemie wird Ihnen auch eine Mission zuweisen 
+eine Mission, um das Drachenstein-Alchemiesystem freizuschalten. Halten Sie ein Auge auf seine Mission bei 30Lv.
+Es wird empfohlen, dass Sie die Missionen früh genug beginnen, um später wertvolle Belohnungen zu erhalten.
+
+[COLOR=ef4f00;FONT_SIZE=15]2.3 Education
+Wenn Sie 5Lv erreichen, können Sie Ihre Klasse wählen und Ihre Ausbildung beginnen. Fügen Sie Punkte zum Trainieren von 
+Fähigkeiten bis zu M1 zu trainieren und dann die von den Lehrern bereitgestellten Bücher zu benutzen, um sie weiter zu trainieren.
+Vergessen Sie nicht, Exorzismus-Schriftrollen und Konzentriertes Lesen von Hong-Hae zu kaufen. Alles auf Ihren Wunsch hin...
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1025; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Gegenstände, die Sie zu sammeln beginnen & Must-Buy-Items
+
+
+[COLOR=ef4f00;FONT_SIZE=15]3.1 Crystals
+Zu diesem Zeitpunkt haben Sie sicher schon einige Metinsteine zerstört und festgestellt, dass sie jede Menge 
+Kristalle fallen lassen (in Ihrem Materiallager). Dafür gibt es einen guten Grund. Turmalin, Smaragd, Saphir, 
+Rubin- und Granatkristalle funktionieren in vielen NPCs als Zweitwährung. Deshalb stellen wir eine Menge davon zur Verfügung, 
+so dass Sie immer das kaufen können, was Sie brauchen. Es wird empfohlen, dass du sie für deinen persönlichen Gebrauch behältst, 
+aber sie zu verkaufen ist praktisch, wenn Sie kein Geld mehr haben. Stellen Sie sicher, dass Sie den Durchschnittspreis von Ihrem 
+Geschäft, um eine bessere Vorstellung von den Preisen zu haben. Lassen Sie sich nicht täuschen...
+
+[COLOR=ef4f00;FONT_SIZE=15]3.2 Verzauberungstruhe, Kräutertruhe
+Diese schön aussehenden Truhen sind wirklich etwas für Sie wert. 
+Verzauberungstruhen bieten Ihnen Verstärkungsgegenstand, Verzauberungsgegenstand & Segensmurmel 
+um die Boni Ihrer Ausrüstung anzupassen. Kräutertruhen enthalten alle Arten von Zutaten 
+für Ihre Trank-Herstellung aus Huahn-So (Jayang, Bokjung, Bakra).
+Beides ist extrem nützlich für Anfänger und sogar für Profis. 
+
+[COLOR=ef4f00;FONT_SIZE=15]3.3 Must-buy-Items
+Es ist noch recht früh, um diese Gegenstände zu erwähnen, aber ein solides Ziel zu haben, wird Ihnen bei der Neuausrichtung helfen:
+
+*Level-80-Helm für IhrÂ're Rasse
+[COLOR=808476;X_PADDING=20]*Kann von Beran-Setaou erhalten werden
+
+*Titan-Schild
+[COLOR=808476;X_PADDING=20]*Kann von Beran-Setaou und Azrael erhalten werden
+
+*Seelenkristall-Halskette
+[COLOR=808476;X_PADDING=20]*Kann von Azrael und Orc Maze erhalten werden
+
+*Seelenkristall-Armband
+[COLOR=808476;X_PADDING=20]*Kann von Azrael und Ork-Labyrinth erhalten werden
+
+*Seelenkristall-Ohrringe
+[COLOR=808476;X_PADDING=20]*Kann von Azrael und Orklabyrinth erhalten werden
+
+*Leinengürtel
+[COLOR=808476;X_PADDING=20]*Kann beim Alchemisten hergestellt werden
+
+Die, die Sie am Anfang erhalten, werden nicht ewig halten, also fangen Sie besser an 
+Geld für diese 3 permanenten Gefährten zu sammeln...
+
+*Brave Boar Seal:
+[COLOR=808476;X_PADDING=20]*30% Stärke gegen Metinstones.
+
+*Löwenbaby-Siegel:
+[COLOR=808476;X_PADDING=20]*Max. HP 2.000
+[COLOR=808476;X_PADDING=20]*Stärke gegen Monster 15%
+[COLOR=808476;X_PADDING=20]*Stärke gegen Metinstones 10%
+
+*Buffi:
+[COLOR=808476;X_PADDING=20]*Ein Schamanenbegleiter, der Ihnen überall hin folgt und Ihnen Buffs gibt.
+[COLOR=808476;X_PADDING=20]*max. Fertigkeitsstufe ist P
+[COLOR=808476;X_PADDING=20]*auf dem max. Skill-Level hat er einen max. Buff von 35%.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1720; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Leveling-Pfade: 30Lv, 50Lv, 75Lv+
+
+Hier sind die Leveling-Pfade, die im Moment die praktikabelsten und einfachsten Wege sind, sich hochzuleveln:
+
+[COLOR=ef4f00]Level 1 - Level 30
+*Shinsoo
+*Yajang
+
+*Chunjo
+*Bokjung
+
+*Jinno
+*Bakra
+
+[COLOR=ef4f00]Level 30 - Level 42
+*Tal von Seungryong
+*Spider Dungeon 1
+*Spider Dungeon 2
+
+[COLOR=ef4f00]Stufe 42 - Stufe 61
+*Berg Sohan
+*Hwang-Tempel
+*Spider Dungeon 2
+*Spider Dungeon 3
+
+[COLOR=ef4f00]Stufe 61 - Stufe 81
+*Geisterwälder
+*Roter Wald
+*Spider Dungeon 3
+
+[COLOR=ef4f00]Stufe 81 - Stufe 90
+*Roter Wald 
+*Grotte des Exils 1
+*Grotte des Verbrechens 2
+
+Denken Sie daran, dass es nicht immer gut ist, sich zu drängen, um Level zu gewinnen, anstatt Gegenstände fallen zu lassen. Ein Beispiel, 
+Es ist besser, sich Zeit zu lassen und in den Geisterwäldern und im Roten Wald zu farmen, als im Spider Dungeon aufzuleveln.
+im Spider Dungeon, denn der Geisterwald und der Rote Wald werden zu diesem Zeitpunkt Ihr Yang-Paradies sein. 
+In diesem Guide geht es nur um den "Start", also lassen wir weitere Levelpfade erst einmal außen vor...
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=2230; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]5. Wie kann ich meinen Schaden erhöhen?
+
+An diesem Punkt sollte Ihr Schaden beginnen, Sie zu stören. 
+Ihnen ist klar, dass Zeit Geld ist und Sie das bestmögliche Ergebnis erzielen wollen. 
+Nun, hier ist Ihre Anleitung:
+
+[COLOR=ef4f00;FONT_SIZE=15]5.1 Aura des Schwertes / Verzauberte Klinge L
+Wenn Sie Sura Weaponry oder Warrior Body sind, wollen Sie diese 2 Fähigkeiten auf der maximalen Stufe. 
+Was überraschenderweise nicht P ist. Skills reichen bis L (Legendär) und können 
+mit Legendären Seelensteinen trainiert werden.
+
+[COLOR=ef4f00;FONT_SIZE=15]5.2 Vote4Buff (20% Stärke gegen Monster)
+Bis zu diesem Punkt waren 20% Erfahrungsbonus wirklich nicht schlecht. Wenn Sie Ihre Gewinne aus Metinstones maximieren wollen, 
+sind 20% Stärke gegen Monster genau das Richtige für Sie...
+
+[COLOR=ef4f00;FONT_SIZE=15]5.3 Drachenstein-Alchemie
+Sie sollten genug Cor Draconis haben, um mit dem Mischen zu beginnen. Ihr Ziel ist jetzt die Herstellung eines 
+Legendärer Drachenrubin (Exzellent)+6, mit mindestens 15% Durchschnittsschaden, 120 Angriffswert & Verteidigung. Arbeiten Sie daran...
+
+[COLOR=ef4f00;FONT_SIZE=15]5.4 Schärpe mit mindestens 13% durchschnittlichem Schaden
+Eine Schärpe würde perfekt zu Ihnen passen, das ist wahr. Machen Sie sich auf die Suche nach einer mit mindestens 
+mindestens 13% durchschnittlichem Schaden und +3 Stärke, um Ihren Schaden zu erhöhen.
+
+[COLOR=ef4f00;FONT_SIZE=15]5.5 Runen-System (F5)
+Das Runensystem ist ein komplexes System und wird in einem anderen Handbuch ausführlich beschrieben. Obwohl, in der Summe, 
+bietet es Ihnen 20% PvE-Boni & Statuspunkte, die Sie sicher interessieren. Schauen Sie mal rein.
+
+[COLOR=ef4f00;FONT_SIZE=15]5.6 Dews
+Die Herstellung von Dews ist ein großer Aspekt des Spiels und Sie sollten es unbedingt bei Huahn-So versuchen. 
+Später können Sie diese Taue verwenden, um die permanenten Versionen von ihnen zu produzieren.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=2650; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]6. Meine ersten Dungeons
+
+Sie denken jetzt vielleicht, dass Sie sich noch nicht in der Nähe eines Dungeons befinden, richtig? Falsch gedacht! Sie können anfangen, Dungeons zu absolvieren 
+bereits ab 30Lv. Ork-Labyrinth, Spinnenbaronin & Teufelskatakomben sind einige lockere Dungeons, mit denen man beginnen kann. 
+Achten Sie darauf, vorher nach Guides zu schauen...
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=2750; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]7. Wie man Millionär wird
+
+An diesem Punkt ist die Wahrscheinlichkeit groß, dass Sie bereits "Millionär" sind. 
+Aber was macht Sie in der Anfangsphase des Servers reich genug? 
+Nun, es gibt sicherlich einige Tipps. Ghost Woods & Red Forest wie bereits erwähnt, 
+ist ein Yang-Paradies für Spieler um 85Lv. Warum ist das so? Weil man hier leicht 
+Smaragdkristalle und Yang-Coupons von Metinstones. Die Smaragdkristalle sind nur 
+bis zu den 90Lv-Metinsteinen droppbar, also sind Sie so ziemlich in der besten Karte, um sie zu farmen. 
+Sie werden zu Preisen verkauft, die es Ihnen ermöglichen, leicht einige Seelenkristall-Gegenstände zu ergattern und auch genug Geld zu verdienen
+um eine gute 75Lv-Waffe und andere Ausrüstung für Ihre zukünftigen Karten herzustellen/zu kaufen. Ein weiser alter Mann sagte einmal: 
+Bleiben Sie im Roten Wald, bis Sie alle oben erwähnten "Must-Buy-Items" haben. 
+Dann setzen Sie Ihre Abenteuer auf den 90Lv+-Karten fort. Von nun an können Sie den Guide 
+'105 und was nun?' besuchen, um Ihre Abenteuer fortzusetzen... Viel Spaß!
+
+
+
+ 

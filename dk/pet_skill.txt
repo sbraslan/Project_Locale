@@ -1,0 +1,23 @@
+1	Modstand (Kriger) 	jijoong	PASSIVE	Modstand til Kriger-angreb (passiv)	0
+2	Modstand (Sura) 	jijoong	PASSIVE	Modstand til Sura-angreb (passiv)	0
+3	Modstand (Ninja) 	jijoong	PASSIVE	Modstand til Ninja-angreb (passiv)	0
+4	Modstand (Shaman) 	jijoong	PASSIVE	Modstand til Shaman-angreb (passiv)	0
+5	Modstand (Lycan) 	jijoong	PASSIVE	Modstand til Lycan-angreb (passiv)	0
+6	Berserker	pacheon	PASSIVE	Angrebsværdi øget (passiv)	0
+7	Anti-magisk 	cheonryeong	PASSIVE	Reducerer fjendens magiske modstand (passiv)	0
+8	Hastighed	banya	PASSIVE	Færdighed nedkøling er reduceret (passiv)	0
+9	Bore	choehoenbimu	PASSIVE	Øget chance for gennemborende slag (passiv)	0
+10	Rehabilitering	heal	AUTO	HP vil blive gendannet så snart det falder under 20%.	480
+11	Vampyr	stealhp	PASSIVE	Sug HP fra fjenden (passiv)	0
+12	Spirituel	stealmp	PASSIVE	Sug MP fra fjenden (passiv)	0
+13	Bolværk	block	PASSIVE	Fysiske skader er blokeret (passiv)	0
+14	Genspejling	reflect_melee	PASSIVE	Modtagne skader genspejles tilbage til fjenden (passiv)	0
+15	Yang sandsynlighed	gold_drop	PASSIVE	Yang sandsynlighedsrate er øget (passiv)	0
+16	Rækkevidde	bow_distance	PASSIVE	Rækkevidde øget (passiv)	0
+17	Udødelig	invincibility	AUTO	Chance for midlertidig usynlighed	600
+18	Healing	removal	AUTO	Chance for at fjerne blødning, langsom og giftige effekter	480
+19	Mester Brygger	potion	PASSIVE	Forøger regenererings eliksirens effektivitet (passiv)	0
+20	Monster Jæger	mob_bonus	PASSIVE	Forøger styrke imod monstres effekt (passiv)	0
+21	Ørne Øjne	exp	PASSIVE	Forøger EXP opnåelse (passiv)	0
+22	Livs Dræner	hp_recover	PASSIVE	Absorberer HP fra dræbte monstre (passiv)	0
+23	Let som en Fjer	feather	AUTO	Aktiverer Fjervandring i en kort periode	180

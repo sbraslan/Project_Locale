@@ -1,0 +1,28 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/orcmaze.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 55-85
+*Eintrittskarte: Ork-Pergament
+[RIGHT_ALIGN]Ork-Pergament
+[IMG=d:/ymir work/ui/wiki/94031.tga; Y=5; X=493]
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Der Dungeon kann nur ohne Gruppe betreten werden.
+*Das Ork-Labyrinth hat eine 90-minütige Abklingzeit.
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=100; CENTER_ALIGN]
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]4x Metin von Seele töten
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Töte den verfluchten Ork-Häuptling
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 3
+
+[X_PADDING=20]Töte den verfluchten Ork-König

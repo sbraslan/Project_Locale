@@ -1,0 +1,120 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/costumes.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen
+*2. Kostümbonus Hinzufügen & Ändern
+*3. Frisuren-Bonus
+*4. Rüstungs-Kostüm Bonus
+*5. Waffenkostüm-Bonus
+*6. Kostüm-Bonus-Transfer
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=100; CENTER_ALIGN]
+
+[CENTER_ALIGN]Kostüme können über den Battlepass, Events oder Spieler erworben werden.
+[CENTER_ALIGN]Wir haben 3 verschiedene Kostüme: Frisur, Rüstungskostüm und Waffenkostüme. Alle diese Kostüme sind permanent.
+[CENTER_ALIGN]Ein Kostüm kann 5 Boni haben. Die Kostüme benötigen verschiedene Kostüm-Adder und -Wechsler.
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Kostümbonus Adder & Changer
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=195; CENTER_ALIGN]
+
+[CENTER_ALIGN]Um die ersten 3 Boni hinzuzufügen, benötigen Sie einen Kostümverstärkungsgegenstand ohne +.
+[CENTER_ALIGN]Um den 4. und 5. Bonus hinzuzufügen, benötigen Sie einen Kostümverstärkungsgegenstand mit +.
+[CENTER_ALIGN]Der 4. und 5. Bonus kann nur hinzugefügt werden, wenn die ersten 3 Boni dem Kostüm hinzugefügt wurden.
+[CENTER_ALIGN]Es wird immer nur 1 Bonus hinzugefügt, auch dieser ist 100%.
+
+[CENTER_ALIGN]Um die ersten 3 Boni zu ändern, benötigen Sie den Gegenstand Kostümverzauberung ohne +.
+[CENTER_ALIGN]Um den 4. und 5. Bonus zu ändern, benötigen Sie einen Kostümverzauberungsgegenstand mit +.
+
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Frisuren-Bonus
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=350; CENTER_ALIGN]
+
+[COLOR=00EF4F;FONT_SIZE=14]Possible 1. - 3. Bonus:
+*Stark gegen Teufel +5, 8, 10%
+*Stark gegen Untote +5, 8, 10%
+*Stark gegen Mystiker +5, 8, 10%
+*Stark gegen Orks +5, 8, 10%
+*Stark gegen Tiere +5, 8, 10%
+*Giftresistenz +3, 5%
+*Angriffsgeschwindigkeit +5, 8, 10%
+*Chance, Pfeilen auszuweichen +5, 8, 10%
+*Chance, einen Nahkampfangriff zu blocken +3, 5%
+*Chance, Nahkampftreffer zu reflektieren +3, 5%
+*Max. HP +500, 750, 1000
+
+[COLOR=FF0021;FONT_SIZE=14]Possible 4. - 5. Bonus:
+*Stark gegen Metinstones +3, 5, 8%
+*Stark gegen Monster +3, 5, 8%
+*Stark gegen Bosse +3, 5, 8%
+*Durchschnittliche Schadensresistenz +3, 5%
+*Durchschnittlicher Schaden +3, 5%
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Rüstungskostüm-Bonus
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=655; CENTER_ALIGN]
+
+
+[COLOR=00EF4F;FONT_SIZE=14]Possible 1. - 3. Bonus:
+*Max. HP +500, 750, 1000
+*Schaden wird durch SP absorbiert +3, 5%
+*Schaden wird von HP absorbiert +3, 5%
+*Zaubergeschwindigkeit +5, 8, 10%
+*Angriffswert +20, 35, 50
+*Eiswiderstand +3, 5, 8%
+*Feuerwiderstand+3, 5, 8%
+*Windresistenz +3, 5, 8%
+*Blitzresistenz +3, 5, 8%
+*Erdwiderstand +3, 5, 8%
+*Dunkelheitswiderstand +3, 5, 8%
+
+
+[COLOR=FF0021;FONT_SIZE=14]Possible 4. - 5. Bonus:
+*Stark gegen Metinstones +3, 5, 8%
+*Stark gegen Monster +3, 5, 8%
+*Stark gegen Bosse +3, 5, 8%
+*Resistenz gegen Halbmensch +3, 5%
+*Resistenz gegen Geschicklichkeitsschaden +3, 5%
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]5. Waffenkostüm-Bonus
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=985; CENTER_ALIGN]
+
+[COLOR=00EF4F;FONT_SIZE=14]Possible 1. - 3. Bonus:
+*Stark gegen Teufel +5, 8, 10%
+*Stark gegen Untote +5, 8, 10%
+*Stark gegen Mystiker +5, 8, 10%
+*Stark gegen Orks +5, 8, 10%
+*Stark gegen Tiere +5, 8, 10%
+*Chance auf einen kritischen Treffer +3, 5%
+*Chance auf einen durchdringenden Treffer +3, 5%
+*Vitalität +3, 5, 8
+*Intelligenz +3, 5, 8
+*Stärke +3, 5, 8
+*Geschicklichkeit +3, 5, 8
+
+
+[COLOR=FF0021;FONT_SIZE=14]Possible 4. - 5. Bonus:
+*Stark gegen Metinstones +3, 5, 8
+*Stark gegen Monster +3, 5, 8%
+*Stark gegen Bosse +3, 5, 8%
+*Stark gegen Halbmenschen +3, 5%
+*Skill-Schaden +3, 5%
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]6. Kostüm-Bonus-Transfer
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1300; CENTER_ALIGN]
+
+[CENTER_ALIGN]Es ist möglich, die Boni eines Kostüms mit einem Kostümbonustransfer bei Theowahdan auf ein anderes Kostüm zu übertragen.
+[CENTER_ALIGN]Das Kostüm im linken Slot wird geleert und die Boni werden auf das Kostüm im rechten Slot übertragen.
+[CENTER_ALIGN]Wenn Sie die Boni auf ein Kostüm übertragen wollen, das bereits Boni hat
+[CENTER_ALIGN]werden die alten Boni mit den neuen überschrieben.
+

@@ -1,0 +1,58 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/shipdefense.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliche Stufe: 105
+*Eintrittskarte: *Nicht benötigter Gegenstand.
+[RIGHT_ALIGN]Blaue Kristall-Essenz
+[IMG=d:/ymir work/ui/wiki/31005.tga; Y=5; X=479]
+
+[COLOR=0xffd700;FONT_SIZE=15]Eigentümlichkeit:
+*Die Schiffsverteidigung hat eine Abklingzeit von 180 Minuten.
+*Der Dungeon kann nur mit einer Gruppe betreten werden.
+*Sie müssen den Dungeon beenden, bevor der Mast zerstört wird.
+*Sie müssen sich Ihre Belohnung aus der Truhe am Ende des Dungeons aussuchen.
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=140; CENTER_ALIGN]
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Töten Sie alle Monster auf dem Deck des Schiffes und schützen Sie den Mast des Schiffes.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Töten Sie alle Monster auf dem Deck des Schiffes und schützen Sie den Mast des Schiffes.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 3
+
+[X_PADDING=20]Töten Sie alle Monster und Metinsteine auf dem Deck. Sobald der Hydra-Debuff weg ist, 
+[X_PADDING=20]können Sie den ersten Hydra-Kopf besiegen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 4
+
+[X_PADDING=20]Töten Sie alle Monster auf dem Deck des Schiffes und schützen Sie den Schiffsmast.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 5
+
+[X_PADDING=20]Töten Sie alle Monster auf dem Deck des Schiffes und schützen Sie den Mast des Schiffes.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 6
+
+[X_PADDING=20]Töten Sie alle Monster und Metinsteine auf dem Deck. Sobald der Hydra-Debuff weg ist,
+[X_PADDING=20]können Sie den zweiten Hydrakopf besiegen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 7
+
+[X_PADDING=20]Töten Sie alle Monster auf dem Deck des Schiffes und schützen Sie den Schiffsmast.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 8
+
+[X_PADDING=20]Töten Sie alle Monster auf dem Deck des Schiffes und schützen Sie den Mast des Schiffes.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 9
+
+[X_PADDING=20]Töten Sie alle Monster und Metinsteine auf dem Deck. Sobald der Hydra-Debuff weg ist, 
+[X_PADDING=20]können Sie den letzten Hydra-Kopf besiegen. Eine Black Pearl-Schatztruhe kann eingetauscht werden
+[X_PADDING=20]gegen eine blaue Kristall-Essenz aus der Hydra-Truhe.
+

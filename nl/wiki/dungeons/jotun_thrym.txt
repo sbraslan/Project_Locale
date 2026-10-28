@@ -1,0 +1,24 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/jotun.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Voraussetzungen:
+*Erforderliches Level: 105
+*Eintrittskarte: Stein der Dryaden
+[RIGHT_ALIGN]Stein der Dryaden
+[IMG=d:/ymir work/ui/wiki/30613.tga; Y=5; X=500]
+
+[COLOR=0xffd700;FONT_SIZE=15]Eigentümlichkeit:
+*Der Dungeon Jotun Thrym hat eine Abklingzeit von 180 Minuten.
+*Der Dungeon kann mit oder ohne eine Gruppe betreten werden.
+*Mounts können nicht verwendet werden.
+*Jotun Thrym kann 5 - 10 Jotun Thrym-Truhen fallen lassen.
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=140; CENTER_ALIGN]
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Bagjanamu töten.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase2
+
+[X_PADDING=20]Töten Sie Jotun Thrym.

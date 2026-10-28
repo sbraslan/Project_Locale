@@ -1,0 +1,7 @@
+[DELAY value;0]
+Je kunt je overleden huisdier weer tot leven wekken door[ENTER]
+het te combineren met Goddelijke Proteïne Hapjes.\n[ENTER]
+Het aantal items dat benodigd is hangt af van de leeftijd[ENTER]
+van je huisdier.\n[ENTER]
+Het overleden huisdier komt weer tot leven met 80% van zijn[ENTER]
+oorspronkelijke leeftijd.\n

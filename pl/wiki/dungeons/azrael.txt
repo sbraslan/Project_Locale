@@ -1,0 +1,50 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/azrael.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 75
+*Eintrittskarte: Schrumpfkopf (nicht für den Eingang, sondern für die 3. Etage)
+[RIGHT_ALIGN]Schrumpfkopf
+[IMG=d:/ymir work/ui/wiki/30319.tga; Y=5; X=493]
+
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Die Teufelskatakombe ist sowohl mit als auch ohne eine Gruppe zugänglich. 
+*Der Dungeon muss innerhalb von einer Stunde abgeschlossen werden.
+*Mit einem Boss Room Ticket (Azrael) kommt man direkt in die letzte Ebene und kann Azrael töten.
+*Die Teufelskatakombe hat eine 60-minütige Abklingzeit.
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Levels:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=145; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 1
+
+[X_PADDING=20]Töten Sie Monster, bis Sie einen Seelenkristallschlüssel fallen lassen. 
+[X_PADDING=20]Sie müssen den Schlüssel zur Kud-Statue am Ende dieser Etage ziehen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 2
+
+[X_PADDING=20]Sie müssen sich durch das Tor der Verdammnis kämpfen, bis Sie die 
+[X_PADDING=20]Schildkrötenfelsen am Ende der Etage erreichen. Nur eine Person muss die Schildkröte anklicken. 
+[X_PADDING=20](Alle Gruppenmitglieder benötigen einen Schrumpfkopf)
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 3
+
+[X_PADDING=20]In dieser Etage finden Sie 7 Metinsteine, genannt Metin der Vergeltung, 
+[X_PADDING=20]die zerstört werden müssen. Es gibt nur 1 richtigen, der es Ihnen erlaubt, in die nächste Ebene zu gelangen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 4
+
+[X_PADDING=20]Finden und töten Sie Tartaros, er befindet sich in einem der Räume unterhalb des Tempels. 
+[X_PADDING=20]Bringen Sie das fallengelassene Fratzen-Totem auf die Spitze des Tempels, ziehen Sie es auf den Basalt-Obelisken und lassen Sie es fallen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 5
+
+[X_PADDING=20]Töten Sie alle Monster in dieser Etage und konzentrieren Sie sich dann auf Charon. Nachdem alle Monster besiegt sind, 
+[X_PADDING=20]gelangen Sie in die nächste Ebene.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 6
+
+[X_PADDING=20]Töte Azrael
+
+
+

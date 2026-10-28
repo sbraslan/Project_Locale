@@ -1,0 +1,97 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/shoulder.tga]
+[CENTER_ALIGN]Eine Schulterbänder ist ein sichtbares Ausrüstungsstück, das den meisten Aeldra-Spielern bekannt ist. 
+[CENTER_ALIGN]Die Schulterbänder wird im Kostümsystem-Reiter ausgerüstet, der sich über die Schaltfläche Kostümsystem
+[CENTER_ALIGN]im Inventar des Spielers zu finden ist. Eine Schulterbänder ist permanent und kann ab Lv1 ausgerüstet werden. 
+[CENTER_ALIGN]Kommen wir gleich zu den Details:
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Die verschiedenen Arten von Schulterbändern und wie man eine erhält.
+*2. Wie man eine Schulterbänder verbessern kann.
+*3. Wie Sie eine Waffe/Rüstung in Ihre Schulterbänder aufnehmen.
+*4. Wie man die Boni von einer Schulterbänder entfernt.
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=135; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Die verschiedenen Arten von Schulterbändern und wie man eine solche erhält.
+
+[CENTER_ALIGN] Es gibt verschiedene Arten von Schulterbändern, darunter: 
+[CENTER_ALIGN] Meister-Schulterbänder, Lord-Schulterbänder, Königliche-Schulterbänder, Souveräne Schulterbänder, Jubiläums-Schulterbänder. 
+[CENTER_ALIGN] Der Unterschied zwischen den 5 Schulterbändern ist einfach das Aussehen und die Herkunft.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.1 Master-Schulterbänder
+[X_PADDING=20]Ein Meister-Schulterband (Basis) erhält man durch den Tausch von 10x Feinen Tüchern bei Theowahdan.
+
+[X_PADDING=20]Außerdem lassen Todesschnitter, Spinnenbaronin, Azrael, Beran Setaou, Razador und Nemere feine Tücher fallen, 
+[X_PADDING=20]Kiste des Ork-Häuptlings, Truhe der Neun Schwänze, Truhe der Wüstenschildkröte, Truhe des Flammenkönigs, Truhe des Gelben Tigers, Truhe der Königin Meley, 
+[X_PADDING=20]Truhe des Drachenwächters, Mondschein-Schatztruhe, Goldene Decimus-Truhe und Goldene Fischtruhe. 
+
+[X_PADDING=20]Außerdem kann eine Meister-Schulterbänder (einfach) als Belohnung aus dem Missionsbuch (normal) erhalten werden, 
+[X_PADDING=20]Missionsbuch (schwer), Missionsbuch (Experte) und Missionsbuch (königlich).
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.2 Lord Schulterbänder
+[X_PADDING=20]Ein Lord-Schulterband (einfach) kann als Belohnung aus dem Missionsbuch (schwer), Missionsbuch (Experte) erhalten werden, 
+[X_PADDING=20]Missionsbuch (königlich), Goldene Decimus-Truhe und aus dem Item-Shop.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.3 Königliche Schulterbänder
+[X_PADDING=20]Ein königliches Schulterband (einfach) können Sie als Belohnung aus dem Missionsbuch (schwer), Missionsbuch (Experte) erhalten, 
+[X_PADDING=20]Missionsbuch (königlich), Goldene Decimus-Truhe, Razador-Truhe und Nemere-Truhe.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.4 Souveräne Schulterbänder
+[X_PADDING=20]Eine Souverän-Schulterbänder (Basis) kann als Belohnung aus dem Missionsbuch (schwer), Missionsbuch (Experte) erhalten werden, 
+[X_PADDING=20]Missionsbuch (königlich), Goldene Decimus-Truhe, Razador-Truhe und Nemere-Truhe.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.5 Jubiläums-Schulterbänder
+[X_PADDING=20]Die JubiläumsSchulterbänder war Teil eines speziellen Item-Shop-Angebots vom 16.07.2018 - 22.07.2018. 
+[X_PADDING=20]Sie gehört heute zum Museum...
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.6 WeihnachtsSchulterbänder
+[X_PADDING=20]Die WeihnachtsSchulterbänder war Teil des Weihnachtsevents 2018. 
+[X_PADDING=20]Sie erhalten sie im Itemshop und mit dem Weihnachts-Battlepass.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=690; CENTER_ALIGN]
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Wie man eine Schulterbänder verbessert.
+
+Eine Schulterbänder hat 4 verschiedene Qualitätsstufen: basic, fine, noble und custom.
+Schulterbändern der gleichen Qualitätsstufe können kombiniert werden, um eine höherwertige Schulterbänder herzustellen, obwohl dieser Vorgang fehlschlagen kann.
+In diesem Fall wird der zweite Flügel im Kombinationsfenster zerstört. Das Kombinationsfenster ist erreichbar 
+über die Option "Kombination" von Theowahdan. Ein benutzerdefinierter Flügel kann verbessert werden, indem er mit einem anderen 
+benutzerdefinierten Fensterflügel (beliebiger Typ) verbessert werden. Die Verbesserung, wenn sie erfolgreich ist, erhöht die Absorptionsrate von 1 auf 5%
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=815; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Wie Sie eine Waffe/Rüstung in Ihrer Schulterbänder absorbieren.
+
+Sie können eine Schulterbänder verwenden, um den Bonus einer beliebigen Waffe oder Rüstung zu absorbieren. 
+Die Rüstung oder Waffe, die absorbiert werden soll, wird zerstört.
+
+*Grundlegende Schulterbändern absorbieren 1% des Bonus einer Rüstung oder Waffe.
+*Feine Schulterbändern absorbieren 5% des Bonus einer Rüstung oder Waffe.
+*Edle Schulterbändern absorbieren 10 % des Bonus einer Rüstung oder Waffe.
+*Benutzerdefinierte Schulterbändern absorbieren 11% - 25% des Bonus einer Rüstung oder Waffe.
+
+Das Bonusabsorptionsfenster ist über die Option "Bonusabsorption" von Theowahdan erreichbar. 
+Legen Sie die Schulterbänder in den linken Slot, die Waffe oder Rüstung in den rechten Slot, und Sie können das Endergebnis im unteren Bereich sehen.
+Der Prozess überträgt die % sowohl der Boni als auch der Stats der Waffe/Rüstung auf die Schulterbänder 
+(Alle Nachkommastellen werden absteigend gerundet.)
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1025; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Wie man die Boni von einer Schulterbänder entfernt.
+
+Sagen wir, Sie haben einen Fehler gemacht und die falsche Rüstung/Waffe in Ihre Schulterbänder absorbiert. Das kann jedem passieren... oder auch nicht.
+Nun, in diesem Fall können Sie Ihre Rüstung/Waffe nicht zurückbekommen, aber Sie können die Boni 
+von Ihrer Schulterbänder mit einem Zertifikat der Umkehrung entfernen.
+
+

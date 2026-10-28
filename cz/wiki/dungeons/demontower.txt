@@ -1,0 +1,76 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/demontower.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 40 - 105
+*Eintrittskarte: -
+
+
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Der Demontower hat keine Abklingzeit.
+*Der Demontower kann mit oder ohne eine Gruppe betreten werden.
+*Für den Death Reaper muss man Level 75+ sein.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=125; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 1
+
+[X_PADDING=20]Zerstöre das Metin der Zähigkeit.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 2
+[IMG=d:/ymir work/ui/wiki/Damonenkonig.tga; Y=180; X=455]
+
+[X_PADDING=20]Töten Sie den Dämonenkönig.
+[X_PADDING=20]Töten Sie alle anderen Monster.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 3
+
+[X_PADDING=20]Töten Sie die Metin des Teufels.
+[X_PADDING=20]Finden Sie das richtige Metin des Falls.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 4
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=360; X=490]
+[IMG=d:/ymir work/ui/wiki/30306.tga; Y=366; X=496]
+
+
+[X_PADDING=20]Töten Sie das Monster, bis Sie den Schlüsselstein fallen lassen.
+[X_PADDING=20]Ziehen Sie den Schlüsselstein auf das Siegel und lassen Sie ihn fallen.
+[X_PADDING=20]Öffnen Sie alle Siegel.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 5
+
+[X_PADDING=20]Töten Sie den stolzen Dämonenkönig.
+[X_PADDING=20]Wenn Sie Level 75+ sind, können Sie mit dem Schwarzschmied sprechen, um das nächste Level zu betreten.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 6
+
+[X_PADDING=20]Töten Sie alle Metins of Death.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 7
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=590; X=490]
+[IMG=d:/ymir work/ui/wiki/30302.tga; Y=596; X=496]
+
+[X_PADDING=20]Töten Sie den Metin des Todes.
+[X_PADDING=20]Aktivieren Sie die Zin-Sa-Gui-Turmkarte.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 8
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=670; X=490]
+[IMG=d:/ymir work/ui/wiki/30304.tga; Y=676; X=496]
+
+[X_PADDING=20]Töten Sie Monster, bis Sie Zin-Bong-In-Key fallen lassen.
+[X_PADDING=20]Ziehen Sie den Zin-Bong-In-Key auf den Grabstein und lassen Sie ihn fallen.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 9
+
+[X_PADDING=20]Töten Sie den Death Reaper.
+[IMG=d:/ymir work/ui/wiki/Sensenmann.tga; Y=700; X=322]
+
+
+

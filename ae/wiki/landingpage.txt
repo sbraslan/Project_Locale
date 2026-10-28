@@ -1,0 +1,73 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/basicguide.tga]
+[CENTER_ALIGN;FONT_SIZE=30]The basic Guide
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=30; CENTER_ALIGN]
+
+[CENTER_ALIGN]ЪСИннннннннннннннннннннннн!
+
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннн1
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннннн2
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннннннннн3
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннннннннннннннннннннннн5
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИннннннннннннннннн6
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннннннннн7
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИннннннннннннннннннннн8
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннннннннннннннннннн9
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннннннннннннннннннннннн10
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннннннннннннннннннннннннннннннннннннннннн11
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИннннннннннннннннннннннннннннннннннннннннннннннннннннннннн12
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИннннннннннннннн13
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИннннннннннннннннннннннннннннн14
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннннннннннннннннн15
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИннннннннннннннннннннннннннннннннннннннннннн16
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИнннннннннннннннннннннннннннннннн18
+
+[X_PADDING=135;FONT_SIZE=15]* ЪСИннннннннннннннннннннннннннннннн19
+
+
+[IMG=d:/ymir work/ui/wiki/emoji/u.tga; Y=70; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/o.tga; Y=97; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/esc.tga; Y=125; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/tab.tga; Y=150; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/f6.tga; Y=178; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/f7.tga; Y=205; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/f10.tga; Y=232; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=259; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/g.tga; Y=259; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=287; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/h.tga; Y=287; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=313; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/o.tga; Y=313; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=341; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/p.tga; Y=341; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=368; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/f5.tga; Y=368; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=368; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/f5.tga; Y=368; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=395; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/mouse_right.tga; Y=392; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=420; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/mouse_left.tga; Y=420; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=449; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/mouse_left.tga; Y=448; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=476; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/mouse_left.tga; Y=476; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/ctrl.tga; Y=504; X=10]
+[IMG=d:/ymir work/ui/wiki/emoji/shift.tga; Y=504; X=60]
+[IMG=d:/ymir work/ui/wiki/emoji/mouse_right.tga; Y=503; X=110]

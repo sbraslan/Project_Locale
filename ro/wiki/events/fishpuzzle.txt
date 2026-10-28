@@ -1,0 +1,47 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/fichpuzzle.tga]
+[CENTER_ALIGN;FONT_SIZE=18]Fischpuzzle
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen
+*2. Spielanleitung
+*3. Runden-Belohnungen
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=110; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen
+
+Jeder Spieler ab Level 30 kann an dem Event teilnehmen.
+Sie benötigen eine Angelrute, einen Wurm oder eine Paste.
+Oben rechts neben dem Event-Button finden Sie das Fisch-Puzzle-Spiel, bei dem Sie das Puzzle verwenden können.
+Während des Events erhält man mit jedem erfolgreich gefangenen Fischpuzzle 5 Hintergrundfelder.
+Mit einem ausgerüsteten Hintergrund Angelbuch hat man die Chance auf einen Hintergrund Fischpuzzlebox Deluxe. 
+(Das Angelbuch kann man im Itemshop für 3h kaufen.) Die Standard-Fischpuzzlekisten enthalten ein zufälliges 
+Puzzlestück. Die Deluxebox enthält ein größeres Puzzlestück.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=250; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Spielanleitung
+
+Ziel des Spiels ist es, die freien Felder mit den Puzzleteilen mit möglichst wenigen Zügen zu vervollständigen.
+Ein Linksklick öffnet die Truhen.
+In das untere Feld kommen die Fisch-Puzzlekisten und in das obere die Fisch-Puzzlekiste Deluxe.
+Klicken Sie mit der linken Maustaste auf eine Truhe, um sie zu öffnen. Ziehen Sie das Teil mit dem Mauszeiger an die gewünschte Stelle und legen Sie es dort ab. 
+Klicken Sie mit der rechten Maustaste, um ein Teil zu verwerfen, wenn es Ihnen nicht gefällt oder es nicht passt.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=380; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Belohnungen für die Runde
+
+Wenn Sie das Rätsel beendet haben, erhalten Sie 30.000 Exp.
+Abhängig von den notwendigen Versuchen erhalten Sie eine von drei goldenen Fischtruhen.
+Je weniger Versuche nötig sind, desto besser ist die Belohnung, die Sie erhalten.
+
+*10 oder weniger: 3x Goldene Fischtruhe (L).
+*11 bis 24: 2x Goldene Fischtruhe (L).
+*25 oder mehr: 1x Goldene Fischtruhe (L).
+
+

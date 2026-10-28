@@ -1,0 +1,2 @@
+Sie können alles in die erste Zeile schreiben, da diese nicht geparst wird, um utf8-Scheiße zu vermeiden
+Dies ist nur ein zufälliger Text, den Sie löschen können events/reaction_event.txt

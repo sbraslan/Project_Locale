@@ -1,0 +1,69 @@
+Sie können alles in die erste Zeile schreiben, da diese nicht geparst wird, um utf8-Shits zu vermeiden
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/patchnotes.tga]
+Jede Zeile ist eine einzelne Textzeile für den Parser.
+[CENTER_ALIGN]Wenn Sie die Zeile mit [ beginnen, können Sie
+[CENTER_ALIGN]die aktuelle Zeile formatieren (zum Beispiel CENTER_ALIGN):
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=200; CENTER_ALIGN]
+*Sie können Absätze hinzufügen, indem Sie die Textzeile mit * beginnen.
+[X_PADDING=20]*Sie können den X_PADDING für jede Textzeile so einstellen, dass sie ein wenig rechts beginnt
+[X_PADDING=20;COLOR=0xFF0000]*Sie können ganze Zeilen mit COLOR=0xRRGGBB einfärben (optional: Sie können das Alpha setzen, wenn Sie 0xRRGGBBAA verwenden)
+[X_PADDING=20;COLOR=0x0000FF;FONT_SIZE=30]*Es ist möglich, HUUUUGE TEXT LINES zu schreiben
+[X_PADDING=32;COLOR=0x0000FF;FONT_SIZE=40]with FONT_SIZE
+[Y_PADDING=20]*Den Y_PADDING können Sie auch so einstellen, dass der Text weiter von der vorherigen Zeile entfernt beginnt.
+[IMG=d:/ymir work/ui/wiki/divider_small.tga; Y=246; CENTER_ALIGN]
+[RIGHT_ALIGN]Rechtsbündig gibt es auch ;)
+[Y_PADDING=30]Bei Bildern müssen Sie den Pfad im IMG-Token angeben, dann können Sie seine (lokale) Position mit X- und Y-Token festlegen. Wenn Sie 
+Wenn Sie CENTER_ALIGN oder RIGHT_ALIGN schreiben, wird das X-Token überschrieben.
+
+[CENTER_ALIGN]Übrigens werden Token mit getrennt;
+[IMG=d:/ymir work/ui/wiki/detail_item.tga; CENTER_ALIGN; Y = 276]
+[CENTER_ALIGN; Y_PADDING=15]Wenn Sie das Bild vor dem Text schreiben, können Sie sogar auf das Bild schreiben
+[CENTER_ALIGN; Y_PADDING=190]Sonst geht es nicht ;)
+[IMG=d:/ymir work/ui/wiki/detail_item.tga; CENTER_ALIGN; Y = 477]
+
+[Y_PADDING = 190]Wenn Sie den Client nicht jedes Mal neu starten wollen, wenn Sie diesen Text ändern, kopieren Sie den Wiki-Ordner von locale/en in den Ordner des Clients
+Ordner, dann benennen Sie ihn in locale in etwas anderes um (wie wiki_ oder so), dann packen Sie locale und in test_server liest er 
+die Dateien aus dem Ordner des Clients.
+
+[CENTER_ALIGN]Sobald das erledigt ist, müssen Sie nur noch die Kategorie ändern, um die bearbeiteten Texte zu sehen.
+
+[COLOR=0xFF0000;FONT_SIZE=21]Ja, und vergessen Sie nicht, die Locale wieder einzustellen, wenn Sie fertig sind (:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[RIGHT_ALIGN]Wenn Sie sich fragen, warum der Scrollbalken so lang ist:
+[RIGHT_ALIGN]*Wegen der Leerzeilen am Ende der Datei

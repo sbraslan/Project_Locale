@@ -1,0 +1,83 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/nemere.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 100 - 105
+*Eintrittskarte: *Passageticket:
+[IMG=d:/ymir work/ui/wiki/rahmen.tga; Y=5; X=460]
+[IMG=d:/ymir work/ui/wiki/71095.tga; Y=15; X=482]
+
+
+[X_PADDING=469]Passageticket
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Der Nemere's Watchtower hat eine Abklingzeit von 3 Stunden.
+*Der Nemere's Watchtower kann mit oder ohne Gruppe betreten werden.
+*Der Wachturm des Nemere hat ein Zeitlimit von 60 Minuten.
+*Jeder Spieler benötigt ein Passageticket.
+
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=150; CENTER_ALIGN]
+[COLOR=ef4f00;FONT_SIZE=15]Level 1
+
+[X_PADDING=20]Alle Monster töten.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 2
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=240; X=490]
+[IMG=d:/ymir work/ui/wiki/30331.tga; Y=246; X=496]
+
+[X_PADDING=20]Töten Sie das Monster, bis Sie den Frostschlüssel fallen lassen.
+[X_PADDING=20]Aktivieren Sie den richtigen Frostschlüssel.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 3
+
+[X_PADDING=20]Töten Sie alle Monster.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 4
+
+[X_PADDING=20]Töten Sie alle Ungeheuer.
+[X_PADDING=20]Dort müssen Sie 2 Wellen von Monstern töten.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 5
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=460; X=490]
+[IMG=d:/ymir work/ui/wiki/30332.tga; Y=466; X=497]
+
+[X_PADDING=20]Töten Sie Monster, bis Sie Nordsterne fallen lassen.
+[X_PADDING=20]Ziehen Sie die Nordsterne auf die arktischen Würfel, bis alle weg sind.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 6
+
+[X_PADDING=20]Töten Sie alle Monster.
+[X_PADDING=20]Töten Sie Metin der Kälte.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 7
+
+[X_PADDING=20]Töten Sie den richtigen Szel.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 8
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=680; X=490]
+[IMG=d:/ymir work/ui/wiki/30333.tga; Y=686; X=496]
+
+[X_PADDING=20]Töten Sie das Monster, bis Sie den Frostblumenschlüssel fallen lassen.
+[X_PADDING=20]Aktivieren Sie den richtigen Frostblumen-Schlüssel.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 9
+
+[X_PADDING=20]Töten Sie den nördlichen Drachenpfeiler.
+[X_PADDING=20]Klicken Sie auf den Eislöwen.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 10
+
+[X_PADDING=20]Töten Sie Nemere.
+[IMG=d:/ymir work/ui/wiki/Nemere.tga; Y=750; X=402]
+
+
+

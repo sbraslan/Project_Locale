@@ -1,0 +1,73 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/zodiactemple.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 90
+*Eintrittskarte: 12 Animasphären
+
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Der Zodiac-Tempel hat keine Abklingzeit, aber Sie benötigen 12 Animasphären pro Lauf.
+*Jeder Spieler erhält jede Stunde 1 Animasphere, egal ob online oder offline.
+*Jeder Premium-Spieler erhält jede Stunde 2 Animasphären, egal ob online oder offline.
+*Mit einem Animasphären-Gutschein können Sie 12 Animasphären erhalten.
+*Der Dungeon kann mit oder ohne Gruppe betreten werden.
+*Es sind jeden Tag zwei Portale geöffnet, und sonntags sind alle 12 Portale geöffnet.
+*Wenn Sie im Zodiac-Tempel sterben, brauchen Sie ein Prisma der Wiedergeburt, um wieder zu leben.
+*Es gibt 40 verschiedene Level und für jedes Level haben Sie 10 Minuten Zeit.
+*Wenn Sie in einem Lauf schnell sind, gibt es die Möglichkeit, Level zu überspringen.
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=185; CENTER_ALIGN]
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1 (Level 1-33)
+
+[X_PADDING=20]Sie erhalten eine zufällige Aufgabe, die Sie in einer vorgegebenen Zeit erledigen müssen.
+[X_PADDING=20]Sie können Level überspringen, wenn Sie bestimmte Etagen sehr schnell abschließen.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2 (Level 34)
+
+[X_PADDING=20]Töten Sie den jeweiligen Zodiac-Boss.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 3 (Level 35-39)
+
+[X_PADDING=20]Töten Sie den rechten Metin-Stein, um mit Insignien belohnt zu werden.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 4 (Level 40)
+
+[X_PADDING=20]Sie können Insignien beim Zodiac-Händler kaufen (50 Stück für 12.500.000 Yang).
+[X_PADDING=20]Sie brauchen sie für den Zodiac-Kalender.
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Der Kalender:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=500; CENTER_ALIGN]
+
+Um ein Kästchen im Kalender anzukreuzen, sind 50 Wächter- und Sternzeicheninsignien erforderlich.
+Durch Klicken in das Kästchen wird das Feld markiert. Dann werden die 100 Insignien aus Ihrem 
+Inventar entfernt und im Kalender erscheint ein Häkchen in dem entsprechenden Feld.
+
+
+Um den Aventurin-Schatz zu erhalten, müssen alle grünen Kästchen angekreuzt werden. Hierfür müssen insgesamt 
+1.500 Wächter-Insignien und 1.500 Zodiac-Insignien benötigt. Jede Wächter-Insignie wird x250 benötigt, 
+während jedes Zodiac-Abzeichen x300 benötigt wird. Wenn alle grünen Kästchen angekreuzt sind, können Sie die 
+Belohnung erhalten, indem Sie auf die grüne Schaltfläche unten links im Kalender klicken.
+
+
+Um den Aureolin-Schatz zu erhalten, müssen alle gelben Kästchen angekreuzt werden. Hierfür müssen insgesamt 
+1.500 Wächter-Insignien und 1.500 Zodiac-Insignien benötigt.
+Für jede Wächter-Insignie werden 250 Stück benötigt, für jede Zodiac-Insignie werden 300 Stück benötigt.
+Wenn alle gelben Kästchen angekreuzt sind, können Sie die Belohnung erhalten, indem Sie auf die gelbe Schaltfläche 
+unten links im Kalender klicken.
+
+
+Erst wenn alle grünen und gelben Kästchen angekreuzt sind, können Sie die dritte mögliche Belohnung erhalten. 
+Den Astralschatz. Sie erhalten jeden Astralschatz, wenn alle Kästchen angekreuzt sind.
+Es ist auch möglich, dass z. B. die grünen Kästchen dreimal angekreuzt wurden und 
+die gelben nur einmal angekreuzt wurden. In diesem Fall erhalten Sie nur einen Astralschatz.
+Wenn Sie aber die gelben Kästchen zweimal ankreuzen, erhalten Sie zwei weitere Astralschätze, ohne die grünen Kästchen erneut anzukreuzen.
+können Sie den Astralschatz erhalten, indem Sie auf die Schaltfläche unten rechts im Kalender klicken.
+
+
+

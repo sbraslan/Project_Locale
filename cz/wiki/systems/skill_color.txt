@@ -1,0 +1,51 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/skilcolor.tga]
+[CENTER_ALIGN]Das Skill Color System führt mehr Individualität für Ihre Skills ein. 
+[CENTER_ALIGN]Passen Sie alle mit speziellen Farben an...
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Die Mission 'Passe dich an?'.
+*2. Wie man alle seine Fähigkeiten anpasst.
+*3. Anpassbare Felder & coole Kombinationen.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=100; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Die Mission 'Passen Sie sich an?
+
+Beschreibung: Gehen Sie zum Gaya-Händler.
+Aufgabe: Zerstöre 250 Metinstones über 85Lv.
+Belohnung: Sie haben die Erlaubnis, die Farbpalette für eine bestimmte Fertigkeit zu ändern.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=200; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. So passen Sie alle Ihre Fähigkeiten an.
+
+Mit einer Färbung können Sie 1 Fertigkeit auswählen, um sie vollständig anzupassen (einschließlich Buffi-Fertigkeiten). Wenn Sie die Farbpalette freigeschaltet haben, 
+klicken Sie mit der rechten Maustaste darauf und wählen Sie alle Farben aus, die Sie für Ihren Skill mögen.
+Sie können die Fertigkeiten jederzeit auf ihre Standardfarbe zurücksetzen, indem Sie auf die Schaltfläche "Standard" klicken.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=295; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Anpassbare Felder & coole Kombinationen.
+
+Ein Skill setzt sich aus der Kombination vieler Felder zusammen. Zum Zwecke der Individualität haben wir jeden Skill 
+jede Fertigkeit in 5 verschiedene Felder unterteilt, die Sie anpassen können, so dass Sie insgesamt eine zu 100% anpassbare Fertigkeit erhalten.
+Wenn Sie 1 von 5 Feldern ändern, bedeutet das nicht, dass Ihr Skill zu 100% die von Ihnen gewählte Farbe hat. 
+Nur ein Teil davon wird es sein, also fangen Sie an, mit den Farben zu spielen...
+
+[IMG=d:/ymir work/ui/wiki/divider_small.tga; Y=410; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]3.1 Coole Kombinationen.
+
+[X_PADDING=20]*0% Rot + 0% Grün + 0% Blau = Schwarz.
+[X_PADDING=20]*100% Rot + 100% Grün + 100% Blau = Weiß.
+[X_PADDING=20]*100% Rot + 100% Grün + 0% Blau = Gelb.
+[X_PADDING=20]*100% Rot + 0% Grün + 100% Blau = Violett.
+[X_PADDING=20]*0% Rot + 100% Grün + 100% Blau = Hellblau.
+[X_PADDING=20]*50% Rot + 50% Grün + 50% Blau = Grau.
+
+[X_PADDING=20]Und so weiter... Immer wieder neu einfärben!
+
+

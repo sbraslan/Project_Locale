@@ -1,0 +1,42 @@
+## BEGIN ##
+Version: v22.0.6.4
+Date: 06.03.2022
+## UPDATE ##
+- Gildenspende überarbeitet [P2P fix]
+- Packet Flood Check implementiert
+- Flower Event eingefügt
+- Shop Search Entity -> Nun kann man alle Shops der gesamten Map durchsuchen
+- Global-Chat: Empire-Flagge eingefügt
+- HitRange [Hydra-Dungeon] fix
+- Chat Optionen [Einstellmöglichkeiten im Chat] eingefügt
+- Schlangenwaffe/rüstung Zufällige Werte Erweiterung eingefügt!
+- div. Fixxes
+## END ##
+
+## BEGIN ##
+Version: v22.0.6.3
+Date: 24.02.2022
+## UPDATE ##
+- PatchNotes GUI anpassung [Textart]
+- Pet-System: implementierung der 3. Seite [Wiederbelebung/Premium]
+- Pet-System: Beschreibung der Premium Seite angepasst
+## END ##
+
+## BEGIN ##
+Version: v22.0.6.2
+Date: 23.02.2022
+## UPDATE ##
+- Initial Patchnote System eingebaut
+- Achievement System aktiviert, Button Repositioniert
+## END ##
+
+## BEGIN ##
+Version: v22.0.6.1
+Date: 20.02.2022
+## UPDATE ##
+- Minigame hinzugefügt: Monstertrio
+- Minigame hinzugefügt: Seherwettstreit
+- Tradeeffekt fix: Wird nur bei erfolgreichem Handeln angezeigt
+- Performance Update: Div Codeanpassungen für Equipment, Quickslot
+- Packetsflood Check eingebaut [Pulse Manager]: Überprüft die getätigten Packet Requests und setzt ein kleines Zeitlimit fest
+## END ##

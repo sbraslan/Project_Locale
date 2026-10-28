@@ -1,0 +1,10 @@
+[DELAY value;0]
+1. Je kunt meerdere stokken per spelletje inzetten om hetzelfde[ENTER]
+aantal kisten te winnen.[ENTER]
+[ENTER]
+2. Je kunt tot 5 Koningsstokken inzetten.[ENTER]
+[ENTER]
+3. Koningsstokken kunnen niet teruggevraagd worden zodra het spel[ENTER]
+gestart is.[ENTER]
+[ENTER]
+4. Gedetailleerdere spelinstructies kun je vinden onder 'Spelregels'.

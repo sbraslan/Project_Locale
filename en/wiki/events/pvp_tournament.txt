@@ -1,0 +1,70 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/pvptournament.tga]
+[CENTER_ALIGN;FONT_SIZE=18]PvP-Turnier
+
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen
+*2. Event-Anweisungen
+*3. Level-Bereiche
+*4. Gewinner-Belohnungen
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=120; CENTER_ALIGN]
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen:
+
+Sie können die PvP-Karte über eine Quest oder beim Kapitän betreten. 
+Jede Runde des Turniers wird zufällig sein. Man muss also gegen alle Rassen antreten und nicht nur gegen 
+deine eigene. Wenn Du die PvP-Map betrittst, sprich mit dem Admiral Angmur, um Dich für das PvP-Turnier anzumelden.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=210; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Anweisungen für das Ereignis
+
+Sobald Sie in die Spezialkarte teleportiert werden, auf der das Event stattfindet, gehen Sie in die Mitte der Karte.
+Dort finden Sie den Admiral Angmur, den Sie ansprechen müssen, um sich zu registrieren.
+Um es für jeden Spieler fair zu gestalten, wird das PvP in mehreren verschiedenen Levelbereichen durchgeführt.
+Abhängig von Ihrem Level werden Sie in einen Levelbereich eingeteilt und nun ist es an der Zeit, dass Sie Ihre Items einsammeln.
+Es gibt 4 verschiedene Arenen, in denen die PvP-Kämpfe einzeln ausgetragen werden.
+Wenn der Admiral Angmur eine freie Arena für Sie und Ihren Gegner findet, werden Sie automatisch hinein teleportiert.
+
+Wenn Sie in die Arena teleportiert werden, haben Sie 10 Sekunden Zeit, Ihre Messer zu schärfen.
+Während dieser Wartezeit dürfen Sie sich nur aufrüsten und vorbereiten, aber nicht bewegen oder kämpfen.
+Die Runden sind 'Best of 3', d.h. Sie brauchen nur 2 aufeinanderfolgende Vitories.
+Das PvP-Turnier ist 'Knock-Out', d.h. es gibt nur einen endgültigen Gewinner (aus jedem Level-Bereich).
+
+Während Ihres Kampfes sind die folgenden Gegenstände/Funktionen deaktiviert:
+
+*Roter Trank (S), (M) und (L)
+*Sonnenelixier (S), (M) und (L)
+*Mounts
+*Haustiere
+*Buffi
+*Team-Buffs
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=525; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Level-Bereiche
+
+Damit jeder Spieler teilnehmen kann, ist das PvP-Turnier in 5 verschiedene Levelbereiche unterteilt:
+
+*Level 35-60
+*Level 61-75
+*Level 76-95
+*Level 96-105
+*Level 106-115
+
+Jeder Levelbereich wird mit 1 Endsieger abgeschlossen.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=690; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Event-Belohnungen:
+
+Die PvP-Event-Belohnungen werden normalerweise im "Events"-Bereich des Forums angekündigt.
+Sie hängen von den Bedürfnissen der Spieler ab und ändern sich von Event zu Event.
+
+
+

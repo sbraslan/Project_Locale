@@ -1,0 +1,17 @@
+1	Boss-Hunt!	noch Benötigt: %s	Monster: |cffff9d9d|H|h%s|h|r	Töte den |cffff9d9d|H|h%s|h|r!	Beende die Mission, um deine Belohnung zu	erhalten.
+2	Best Fighter!	noch Benötigt: %s	Mindestlevel: |cffff9d9d|H|h%s|h|r	Besiege Spieler mit dem Mindestlevel |cffff9d9d|H|h%s|h|r	Beende die Quest, um deine Belohnung zu	erhalten.
+3	Maximum Damage!	Verbleibender Schaden: %s	Monster: |cffff9d9d|H|h%s|h|r	Sammle Schaden |cffff9d9d|H|h%s|h|r	mit gleichem oder höherem Schaden, um die	Quest abzuschließen.
+4	Sharp Blades!	Verbleibender Schaden: %s	Mindeststufe: |cffff9d9d|H|h%s|h|r	Triff Spieler mit einer höheren Stufe als |cffff9d9d|H|h%s|h|r	mit gleichem oder höherem Schaden, um die Quest	abzuschließen.
+5	Pearl Collector!	Zu verwendende(s) Objekt(e): %s	Objekt: |cffff9d9d|H|h%s|h|r	Verwenden Sie |cffff9d9d|H|h%s|h|r	um die Mission zu erfüllen und wertvolle	Belohnungen zu erhalten.
+6	Rich Citizen!	Zu verwendende(s) Objekt(e): %s	Objekt: |cffff9d9d|H|h%s|h|r	Verkaufe |cffff9d9d|H|h%s|h|r	um die Mission zu erfüllen und wertvolle	Belohnungen zu erhalten.
+7	Crafter!	Noch Herzustellende Objekt(e): %s	Objekt: |cffff9d9d|H|h%s|h|r	Veredle ein|cffff9d9d|H|h%s|h|r	um die Mission zu erfüllen und wertvolle	Belohnungen zu erhalten.
+8	Jeweller	Noch Herzustellende Objekt(e): %s	Objekt: |cffff9d9d|H|h%s|h|r	Veredle ein |cffff9d9d|H|h%s|h|r	um die Mission zu erfüllen und wertvolle	Belohnungen zu erhalten.
+9	Destroy!	Noch zu zerstörende Objekt(e): %s	Objekt: |cffff9d9d|H|h%s|h|r	Zerstöre |cffff9d9d|H|h%s|h|r	um die Mission zu erfüllen und wertvolle	Belohnungen zu erhalten.
+10	Help the Biologist!	noch zu sammelnde Objekt(e): %s	Objekt: |cffff9d9d|H|h%s|h|r	Sammel |cffff9d9d|H|h%s|h|r	um die Mission zu erfüllen und wertvolle	Belohnungen zu erhalten.
+
+11	Grilled Fish!	Gebratener Fisch: %s	Fischen:	Jeder Fisch	brate jeden Fisch	und verdiene dir unschätzbare Belohnungen	für deinen Charakter.
+12	Dead Sea!	Fische fangen: %s	Fischen:	Beliebiger Fisch	Fangen Sie einen beliebigen Fisch, um zu vervollständigen	und verdiene dir unschätzbare Belohnungen	für deinen Charakter.
+13	Treasuremaster!	Yang zu ausgeben: %s	Ausgeben für: beliebiges Objekt Yang	ausgeben, um zu vervollständigen	und verdiene dir unschätzbare Belohnungen	für deinen Charakter.
+14	Pirate!	Yang Farmen: %s	Füllen von:	Du erhälst von jedem Monster Yang	sammle das ganze Yang ein	und verdiene dir unschätzbare Belohnungen.
+15	Dangerous Dungeon!	Schablonen zum Ausfüllen: %s	Dungeon:	Dämonenturm Schließe den Dungeon ab, um die	Belohnung für deinen Charakter	zu erhalten.
+16	Catch the King!	Übrig gebliebene Spiele: %s	Spiel:	Fangen Sie den König Beenden Sie das Spiel, um die	Belohnung für deinen Charakter	zu erhalten.

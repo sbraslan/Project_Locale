@@ -1,0 +1,38 @@
+
+[BANNER_IMG = ]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 75
+*Eintrittskarte: Schrumpfkopf
+[RIGHT_ALIGN]Schrumpfkopf
+[IMG=d:/ymir work/ui/wiki/30319.tga; Y=5; X=493]
+
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Du hast nur 15 Minuten Zeit, um den Dungeon zu beenden.
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=145; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Zerstören Sie den Schleim Metin.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Zerstören Sie alle Monster.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 3
+
+[X_PADDING=20]Sehen Sie sich die Stele an.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 4
+
+[X_PADDING=20]Zerstören Sie alle Metinstones.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 5
+
+[X_PADDING=20]Füllen Sie den Becher mit Schleim und bringen Sie ihn zur Stele! 
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 6
+
+[X_PADDING=20]Besiegen Sie die Schleimkönigin!

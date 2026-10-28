@@ -1,0 +1,51 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/thranduils.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 110
+*Eintrittskarte: Passage Ticket+
+[RIGHT_ALIGN]Durchgangsticket+
+[IMG=d:/ymir work/ui/wiki/93264.tga; Y=5; X=485]
+
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Thranduils Höhle hat eine Abklingzeit von 180 Minuten.
+*Der Dungeon kann mit oder ohne eine Gruppe betreten werden.
+*Es besteht eine 10%ige Chance, dass der Wächter des Waldes am Ende des Dungeons erscheint.
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=132; CENTER_ALIGN]
+[COLOR=ef4f00;FONT_SIZE=15]Level 1
+
+[X_PADDING=20]Beschwören Sie 100 Monster innerhalb von 90 Sekunden. Durch das Töten von Monstern spawnen mehr und mehr.
+[X_PADDING=20]Für jedes getötete Monster erscheint die doppelte Anzahl.
+[X_PADDING=20]Sobald 100 Monster beschworen wurden, haben Sie 60 Sekunden Zeit, sie alle zu töten.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 2
+
+[X_PADDING=20]Zerstören Sie den rechten Metin-Stein.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 3
+
+[X_PADDING=20]Sammeln Sie die Schlüssel des Waldes bei den kommenden Monsterwellen ein. 
+[X_PADDING=20]Die Schlüssel des Waldes werden benötigt, um Sinarins Nachkommen zu zerstören.
+[X_PADDING=20]Jeder Schlüssel zieht 10% des Lebens der Nachkommenschaft ab.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 4
+
+[X_PADDING=20]Sindarin töten.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 5
+
+[X_PADDING=20]Überleben Sie 3 Minuten und besiegen Sie alle Monster. Alle 30 Sekunden erscheint eine Saze Zone auf dem Boden. 
+[X_PADDING=20]Wenn Sie diese nicht rechtzeitig erreichen, startet das Level neu.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 6
+
+[X_PADDING=20]Besiegen Sie alle 3 Monsterwellen innerhalb von 3 Minuten. Wenn Sie scheitern, starten Sie das Level neu.
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 7
+
+[X_PADDING=20]Besiegen Sie Thranduil.
+[X_PADDING=20]Nachdem Thranduil besiegt wurde, besteht eine 10%ige Chance, dass Sie den Wächter des Waldes beschwören werden. 
+[X_PADDING=20]Von ihm können Sie die neue PvP-Ausrüstung herstellen.
+

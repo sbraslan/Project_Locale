@@ -1,0 +1,17 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/hexachest.tga]
+[CENTER_ALIGN;FONT_SIZE=18]Hexagonale Schatztruhe
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=65; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen:
+
+Während das Ereignis aktiv ist, haben Sie die Möglichkeit, Hexagonal Treasure Chest als Alternative Drop abzulegen.
+Innerhalb des Bereichs von +/- 15 Level werden Monster sie zufällig fallen lassen.
+
+Bitte beachten Sie: 
+Solche 'Alternative' Events können spontan, ohne langfristige Ankündigung, aktiviert werden. 
+Behalten Sie das Forum im Auge...

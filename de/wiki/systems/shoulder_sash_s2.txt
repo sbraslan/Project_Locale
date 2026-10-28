@@ -1,0 +1,81 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/shoulder.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Die verschiedenen Arten von Schulterbandn und wie man eine erhält
+*2. Wie man eine Schulterband verbessert
+*3. Wie man eine Waffe zur Schulterband hinzufügt
+*4. Wie man die Boni von einer Schulterband entfernt
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=80; CENTER_ALIGN]
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Die verschiedenen Arten von Schärpen und wie man eine Schärpe erhält
+
+[COLOR=ef4f00;FONT_SIZE=15]1.1 Die Schulterbandn:
+Es gibt 4 verschiedene Schulterbandn:
+*Lord-Schulterband
+*Meister-Schulterband
+*Souverän-Schulterband
+*Königliches-Schulterban
+
+Der Unterschied zwischen den Schulterbandn ist nur das Aussehen.
+[IMG=d:/ymir work/ui/wiki/divider_small.tga; Y=250; CENTER_ALIGN]
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.2 Woher bekommt man ein Schulterband?
+Die Schulterbänder kann bei Theowahdan mit verschiedenen Umhängen hergestellt werden
+Die Umhänge können von den Metinsteinen am Kap Drachenfeuer, in der Nephritbucht, 
+Donnergebirge und Gautama-Klippe gedroppt werden.
+Es gibt 4 verschiedene Umhänge aus dennen man 4 verschiedene Schulterbänder herstellen kann:
+*10x Grüner Mantel -> Lord-Schulterband
+*10x Violetter Mantel -> Meister-Schulterband
+*10x Blauer Mantel -> Souveränes-Schulterband
+*10x Gelber Mantel -> Königliches-Schulterband
+Zum Herstellen der Schulterbänder benötigen Sie 250.000 Yang und 10x Umhang einer Farbe, die Herstellung scheitert nicht.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=400; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Wie man eine Schulterband verbessert
+
+[COLOR=ef4f00]Die Shoulder Sash hat 4 verschiedene Stufen:
+*basic
+*Fein
+*edel
+*angepasst
+
+Zwei Schulterbänder der gleichen Stufe können bei Theowahdan miteinander kombiniert werden, um eine höhere Stufe zu erhalten.
+Beim Kombinationsvorgang wird das obere Schulterband aufgewertet und das untere zerstört.
+Die Aufwertung der Schulterbänder kann fehlschlagen.
+Es ist möglich, die Schulterbänder im Kombinationsfenster mit Drag and Drop oder "ALT + linker Mausklick" hinzuzufügen.
+Eine benutzerdefinierte Schulterband kann mit einer anderen benutzerdefinierten Schulterband kombiniert werden, um die maximalen 25% zu erhalten.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=620; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. So fügen Sie der Schulterband eine Waffe hinzu
+
+Sie können die Boni Ihrer Waffe zu Ihrem Schulterband hinzufügen.
+Sie können Ihre Waffe zu einem Schulterband bei Theowahdan unter Einschluss der Boni hinzufügen.
+> Die Waffe wird bei diesem Vorgang zerstört!
+
+Das Schulterband gibt Ihnen nur einen bestimmten %-Anteil der Boni.
+*Schulterband (einfach) nimmt 1% der Boni von der Waffe auf.
+*Schulterband (fein) absorbiert 5% der Boni der Waffe.
+*Schulterband (edel) absorbiert 10 % der Boni der Waffe.
+*Schulterband (kundenspezifisch) absorbiert 11 - 25% der Boni der Waffe.
+
+Die Boni werden nach unten gerundet.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=830; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Wie man die Boni von einem Schulterband entfernt
+Wenn Sie eine falsche Waffe zu Ihrem Schulterband hinzufügen oder die Schulterband die falschen Boni hat, gibt es nur 1 Möglichkeit:
+Die Boni Ihrer Schulterband mit dem Zertifikat der Umkehrung zu entfernen, das Sie im Itemshop kaufen können.
+Das Zertifikat der Umkehrung entfernt alle Boni von der Schulterband.
+Sie erhalten die Waffe, die von der Schulterband absorbiert wurde, nicht zurück.
+

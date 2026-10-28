@@ -1,0 +1,28 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/apedungeon.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 35 - 60
+*Eintrittskarte: Kraut des Affen
+[IMG=d:/ymir work/ui/wiki/rahmen.tga; Y=5; X=460]
+[IMG=d:/ymir work/ui/wiki/31064.tga; Y=15; X=482]
+
+
+[X_PADDING=467]Kraut des Affen
+[COLOR=0xffd700;FONT_SIZE=15]Eigentümlichkeit:
+*Das Affenversteck hat eine Abklingzeit von 1 Stunde.
+*Das Affenversteck kann mit oder ohne Gruppe betreten werden.
+*Das Affenversteck hat ein Zeitlimit von 60 Minuten.
+*Jeder Spieler benötigt eine Herde normaler Affen.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=148; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Zerstören Sie alle 6 Metinstones im Raum.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Besiegen Sie den Affenlord und seine Kameraden
+[IMG=d:/ymir work/ui/wiki/Affen-Lord.tga; Y=160; X=320]

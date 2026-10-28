@@ -1,0 +1,38 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/meleyshort.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 75
+*Eintrittskarte: Man braucht keine Gruppe, aber man muss einer Gilde angehören
+
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Meley's Hort hat eine Abklingzeit von 180 Minuten.
+*Sie müssen in einer Gilde sein, um den Dungeon zu betreten und Sie brauchen mindestens 4 Charaktere.
+*Sie müssen Ihre Belohnung aus der Truhe am Ende des Dungeons wählen. Es gibt zwei Truhen, aus denen man wählen kann.
+*Bis zu 16 verschiedene Charaktere können den Dungeon betreten.
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=135; CENTER_ALIGN]
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Beschädigen Sie die Drachenstatuen, bis sie nur noch 75% ihrer HP haben. 
+[X_PADDING=20]Danach erscheint ein oranger Schild über der Statue und sie kann nicht weiter beschädigt werden.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Beschädigen Sie die Drachenstatuen, bis sie nur noch 50% ihrer HP haben. 
+[X_PADDING=20]Alle zwei Minuten erscheinen vier Dracheneier und solange sie am Leben sind, erhalten die Statuen keinen Schaden.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 3
+
+[X_PADDING=20]Es erscheinen vier Drachenwächter-Idall, die besiegt werden müssen. Die Drachenstatuen können dann 
+[X_PADDING=20]bis zu 0% beschädigt werden. Vier Dracheneier erscheinen alle zwei Minuten und solange sie am Leben sind, 
+[X_PADDING=20]erhalten die Statuen keinen Schaden. Wenn sie 0% HP erreichen, werden die Statuen grün.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 4
+
+[X_PADDING=20]Sobald alle vier Drachenstatuen 0% HP erreicht haben, müssen vier Spieler 
+[X_PADDING=20]innerhalb von 10 Sekunden einen Drachenfeuerring auf die Statuen ziehen. Meley ist besiegt und die Statuen verschwinden. 
+[X_PADDING=20]Danach erscheint die Goldene Drachentruhe, aus der Sie Ihre Belohnung wählen können.
+
+

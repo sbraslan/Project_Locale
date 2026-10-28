@@ -1,0 +1,40 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/gaya.tga]
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen.
+*2. Wie kann ich Gaya bekommen?
+*3. Was kann ich mit Gaya kaufen?
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=80; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen.
+
+Sie können Ihr aktuelles Gaya-Guthaben links neben Ihrem Yang-Guthaben sehen.
+Gaya kann mit einem Gaya-Gutschein vom Gaya-Markt gehandelt werden.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=165; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Wie kann ich Gaya erhalten?
+
+Gaya kann beim Gaya-Händler mit 10 Edelsteinen, 500.000 Yang und 1 Stein +0 - 3 hergestellt werden.
+Es gibt die Möglichkeit, 10 Gaya auf einmal herzustellen, dazu benötigt man 100 Edelsteine, 5.000.000 Yang und 10 Steine +0 - 3.
+Das Herstellen von Gaya ist immer 100% und kann nicht scheitern.
+
+[IMG=d:/ymir work/ui/wiki/divider_small.tga; Y=260; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]2.1 Wie kann ich Edelsteine bekommen?
+
+Edelsteine können von den meisten Bossen und Boss-Truhen erhalten werden, auch von Events.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=330; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Was kann ich mit Gaya kaufen?
+
+Mit Gaya können Sie einige wertvolle Gegenstände auf dem Gaya-Markt kaufen, der immer 12 Gegenstände hat.
+
+
+
+

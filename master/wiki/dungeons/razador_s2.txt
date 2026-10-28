@@ -1,0 +1,62 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/razador.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 100 - 105
+*Eintrittskarte: *Passageticket:
+[IMG=d:/ymir work/ui/wiki/rahmen.tga; Y=5; X=460]
+[IMG=d:/ymir work/ui/wiki/71095.tga; Y=15; X=482]
+
+
+[X_PADDING=469]Passageticket
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Die Rote Drachenfestung hat eine Abklingzeit von 3 Stunden.
+*Die Rote Drachenfestung kann mit oder ohne Gruppe betreten werden.
+*Die Rote Drachenfestung hat ein Zeitlimit von 60 Minuten.
+*Jeder Spieler benötigt ein Passageticket.
+
+[CENTER_ALIGN;COLOR=0xffd700]Es ist immer zufällig, welches Level man als nächstes bekommt, das beinhaltet nicht den Boss!
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=170; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 1
+
+[X_PADDING=20]Alle Monster töten.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 2
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=255; X=490]
+[IMG=d:/ymir work/ui/wiki/30329.tga; Y=261; X=496]
+
+[X_PADDING=20]Töten Sie alle Monster, bis Sie das goldene Zahnrad fallen lassen
+[X_PADDING=20]Ziehen Sie das Goldene Zahnrad an der Isfet-Stele, bis Sie das richtige bekommen
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 3
+
+[X_PADDING=20]Töten Sie alle Monster.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 4
+
+[X_PADDING=20]Ignator töten.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 5
+[IMG=d:/ymir work/ui/wiki/rahmen_small.tga; Y=455; X=490]
+[IMG=d:/ymir work/ui/wiki/30306.tga; Y=461; X=496]
+
+[X_PADDING=20]Töten Sie alle Monster, bis Sie die Maat-Steine fallen lassen.
+[X_PADDING=20]Ziehen Sie die Maat-Steine auf alle 7 Isfet-Stelen, bis alle Isfet-Stelen weg sind.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 6
+
+[X_PADDING=20]Töten Sie den Fegefeuer-Metin.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Level 7
+
+[X_PADDING=20]Töten Sie Razador.
+[IMG=d:/ymir work/ui/wiki/Razador.tga; Y=520; X=402]
+
+

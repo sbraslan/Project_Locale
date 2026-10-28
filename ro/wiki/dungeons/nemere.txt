@@ -1,0 +1,44 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner_weapons.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 95-109
+*Eintrittskarte: Eis-Ticket
+[RIGHT_ALIGN]Eis-Ticket
+[IMG=d:/ymir work/ui/wiki/31089.tga; Y=5; X=500]
+
+[COLOR=0xffd700;FONT_SIZE=15]Eigentümlichkeit:
+*Neemere's Watchtower hat eine 90-minütige Abklingzeit.
+*Der Dungeon kann mit oder ohne eine Gruppe betreten werden.
+*Sie haben insgesamt 60 Minuten Zeit, um Neemeres Wachturm erfolgreich abzuschließen.
+
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=140; CENTER_ALIGN]
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Zerstören Sie alle Metins of Cold und ziehen Sie den Northstar in den Würfel.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Besiegen Sie alle Monster.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 3
+
+[X_PADDING=20]Besiegen Sie den Metinstein.
+[X_PADDING=20]Einzigartige Eigenschaft: Der Metinstone wird sich teleportieren
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 4
+
+[X_PADDING=20]Besiegen Sie Szel.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 5
+
+[X_PADDING=20]Besiegen Sie Monster, bis Sie 10x Frost-Schlüssel erhalten.
+[X_PADDING=20]Ziehen Sie die Schlüssel zum Frostigen Löwen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 6
+
+[X_PADDING=20]Besiegen Sie Nemere.
+
+

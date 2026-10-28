@@ -1,0 +1,42 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/banner_weapons.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Voraussetzungen:
+*Erforderliches Level: 95 - 109
+*Eintrittskarte: Feuer-Ticket
+[RIGHT_ALIGN]Feuer-Ticket
+[IMG=d:/ymir work/ui/wiki/31089.tga; Y=5; X=500]
+
+[COLOR=0xffd700;FONT_SIZE=15]Eigentümlichkeit:
+*Die Rote Drachenfestung hat eine 90-minütige Abklingzeit.
+*Der Dungeon kann mit oder ohne eine Gruppe betreten werden.
+*Sie haben insgesamt 60 Minuten Zeit, um die Rote Drachenfestung erfolgreich abzuschließen.
+
+
+[CENTER_ALIGN;FONT_SIZE=18]Die Phasen:
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=145; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Besiegen Sie alle Zünder und setzen Sie die goldenen Zahnräder in die Säule.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Besiegen Sie alle Monster und ziehen Sie den Schlüssel auf die Stele.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 3
+
+[X_PADDING=20]Zerstören Sie die Metinstones in der richtigen Reihenfolge.
+[X_PADDING=20]Ein roter Pfeil über dem Metinstone wird Ihnen dabei helfen.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 4
+
+[X_PADDING=20]Besiegen Sie alle Monster.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 5
+
+[X_PADDING=20]Zerstören Sie den Metinstein. 
+[X_PADDING=20]Einzigartige Eigenschaft: Bei 45% HP wird eine Monsterwelle erscheinen. Besiegen Sie sie, um fortzufahren.
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 6
+
+[X_PADDING=20]Besiegen Sie Razador.

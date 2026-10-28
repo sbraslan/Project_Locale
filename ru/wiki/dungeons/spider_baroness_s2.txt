@@ -1,0 +1,28 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/spiderbaroness.tga]
+[COLOR=0xffd700;FONT_SIZE=15]Anforderungen:
+*Erforderliches Level: 60 - 85
+*Eintrittskarte: Arachnids Key 
+[IMG=d:/ymir work/ui/wiki/rahmen.tga; Y=5; X=460]
+[IMG=d:/ymir work/ui/wiki/30324.tga; Y=15; X=482]
+
+
+[X_PADDING=467]Arachniden Taste
+[COLOR=0xffd700;FONT_SIZE=15]Besonderheit:
+*Das Nest der Spinnenbaronin hat eine Abklingzeit von 1 Stunde.
+*Das Nest der Spinnenbaronin kann mit oder ohne eine Gruppe betreten werden.
+*Das Nest der Spinnenbaronin hat ein Zeitlimit von 20 Minuten.
+*Nur der Gruppenleiter benötigt einen Arachniden-Schlüssel.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=148; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 1
+
+[X_PADDING=20]Töten Sie den Spinnenbaron und aktivieren Sie die Arachniden-Pfeife, die er fallen lässt.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]Phase 2
+
+[X_PADDING=20]Töten Sie die Spinnenbaronin.
+[IMG=d:/ymir work/ui/wiki/Spinnenbaroness.tga; Y=160; X=320]

@@ -1,0 +1,25 @@
+MAP_1	Map 1
+MAP_2	Map 2
+MAP_1_AND_MAP_2	Map1 & Map2
+GUILDZONE_1	Guild Zone 1
+GUILDZONE_2	Guild Zone 2
+MONKEY_DUNGEON_1	Monkey Dungeon (Easy)
+MONKEY_DUNGEON_2	Monkey Dungeon (Medium)
+MONKEY_DUNGEON_3	Monkey Dungeon (Hard)
+SEUNGRYONG	Valley of Seungryong
+YONGBI_DESERT	Yongbi Desert
+MOUNT_SOHAN	Mount Sohan (Iceland)
+HWANG_TEMPLE	Hwang Temple
+DOYYUMHWAN	Doyyumhwan (Fireland)
+GHOST_FOREST	Lungsam (ghost forest)
+RED_FOREST	Red forest
+LAND_OF_GIANTS	Land of Giants
+SNAKEFIELD	Snake field
+DEVIL_TOWER	Demon Tower
+DEVILS_CATACOMB	Devil's Catacomb
+SPIDER_DUNGEON_1	Spider dungeon 1
+SPIDER_DUNGEON_2	Spider dungeon 2
+SPIDER_DUNGEON_3	Spider dungeon 3
+SKIPIA_DUNGEON_1	Den of Banishment 1
+SKIPIA_DUNGEON_2	Den of Banishment 2
+SKIPIA_DUNGEON_1_2	Den of Banishment 1 & 2

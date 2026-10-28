@@ -1,0 +1,47 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/gaya.tga]
+[CENTER_ALIGN]Das Gaya-System führt eine neue Währung in das Spiel ein, mit der wertvoller Handel betrieben werden kann.
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Allgemeine Informationen.
+*2. Wie kann ich Gaya bekommen?
+*3. Was kann ich mit Gaya kaufen?
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=90; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Allgemeine Informationen.
+
+Ihr Gaya-Guthaben ist der Betrag, der auf der linken Seite der Geldleiste steht (neben Ihrem Yang-Guthaben). 
+Sie können Gaya verwenden, um Gegenstände auf dem Gaya-Markt zu kaufen. Gaya kann nicht in anderen Charakteren bewegt werden und kann nicht gehandelt werden. 
+Gaya können Sie durch das Raffinieren von Edelsteinen beim Gaya-Händler erhalten.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=185; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Wie kann ich Gaya bekommen?
+
+Sie können 1 Gaya erhalten, indem Sie 10x Edelsteine, 500.000 Yang und einen Stein +0 - +3 an den Gaya-Händler geben 
+(Pyungmoo, Yongan, Joan). Der Vorgang kann nicht fehlschlagen. Alternativ können Sie 10x Gaya direkt herstellen, indem Sie 
+100x Edelsteine, 5.000.000 Yang und 10 Steine +0 - +3 an den Gaya-Händler geben. Auch hier kann der Vorgang nicht scheitern.
+
+[IMG=d:/ymir work/ui/wiki/divider_small.tga; Y=280; CENTER_ALIGN]
+
+[COLOR=ef4f00;FONT_SIZE=15]2.1 Wie kann ich Edelsteine bekommen?
+
+Edelsteine erhält man von:
+ 
+Häuptling Ork, Neunschwänziger, Riesenschildkröte, Flammenkönig, Spinnenkönigin, Gelber Tigergeist, 
+Todesschnitter, Spinnenbaronin, Azrael, Beran Setaou, Eishexe, Razador, Nemere, 
+König der Kristalldrachen, Jotun Thrym's Chest.
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=400; CENTER_ALIGN]
+
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Was kann ich mit Gaya kaufen?
+
+Mit Gaya können Sie Gegenstände aus einer Auswahl von 12 Gegenständen kaufen. Das wichtigste Item ist der goldene Metallic-Farbstoff. 
+Außerdem kann man einen Ring, ein Haustier und ein 14-Tage-Mount kaufen.  Der Gaya-Händler tauscht auch gerne mal die Auswahl 
+der Items, also behalten Sie den Gaya-Händler immer im Auge.
+
+
+

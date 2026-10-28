@@ -1,0 +1,122 @@
+
+[BANNER_IMG = d:/ymir work/ui/wiki/banners/105andnow.tga]
+[CENTER_ALIGN]Liebe Aeldra-Spieler,
+[CENTER_ALIGN]Wenn ihr dieses Handbuch lest, ist die Wahrscheinlichkeit groß, dass ihr euch irgendwo in 
+[CENTER_ALIGN]den Abenteuern von Aeldra. Lassen Sie sich von nun an von diesem Leitfaden den Weg zeigen...
+
+
+[COLOR=0xffd700;FONT_SIZE=15]Inhaltsliste:
+*1. Die Abenteuer nach 105Lv & dem Battlepass of the Tree
+*2. Was hat es mit diesen Kostümen auf sich?
+*3. Eine kurze Erklärung der Dungeons
+*4. Turmalin-Ausrüstung
+*5. Wie man die Affen besiegt.
+*6. Habe ich den Server jetzt fertig?
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=160; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]1. Die Abenteuer nach 105Lv & dem Battlepass of the Tree
+
+Zu diesem Zeitpunkt gelten Sie als Spieler der mittleren Stufe, da Sie kurz davor sind, die maximale Stufe zu erreichen. 
+Allerdings haben Sie wahrscheinlich bemerkt, dass die Dinge ein wenig anspruchsvoller werden...
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.1 Verzauberter Wald & Dunkler Wald
+
+Sie sind nun in der Lage, sich zu den neuen Karten "Verzauberter Wald" und "Dunkler Wald" zu teleportieren. Diese Karten sind voller 
+voller kleiner Schätze, die Sie nach und nach entdecken werden. Als erstes müssen Sie Ihre Ausrüstung anpassen, 
+denn wie bereits erwähnt: Die Dinge werden ein wenig anspruchsvoller. Die Monster hier haben keinen 
+aktiven Rassenbonus, obwohl sie mit "Erde" beschriftet sind, was bedeutet, dass ein Erd-Talisman+49 gut zu haben ist. 
+Außerdem ist ihr Schaden im Vergleich zu 90Lv-Karten deutlich erhöht, so dass Sie Ihre 'Chance zu blocken' maximieren sollten, 
+'Max. HP' & 'HP absorbieren' zu maximieren, wird sich als nützlich erweisen. Ein Legendärer Drache Onyx & Jade (vorausgesetzt, Sie haben bereits 
+Rubin+6) zusammen mit +5 Ausweich- und Verteidigungssteinen in Ihrer Rüstung stellen sicher, dass Sie am Leben bleiben, während Sie 
+Metins der Baum-Wesen farmen.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.2 Missionsbuch (königlich) ?
+
+Sie werden von nun an auch Missionsbücher (königlich) droppen. Es enthält eine Reihe von Missionen, 
+die bei erfolgreichem Abschluss belohnt werden. Die meisten der Missionen sind Dungeons-bezogen, 
+wenn Sie sich also wohlfühlen, können Sie sie aktivieren. Wenn nicht, ist es auch möglich, sie zu verkaufen. Beachten Sie, dass die 
+Belohnungen saftig sind (Legendäre Seelensteine, Bossrolle(schwer), etc...)
+
+
+[COLOR=ef4f00;FONT_SIZE=15]1.3 Battlepass des Baumes
+
+Ihr kennt den Battlepass schon, früher war er 1Lv. Hier kommt er wieder, ein wenig überarbeitet.
+Er beinhaltet 7 normale Missionen und 3 Legendäre Missionen. Die Belohnungen sind an eure Bedürfnisse angepasst, 
+also bearbeite sie so schnell wie möglich.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=580; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]2. Was hat es mit diesen Kostümen auf sich?
+
+Bis jetzt haben Sie wahrscheinlich diese 3x10%-Anfängerkostüme aufgefrischt oder Sie haben es geschafft, einige 3x15% 
+Kostümbonusse zu ergattern. Nun, Sie sind noch nicht fertig. Von Zeit zu Zeit finden spezielle Events statt, die normalerweise 
+20% Kostümbonus entweder für Ihre Waffe oder Ihre Frisur. Sie sollten anfangen, nach ihnen zu suchen...
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=680; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]3. Eine kurze Erklärung der Dungeons
+
+Sie haben soeben die Tore von Jotun Thrym und Schiffsverteidigung, den High-End-Dungeons, freigeschaltet, zusammen mit Nemere 
+& Razador von vorhin (95Lv). Es scheint, als bräuchten alle Dungeons Schlüssel... Nun, es ist nicht so dramatisch, wie Sie denken. 
+Wenn Sie sich ein Passage-Ticket [oder ein Bossraum-Ticket (Nemere)] schnappen, erhalten Sie auch Zugang zur Schiffsverteidigung 
+(da Nemere 100% blaue Kristall-Essenz fallen lässt). Dieselbe Logik: Razador lässt 100% roten Höllenquarz fallen, mit dem man die 
+Höhle der Kristalldrachen. Im Grunde genommen ketten Sie also einfach Dungeons aneinander und machen sich selbst einen erheblichen Gewinn.
+Denken Sie daran, dass die Höhle der Kristalldrachen und Jotun Thrym schadensbasierte Dungeons sind, die ein Maximum an
+Boni erfordern. Bleiben Sie mit unserem Forum in Kontakt für weitere Informationen...
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=830; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]4. Turmalin-Ausrüstung
+
+Meinen Sie nicht, dass es an der Zeit ist, diese niedrigstufigen Seelenkristall-Gegenstände loszuwerden? Das ist es in der Tat.
+Turmalin-Ohrringe und -Halskette gewähren Ihnen 15% Stärke gegen Monster und Metinstones, eine grundlegende 
+Verbesserung eures Schadens. Turmalin-Armband gewährt Ihnen 15% Stärke gegen Monster und Bosse, 
+was Ihnen erlaubt, einige High-End-Dungeons allein zu bewältigen. Generell gilt, dass Turmalin-Ausrüstung 
+zusammen mit den Feuerschuhen, dem Drachenkristall-Gürtel, dem Drachengott-Schild und dem Meeresschlangen-Helm in Badawahdan 
+(Kap-Drachen-Dorf) hergestellt. Schauen Sie auch dort nach.
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=970; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]5. Wie man diese Affen besiegt.
+
+Es wird nicht lange dauern, bis Sie auch Wukongs Tempel freischalten (Karte 110Lv), was die Art und Weise, wie Sie farmen, verfeinern wird.
+Alle Drachenstein-Alchemie +6 (für die zusätzlichen Boni), Wind-Talisman+99, Schärpen-Kostüm und Maximierung 
+Ihres Schadens werden Sie von nun an ernsthaft zu schaffen machen. Auf dieser Karte beginnen Sie mit dem Farmen großer Mengen 
+Truhe mit Vorräten, Traum- und Himmelsseelen, Truhe mit Fertigkeiten (für Ihre Spezialfertigkeiten), sowie 
+Materialien für Ihre High-End-Ausrüstung. Wenn Sie sie verkaufen oder für Ihre eigene Ausrüstung verwenden, werden Sie in beiden Fällen 
+So oder so werden Sie reich genug, um sich die oben genannten Gegenstände leisten zu können. Sie sollten sich auch fragen 
+was es mit dem Zodiac-Tempel & Thranduil auf sich hat, nicht wahr...?
+
+
+[IMG=d:/ymir work/ui/wiki/divider_long.tga; Y=1120; CENTER_ALIGN]
+
+[CENTER_ALIGN;FONT_SIZE=18;COLOR=58ADFF]6. Habe ich den Server jetzt fertig?
+
+Den maximalen Level zu erreichen, bedeutet anscheinend nicht, dass Sie alle Aspekte des Spiels durchlaufen haben. 
+Ich bin mir sicher, dass Sie das auch wissen.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]6.1 Zodiac-Tempel
+
+Einige der härtesten Abenteuer werden hier, im Zodiac-Tempel, stattfinden. Es ist an der Zeit, dass Sie sich sozialisieren 
+und sich ein Team oder eine Gilde zu suchen, die Ihnen dabei hilft. Es gibt tonnenweise neue Features, Dungeon-Etagen 
+und Belohnungen in diesem gigantischen Aspekt des Spiels, und es wird nicht einfach sein, alleine durchzukommen. Maximieren Sie 
+Ihrer Ausrüstung, das Aufrüsten all Ihrer Talismane auf +99 und das Bilden eines fähigen Teams kann Sie bis zur 40. Etage führen...
+In der Summe werden Sie bald Ihre geliebte 75Lv-Waffe loswerden und eine Zodiac-Waffe ausrollen und aufwerten. 
+Das Gleiche gilt für Ihre Rüstung. Der Umgang mit den 12 Zodiac-Göttern ist kein Zuckerschlecken, deshalb sollten Sie unbedingt 
+unser Forum für detaillierte Informationen zu konsultieren.
+
+
+[COLOR=ef4f00;FONT_SIZE=15]6.2 Thranduils Höhle
+
+Dieser Dungeon besteht aus neuen Bossen, Stufen und vielen Vielseitigkeiten. 
+Sie werden einige neue Techniken in dieser Höhle finden und vielleicht einige Kyanit-Ausrüstung? Wer weiß...
+
+
