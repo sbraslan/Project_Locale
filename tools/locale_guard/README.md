@@ -218,3 +218,33 @@ The dry-run tool has no apply mode and never writes locale files. It:
 
 Any drift, mixed newline target, encoding failure, ambiguous decision or dirty
 patch target aborts the dry run without modifying locale content.
+
+
+## Transactional runtime apply
+
+After tests, decision verification and the dry-run diff are approved, validate
+the apply gate without writing anything:
+
+    python -m tools.locale_guard.runtime_apply --root . --workspace ..
+
+No locale file is changed unless the explicit --apply switch is supplied.
+
+To apply only the 13 evidence-backed runtime decisions:
+
+    python -m tools.locale_guard.runtime_apply --root . --workspace .. --apply
+
+The apply tool:
+- rebuilds a fresh audit and fresh dry run before writing,
+- requires exactly 13 resolved changes and 7 unresolved decisions,
+- refuses dirty target locale files,
+- stores raw-byte backups under .locale_guard/backups/runtime_<token>/,
+- regenerates and SHA-checks the exact approved simulated bytes,
+- writes files atomically,
+- re-runs the audit after writing,
+- requires the runtime issue set to become exactly the 7 unresolved decisions,
+- checks encoding, BOM, newline style and simulated SHA for every changed file,
+- runs git diff --check,
+- rolls every changed file back to its raw-byte backup if any post-check fails.
+
+A successful apply creates only local working-tree changes. It never commits or
+pushes locale content automatically.
