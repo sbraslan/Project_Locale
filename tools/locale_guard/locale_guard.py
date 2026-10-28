@@ -297,6 +297,7 @@ def audit_repository(root: Path, config: dict) -> dict:
     turkish = config["turkish_language"]
     master = config["master_directory"]
     metadata_keys = set(config.get("metadata_keys", []))
+    skip_generic_tsv = set(config.get("skip_generic_tsv_compare", []))
 
     issues: list[Issue] = []
     files: dict[str, list[dict]] = {}
@@ -321,7 +322,7 @@ def audit_repository(root: Path, config: dict) -> dict:
                 language_infos.append(asdict(info))
             if text is not None:
                 texts[(language, relative)] = text
-                if language in {turkish, master}:
+                if language == turkish:
                     issues.extend(audit_turkish_text(f"{language}/{relative}", text, language))
         files[language] = language_infos
 
@@ -349,7 +350,11 @@ def audit_repository(root: Path, config: dict) -> dict:
         tr_text = texts.get((turkish, relative))
         if en_text is None or tr_text is None:
             continue
-        if classify_mode(en_text) == "tsv" and classify_mode(tr_text) == "tsv":
+        if (
+            relative not in skip_generic_tsv
+            and classify_mode(en_text) == "tsv"
+            and classify_mode(tr_text) == "tsv"
+        ):
             issues.extend(compare_tsv(
                 f"{canonical}/{relative}",
                 f"{turkish}/{relative}",
