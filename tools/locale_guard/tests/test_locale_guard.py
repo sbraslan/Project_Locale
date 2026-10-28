@@ -171,10 +171,10 @@ class LocaleGuardTests(unittest.TestCase):
     def test_repair_plan_is_read_only_and_fail_closed(self):
         plan = build_repair_plan({
             "issues": [
-                {"code": "CANONICAL_MISSING_KEY", "path": "en/itemdesc.txt"},
-                {"code": "TR_MISSING_KEY", "path": "tr/skilldesc.txt"},
-                {"code": "PRINTF_CONTRACT_MISMATCH", "path": "tr/locale_game.txt"},
-                {"code": "ENCODING_UNDECODABLE", "path": "gr/mob_names.txt"},
+                {"severity": "error", "code": "CANONICAL_MISSING_KEY", "path": "en/itemdesc.txt"},
+                {"severity": "error", "code": "TR_MISSING_KEY", "path": "tr/skilldesc.txt"},
+                {"severity": "error", "code": "PRINTF_CONTRACT_MISMATCH", "path": "tr/locale_game.txt"},
+                {"severity": "error", "code": "ENCODING_UNDECODABLE", "path": "gr/mob_names.txt"},
             ]
         })
         self.assertFalse(plan["write_enabled"])
