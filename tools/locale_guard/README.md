@@ -129,3 +129,34 @@ This prevents local editor, unpacker, code-page conversion, or line-ending
 changes from being mistaken for defects in the repository baseline.
 
 The guard never restores or rewrites a dirty file automatically.
+
+
+## Repair planning and runtime contract probe
+
+Generate a read-only repair plan:
+
+    python -m tools.locale_guard.repair_plan --root .
+
+The plan never edits locale files. It separates canonical EN backfill, Turkish
+backfill, runtime-contract review, layout review, encoding integrity, manifest
+review and informational findings.
+
+For runtime-format findings, probe the sibling project repositories from the
+Project_Locale checkout:
+
+    python -m tools.locale_guard.contract_probe --root . --workspace ..
+
+The probe scans Project_ClientSrc, Project_ServerSRC, Project_Game and
+Project_Binary read-only and writes:
+
+    .locale_guard/contract_probe.json
+
+For symbolic locale keys it searches the exact key. For numeric locale_string
+entries it derives stable literal text fragments from the EN/TR values. The
+probe is evidence collection only; it never changes source or locale files.
+
+Printf validation distinguishes:
+- argument contract differences such as %d vs %s or %lu vs %u (blocking),
+- formatting-only differences such as % d vs %d (non-blocking review),
+- literal %% (does not consume a vararg),
+- layout escapes such as \n (separate non-blocking review).
