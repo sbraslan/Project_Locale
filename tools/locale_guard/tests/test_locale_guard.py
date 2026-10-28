@@ -4,6 +4,7 @@ from pathlib import Path
 from tools.locale_guard.contract_probe import (
     base_logical_key,
     classify_evidence_path,
+    classify_match_evidence,
     evidence_strength,
     literal_fragments,
     load_locale_enum_map,
@@ -245,6 +246,34 @@ class LocaleGuardTests(unittest.TestCase):
             mapping = load_locale_enum_map(header)
             self.assertEqual(mapping["276"], "LU_RUNDE")
             self.assertEqual(mapping["282"], "AKTUELLE_TEILNEHMER")
+
+    def test_enum_definition_is_not_runtime_source_evidence(self):
+        kind = classify_match_evidence(
+            "enum_key",
+            "LU_RUNDE",
+            Path("game/src/Locale.hpp"),
+            "    LU_RUNDE = 276,",
+            "source",
+        )
+        self.assertEqual(kind, "symbol_definition")
+        self.assertEqual(
+            evidence_strength("enum_key", "LU_RUNDE", kind),
+            "definition",
+        )
+
+    def test_enum_usage_outside_definition_remains_source_evidence(self):
+        kind = classify_match_evidence(
+            "enum_key",
+            "LU_RUNDE",
+            Path("game/src/some_feature.cpp"),
+            "SendSomething(ELocaleStrings::LU_RUNDE, round);",
+            "source",
+        )
+        self.assertEqual(kind, "source")
+        self.assertEqual(
+            evidence_strength("enum_key", "LU_RUNDE", kind),
+            "strong",
+        )
 
     def test_contract_probe_separates_source_from_locale_reference(self):
         self.assertEqual(
