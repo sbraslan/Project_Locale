@@ -10,6 +10,8 @@ from tools.locale_guard.locale_guard import (
     decode_text,
     keyed_tsv_rows,
     parse_git_porcelain,
+    structural_issue_breakdown,
+    Issue,
 )
 
 class LocaleGuardTests(unittest.TestCase):
@@ -95,6 +97,18 @@ class LocaleGuardTests(unittest.TestCase):
         )
         self.assertEqual(set(rows), {"101"})
         self.assertEqual(duplicates, [])
+
+    def test_structural_issue_breakdown_groups_by_file(self):
+        rows = structural_issue_breakdown([
+            Issue("error", "TR_MISSING_KEY", "tr/a.txt", "x"),
+            Issue("error", "PROTECTED_TOKEN_MISMATCH", "tr/a.txt", "x"),
+            Issue("warning", "TR_EXTRA_KEY", "tr/b.txt", "x"),
+            Issue("info", "TR_FOREIGN_LANGUAGE_SUSPECT", "tr/a.txt", "x"),
+        ])
+        self.assertEqual(rows[0]["path"], "tr/a.txt")
+        self.assertEqual(rows[0]["total"], 2)
+        self.assertEqual(rows[1]["path"], "tr/b.txt")
+        self.assertEqual(rows[1]["total"], 1)
 
     def test_cp1250_fallback_is_lossless(self):
         data = "Příliš žluťoučký kůň".encode("cp1250")
