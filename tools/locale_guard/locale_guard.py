@@ -371,7 +371,6 @@ def structural_issue_breakdown(issues: Sequence[Issue]) -> list[dict]:
         "DUPLICATE_KEY",
         "COLUMN_COUNT_MISMATCH",
         "PRINTF_CONTRACT_MISMATCH",
-        "PRINTF_FORMAT_DIFFERENCE",
         "MARKUP_TOKEN_MISMATCH",
     }
     by_path: dict[str, collections.Counter[str]] = {}
