@@ -173,7 +173,7 @@ def classify_match_evidence(
         match_type == "enum_key"
         and normalized_path.endswith("game/src/locale.hpp")
         and re.search(
-            rf"^\\s*{re.escape(term)}\\s*=\\s*\\d+\\s*,",
+            rf"^\s*{re.escape(term)}\s*=\s*\d+\s*,",
             line,
         )
     ):
