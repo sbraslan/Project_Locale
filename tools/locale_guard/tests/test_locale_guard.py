@@ -7,6 +7,7 @@ from tools.locale_guard.locale_guard import (
     suspicious_foreign_language,
     tsv_rows,
     inspect_file,
+    decode_text,
 )
 
 class LocaleGuardTests(unittest.TestCase):
@@ -41,6 +42,39 @@ class LocaleGuardTests(unittest.TestCase):
             info, _, issues = inspect_file(path, "tr", "sample.txt")
             self.assertEqual(info.path, "sample.txt")
             self.assertTrue(all(issue.path == "tr/sample.txt" for issue in issues))
+
+    def test_utf8_is_preferred_before_legacy_fallback(self):
+        data = "Türkçe".encode("utf-8")
+        text, encoding, bom = decode_text(
+            data,
+            language="tr",
+            legacy_encodings=("cp1254",),
+        )
+        self.assertEqual(text, "Türkçe")
+        self.assertEqual(encoding, "utf-8")
+        self.assertFalse(bom)
+
+    def test_cp1251_fallback_is_lossless(self):
+        data = "Привет".encode("cp1251")
+        text, encoding, bom = decode_text(
+            data,
+            language="ru",
+            legacy_encodings=("cp1251",),
+        )
+        self.assertEqual(text, "Привет")
+        self.assertEqual(encoding, "cp1251")
+        self.assertFalse(bom)
+
+    def test_cp1250_fallback_is_lossless(self):
+        data = "Příliš žluťoučký kůň".encode("cp1250")
+        text, encoding, bom = decode_text(
+            data,
+            language="cz",
+            legacy_encodings=("cp1250",),
+        )
+        self.assertEqual(text, "Příliš žluťoučký kůň")
+        self.assertEqual(encoding, "cp1250")
+        self.assertFalse(bom)
 
 if __name__ == "__main__":
     unittest.main()
