@@ -9,6 +9,7 @@ from tools.locale_guard.locale_guard import (
     inspect_file,
     decode_text,
     keyed_tsv_rows,
+    parse_git_porcelain,
 )
 
 class LocaleGuardTests(unittest.TestCase):
@@ -65,6 +66,18 @@ class LocaleGuardTests(unittest.TestCase):
         self.assertEqual(text, "Привет")
         self.assertEqual(encoding, "cp1251")
         self.assertFalse(bom)
+
+    def test_git_porcelain_parser(self):
+        entries = parse_git_porcelain(
+            " M gr/mob_names.txt\nMM it/insult.txt\n"
+        )
+        self.assertEqual(
+            entries,
+            [
+                (" M", "gr/mob_names.txt"),
+                ("MM", "it/insult.txt"),
+            ],
+        )
 
     def test_composite_tsv_keys_are_not_false_duplicates(self):
         rows, duplicates = keyed_tsv_rows(
