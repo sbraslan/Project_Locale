@@ -373,6 +373,7 @@ def structural_issue_breakdown(issues: Sequence[Issue]) -> list[dict]:
         "CANONICAL_MISSING_KEY",
         "DUPLICATE_KEY",
         "COLUMN_COUNT_MISMATCH",
+        "STRUCTURAL_COLUMN_MISMATCH",
         "PRINTF_CONTRACT_MISMATCH",
         "MARKUP_TOKEN_MISMATCH",
     }
@@ -487,6 +488,9 @@ def compare_registered_tsv(
     token_columns = parser_spec.get("token_columns", "all_non_key")
     duplicate_policy = parser_spec.get("duplicate_policy", "error")
     column_count_policy = parser_spec.get("column_count_policy", "strict")
+    structural_columns = [
+        int(index) for index in parser_spec.get("structural_columns", [])
+    ]
 
     en_rows, en_duplicates = keyed_tsv_rows(
         en_text,
@@ -546,12 +550,39 @@ def compare_registered_tsv(
     for key in sorted(en_keys & tr_keys):
         en_columns = en_rows[key]
         tr_columns = tr_rows[key]
+
+        structural_mismatch = False
+        for structural_index in structural_columns:
+            en_structural = (
+                en_columns[structural_index].strip()
+                if structural_index < len(en_columns)
+                else ""
+            )
+            tr_structural = (
+                tr_columns[structural_index].strip()
+                if structural_index < len(tr_columns)
+                else ""
+            )
+            if en_structural != tr_structural:
+                structural_mismatch = True
+                issues.append(Issue(
+                    "error", "STRUCTURAL_COLUMN_MISMATCH", tr_path,
+                    f"Structural column {structural_index} differs from EN: "
+                    f"EN={en_structural!r} TR={tr_structural!r}",
+                    key=key,
+                    language=tr_language,
+                    column=structural_index,
+                    source_value=en_structural,
+                    target_value=tr_structural,
+                ))
+
         if column_count_policy == "strict" and len(en_columns) != len(tr_columns):
-            issues.append(Issue(
-                "error", "COLUMN_COUNT_MISMATCH", tr_path,
-                f"TSV column count differs from EN ({len(tr_columns)} vs {len(en_columns)}).",
-                key=key, language=tr_language
-            ))
+            if not structural_mismatch:
+                issues.append(Issue(
+                    "error", "COLUMN_COUNT_MISMATCH", tr_path,
+                    f"TSV column count differs from EN ({len(tr_columns)} vs {len(en_columns)}).",
+                    key=key, language=tr_language
+                ))
             continue
 
         if token_columns == "disabled":
