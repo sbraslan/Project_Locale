@@ -255,6 +255,51 @@ def git_dirty_locale_paths(
 
     return parse_git_porcelain(completed.stdout), None
 
+def git_head_blob_bytes(
+    root: Path,
+    repo_path: str,
+) -> tuple[bytes | None, str | None]:
+    try:
+        completed = subprocess.run(
+            ["git", "show", f"HEAD:{repo_path}"],
+            cwd=root,
+            capture_output=True,
+            check=False,
+        )
+    except OSError as exc:
+        return None, str(exc)
+
+    if completed.returncode != 0:
+        message = completed.stderr.decode("utf-8", errors="replace").strip()
+        return None, message or f"git show returned {completed.returncode}"
+
+    return completed.stdout, None
+
+def structural_issue_breakdown(issues: Sequence[Issue]) -> list[dict]:
+    structural_codes = {
+        "TR_MISSING_KEY",
+        "TR_EXTRA_KEY",
+        "DUPLICATE_KEY",
+        "COLUMN_COUNT_MISMATCH",
+        "PROTECTED_TOKEN_MISMATCH",
+    }
+    by_path: dict[str, collections.Counter[str]] = {}
+    for issue in issues:
+        if issue.code not in structural_codes:
+            continue
+        counter = by_path.setdefault(issue.path, collections.Counter())
+        counter[issue.code] += 1
+
+    rows = []
+    for path, counter in by_path.items():
+        rows.append({
+            "path": path,
+            "total": sum(counter.values()),
+            "codes": dict(counter),
+        })
+    rows.sort(key=lambda row: (-row["total"], row["path"]))
+    return rows
+
 def inspect_file(
     path: Path,
     lang: str,
@@ -486,6 +531,58 @@ def audit_repository(root: Path, config: dict) -> dict:
                 encoding_candidates,
             )
             issues.extend(file_issues)
+
+            anomaly_codes = {issue.code for issue in file_issues}
+            if anomaly_codes & {"ENCODING_UNDECODABLE", "NEWLINE_MIXED"}:
+                repo_path = f"{language}/{relative}"
+                head_bytes, head_error = git_head_blob_bytes(root, repo_path)
+                if head_error:
+                    issues.append(Issue(
+                        "warning", "HEAD_BLOB_UNAVAILABLE", repo_path,
+                        f"Could not read HEAD blob for anomaly diagnostics: {head_error}",
+                        language=language,
+                    ))
+                elif head_bytes is not None:
+                    worktree_bytes = path.read_bytes()
+                    worktree_sha = sha256_bytes(worktree_bytes)
+                    head_sha = sha256_bytes(head_bytes)
+
+                    if worktree_sha != head_sha:
+                        issues.append(Issue(
+                            "error", "WORKTREE_BYTES_DIFFER_FROM_HEAD", repo_path,
+                            "Working-tree bytes differ from the HEAD blob even though "
+                            "Git status may consider filters/normalization. "
+                            f"worktree_sha256={worktree_sha} head_sha256={head_sha}",
+                            language=language,
+                        ))
+
+                    if "ENCODING_UNDECODABLE" in anomaly_codes:
+                        try:
+                            _, head_encoding, _ = decode_text(
+                                head_bytes,
+                                language=language,
+                                legacy_encodings=encoding_candidates,
+                            )
+                        except UnicodeDecodeError:
+                            issues.append(Issue(
+                                "info", "HEAD_BLOB_UNDECODABLE", repo_path,
+                                "HEAD blob is also undecodable with the configured rules.",
+                                language=language,
+                            ))
+                        else:
+                            issues.append(Issue(
+                                "info", "HEAD_BLOB_DECODES", repo_path,
+                                f"HEAD blob decodes successfully as {head_encoding}.",
+                                language=language,
+                            ))
+
+                    if "NEWLINE_MIXED" in anomaly_codes:
+                        issues.append(Issue(
+                            "info", "HEAD_BLOB_NEWLINE", repo_path,
+                            f"HEAD blob newline style is {newline_style(head_bytes)}.",
+                            language=language,
+                        ))
+
             if info:
                 language_infos.append(asdict(info))
             if text is not None:
@@ -561,6 +658,8 @@ def audit_repository(root: Path, config: dict) -> dict:
         and classify_mode(texts[(canonical, relative)]) == "tsv"
     )
 
+    structural_breakdown = structural_issue_breakdown(issues)
+
     counts = collections.Counter(issue.severity for issue in issues)
     encoding_summary = {
         language: dict(collections.Counter(
@@ -577,6 +676,7 @@ def audit_repository(root: Path, config: dict) -> dict:
         "summary": dict(counts),
         "encoding_summary": encoding_summary,
         "unparsed_tsv_files": unparsed_tsv_files,
+        "structural_breakdown": structural_breakdown,
         "files": files,
         "issues": [asdict(issue) for issue in issues],
     }
@@ -629,6 +729,16 @@ def main(argv: Sequence[str] | None = None) -> int:
     unparsed = report.get("unparsed_tsv_files", [])
     if unparsed:
         print(f"unparsed TSV files: {len(unparsed)}")
+
+    structural = report.get("structural_breakdown", [])
+    if structural:
+        print("top structural issue files:")
+        for row in structural[:10]:
+            codes = ", ".join(
+                f"{code}={count}"
+                for code, count in sorted(row["codes"].items())
+            )
+            print(f"  - {row['path']}: total={row['total']} ({codes})")
 
     if errors:
         return 2
