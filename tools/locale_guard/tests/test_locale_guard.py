@@ -11,7 +11,7 @@ from tools.locale_guard.contract_probe import (
     search_terms,
 )
 from tools.locale_guard.repair_plan import build_repair_plan
-from tools.locale_guard.runtime_decision_check import verify_decisions
+from tools.locale_guard.runtime_decision_check import resolve_evidence_path, verify_decisions
 from tools.locale_guard.locale_guard import (
     cp1254_mojibake_candidate,
     protected_tokens,
@@ -339,6 +339,33 @@ class LocaleGuardTests(unittest.TestCase):
         codes = [issue.code for issue in issues]
         self.assertIn("STRUCTURAL_COLUMN_MISMATCH", codes)
         self.assertNotIn("COLUMN_COUNT_MISMATCH", codes)
+
+    def test_runtime_decision_path_resolution_allows_src_prefix(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            workspace = Path(tmp)
+            actual = (
+                workspace
+                / "Project_ClientSrc"
+                / "Src"
+                / "UserInterface"
+                / "PythonSkill.cpp"
+            )
+            actual.parent.mkdir(parents=True)
+            actual.write_text("example", encoding="utf-8")
+
+            resolved, error = resolve_evidence_path(
+                workspace,
+                "Project_ClientSrc",
+                "UserInterface/PythonSkill.cpp",
+            )
+
+        self.assertIsNone(error)
+        self.assertIsNotNone(resolved)
+        self.assertTrue(
+            resolved.as_posix().endswith(
+                "Project_ClientSrc/Src/UserInterface/PythonSkill.cpp"
+            )
+        )
 
     def test_runtime_decision_check_accepts_intrinsic_malformed_fix(self):
         plan = {
