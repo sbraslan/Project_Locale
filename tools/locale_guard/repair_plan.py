@@ -90,16 +90,21 @@ def build_repair_plan(report: dict) -> dict:
             bucket = "informational"
         categories[bucket]["issues"].append(issue)
 
-    for category in categories.values():
+    hard_categories = {"runtime_contract_review", "encoding_integrity"}
+    for name, category in categories.items():
         category["count"] = len(category["issues"])
-        category["hard_count"] = sum(
-            1 for issue in category["issues"]
-            if issue.get("severity") == "error"
+        category["hard_count"] = (
+            sum(
+                1 for issue in category["issues"]
+                if issue.get("severity") == "error"
+            )
+            if name in hard_categories
+            else 0
         )
 
-    hard_blocker_count = (
-        categories["runtime_contract_review"]["hard_count"]
-        + categories["encoding_integrity"]["hard_count"]
+    hard_blocker_count = sum(
+        categories[name]["hard_count"]
+        for name in hard_categories
     )
 
     return {
