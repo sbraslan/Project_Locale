@@ -49,6 +49,10 @@ class LocaleGuardTests(unittest.TestCase):
     def test_layout_tokens_are_separate(self):
         self.assertEqual(layout_tokens("Line 1\\nLine 2\\n"), ["\\n", "\\n"])
 
+    def test_printf_contract_ignores_literal_percent(self):
+        self.assertEqual(printf_contract_tokens("%d%%"), ["d"])
+        self.assertEqual(printf_contract_tokens("%%%d"), ["d"])
+
     def test_printf_contract_distinguishes_argument_types(self):
         self.assertEqual(printf_contract_tokens("%d %s %lu"), ["d", "s", "lu"])
         self.assertNotEqual(printf_contract_tokens("%d"), printf_contract_tokens("%s"))
@@ -154,7 +158,7 @@ class LocaleGuardTests(unittest.TestCase):
     def test_structural_issue_breakdown_groups_by_file(self):
         rows = structural_issue_breakdown([
             Issue("error", "TR_MISSING_KEY", "tr/a.txt", "x"),
-            Issue("error", "PROTECTED_TOKEN_MISMATCH", "tr/a.txt", "x"),
+            Issue("error", "PRINTF_CONTRACT_MISMATCH", "tr/a.txt", "x"),
             Issue("error", "CANONICAL_MISSING_KEY", "en/b.txt", "x"),
             Issue("info", "TR_FOREIGN_LANGUAGE_SUSPECT", "tr/a.txt", "x"),
         ])
