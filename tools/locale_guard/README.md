@@ -160,3 +160,29 @@ Printf validation distinguishes:
 - formatting-only differences such as % d vs %d (non-blocking review),
 - literal %% (does not consume a vararg),
 - layout escapes such as \n (separate non-blocking review).
+
+
+## Runtime decision verification
+
+Runtime-contract fixes are locked in:
+
+    tools/locale_guard/runtime_contract_decisions.json
+
+The manifest is read-only policy data. It separates evidence-backed decisions
+from unresolved contracts and does not modify locale files.
+
+Verify the current repair plan and every external evidence snippet before any
+future patch generation:
+
+    python -m tools.locale_guard.runtime_decision_check --root . --workspace ..
+
+The verifier fails closed when:
+- a runtime issue is missing from the decision manifest,
+- the manifest contains a stale/extra issue,
+- a current source/target value drifted,
+- an evidence file or exact evidence snippet is missing,
+- a resolved decision has no proposed value,
+- an unresolved decision accidentally proposes a value.
+
+A successful verification only means the resolved subset is eligible for a
+future dry-run patch. It never applies locale changes.
