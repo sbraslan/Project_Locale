@@ -286,7 +286,7 @@ def audit_turkish_text(display_path: str, text: str, language: str) -> list[Issu
         detected_language, counts = suspicious_foreign_language(line)
         if detected_language:
             issues.append(Issue(
-                "warning", "TR_FOREIGN_LANGUAGE_SUSPECT", display_path,
+                "info", "TR_FOREIGN_LANGUAGE_SUSPECT", display_path,
                 f"Line looks more like {detected_language.upper()} than Turkish (scores={counts}).",
                 line=line_number, language=language
             ))
@@ -553,8 +553,22 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     errors = report["summary"].get("error", 0)
     warnings = report["summary"].get("warning", 0)
-    print(f"locale-guard: errors={errors} warnings={warnings}")
+    infos = report["summary"].get("info", 0)
+    print(f"locale-guard: errors={errors} warnings={warnings} info={infos}")
     print(f"report: {Path(args.report).as_posix()}")
+
+    undecodable = [
+        issue for issue in report["issues"]
+        if issue["code"] == "ENCODING_UNDECODABLE"
+    ]
+    if undecodable and len(undecodable) <= 10:
+        print("undecodable files:")
+        for issue in undecodable:
+            print(f"  - {issue['path']}")
+
+    unparsed = report.get("unparsed_tsv_files", [])
+    if unparsed:
+        print(f"unparsed TSV files: {len(unparsed)}")
 
     if errors:
         return 2
