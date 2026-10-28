@@ -114,14 +114,16 @@
       "key_columns": [
         0
       ],
-      "token_columns": "all_non_key"
+      "token_columns": "all_non_key",
+      "duplicate_policy": "occurrence"
     },
     "locale_interface.txt": {
       "kind": "keyed_tsv",
       "key_columns": [
         0
       ],
-      "token_columns": "all_non_key"
+      "token_columns": "all_non_key",
+      "duplicate_policy": "occurrence"
     },
     "locale_string.txt": {
       "kind": "keyed_tsv",
@@ -164,8 +166,10 @@
       ],
       "token_columns": [
         1,
-        2
-      ]
+        2,
+        3
+      ],
+      "column_count_policy": "flexible"
     },
     "loading_tip_vnum.txt": {
       "kind": "keyed_tsv",
@@ -208,13 +212,13 @@
     },
     "shop_deco.txt": {
       "kind": "keyed_tsv",
-      "key_columns": [
-        0,
+      "key_exclude_columns": [
         1
       ],
       "token_columns": [
         1
-      ]
+      ],
+      "column_count_policy": "strict"
     },
     "monster_card.txt": {
       "kind": "keyed_tsv",
