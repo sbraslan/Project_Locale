@@ -42,13 +42,19 @@ class TurkceMenuV6Tests(unittest.TestCase):
             menu.github_menusu(self.root)
             fetch.assert_not_called()
 
-    def test_live_apply_menu_cannot_call_any_writer(self):
+    def test_live_apply_denied_by_outer_confirmation(self):
         with patch.object(menu, "secim_al", side_effect=["5", "G"]), \
-             patch.object(menu, "modulu_calistir") as runner, \
-             patch.object(menu, "calistir") as process:
+             patch.object(menu, "onay_iste", return_value=False), \
+             patch.object(menu, "canli_modul") as executor:
             menu.islem_menusu(self.root)
-            runner.assert_not_called()
-            process.assert_not_called()
+            executor.assert_not_called()
+
+    def test_approved_choice_is_still_interactive(self):
+        with patch.object(menu, "secim_al", side_effect=["5", "G"]), \
+             patch.object(menu, "onay_iste", return_value=True), \
+             patch.object(menu, "canli_modul") as executor:
+            menu.islem_menusu(self.root)
+            executor.assert_called_once_with(self.root, "uygula")
 
     def test_setup_allowlist_never_contains_locale(self):
         self.assertTrue(menu.KURULACAKLAR)
