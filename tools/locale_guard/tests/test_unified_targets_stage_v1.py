@@ -61,7 +61,7 @@ class TargetStagingTests(unittest.TestCase):
         self.approval.write_text(json.dumps(data),encoding="utf-8")
 
     def test_no_manifest_blocks_target_without_writing(self):
-        with self.assertRaises(FileNotFoundError):
+        with self.assertRaises(TranslationBlocked):
             approved_source(self.root,self.config,self.approval)
         self.assertFalse((self.root/"de"/"locale_game.txt").exists())
 
