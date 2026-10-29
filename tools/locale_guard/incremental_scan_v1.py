@@ -74,6 +74,35 @@ def read_file(root: Path, lang: str, rel: str, config: dict) -> tuple[str, str]:
     return text, hashlib.sha256(raw).hexdigest()
 
 
+def validate_nontranslatable_filter(root: Path, lang: str, rel: str,
+                                   config: dict) -> str:
+    """İçeriği asla çevrilmeyen kelime filtresinin bayt biçimini doğrula."""
+    require(rel == "insult.txt", "Desteklenmeyen filtre türü")
+    p = root / lang / safe_path(rel)
+    require(p.is_file() and not p.is_symlink(), "Filtre dosyası geçersiz")
+    raw = p.read_bytes()
+    if raw.startswith(bytes.fromhex("fffe")):
+        codec = "utf-16"
+    elif raw.startswith(bytes.fromhex("feff")):
+        codec = "utf-16"
+    else:
+        try:
+            read_file(root, lang, rel, config)
+        except FileContentError:
+            raise
+        return hashlib.sha256(raw).hexdigest()
+    try:
+        decoded = raw.decode(codec, "strict")
+        require(decoded.encode(codec) == raw and "\ufffd" not in decoded,
+                "UTF-16 filtre bayt bütünlüğü hatası: " + lang + "/" + rel)
+    except UnicodeError as exc:
+        raise FileContentError(
+            "UTF-16 filtre dosyası okunamadı: " + lang + "/" + rel
+            + " | " + str(exc)
+        ) from exc
+    return hashlib.sha256(raw).hexdigest()
+
+
 def parse_rows(text: str, spec: dict, rel: str, lang: str) -> dict:
     require(spec.get("kind") == "keyed_tsv", "Tanınmayan parser: " + rel)
     rows, duplicates = keyed_tsv_rows(
@@ -127,6 +156,20 @@ def collect(root: Path, config: dict, baseline: dict | None = None,
                 continue
             if rel not in target_files:
                 add("MISSING_FILE_TRANSLATION", lang, rel)
+                continue
+            if rel == "insult.txt":
+                try:
+                    master_digest = validate_nontranslatable_filter(
+                        root, master_lang, rel, config)
+                    target_digest = validate_nontranslatable_filter(
+                        root, lang, rel, config)
+                except FileContentError as exc:
+                    add("FILE_ENCODING_REVIEW", lang, rel, reason=str(exc))
+                else:
+                    add("SPECIAL_FILE_PRESERVED", lang, rel,
+                        master_sha256=master_digest,
+                        target_sha256=target_digest,
+                        translation_allowed=False)
                 continue
             if rel not in cache:
                 try:
