@@ -75,6 +75,7 @@ KAYIT_ACIKLAMALARI = {
     "english": "İngilizce kanonik kapsam denemesi",
     "scan": "16 dilde artımlı değişiklik taraması",
     "queue": "Eksik çeviriler için güvenli iş kuyruğu",
+    "runtime": "Uygulama sonrası Türkçe runtime SHA-256 denetimi",
     "checkpoint": "316 hücrelik kontrol noktası",
     "rehearse": "316 hücrelik izole uygulama provası",
 }
@@ -229,8 +230,23 @@ def tam_kontrol(kok: Path) -> None:
         kok, "test", "unittest", "discover", "-s", "tools/locale_guard/tests", "-q")))
     sonuc.append(("Genel denetim", modulu_calistir(
         kok, "audit", "tools.locale_guard.locale_guard", "audit", "--root", ".")))
-    sonuc.append(("316 hücre", modulu_calistir(
-        kok, "preview", "tools.locale_guard.master_tr_rehearsal", "status", "--root", ".")))
+    # Canlı uygulama sonrasında eski dry-run kontrolü doğal olarak başarısızdır.
+    # Uygulanmış 92 dosya yerine runtime SHA denetimi yapılmalıdır.
+    uygulanmis = False
+    try:
+        from tools.locale_guard.master_tr_live_apply_v1 import son_islem
+        folder = son_islem(kok)
+        kayit = json.loads((folder / "islem.json").read_text(encoding="utf-8"))
+        uygulanmis = kayit.get("durum") == "UYGULANDI"
+    except (RuntimeError, OSError, ValueError, ImportError):
+        pass
+    if uygulanmis:
+        sonuc.append(("316 hücrenin canlı SHA kontrolü", modulu_calistir(
+            kok, "runtime", "tools.locale_guard.runtime_readiness_v1", "--root", ".")))
+    else:
+        sonuc.append(("316 hücre", modulu_calistir(
+            kok, "preview", "tools.locale_guard.master_tr_rehearsal",
+            "status", "--root", ".")))
     eski = [
         ("Staging V2", "tools/locale_guard/master_tr_stage_validate_v2.py",
          "tools.locale_guard.master_tr_stage_validate_v2", "stage"),
