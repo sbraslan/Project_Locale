@@ -91,6 +91,34 @@ class MasterFirstPlanTests(unittest.TestCase):
         self.assertEqual(entries[0]["line"], 2)
         self.assertIn("%u", entries[0]["protected_tokens"])
 
+    def test_known_description_file_is_freeform_without_tsv_rewrite(self):
+        self.write("master", "wonexchange_desc.txt",
+                   "[DELAY value;0]\nExchange currencies[ENTER]\n")
+        entries, held = extract_master_cells(
+            self.root, self.config, "wonexchange_desc.txt")
+        self.assertEqual(held, [])
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0]["mode"], "wiki_line")
+        self.assertEqual(entries[0]["line"], 2)
+
+    def test_unknown_description_not_auto_approved(self):
+        self.write("master", "new_unknown_desc.txt", "Exchange currencies[ENTER]\n")
+        entries, held = extract_master_cells(
+            self.root, self.config, "new_unknown_desc.txt")
+        self.assertEqual(entries, [])
+        self.assertEqual(held[0]["status"], "KAYITSIZ_DOSYA_PARSER_INCELEMESI")
+
+    def test_tab_in_freeform_halts_translation(self):
+        self.write("master", "wonexchange_desc.txt", "1\tOld\n")
+        entries, held = extract_master_cells(
+            self.root, self.config, "wonexchange_desc.txt")
+        self.assertEqual(entries, [])
+        self.assertEqual(held[0]["status"], "SERBEST_METINDE_TSV_TAB_ENGELI")
+
+    def test_all_bracket_directives_not_treated_as_text(self):
+        self.assertFalse(is_candidate("[DELAY value;0][ENTER][IMG=hero]"))
+        self.assertTrue(is_candidate("[ENTER]Merchant goods"))
+
     def test_source_classification_never_approves(self):
         item = source_classification({"source": "Collect the reward now"})
         self.assertFalse(item["live_apply_allowed"])
