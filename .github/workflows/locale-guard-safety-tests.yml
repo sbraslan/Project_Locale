@@ -34,4 +34,5 @@ jobs:
           name: locale-unified-master-inventory
           path: .locale_guard/unified_master_first_*.json
           retention-days: 7
+          include-hidden-files: true
           if-no-files-found: error
