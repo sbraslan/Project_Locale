@@ -49,8 +49,22 @@ class LocalLibreTranslate:
         try:
             with urllib.request.urlopen(request, timeout=25) as response:
                 result = json.loads(response.read().decode("utf-8"))
-        except (urllib.error.URLError, ValueError, OSError) as exc:
-            raise TranslationBlocked("Yerel LibreTranslate yanıtı alınamadı") from exc
+        except urllib.error.HTTPError as exc:
+            raise TranslationBlocked(
+                "Yerel LibreTranslate HTTP " + str(exc.code)
+                + " | " + str(exc.reason)
+                + " | Servis dil modeli veya istek ayarlarını kontrol edin"
+            ) from exc
+        except urllib.error.URLError as exc:
+            raise TranslationBlocked(
+                "Yerel LibreTranslate bağlantısı kurulamadı: "
+                + str(exc.reason) + " | 127.0.0.1:5000 kontrol edin"
+            ) from exc
+        except (ValueError, OSError) as exc:
+            raise TranslationBlocked(
+                "Yerel LibreTranslate cevabı JSON/UTF-8 olarak çözümlenemedi: "
+                + type(exc).__name__
+            ) from exc
         translated = result.get("translatedText")
         if not isinstance(translated, str) or not translated.strip():
             raise TranslationBlocked("Yerel çeviri servisi boş metin döndürdü")
