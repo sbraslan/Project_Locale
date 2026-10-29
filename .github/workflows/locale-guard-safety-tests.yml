@@ -24,3 +24,14 @@ jobs:
         run: python -B -m unittest discover -s tools/locale_guard/tests -v
       - name: Check all LocaleGuard Python syntax
         run: python -B -c "import ast,pathlib; [ast.parse(p.read_text(encoding='utf-8-sig'),filename=str(p)) for p in pathlib.Path('tools/locale_guard').rglob('*.py')]"
+      - name: Read-only master and 16-language full TXT inventory
+        run: |
+          mkdir -p .locale_guard
+          python -B -m tools.locale_guard.unified_master_first_plan_v1 --root .
+      - name: Save master and 16-language inventory artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: locale-unified-master-inventory
+          path: .locale_guard/unified_master_first_*.json
+          retention-days: 7
+          if-no-files-found: error
