@@ -28,6 +28,17 @@ jobs:
         run: |
           mkdir -p .locale_guard
           python -B -m tools.locale_guard.unified_master_first_plan_v1 --root .
+      - name: Exercise one-command unified Express without translation service
+        run: |
+          python -B -m tools.locale_guard.unified_express_pipeline_v1 --root .
+      - name: Save Express safety results
+        uses: actions/upload-artifact@v4
+        with:
+          name: locale-unified-express-dry-run
+          path: .locale_guard/unified_express/*/sonuc.json
+          retention-days: 7
+          include-hidden-files: true
+          if-no-files-found: error
       - name: Save master and 16-language inventory artifact
         uses: actions/upload-artifact@v4
         with:
