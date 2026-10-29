@@ -2,6 +2,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from tools.locale_guard import master_tr_live_apply_v1 as live
 
@@ -24,6 +25,12 @@ class MasterTrLiveApplyV1Tests(unittest.TestCase):
                 (self.root / lang / name).write_bytes(before)
             self.old[name] = before
             self.previews[name] = after
+        self.rehearsal_patch = patch(
+            "tools.locale_guard.master_tr_rehearsal.rehearse",
+            return_value=self.root,
+        )
+        self.rehearsal_patch.start()
+        self.addCleanup(self.rehearsal_patch.stop)
         self.summary = {
             "planned_change_count": 316,
             "excluded_unapproved_count": 1,
