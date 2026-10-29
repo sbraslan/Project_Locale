@@ -24,6 +24,7 @@ PYTHON_NAMED_PRINTF = re.compile(
 )
 TAG = re.compile(r"</?[A-Za-z][A-Za-z0-9:_-]*(?:\s+[^<>]*?)?\s*/?>")
 MARKER = re.compile(r"__MT2PROTECTED_\d+__")
+WHITESPACE_STRUCTURE = re.compile(r"[\t\r\n]")
 FORBIDDEN = ("\ufffd", "\x00")
 MIN_BRIDGE_SCORE = 0.72
 MIN_TARGET_SCORE = 0.68
@@ -59,7 +60,8 @@ def token_spans(text: str) -> list[tuple[int, int, str]]:
     """Teknik dizeleri eşsiz, çakışmasız aralıklara ayır."""
     found = []
     for regex in (PYTHON_NAMED_PRINTF, PRINTF_RE, BRACE_RE, METIN_PIPE_RE,
-                  BRACKET_DIRECTIVE_RE, ESCAPE_RE, URL_RE, TAG):
+                  BRACKET_DIRECTIVE_RE, ESCAPE_RE, URL_RE, TAG,
+                  WHITESPACE_STRUCTURE):
         for m in regex.finditer(text):
             found.append((m.start(), m.end(), m.group()))
     found.sort(key=lambda s: (s[0], -(s[1]-s[0])))
