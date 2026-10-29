@@ -36,10 +36,24 @@ def read_file(root: Path, lang: str, rel: str, config: dict) -> tuple[str, str]:
         cursor = cursor.parent
     raw = p.read_bytes()
     require(b"\x00" not in raw, "İkili/NUL içerik: " + str(p))
-    text, codec, _ = decode_text(
-        raw, language=lang,
-        legacy_encodings=config.get("legacy_decodings", {}).get(lang, []),
-    )
+    try:
+        text, codec, _ = decode_text(
+            raw, language=lang,
+            legacy_encodings=config.get("legacy_decodings", {}).get(lang, []),
+        )
+    except (UnicodeDecodeError, LookupError) as exc:
+        position = getattr(exc, "start", None)
+        sample = (raw[:32] if position is None
+                  else raw[max(0, position - 12):position + 16])
+        raise RuntimeError(
+            "Kodlama çözümlenemedi: " + str(p.relative_to(root))
+            + " | UTF8_BOM=" + str(raw.startswith(bytes.fromhex("efbbbf")))
+            + " | hata_pozisyonu=" + str(position)
+            + " | bayt_örneği=" + sample.hex(" ")
+            + " | tanımlı_kodlamalar="
+            + repr(config.get("legacy_decodings", {}).get(lang, []))
+            + " | ayrıntı=" + str(exc)
+        ) from exc
     require(text.encode(codec) == raw and "\ufffd" not in text,
             "Kodlama bütünlüğü hatası: " + str(p))
     return text, hashlib.sha256(raw).hexdigest()
