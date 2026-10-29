@@ -23,7 +23,9 @@ PYTHON_NAMED_PRINTF = re.compile(
     r"%\([A-Za-z_][A-Za-z_0-9]*\)[-+#0 ]*(?:\d+)?(?:\.\d+)?[diuoxXfFeEgGaAcsp]"
 )
 TAG = re.compile(r"</?[A-Za-z][A-Za-z0-9:_-]*(?:\s+[^<>]*?)?\s*/?>")
-ALL_BRACKET_DIRECTIVE = re.compile(r"\[[A-Za-z_][A-Za-z_0-9]*(?:=[^\]\r\n]*)?\]")
+ALL_BRACKET_DIRECTIVE = re.compile(
+    r"\[[A-Za-z_][A-Za-z_0-9]*(?:(?:\s+|=|;)[^\]\r\n]*)?\]"
+)
 MARKER = re.compile(r"__MT2PROTECTED_\d+__")
 WHITESPACE_STRUCTURE = re.compile(r"[\t\r\n]")
 FORBIDDEN = ("\ufffd", "\x00")
