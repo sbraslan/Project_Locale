@@ -44,6 +44,19 @@ DURUM_ADLARI = {
     "SOURCE_CHANGED_RETRANSLATION": "Master değişikliği nedeniyle yeniden çevrilecekler",
     "PARSER_SHAPE_REVIEW": "Dosya şeması incelemesi gerekenler",
 }
+# Yerel çalışmada daha önce doğrulanmış özgün Git blob kimlikleri.
+# Bunun dışındaki değişmiş dosyalar otomatik kurulumla ezilmez.
+BILINEN_ESKI_BLOBLAR = {
+    "tools/locale_guard/incremental_scan_v1.py": {
+        "570b7c27df40fda4fb9f2fa296fc427487362a37",
+        "237848db59cb3c3375e3d0756df3d63d9d632377",
+    },
+    "tools/locale_guard/tests/test_incremental_scan_v1.py": {
+        "35960513dc3ad1f1ca768f5d757aec4423854eb1",
+        "9f8eda6a69f1a051ec2e14a3b0043730fb5d985e",
+    },
+}
+
 KAYIT_ACIKLAMALARI = {
     "test": "Tüm birim ve regresyon testleri",
     "audit": "Ana güvenlik ve yapısal bütünlük denetimi",
@@ -304,10 +317,6 @@ def kurulacak_plan(kok: Path) -> list[tuple[Path, bytes, bytes | None]]:
     plan = []
     for goreli in KURULACAKLAR:
         hedef = guvenli_yol(kok, goreli)
-        kaynak = komut(kok, ["git", "show", "refs/remotes/origin/" + HEDEF_DAL + ":" + goreli])
-        if kaynak.returncode == 0:
-            # Git blob ham baytları için text=True kullanma: ayrı binary çağrı yapılır.
-            pass
         raw = subprocess.run(
             ["git", "show", "refs/remotes/origin/" + HEDEF_DAL + ":" + goreli],
             cwd=kok, capture_output=True, check=False,
@@ -329,6 +338,16 @@ def kurulacak_plan(kok: Path) -> list[tuple[Path, bytes, bytes | None]]:
             raise RuntimeError("Kurulum üst klasörü yok: " + goreli)
         eski = hedef.read_bytes() if hedef.exists() else None
         if eski != veri:
+            if eski is not None:
+                # Bilinen eski sürümler dışında el ile değiştirilmiş dosyalar korunur.
+                import hashlib
+                ham_kimlik = hashlib.sha1(
+                    b"blob " + str(len(eski)).encode("ascii") + b"\x00" + eski
+                ).hexdigest()
+                if ham_kimlik not in BILINEN_ESKI_BLOBLAR.get(goreli, set()):
+                    raise RuntimeError(
+                        "Yerel dosya bilinmeyen içerikte; üstüne yazılmaz: " + goreli
+                    )
             plan.append((hedef, veri, eski))
     return plan
 
