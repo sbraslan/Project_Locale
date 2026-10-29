@@ -1,32 +1,33 @@
 @echo off
+chcp 65001 >nul
 setlocal EnableExtensions DisableDelayedExpansion
 set "PYTHONDONTWRITEBYTECODE=1"
 set "PYTHONIOENCODING=utf-8"
 
 pushd "%~dp0" 2>nul
 if errorlevel 1 (
-    echo [BLOCK] Cannot enter Project_Locale directory.
+    echo [ENGEL] Project_Locale klasörüne girilemedi.
     exit /b 2
 )
 if not exist "tools\locale_guard\master_tr_rehearsal.py" (
-    echo [BLOCK] Verified rehearsal module is missing.
+    echo [ENGEL] Doğrulanmış prova modülü bulunamadı.
     popd
     exit /b 2
 )
 if not exist "tools\locale_guard\config.json" (
-    echo [BLOCK] Locale Guard config is missing.
+    echo [ENGEL] Locale Guard yapılandırması bulunamadı.
     popd
     exit /b 2
 )
 where python >nul 2>nul
 if errorlevel 1 (
-    echo [BLOCK] Python not available on PATH.
+    echo [ENGEL] Python sistem yolunda bulunamadı.
     popd
     exit /b 2
 )
 python -B -c "import sys; assert sys.version_info >= (3, 10)"
 if errorlevel 1 (
-    echo [BLOCK] Python 3.10+ is required.
+    echo [ENGEL] Python 3.10 veya üzeri gereklidir.
     popd
     exit /b 2
 )
@@ -34,26 +35,26 @@ if errorlevel 1 (
 :menu
 cls
 echo ======================================================================
-echo PROJECT_LOCALE SAFE MAIN MENU V2  -  2026-10-29
+echo PROJECT_LOCALE - GÜVENLİ ANA MENÜ V3  -  2026-10-29
 echo ======================================================================
-echo CANONICAL MASTER: master/          LIVE TARGET: tr/
-echo VERIFIED 2026-10-29 PREVIEW: 316 cells / 46 files / 1 HOLD
-echo EARLIER STAGING V2: 262 cells / 46 files (separate workflow)
-echo LIVE APPLY: LOCKED                CLIENT/BINARY: UNTOUCHED
+echo KANONİK KAYNAK: master/             CANLI HEDEF: tr/
+echo SON ÖNİZLEME: 316 hücre / 46 dosya / 1 bekleyen onay
+echo ÖNCEKİ STAGING V2: 262 hücre / 46 dosya (ayrı işlem)
+echo CANLI UYGULAMA: KİLİTLİ             İSTEMCİ/BINARY: DEĞİŞMEDİ
 echo ======================================================================
-echo [1] Verify 316-cell master-to-TR preview (read-only)
-echo [2] Save verified 316-cell checkpoint (.locale_guard only)
-echo [3] Run all local Locale Guard unit tests
-echo [4] Rehearse 316-cell test application (sandbox only)
-echo [5] Verify earlier 262-cell Staging V2 + differential audit
-echo [6] Canonical EN Stage-1 scope dry-run (report only)
-echo [7] FULL SAFE PREFLIGHT (tests + both pipelines + Stage-1)
-echo [8] Show Git status (read-only)
-echo [9] Show output locations and next activation steps
-echo [A] Activation readiness status (NO live apply)
-echo [Q] Exit
+echo [1] 316 hücrelik Master - TR önizlemesini doğrula (salt okunur)
+echo [2] Doğrulanan 316 hücrelik kontrol noktasını kaydet
+echo [3] Tüm yerel Locale Guard birim testlerini çalıştır
+echo [4] 316 hücrelik uygulamayı test alanında prova et
+echo [5] Önceki 262 hücrelik Staging V2 ve fark denetimi
+echo [6] Kanonik EN Aşama-1 kapsam denemesi (yalnız rapor)
+echo [7] TAM GÜVENLİ ÖN KONTROL (testler + iki hat + Aşama-1)
+echo [8] Git durumunu göster (salt okunur)
+echo [9] Çıktı konumları ve sonraki etkinleştirme adımları
+echo [H] Etkinleştirme hazırlığı (canlı uygulama YOK)
+echo [C] Çıkış
 echo.
-choice /C 123456789AQ /N /M "Select: "
+choice /C 123456789HC /N /M "Seçiminiz: "
 if errorlevel 11 goto end
 if errorlevel 10 goto readiness
 if errorlevel 9 goto paths
@@ -92,8 +93,8 @@ python -B -m tools.locale_guard.master_tr_stage_diff_audit_v1
 goto after
 
 :missing_v2
-echo [BLOCK] Local Staging V2 validator or differential audit is missing.
-echo [BLOCK] No files were changed. Do not substitute older results.
+echo [ENGEL] Yerel Staging V2 doğrulayıcısı veya fark denetimi bulunamadı.
+echo [ENGEL] Dosyalar değişmedi. Eski sonuçları geçerli saymayın.
 cmd /c exit /b 2
 goto after
 
@@ -103,42 +104,42 @@ python -B -m tools.locale_guard.canonical_backfill_stage1_dry_run --report .loca
 goto after
 
 :missing_canonical
-echo [BLOCK] Canonical Stage-1 dry-run module is missing.
+echo [ENGEL] Kanonik Aşama-1 deneme modülü bulunamadı.
 cmd /c exit /b 2
 goto after
 
 :full
 echo.
-echo [1/5] Locale Guard tests...
+echo [1/5] Locale Guard testleri çalışıyor...
 python -B -m unittest discover -s tools\locale_guard\tests -v
 if errorlevel 1 goto after
 echo.
-echo [2/5] Latest 316-cell merge preview integrity...
+echo [2/5] Son 316 hücrelik birleştirme önizlemesi doğrulanıyor...
 python -B -m tools.locale_guard.master_tr_rehearsal status --root .
 if errorlevel 1 goto after
 if not exist "tools\locale_guard\master_tr_stage_validate_v2.py" goto missing_full
 if not exist "tools\locale_guard\master_tr_stage_diff_audit_v1.py" goto missing_full
 echo.
-echo [3/5] Earlier Staging V2 integrity...
+echo [3/5] Önceki Staging V2 bütünlüğü doğrulanıyor...
 python -B -m tools.locale_guard.master_tr_stage_validate_v2
 if errorlevel 1 goto after
 echo.
-echo [4/5] Earlier Staging V1-V2 independent difference audit...
+echo [4/5] Önceki Staging V1-V2 bağımsız fark denetimi...
 python -B -m tools.locale_guard.master_tr_stage_diff_audit_v1
 if errorlevel 1 goto after
 if not exist "tools\locale_guard\canonical_backfill_stage1_dry_run.py" goto missing_full
 echo.
-echo [5/5] Canonical EN Stage-1 (report only)...
+echo [5/5] Kanonik EN Aşama-1 (yalnız rapor)...
 python -B -m tools.locale_guard.canonical_backfill_stage1_dry_run --report .locale_guard/safe_menu_canonical_stage1_v2.json --diff .locale_guard/safe_menu_canonical_stage1_v2.diff
 if errorlevel 1 goto after
 echo.
-echo [OK] ALL FIVE PREFLIGHT CHECKS PASSED. LIVE APPLY REMAINS LOCKED.
+echo [TAMAM] Beş ön kontrolün tamamı başarılı. Canlı uygulama kilitli.
 cmd /c exit /b 0
 goto after
 
 :missing_full
-echo [BLOCK] One or more local preflight scripts are missing.
-echo [BLOCK] No fallback or live apply was attempted.
+echo [ENGEL] Bir veya daha fazla yerel ön kontrol dosyası bulunamadı.
+echo [ENGEL] Yedek yöntem veya canlı uygulama denenmedi.
 cmd /c exit /b 2
 goto after
 
@@ -148,47 +149,47 @@ goto after
 
 :paths
 echo.
-echo Latest 316-cell preview:
+echo Son 316 hücrelik önizleme:
 echo   .locale_guard\master_tr_merge_preview_v1
-echo Latest 316-cell semantic candidate:
+echo Son 316 hücrelik anlamsal aday:
 echo   .locale_guard\staging_master_tr_v3_semantic_candidate
-echo Checkpoints:
+echo Kontrol noktaları:
 echo   .locale_guard\checkpoints
-echo Sandbox rehearsal:
+echo Test alanındaki prova:
 echo   .locale_guard\test_apply_master_tr_aa529ec168d1\tr
-echo Earlier 262-cell Staging V2:
+echo Önceki 262 hücrelik Staging V2:
 echo   .locale_guard\staging_master_tr_v2
-echo Canonical Stage-1 report:
+echo Kanonik Aşama-1 raporu:
 echo   .locale_guard\safe_menu_canonical_stage1_v2.json
 echo.
-echo Planned order: 3 tests, 1 verify, 2 checkpoint, 4 sandbox, 7 full check.
-echo Note: One dragon_alchemy cell is excluded and needs semantic approval.
-echo No menu option writes to live master/ or tr/.
+echo Önerilen sıra: 3 test, 1 doğrulama, 2 kayıt, 4 prova, 7 tam kontrol.
+echo Not: Bir dragon_alchemy hücresi dışlandı; anlamsal onay gerekiyor.
+echo Hiçbir seçenek canlı master/ veya tr/ dosyalarına yazmaz.
 cmd /c exit /b 0
 goto after
 
 :readiness
 echo.
-echo [CHECK] Latest 316-cell preview must remain SHA256-identical...
+echo [KONTROL] Son 316 hücrelik önizlemenin SHA256 değeri değişmemeli...
 python -B -m tools.locale_guard.master_tr_rehearsal status --root .
 if errorlevel 1 goto after
 echo.
-echo [BLOCK] LIVE ACTIVATION IS NOT YET AUTHORIZED BY THIS MENU.
-echo 316 reviewed technical changes are test-ready, not deployed.
-echo 1 excluded dragon_alchemy cell must be handled explicitly.
-echo Run [4] sandbox and [7] full safe preflight.
-echo For a future live apply: require explicit approval, backup, independent
-echo pre-write hash checks, rollback, and post-write verification.
+echo [ENGEL] BU MENÜDEN CANLI ETKİNLEŞTİRMEYE İZİN VERİLMİYOR.
+echo 316 teknik değişiklik test için hazır, canlıya uygulanmadı.
+echo Dışlanan 1 dragon_alchemy hücresi ayrı incelenmelidir.
+echo Önce [4] test alanı provasını, sonra [7] tam ön kontrolü çalıştırın.
+echo Canlı uygulama için açık onay, yedekleme, bağımsız kaynak hash
+echo kontrolleri, geri alma ve işlem sonrası doğrulama zorunludur.
 cmd /c exit /b 0
 goto after
 
 :after
 if errorlevel 1 (
     echo.
-    echo [BLOCK] Command failed. No automatic retry or live apply.
+    echo [ENGEL] Komut başarısız. Otomatik tekrar veya canlı uygulama yok.
 ) else (
     echo.
-    echo [OK] Command finished. No live apply.
+    echo [TAMAM] Komut tamamlandı. Canlı uygulama yapılmadı.
 )
 echo.
 pause
