@@ -103,6 +103,17 @@ def validate_nontranslatable_filter(root: Path, lang: str, rel: str,
     return hashlib.sha256(raw).hexdigest()
 
 
+def read_raw_hash(root: Path, lang: str, rel: str) -> str:
+    """Yazma yapılmayacak yapısal dosya: yalnız ham bayt kimliği."""
+    p = root / lang / safe_path(rel)
+    require(p.is_file(), "Yapısal dosya eksik: " + lang + "/" + rel)
+    cursor = p
+    while cursor != root:
+        require(not cursor.is_symlink(), "Yapısal dosyada symlink: " + str(cursor))
+        cursor = cursor.parent
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
 def parse_rows(text: str, spec: dict, rel: str, lang: str) -> dict:
     require(spec.get("kind") == "keyed_tsv", "Tanınmayan parser: " + rel)
     rows, duplicates = keyed_tsv_rows(
@@ -157,6 +168,14 @@ def collect(root: Path, config: dict, baseline: dict | None = None,
             if rel not in target_files:
                 add("MISSING_FILE_TRANSLATION", lang, rel)
                 continue
+            spec = registry.get(rel)
+            if spec is not None and spec.get("token_columns") == "disabled":
+                add("SCHEMA_TRANSLATION_DISABLED", lang, rel,
+                    master_sha256=read_raw_hash(root, master_lang, rel),
+                    target_sha256=read_raw_hash(root, lang, rel),
+                    translation_allowed=False,
+                    reason="Çevrilecek sütun şemada tanımlı değil; baytlar korunuyor.")
+                continue
             if rel == "insult.txt":
                 try:
                     master_digest = validate_nontranslatable_filter(
@@ -187,7 +206,6 @@ def collect(root: Path, config: dict, baseline: dict | None = None,
                 add("FILE_ENCODING_REVIEW", lang, rel,
                     affected_side=lang, reason=str(exc))
                 continue
-            spec = registry.get(rel)
             if spec is None or spec.get("kind") != "keyed_tsv":
                 add("FREEFORM_OR_UNREGISTERED_REVIEW", lang, rel,
                     master_sha256=master_sha, target_sha256=target_sha)
