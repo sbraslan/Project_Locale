@@ -58,7 +58,7 @@ class ExpressTests(unittest.TestCase):
         with patch("tools.locale_guard.unified_express_pipeline_v1.load_config",
                    return_value=self.conf), \
              patch("tools.locale_guard.unified_express_pipeline_v1.build_staging") as stage:
-            with self.assertRaises(FileNotFoundError):
+            with self.assertRaises(TranslationBlocked):
                 express(self.root,with_tests=False,
                         service=False,approval=fake_approval)
             stage.assert_not_called()
