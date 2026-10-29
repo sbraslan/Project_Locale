@@ -70,7 +70,7 @@ class TurkceMenuV6Tests(unittest.TestCase):
             menu.islem_menusu(self.root)
             runner.assert_called_once_with(
                 self.root, "unified",
-                "tools.locale_guard.unified_master_first_plan_v1", "--root", ".")
+                "tools.locale_guard.unified_express_pipeline_v1", "--root", ".")
 
     def test_setup_allowlist_never_contains_locale(self):
         self.assertTrue(menu.KURULACAKLAR)
