@@ -75,15 +75,32 @@ class IncrementalScanV1Tests(unittest.TestCase):
         self.put("tr", "sample.txt", "1\tBir\n")
         raw = bytes.fromhex("efbbbf") + b"1\t" + bytes.fromhex("e3") + b"\n"
         (self.root / "tr" / "sample.txt").write_bytes(raw)
-        with self.assertRaises(RuntimeError) as context:
-            collect(self.root, self.config, languages=["tr"])
-        message = str(context.exception)
-        self.assertIn("tr/sample.txt", message.replace("\\", "/"))
-        self.assertIn("UTF8_BOM=True", message)
-        self.assertIn("hata_pozisyonu=", message)
+        result = collect(self.root, self.config, languages=["tr"])
+        self.assertEqual(result["counts"]["FILE_ENCODING_REVIEW"], 1)
+        bad = [x for x in result["items"]
+               if x["status"] == "FILE_ENCODING_REVIEW"]
+        self.assertEqual(bad[0]["path"], "sample.txt")
+        self.assertEqual(bad[0]["affected_side"], "tr")
+        self.assertIn("NUL", bad[0]["reason"]) if b"\x00" in raw else self.assertIn("UTF8_BOM=True", bad[0]["reason"])
         self.assertEqual(
             (self.root / "tr" / "sample.txt").read_bytes(), raw
         )
+
+    def test_nul_file_isolated_and_other_files_scanned(self):
+        self.put("master", "sample.txt", "1\tBir\n")
+        self.put("tr", "sample.txt", "1\tBir\n")
+        self.put("master", "story.txt", "Güvenli metin\n")
+        self.put("tr", "story.txt", "Güvenli metin\n")
+        raw = b"1\tValue\x00broken\n"
+        (self.root / "tr" / "sample.txt").write_bytes(raw)
+        result = collect(self.root, self.config, languages=["tr"])
+        self.assertEqual(result["mode"], "READ_ONLY_DELTA_SCAN_WITH_BLOCKERS")
+        self.assertEqual(result["counts"]["FILE_ENCODING_REVIEW"], 1)
+        self.assertEqual(result["counts"]["FREEFORM_OR_UNREGISTERED_REVIEW"], 1)
+        failure = next(x for x in result["items"]
+                       if x["status"] == "FILE_ENCODING_REVIEW")
+        self.assertIn("NUL_sayısı=1", failure["reason"])
+        self.assertEqual((self.root / "tr" / "sample.txt").read_bytes(), raw)
 
     def test_missing_file_never_created(self):
         self.put("master", "sample.txt", "1\tBir\n")
