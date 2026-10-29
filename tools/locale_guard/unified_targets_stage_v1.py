@@ -35,8 +35,11 @@ PHASE = "16-language-target-staging-v1"
 def approved_source(root: Path, config: dict, document: Path) -> dict:
     """Kaynak manifesti bütün Master dosyalarının SHA-256 kaydını içermeli."""
     guard = root / ".locale_guard"
-    if document.is_symlink() or not document.is_relative_to(guard):
-        raise TranslationBlocked("Onay belgesi yalnız .locale_guard içinde olabilir")
+    doc = document.resolve()
+    safe_guard = guard.resolve()
+    if (document.is_symlink() or not doc.is_relative_to(safe_guard)
+            or not doc.is_file() or not safe_guard.is_dir()):
+        raise TranslationBlocked("Onay belgesi yalnız güvenilir .locale_guard içinde olabilir")
     content = json.loads(document.read_text(encoding="utf-8"))
     if (content.get("status") != APPROVAL
             or content.get("human_approved") is not True
