@@ -1,0 +1,25 @@
+name: Locale Guard safety tests
+
+on:
+  push:
+    branches:
+      - automation/locale-safe-menu-rehearsal-20261029
+  pull_request:
+    branches:
+      - automation/locale-guard-v1
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Locale Guard safety tests
+        run: python -B -m unittest discover -s tools/locale_guard/tests -v
+      - name: Check Python syntax
+        run: python -B -c "import ast, pathlib; ast.parse(pathlib.Path('tools/locale_guard/master_tr_rehearsal.py').read_text(encoding='utf-8'))"
