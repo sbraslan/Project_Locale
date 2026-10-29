@@ -5,6 +5,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from tools.locale_guard import master_tr_live_apply_v1 as live
+from tools.locale_guard.runtime_readiness_v1 import runtime_kontrol
 
 
 class MasterTrLiveApplyV1Tests(unittest.TestCase):
@@ -104,6 +105,24 @@ class MasterTrLiveApplyV1Tests(unittest.TestCase):
         self.assert_old()
         journal = json.loads((folder / "islem.json").read_text(encoding="utf-8"))
         self.assertEqual(journal["durum"], "GERI_ALINDI")
+
+    def test_runtime_readiness_only_after_verified_apply(self):
+        with self.assertRaises(RuntimeError):
+            runtime_kontrol(self.root)
+        self.approve()
+        self.assertTrue(live.uygula(
+            self.root, self.summary, self.previews,
+            input_fn=lambda _: live.ACK_APPLY,
+        ))
+        ready = runtime_kontrol(self.root)
+        self.assertEqual(ready["durum"], "TR_RUNTIME_ON_KONTROL_GECTI")
+        self.assertEqual(ready["dogrulanan_dosya"], 92)
+        self.assertFalse(ready["istemciye_kopyalandi"])
+        self.assertTrue(live.geri_al(
+            self.root, input_fn=lambda _: live.ACK_ROLLBACK
+        ))
+        with self.assertRaises(RuntimeError):
+            runtime_kontrol(self.root)
 
     def test_partial_write_failure_restores_all_92_files(self):
         self.approve()
