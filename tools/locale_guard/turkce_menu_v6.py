@@ -14,7 +14,7 @@ from pathlib import Path, PurePosixPath
 
 from tools.locale_guard.locale_guard import load_config
 
-HEDEF_DAL = "automation/locale-safe-menu-rehearsal-20261029"
+HEDEF_DAL = "automation/locale-unified-master-first-20261029"
 HEDEF_DEPO = "sbraslan/Project_Locale"
 GITHUB_ADRESLERI = {
     "https://github.com/" + HEDEF_DEPO,
@@ -33,6 +33,14 @@ KURULACAKLAR = (
     "tools/locale_guard/master_tr_live_apply_v1.py",
     "tools/locale_guard/tests/test_master_tr_live_apply_v1.py",
     "tools/locale_guard/runtime_readiness_v1.py",
+    "tools/locale_guard/unified_translation_contract_v1.py",
+    "tools/locale_guard/unified_master_first_plan_v1.py",
+    "tools/locale_guard/unified_master_tr_stage_v1.py",
+    "tools/locale_guard/unified_targets_stage_v1.py",
+    "tools/locale_guard/tests/test_unified_translation_contract_v1.py",
+    "tools/locale_guard/tests/test_unified_master_first_plan_v1.py",
+    "tools/locale_guard/tests/test_unified_master_tr_stage_v1.py",
+    "tools/locale_guard/tests/test_unified_targets_stage_v1.py",
 )
 DURUM_ADLARI = {
     "BASELINE_REQUIRED": "Onaylı başlangıç referansı bulunmayan dosyalar",
@@ -76,6 +84,8 @@ KAYIT_ACIKLAMALARI = {
     "scan": "16 dilde artımlı değişiklik taraması",
     "queue": "Eksik çeviriler için güvenli iş kuyruğu",
     "runtime": "Uygulama sonrası Türkçe runtime SHA-256 denetimi",
+    "unified": "200 Master TXT ve 16 dil Master-öncelikli güvenli Express taraması",
+    "master_stage": "Master EN/DE metinleri için Türkçe staging provası",
     "checkpoint": "316 hücrelik kontrol noktası",
     "rehearse": "316 hücrelik izole uygulama provası",
 }
@@ -310,11 +320,13 @@ def islem_menusu(kok: Path) -> None:
         print("[2] Güvenlik testleri ve 316 hücreyi izole prova et")
         print("[3] 316 hücreyi önce/sonra raporunda incele")
         print("[4] İncelenen 316 hücreye anlamsal onay ver")
-        print("[5] ONAYLANAN 316 HÜCREYİ MASTER + TR DOSYALARINA UYGULA")
-        print("[6] Uygulama sonrası Türkçe runtime hazırlığını denetle")
-        print("[7] Son canlı uygulamayı yedekten geri al")
+        print("[5] Eski 316 canlı uygulama (yeni Master-first akışında KİLİTLİ)")
+        print("[6] Eski 316 paketinin runtime SHA denetimi (tüm sistem DEĞİL)")
+        print("[7] Son eski 316 uygulamasını yedekten geri al")
+        print("[8] Master-first EXPRESS: Tüm TXT ve 16 dil farklarını tara")
+        print("[9] Master yabancı metinlerini güvenli staging'e çevir (pilot)")
         print("[G] Geri   [M] Ana menü   [0] Çıkış")
-        secim = secim_al(set("1234567GM0"))
+        secim = secim_al(set("123456789GM0"))
         if secim in ("G", "M"):
             return
         if secim == "0":
@@ -354,11 +366,9 @@ def islem_menusu(kok: Path) -> None:
             if onay_iste("İnceleme raporuna bağlı anlamsal kullanıcı onayı istenecek."):
                 canli_modul(kok, "onayla")
         elif secim == "5":
-            if onay_iste(
-                "46 Master + 46 TR dosyası yedeklenip CANLI değiştirilebilir. "
-                "İçerik onayı ve ikinci UYGULA 316 doğrulaması zorunludur."
-            ):
-                canli_modul(kok, "uygula")
+            print("[KİLİTLİ] Eski 316 hücrelik paket, bütün Master'ın Türkçe")
+            print("tamamlandığı yeni sistemde canlı uygulanmayacak.")
+            print("Bu seçim hiçbir dosyaya yazmaz.")
         elif secim == "6":
             if onay_iste("Uygulanan 92 dosyanın SHA-256 kimlikleri denetlenecek."):
                 modulu_calistir(kok, "runtime",
@@ -367,6 +377,17 @@ def islem_menusu(kok: Path) -> None:
         elif secim == "7":
             if onay_iste("Son işlem yedekten geri alınabilir; ayrıca GERI AL onayı istenecek."):
                 canli_modul(kok, "geri-al")
+        elif secim == "8":
+            if onay_iste("Master ve 16 dilde bütün TXT dosyaları salt-okunur taranacak."):
+                modulu_calistir(kok, "unified",
+                               "tools.locale_guard.unified_master_first_plan_v1",
+                               "--root", ".")
+        elif secim == "9":
+            if onay_iste("Master EN/DE metinleri yalnız staging alanına çevrilecek."):
+                print("Bu işlem yalnız yerel LibreTranslate servisini kullanır.")
+                modulu_calistir(kok, "master_stage",
+                               "tools.locale_guard.unified_master_tr_stage_v1",
+                               "--root", ".", "--service", "local", "--limit", "50")
 
 
 def git_kontrol(kok: Path) -> None:
@@ -580,8 +601,8 @@ def ana_menu(kok: Path) -> None:
         print("[2] İŞLEM   - Tarama, çeviri kuyruğu, kontrol noktası, prova")
         print("[3] GİTHUB  - Kurulum, güncelleme ve güvenli eşitleme")
         print("[0] ÇIKIŞ")
-        print("Canlı uygulama yalnız 316 hücrelik onaylı paket için açıktır.")
-        print("Diğer 15 dilin otomatik çevirisi ve oyun içi dağıtım tamamlanmadı.")
+        print("Master-first Türkçe temizlik ve 16 dil staging çalışmaları devam ediyor.")
+        print("Eski 316 paketin canlı uygulaması güvenlik nedeniyle kapalı.")
         secim = secim_al(set("1230"))
         if secim == "0":
             print("Program güvenli şekilde kapatıldı.")
