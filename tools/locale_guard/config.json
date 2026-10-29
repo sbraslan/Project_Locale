@@ -246,6 +246,16 @@
         0
       ],
       "token_columns": "disabled"
+    },
+    "locale_quest.txt": {
+      "kind": "keyed_tsv",
+      "key_columns": [
+        0
+      ],
+      "token_columns": [
+        1
+      ],
+      "duplicate_policy": "error"
     }
   }
 }
