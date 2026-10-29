@@ -63,6 +63,52 @@ class ExpressTests(unittest.TestCase):
                         service=False,approval=fake_approval)
             stage.assert_not_called()
 
+    def test_zero_accepted_translations_report_block_reasons(self):
+        original = self.file.read_bytes()
+        failed_stage = {
+            "changes": [], "blocked": [
+                {"path": "wiki/guide.txt", "status": "GUVENLIK_ENGELI",
+                 "reason": "Yerel LibreTranslate bağlantısı kurulamadı"},
+                {"path": "wiki/guide.txt", "status": "ANLAMSAL_INCELEME",
+                 "source": "Welcome hero"},
+            ], "queued_not_attempted": 934, "staged_files": {},
+            "live_apply": False,
+        }
+        with patch("tools.locale_guard.unified_express_pipeline_v1.load_config",
+                   return_value=self.conf), \
+             patch("tools.locale_guard.unified_express_pipeline_v1.stage_master",
+                   return_value=failed_stage):
+            result = express(self.root, with_tests=False, service=True,
+                             provider=object(), limit=2)
+        self.assertEqual(result["status"], "CEVIRI_ENGELLERI_INCELENMELI")
+        self.assertEqual(self.file.read_bytes(), original)
+        self.assertFalse(result["live_apply"])
+        reports = list((self.root / ".locale_guard" / "unified_express")
+                       .glob("*/master_staging_engeller.json"))
+        self.assertEqual(len(reports), 1)
+        import json
+        data = json.loads(reports[0].read_text(encoding="utf-8"))
+        self.assertEqual(data["blocked_count"], 2)
+        self.assertIn("Yerel LibreTranslate bağlantısı kurulamadı",
+                      data["blocked_reasons"])
+        self.assertEqual(data["blocked"][0]["path"], "wiki/guide.txt")
+
+    def test_successful_stage_still_needs_human_approval(self):
+        ready_stage = {
+            "changes": [{"status": "INSAN_ONAYI_BEKLIYOR"}],
+            "blocked": [], "queued_not_attempted": 935,
+            "staged_files": {}, "live_apply": False,
+        }
+        with patch("tools.locale_guard.unified_express_pipeline_v1.load_config",
+                   return_value=self.conf), \
+             patch("tools.locale_guard.unified_express_pipeline_v1.stage_master",
+                   return_value=ready_stage):
+            result = express(self.root, with_tests=False, service=True,
+                             provider=object(), limit=1)
+        self.assertEqual(result["status"], "ONIZLEME_HAZIR_ONAY_BEKLIYOR")
+        self.assertFalse(result["live_apply"])
+        self.assertFalse(result["all_16_languages_ready"])
+
     def test_test_failure_prevents_reports_and_live_changes(self):
         with patch("tools.locale_guard.unified_express_pipeline_v1.check_tests",
                    return_value=False):
