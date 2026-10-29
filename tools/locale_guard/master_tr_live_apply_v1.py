@@ -261,6 +261,11 @@ def uygula(kok: Path, summary: dict, previews: dict[str, bytes],
     depo_kontrol(kok)
     onay_dogrula(kok, summary, previews)
     hedefler = hedefleri_hazirla(kok, previews)
+    # İnsan onayından sonra, işlemden önce sabit SHA'lı izole prova şart.
+    from tools.locale_guard.master_tr_rehearsal import rehearse
+    test_klasoru = rehearse(kok, summary, previews)
+    kontrol(test_klasoru.is_dir(), "İzole prova bulunamadı")
+    print("[BAŞARILI] İzole prova yeniden doğrulandı.")
     print("Uygulama kapsamı: 316 hücre / 46 dosya / master + tr = 92 dosya")
     print("Bir Dragon Alchemy hücresi hariç; diğer dil klasörleri değiştirilmez.")
     if input_fn("Son canlı onay (UYGULA 316): ").strip() != ACK_APPLY:
