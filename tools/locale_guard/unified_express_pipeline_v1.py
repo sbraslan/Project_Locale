@@ -13,6 +13,7 @@ import os
 import subprocess
 import sys
 import uuid
+from collections import Counter
 from pathlib import Path
 
 from tools.locale_guard.locale_guard import load_config
@@ -102,10 +103,18 @@ def express(root: Path, *, service: bool = False,
         if service:
             local = provider if provider is not None else LocalLibreTranslate()
             stage = stage_master(root, config, local, limit=limit)
+            error_counts = Counter(
+                str(item.get("reason", item.get("status", "BİLİNMİYOR")))
+                for item in stage["blocked"]
+            )
+            stage_status = ("INCELEME_BEKLIYOR" if stage["changes"]
+                            else "SIFIR_CEVIRI_ADAYI_KABUL_EDILDI")
             stage_info = {
-                "status": "INCELEME_BEKLIYOR",
+                "status": stage_status,
+                "attempted": len(stage["changes"]) + len(stage["blocked"]),
                 "candidates": len(stage["changes"]),
                 "held": len(stage["blocked"]),
+                "held_reasons": dict(error_counts.most_common()),
                 "remaining": stage["queued_not_attempted"],
                 "master_staged_file_sha256": {
                     name: info["new_sha256"]
@@ -121,10 +130,27 @@ def express(root: Path, *, service: bool = False,
                     f.flush()
                     os.fsync(f.fileno())
             save_json(report_dir / "master_staging_ozet.json", stage_info)
+            # Tek tek engelleri kaydet: 0 dosya durumunda sessiz başarısızlık yok.
+            # Master/ ve 16 dilin canlı klasörlerine dokunulmaz.
+            save_json(report_dir / "master_staging_engeller.json", {
+                "schema_version": 1,
+                "status": stage_status,
+                "attempted": stage_info["attempted"],
+                "blocked_count": len(stage["blocked"]),
+                "blocked_reasons": dict(error_counts.most_common()),
+                "blocked": stage["blocked"],
+                "live_apply": False,
+            })
             result["steps"].append({"step": "MASTER_TURKCE_STAGING",
                                     **stage_info})
             print("Master staging dosyası:", len(stage["staged_files"]),
                   "| İnsani onay gereklidir.")
+            print("Denenen:", stage_info["attempted"],
+                  "| Kabul edilen hücre:", len(stage["changes"]),
+                  "| İncelemeye ayrılan:", len(stage["blocked"]))
+            for reason, number in error_counts.most_common(6):
+                print(" - Engel:", number, "kayıt |", reason)
+            print("Ayrıntı: ", (report_dir / "master_staging_engeller.json").relative_to(root))
         else:
             result["steps"].append({
                 "step": "MASTER_TURKCE_STAGING",
@@ -161,7 +187,11 @@ def express(root: Path, *, service: bool = False,
                 "step": "16_DIL_KOPRU_STAGING",
                 "status": "TAM_TURKCE_MASTER_ONAYI_BEKLENIYOR",
             })
-        result["status"] = "ONIZLEME_HAZIR_ONAY_BEKLIYOR"
+        result["status"] = (
+            "CEVIRI_ENGELLERI_INCELENMELI"
+            if service and not stage["changes"] and stage["blocked"]
+            else "ONIZLEME_HAZIR_ONAY_BEKLIYOR"
+        )
     except Exception as exc:
         result["status"] = "GUVENLIK_ENGELI"
         result["error"] = str(exc)
@@ -186,7 +216,7 @@ def main() -> int:
         result = express(root, service=args.service == "local",
                          limit=args.limit, approval=approval)
         print("Sonuç:", result["status"])
-        return 0
+        return 3 if result["status"] == "CEVIRI_ENGELLERI_INCELENMELI" else 0
     except (RuntimeError, OSError, ValueError, UnicodeError, KeyError) as exc:
         print("[ENGEL] Master-first Express:", exc)
         return 2
