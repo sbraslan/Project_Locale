@@ -71,14 +71,14 @@ class IncrementalScanV1Tests(unittest.TestCase):
                     languages=["tr"])
 
     def test_invalid_utf8_bom_reports_path_without_writing(self):
-        self.put("master", "sample.txt", "1\\tBir\\n")
-        self.put("tr", "sample.txt", "1\\tBir\\n")
-        raw = bytes.fromhex("efbbbf") + b"1\\t" + bytes.fromhex("e3") + b"\\n"
+        self.put("master", "sample.txt", "1\tBir\n")
+        self.put("tr", "sample.txt", "1\tBir\n")
+        raw = bytes.fromhex("efbbbf") + b"1\t" + bytes.fromhex("e3") + b"\n"
         (self.root / "tr" / "sample.txt").write_bytes(raw)
         with self.assertRaises(RuntimeError) as context:
             collect(self.root, self.config, languages=["tr"])
         message = str(context.exception)
-        self.assertIn("tr/sample.txt", message.replace("\\\\", "/"))
+        self.assertIn("tr/sample.txt", message.replace("\\", "/"))
         self.assertIn("UTF8_BOM=True", message)
         self.assertIn("hata_pozisyonu=", message)
         self.assertEqual(
