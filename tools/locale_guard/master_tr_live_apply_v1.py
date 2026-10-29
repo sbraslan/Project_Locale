@@ -344,7 +344,7 @@ def geri_al(kok: Path, input_fn=input) -> bool:
     folder = son_islem(kok)
     journal_path = folder / "islem.json"
     journal = json.loads(read_safe(kok, journal_path).decode("utf-8"))
-    kontrol(journal["durum"] in ("UYGULANDI", "KURTARMA_GEREKIYOR", "UYGULANIYOR"),
+    kontrol(journal["durum"] in ("UYGULANDI", "HAZIRLANDI", "KURTARMA_GEREKIYOR", "UYGULANIYOR"),
             "Bu işlem geri alınabilir durumda değil")
     kontrol(journal.get("onizleme_sha256") == PREVIEW_SHA
             and len(journal.get("dosyalar", [])) == 92,
