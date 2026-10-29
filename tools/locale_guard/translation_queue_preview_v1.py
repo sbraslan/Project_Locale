@@ -28,7 +28,10 @@ def editable_columns(spec: dict, width: int) -> list[int]:
     if token == "all_non_key":
         selected = set(range(width)) - keys
     elif isinstance(token, list) and all(type(i) is int for i in token):
-        selected = set(token)
+        if spec.get("column_count_policy") == "flexible":
+            selected = {i for i in token if 0 <= i < width}
+        else:
+            selected = set(token)
     else:
         raise RuntimeError("[ENGEL] Bilinmeyen çeviri sütun politikası: " + str(token))
     require(all(0 <= i < width for i in selected),
