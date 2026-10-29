@@ -87,6 +87,7 @@ echo   .locale_guard\checkpoints
 echo Isolated test files:
 echo   .locale_guard\test_apply_master_tr_aa529ec168d1\tr
 echo Note: these are ignored local outputs, not a live deployment.
+cmd /c exit /b 0
 goto after
 
 :after
