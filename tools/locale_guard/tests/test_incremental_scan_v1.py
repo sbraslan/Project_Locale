@@ -33,7 +33,7 @@ class IncrementalScanV1Tests(unittest.TestCase):
         self.assertEqual(data["counts"]["EXTRA_KEY_REVIEW"], 1)
         self.assertEqual(data["counts"]["BASELINE_REQUIRED"], 2)
         self.assertFalse(data["automatic_apply"])
-        self.assertEqual((self.root / "tr" / "sample.txt").read_text(), "1\tBir\n3\tÜç\n")
+        self.assertEqual((self.root / "tr" / "sample.txt").read_text(encoding="utf-8"), "1\tBir\n3\tÜç\n")
 
     def test_changed_key_with_approved_baseline(self):
         self.put("master", "sample.txt", "1\tYeni\n2\tAynı\n")
