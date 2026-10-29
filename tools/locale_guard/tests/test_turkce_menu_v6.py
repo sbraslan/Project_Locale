@@ -49,12 +49,28 @@ class TurkceMenuV6Tests(unittest.TestCase):
             menu.islem_menusu(self.root)
             executor.assert_not_called()
 
-    def test_approved_choice_is_still_interactive(self):
+    def test_old_316_live_apply_is_locked_even_with_approval(self):
         with patch.object(menu, "secim_al", side_effect=["5", "G"]), \
              patch.object(menu, "onay_iste", return_value=True), \
              patch.object(menu, "canli_modul") as executor:
             menu.islem_menusu(self.root)
-            executor.assert_called_once_with(self.root, "uygula")
+            executor.assert_not_called()
+
+    def test_unified_master_plan_requires_confirmation(self):
+        with patch.object(menu, "secim_al", side_effect=["8", "G"]), \
+             patch.object(menu, "onay_iste", return_value=False), \
+             patch.object(menu, "modulu_calistir") as runner:
+            menu.islem_menusu(self.root)
+            runner.assert_not_called()
+
+    def test_unified_plan_after_confirmation_uses_read_only_module(self):
+        with patch.object(menu, "secim_al", side_effect=["8", "G"]), \
+             patch.object(menu, "onay_iste", return_value=True), \
+             patch.object(menu, "modulu_calistir") as runner:
+            menu.islem_menusu(self.root)
+            runner.assert_called_once_with(
+                self.root, "unified",
+                "tools.locale_guard.unified_master_first_plan_v1", "--root", ".")
 
     def test_setup_allowlist_never_contains_locale(self):
         self.assertTrue(menu.KURULACAKLAR)
