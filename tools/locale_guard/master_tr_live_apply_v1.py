@@ -234,6 +234,11 @@ def islem_klasoru(kok: Path) -> Path:
 def geri_yukle(kok: Path, folder: Path, journal: dict,
                *, force_expected: bool = True) -> None:
     """Yeni SHA veya eski SHA dışında bir dosya değiştirilmez."""
+    kontrol(len(journal.get("dosyalar", [])) == 92,
+            "Geri alma kayıt kapsamı beklenenden farklı")
+    plan = []
+    # Önce *bütün* hedefleri ve yedekleri kontrol et: sonradan yapılmış
+    # kullanıcı düzenlemeleri kısmi geri alma ile ezilemez.
     for item in reversed(journal["dosyalar"]):
         path = dosya_yolu(kok, item["dil"], item["dosya"])
         backup = folder / "yedekler" / item["dil"] / relative_path(item["dosya"])
@@ -242,7 +247,9 @@ def geri_yukle(kok: Path, folder: Path, journal: dict,
         if force_expected:
             kontrol(digest(current) in (item["eski_sha256"], item["yeni_sha256"]),
                     "Geri alma sırasında beklenmeyen dosya değişikliği: " + str(path))
-        if current != original:
+        plan.append((path, original))
+    for path, original in plan:
+        if read_safe(kok, path) != original:
             kaydet_atomik(path, original)
         kontrol(read_safe(kok, path) == original, "Geri alma doğrulaması başarısız")
     journal["durum"] = "GERI_ALINDI"
