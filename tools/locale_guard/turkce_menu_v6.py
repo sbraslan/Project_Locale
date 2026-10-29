@@ -165,6 +165,20 @@ def modulu_calistir(kok: Path, kimlik: str, modul: str, *args: str) -> bool:
     return calistir(kok, kimlik, [sys.executable, "-B", "-m", modul, *args])
 
 
+def rapor_damgasi(kok: Path, goreli: str) -> int | None:
+    p = guvenli_yol(kok, goreli)
+    return p.stat().st_mtime_ns if p.is_file() else None
+
+
+def guncel_rapor_ozeti(kok: Path, goreli: str, once: int | None,
+                      alan: str = "counts") -> None:
+    sonra = rapor_damgasi(kok, goreli)
+    if sonra is None or sonra == once:
+        print("[BİLGİ] Bu işlemde yeni rapor üretilmedi; eski rapor gösterilmiyor.")
+        return
+    rapor_ozeti(kok, goreli, alan)
+
+
 def rapor_ozeti(kok: Path, goreli: str, alan: str = "counts") -> None:
     try:
         path = guvenli_yol(kok, goreli)
@@ -172,6 +186,13 @@ def rapor_ozeti(kok: Path, goreli: str, alan: str = "counts") -> None:
         print("\nRapor özeti:", goreli)
         for kod, sayi in sorted(rapor.get(alan, {}).items()):
             print(" -", DURUM_ADLARI.get(kod, "Diğer inceleme kaydı"), ":", sayi)
+        hatalar = [
+            item for item in rapor.get("items", [])
+            if item.get("status") == "FILE_ENCODING_REVIEW"
+        ]
+        for item in hatalar[:5]:
+            print(" - Kodlama incelemesi:", item.get("language", "?")
+                  + "/" + item.get("path", "?"))
         for key, turkce in (
             ("missing_key_rows", "Eksik anahtar satırı"),
             ("translation_cells", "Çeviri adayı hücre"),
@@ -217,10 +238,12 @@ def tam_kontrol(kok: Path) -> None:
         else:
             print("[EKSİK] Kontrol modülü yerelde bulunamadı:", ad)
             sonuc.append((ad, False))
+    rapor = ".locale_guard/incremental_scan_v1.json"
+    once = rapor_damgasi(kok, rapor)
     tarama = modulu_calistir(
         kok, "scan", "tools.locale_guard.incremental_scan_v1", "--root", ".")
     sonuc.append(("16 dil taraması", tarama))
-    rapor_ozeti(kok, ".locale_guard/incremental_scan_v1.json")
+    guncel_rapor_ozeti(kok, rapor, once)
     satir()
     print("KONTROL SONUCU")
     for ad, iyi in sonuc:
@@ -249,8 +272,10 @@ def islem_menusu(kok: Path) -> None:
             raise SystemExit(0)
         if secim == "1":
             if onay_iste("16 dilin artımlı taraması çalıştırılacak."):
+                rapor = ".locale_guard/incremental_scan_v1.json"
+                once = rapor_damgasi(kok, rapor)
                 modulu_calistir(kok, "scan", "tools.locale_guard.incremental_scan_v1", "--root", ".")
-                rapor_ozeti(kok, ".locale_guard/incremental_scan_v1.json")
+                guncel_rapor_ozeti(kok, rapor, once)
         elif secim == "2":
             if onay_iste("Yeni çeviri kuyruğu yalnız rapora oluşturulacak."):
                 tarih = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d_%H%M%S_%f")
@@ -419,6 +444,12 @@ def git_esitle(kok: Path) -> None:
         durum = komut(kok, ["git", "status", "--porcelain", "--untracked-files=all"])
         if durum.returncode != 0 or durum.stdout.strip():
             raise RuntimeError("Yerel dosya değişiklikleri var; güvenli birleştirme engellendi.")
+        ancestor = komut(kok, ["git", "merge-base", "--is-ancestor", "HEAD",
+                               "refs/remotes/origin/" + HEDEF_DAL])
+        if ancestor.returncode != 0:
+            raise RuntimeError(
+                "GitHub dalı yerel dalın ilerisi değil; güvenli birleştirme reddedildi."
+            )
         fark = komut(kok, ["git", "diff", "--name-only", "HEAD",
                            "refs/remotes/origin/" + HEDEF_DAL])
         if fark.returncode != 0:
