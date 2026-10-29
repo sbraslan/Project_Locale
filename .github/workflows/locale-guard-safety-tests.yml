@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - automation/locale-safe-menu-rehearsal-20261029
+      - automation/locale-unified-master-first-20261029
   pull_request:
     branches:
       - automation/locale-guard-v1
@@ -21,5 +22,5 @@ jobs:
           python-version: '3.11'
       - name: Locale Guard safety tests
         run: python -B -m unittest discover -s tools/locale_guard/tests -v
-      - name: Check Python syntax
-        run: python -B -c "import ast, pathlib; ast.parse(pathlib.Path('tools/locale_guard/master_tr_rehearsal.py').read_text(encoding='utf-8'))"
+      - name: Check all LocaleGuard Python syntax
+        run: python -B -c "import ast,pathlib; [ast.parse(p.read_text(encoding='utf-8-sig'),filename=str(p)) for p in pathlib.Path('tools/locale_guard').rglob('*.py')]"
