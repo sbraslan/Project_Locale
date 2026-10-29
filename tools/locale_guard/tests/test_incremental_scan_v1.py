@@ -120,6 +120,20 @@ class IncrementalScanV1Tests(unittest.TestCase):
         self.assertEqual(data["counts"]["FILE_ENCODING_REVIEW"], 1)
         self.assertEqual((self.root / "tr" / "insult.txt").read_bytes(), raw)
 
+    def test_disabled_schema_preserves_undecodable_target_bytes(self):
+        self.config["parser_registry"]["monster_card.txt"] = {
+            "kind": "keyed_tsv", "key_columns": [0],
+            "token_columns": "disabled",
+        }
+        self.put("master", "monster_card.txt", "1\tBaşlık\n")
+        raw = b"1\t" + bytes.fromhex("81") + b"\n"
+        (self.root / "tr" / "monster_card.txt").write_bytes(raw)
+        report = collect(self.root, self.config, languages=["tr"])
+        self.assertEqual(report["counts"]["SCHEMA_TRANSLATION_DISABLED"], 1)
+        self.assertNotIn("FILE_ENCODING_REVIEW", report["counts"])
+        self.assertFalse(report["automatic_apply"])
+        self.assertEqual((self.root / "tr" / "monster_card.txt").read_bytes(), raw)
+
     def test_missing_file_never_created(self):
         self.put("master", "sample.txt", "1\tBir\n")
         data = collect(self.root, self.config, languages=["tr"])
