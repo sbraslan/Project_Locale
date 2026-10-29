@@ -102,6 +102,24 @@ class IncrementalScanV1Tests(unittest.TestCase):
         self.assertIn("NUL_sayısı=1", failure["reason"])
         self.assertEqual((self.root / "tr" / "sample.txt").read_bytes(), raw)
 
+    def test_utf16_word_filter_preserved_without_translation(self):
+        self.put("master", "insult.txt", "örnek\n")
+        raw = "parola\r\nküfür\r\n".encode("utf-16")
+        (self.root / "tr" / "insult.txt").write_bytes(raw)
+        data = collect(self.root, self.config, languages=["tr"])
+        self.assertEqual(data["counts"]["SPECIAL_FILE_PRESERVED"], 1)
+        self.assertNotIn("FILE_ENCODING_REVIEW", data["counts"])
+        self.assertFalse(data["automatic_apply"])
+        self.assertEqual((self.root / "tr" / "insult.txt").read_bytes(), raw)
+
+    def test_nul_word_filter_without_utf16_bom_is_not_whitelisted(self):
+        self.put("master", "insult.txt", "test\n")
+        raw = b"x\x00y\n"
+        (self.root / "tr" / "insult.txt").write_bytes(raw)
+        data = collect(self.root, self.config, languages=["tr"])
+        self.assertEqual(data["counts"]["FILE_ENCODING_REVIEW"], 1)
+        self.assertEqual((self.root / "tr" / "insult.txt").read_bytes(), raw)
+
     def test_missing_file_never_created(self):
         self.put("master", "sample.txt", "1\tBir\n")
         data = collect(self.root, self.config, languages=["tr"])
