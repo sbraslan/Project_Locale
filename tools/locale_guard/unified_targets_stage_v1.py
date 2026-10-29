@@ -100,7 +100,8 @@ def staged_target(root: Path, config: dict, provider, lang: str, rel: str,
             raise TranslationBlocked("Türkçe İngilizce köprü anlamsal inceleme istiyor")
         english = bridge["english"]
 
-        identity = cache_key(english, "en", requested_code, "contract-v1")
+        identity = cache_key(english + "\x00" + tr, "en", requested_code,
+                             "contract-v1")
         candidate = cache.get(identity)
         if candidate is None:
             candidate = verify_target(
