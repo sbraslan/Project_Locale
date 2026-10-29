@@ -85,6 +85,29 @@ class TurkceMenuV6Tests(unittest.TestCase):
             menu.git_esitle(self.root)
             merge.assert_not_called()
 
+    def test_old_report_is_not_presented_as_new(self):
+        report = self.root / ".locale_guard" / "incremental_scan_v1.json"
+        report.parent.mkdir()
+        report.write_text('{"counts":{"MISSING_KEY_TRANSLATION":99}}',
+                          encoding="utf-8")
+        old = menu.rapor_damgasi(self.root, ".locale_guard/incremental_scan_v1.json")
+        with patch.object(menu, "rapor_ozeti") as summary:
+            menu.guncel_rapor_ozeti(
+                self.root, ".locale_guard/incremental_scan_v1.json", old
+            )
+            summary.assert_not_called()
+
+    def test_fresh_report_can_be_summarized(self):
+        report = self.root / ".locale_guard" / "incremental_scan_v1.json"
+        report.parent.mkdir()
+        report.write_text('{"counts":{"MISSING_KEY_TRANSLATION":99}}',
+                          encoding="utf-8")
+        with patch.object(menu, "rapor_ozeti") as summary:
+            menu.guncel_rapor_ozeti(
+                self.root, ".locale_guard/incremental_scan_v1.json", None
+            )
+            summary.assert_called_once()
+
     def test_wrong_git_origin_is_refused(self):
         result = SimpleNamespace(returncode=0, stdout="https://github.com/other/repo\n")
         with patch.object(menu, "komut", return_value=result):
