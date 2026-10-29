@@ -30,6 +30,9 @@ KURULACAKLAR = (
     "tools/locale_guard/tests/test_incremental_scan_v1.py",
     "tools/locale_guard/translation_queue_preview_v1.py",
     "tools/locale_guard/tests/test_translation_queue_preview_v1.py",
+    "tools/locale_guard/master_tr_live_apply_v1.py",
+    "tools/locale_guard/tests/test_master_tr_live_apply_v1.py",
+    "tools/locale_guard/runtime_readiness_v1.py",
 )
 DURUM_ADLARI = {
     "BASELINE_REQUIRED": "Onaylı başlangıç referansı bulunmayan dosyalar",
@@ -47,6 +50,12 @@ DURUM_ADLARI = {
 # Yerel çalışmada daha önce doğrulanmış özgün Git blob kimlikleri.
 # Bunun dışındaki değişmiş dosyalar otomatik kurulumla ezilmez.
 BILINEN_ESKI_BLOBLAR = {
+    "tools/locale_guard/turkce_menu_v6.py": {
+        "1737f2763a5e26c67065b0ef93e730b8cbf33b2c",
+    },
+    "tools/locale_guard/tests/test_turkce_menu_v6.py": {
+        "dfe9d1c1c574ef3d79dcbcd984d7adf9931db951",
+    },
     "tools/locale_guard/incremental_scan_v1.py": {
         "570b7c27df40fda4fb9f2fa296fc427487362a37",
         "237848db59cb3c3375e3d0756df3d63d9d632377",
@@ -254,50 +263,94 @@ def tam_kontrol(kok: Path) -> None:
         print("En az bir kontrol tamamlanmadı. Canlı uygulama KİLİTLİ.")
 
 
+def canli_modul(kok: Path, islem: str) -> bool:
+    """İnsan onayı konsoldan alınır; stdout gizlenmez, komut otomatik çalışmaz."""
+    args = [
+        sys.executable, "-B", "-m",
+        "tools.locale_guard.master_tr_live_apply_v1",
+        islem, "--root", ".",
+    ]
+    ortam = dict(os.environ)
+    ortam["PYTHONIOENCODING"] = "utf-8"
+    ortam["PYTHONDONTWRITEBYTECODE"] = "1"
+    try:
+        result = subprocess.run(args, cwd=kok, env=ortam, check=False)
+        if result.returncode != 0:
+            print("[ENGEL] İşlem tamamlanmadı. Dosya değiştirilmişse journal kontrol edin.")
+        else:
+            print("[TAMAM] İşlem başarıyla tamamlandı.")
+        return result.returncode == 0
+    except OSError as hata:
+        print("[ENGEL] Türkçe uygulama modülü başlatılamadı:", hata)
+        return False
+
+
 def islem_menusu(kok: Path) -> None:
     while True:
         satir()
-        print("2 - İŞLEMLER")
+        print("2 - DİL İŞLEMLERİ VE UYGULAMA")
         satir()
-        print("[1] 16 dilin eksik, fazla ve değişen kayıtlarını tara")
-        print("[2] Eksik çeviriler için yeni kuyruk oluştur")
-        print("[3] 316 hücreyi doğrula ve kontrol noktası kaydet")
-        print("[4] 316 hücreyi izole test alanında prova et")
-        print("[5] Canlı çeviri uygulaması (henüz hazır değil; kilitli)")
+        print("[1] 16 dilde fark taraması ve çeviri kuyruğunu hazırla")
+        print("[2] Güvenlik testleri ve 316 hücreyi izole prova et")
+        print("[3] 316 hücreyi önce/sonra raporunda incele")
+        print("[4] İncelenen 316 hücreye anlamsal onay ver")
+        print("[5] ONAYLANAN 316 HÜCREYİ MASTER + TR DOSYALARINA UYGULA")
+        print("[6] Uygulama sonrası Türkçe runtime hazırlığını denetle")
+        print("[7] Son canlı uygulamayı yedekten geri al")
         print("[G] Geri   [M] Ana menü   [0] Çıkış")
-        secim = secim_al(set("12345GM0"))
+        secim = secim_al(set("1234567GM0"))
         if secim in ("G", "M"):
             return
         if secim == "0":
             raise SystemExit(0)
         if secim == "1":
-            if onay_iste("16 dilin artımlı taraması çalıştırılacak."):
-                rapor = ".locale_guard/incremental_scan_v1.json"
-                once = rapor_damgasi(kok, rapor)
-                modulu_calistir(kok, "scan", "tools.locale_guard.incremental_scan_v1", "--root", ".")
-                guncel_rapor_ozeti(kok, rapor, once)
-        elif secim == "2":
-            if onay_iste("Yeni çeviri kuyruğu yalnız rapora oluşturulacak."):
+            if onay_iste("16 dil taraması yapılacak ve ayrı çeviri kuyruğu hazırlanacak."):
+                report = ".locale_guard/incremental_scan_v1.json"
+                once = rapor_damgasi(kok, report)
+                modulu_calistir(kok, "scan",
+                    "tools.locale_guard.incremental_scan_v1", "--root", ".")
+                guncel_rapor_ozeti(kok, report, once)
                 tarih = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d_%H%M%S_%f")
-                ad = ".locale_guard/translation_queue_" + tarih + ".json"
-                modulu_calistir(
-                    kok, "queue", "tools.locale_guard.translation_queue_preview_v1",
-                    "--root", ".", "--output", ad)
-                if gerekli_dosya(kok, ad):
-                    rapor_ozeti(kok, ad, "scan_counts")
+                kuyruk = ".locale_guard/translation_queue_" + tarih + ".json"
+                modulu_calistir(kok, "queue",
+                    "tools.locale_guard.translation_queue_preview_v1",
+                    "--root", ".", "--output", kuyruk)
+                if gerekli_dosya(kok, kuyruk):
+                    rapor_ozeti(kok, kuyruk, "scan_counts")
+        elif secim == "2":
+            if onay_iste("Bütün birim testleri ve 316 hücrelik izole prova yapılacak."):
+                if modulu_calistir(kok, "test", "unittest", "discover",
+                                  "-s", "tools/locale_guard/tests", "-q"):
+                    if modulu_calistir(kok, "preview",
+                                      "tools.locale_guard.master_tr_rehearsal",
+                                      "status", "--root", "."):
+                        if modulu_calistir(kok, "rehearse",
+                                          "tools.locale_guard.master_tr_rehearsal",
+                                          "rehearse", "--root", "."):
+                            modulu_calistir(kok, "checkpoint",
+                                           "tools.locale_guard.master_tr_rehearsal",
+                                           "checkpoint", "--root", ".")
         elif secim == "3":
-            if onay_iste("316 hücre doğrulanacak; başarılıysa kontrol noktası yazılacak."):
-                if modulu_calistir(kok, "preview", "tools.locale_guard.master_tr_rehearsal",
-                                   "status", "--root", "."):
-                    modulu_calistir(kok, "checkpoint", "tools.locale_guard.master_tr_rehearsal",
-                                    "checkpoint", "--root", ".")
+            if onay_iste("316 hücrelik önce/sonra inceleme raporu oluşturulacak."):
+                canli_modul(kok, "incele")
+                print("Dosyayı açıp 316 metin değişikliğini inceleyin.")
         elif secim == "4":
-            if onay_iste("316 hücre gerçek dil klasörlerine yazılmadan prova edilecek."):
-                modulu_calistir(kok, "rehearse", "tools.locale_guard.master_tr_rehearsal",
-                                "rehearse", "--root", ".")
+            if onay_iste("İnceleme raporuna bağlı anlamsal kullanıcı onayı istenecek."):
+                canli_modul(kok, "onayla")
         elif secim == "5":
-            print("[KİLİTLİ] Onaylı çeviri/geri alma motoru henüz entegre edilmedi.")
-            print("Bu seçenek hiçbir dosyaya yazmaz ve 'UYGULA' komutu çalıştırmaz.")
+            if onay_iste(
+                "46 Master + 46 TR dosyası yedeklenip CANLI değiştirilebilir. "
+                "İçerik onayı ve ikinci UYGULA 316 doğrulaması zorunludur."
+            ):
+                canli_modul(kok, "uygula")
+        elif secim == "6":
+            if onay_iste("Uygulanan 92 dosyanın SHA-256 kimlikleri denetlenecek."):
+                modulu_calistir(kok, "runtime",
+                               "tools.locale_guard.runtime_readiness_v1",
+                               "--root", ".")
+        elif secim == "7":
+            if onay_iste("Son işlem yedekten geri alınabilir; ayrıca GERI AL onayı istenecek."):
+                canli_modul(kok, "geri-al")
 
 
 def git_kontrol(kok: Path) -> None:
@@ -511,7 +564,8 @@ def ana_menu(kok: Path) -> None:
         print("[2] İŞLEM   - Tarama, çeviri kuyruğu, kontrol noktası, prova")
         print("[3] GİTHUB  - Kurulum, güncelleme ve güvenli eşitleme")
         print("[0] ÇIKIŞ")
-        print("Canlı çeviri uygulaması henüz kilitli; hiçbir işlem otomatik başlamaz.")
+        print("Canlı uygulama yalnız 316 hücrelik onaylı paket için açıktır.")
+        print("Diğer 15 dilin otomatik çevirisi ve oyun içi dağıtım tamamlanmadı.")
         secim = secim_al(set("1230"))
         if secim == "0":
             print("Program güvenli şekilde kapatıldı.")
