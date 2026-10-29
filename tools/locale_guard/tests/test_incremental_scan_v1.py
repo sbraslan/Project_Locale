@@ -70,6 +70,21 @@ class IncrementalScanV1Tests(unittest.TestCase):
                     baseline={"schema_version": 1, "status": "UNAPPROVED"},
                     languages=["tr"])
 
+    def test_invalid_utf8_bom_reports_path_without_writing(self):
+        self.put("master", "sample.txt", "1\\tBir\\n")
+        self.put("tr", "sample.txt", "1\\tBir\\n")
+        raw = bytes.fromhex("efbbbf") + b"1\\t" + bytes.fromhex("e3") + b"\\n"
+        (self.root / "tr" / "sample.txt").write_bytes(raw)
+        with self.assertRaises(RuntimeError) as context:
+            collect(self.root, self.config, languages=["tr"])
+        message = str(context.exception)
+        self.assertIn("tr/sample.txt", message.replace("\\\\", "/"))
+        self.assertIn("UTF8_BOM=True", message)
+        self.assertIn("hata_pozisyonu=", message)
+        self.assertEqual(
+            (self.root / "tr" / "sample.txt").read_bytes(), raw
+        )
+
     def test_missing_file_never_created(self):
         self.put("master", "sample.txt", "1\tBir\n")
         data = collect(self.root, self.config, languages=["tr"])
