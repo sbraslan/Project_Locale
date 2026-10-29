@@ -19,6 +19,10 @@ def require(ok: bool, message: str) -> None:
         raise RuntimeError("[ENGEL] " + message)
 
 
+class FileContentError(RuntimeError):
+    """Dosya verisi güvenle okunamadı; satır taraması sürdürülür, uygulama engellenir."""
+
+
 def safe_path(value: str) -> Path:
     p = PurePosixPath(value)
     require(bool(value) and p.as_posix() == value and not p.is_absolute()
@@ -35,7 +39,16 @@ def read_file(root: Path, lang: str, rel: str, config: dict) -> tuple[str, str]:
         require(not cursor.is_symlink(), "Sembolik bağlantı yasak: " + str(cursor))
         cursor = cursor.parent
     raw = p.read_bytes()
-    require(b"\x00" not in raw, "İkili/NUL içerik: " + str(p))
+    if b"\x00" in raw:
+        positions = [i for i, value in enumerate(raw) if value == 0]
+        raise FileContentError(
+            "NUL içerik: " + str(p.relative_to(root))
+            + " | NUL_sayısı=" + str(len(positions))
+            + " | ilk_konumlar=" + repr(positions[:12])
+            + " | ilk_32_bayt=" + raw[:32].hex(" ")
+            + " | SHA256=" + hashlib.sha256(raw).hexdigest()
+            + " | kaynak dosya değiştirilmedi"
+        )
     try:
         text, codec, _ = decode_text(
             raw, language=lang,
@@ -45,7 +58,7 @@ def read_file(root: Path, lang: str, rel: str, config: dict) -> tuple[str, str]:
         position = getattr(exc, "start", None)
         sample = (raw[:32] if position is None
                   else raw[max(0, position - 12):position + 16])
-        raise RuntimeError(
+        raise FileContentError(
             "Kodlama çözümlenemedi: " + str(p.relative_to(root))
             + " | UTF8_BOM=" + str(raw.startswith(bytes.fromhex("efbbbf")))
             + " | hata_pozisyonu=" + str(position)
@@ -54,8 +67,10 @@ def read_file(root: Path, lang: str, rel: str, config: dict) -> tuple[str, str]:
             + repr(config.get("legacy_decodings", {}).get(lang, []))
             + " | ayrıntı=" + str(exc)
         ) from exc
-    require(text.encode(codec) == raw and "\ufffd" not in text,
-            "Kodlama bütünlüğü hatası: " + str(p))
+    if text.encode(codec) != raw or "\ufffd" in text:
+        raise FileContentError(
+            "Kodlama bütünlüğü hatası: " + str(p.relative_to(root))
+        )
     return text, hashlib.sha256(raw).hexdigest()
 
 
@@ -114,9 +129,21 @@ def collect(root: Path, config: dict, baseline: dict | None = None,
                 add("MISSING_FILE_TRANSLATION", lang, rel)
                 continue
             if rel not in cache:
-                cache[rel] = read_file(root, master_lang, rel, config)
+                try:
+                    cache[rel] = read_file(root, master_lang, rel, config)
+                except FileContentError as exc:
+                    cache[rel] = exc
+            if isinstance(cache[rel], FileContentError):
+                add("FILE_ENCODING_REVIEW", lang, rel,
+                    affected_side=master_lang, reason=str(cache[rel]))
+                continue
             master_text, master_sha = cache[rel]
-            target_text, target_sha = read_file(root, lang, rel, config)
+            try:
+                target_text, target_sha = read_file(root, lang, rel, config)
+            except FileContentError as exc:
+                add("FILE_ENCODING_REVIEW", lang, rel,
+                    affected_side=lang, reason=str(exc))
+                continue
             spec = registry.get(rel)
             if spec is None or spec.get("kind") != "keyed_tsv":
                 add("FREEFORM_OR_UNREGISTERED_REVIEW", lang, rel,
@@ -147,7 +174,9 @@ def collect(root: Path, config: dict, baseline: dict | None = None,
                         add("SOURCE_CHANGED_RETRANSLATION", lang, rel,
                             key=key, source_sha256=current)
     return {
-        "schema_version": 1, "mode": "READ_ONLY_DELTA_SCAN",
+        "schema_version": 1,
+        "mode": "READ_ONLY_DELTA_SCAN_WITH_BLOCKERS" if counts["FILE_ENCODING_REVIEW"]
+                else "READ_ONLY_DELTA_SCAN",
         "source": master_lang, "languages": targets,
         "counts": dict(sorted(counts.items())),
         "action_count": len(results), "automatic_apply": False,
@@ -189,6 +218,11 @@ def main(argv: list[str] | None = None) -> int:
         for status, count in result["counts"].items():
             print(f"{status}: {count}")
         print("Rapor:", output.relative_to(root))
+        if result["counts"].get("FILE_ENCODING_REVIEW", 0):
+            print("[ENGEL] Kodlama/NUL inceleme kaydı var. Diğer dosyalar tarandı.")
+            print("Onaylı uygulama: KİLİTLİ. Raporda ayrıntılar mevcut.")
+            print("Canlı dosya değişikliği: HAYIR")
+            return 2
         print("Canlı dosya değişikliği: HAYIR")
         return 0
     except (RuntimeError, OSError, ValueError, UnicodeError, KeyError, TypeError) as exc:
