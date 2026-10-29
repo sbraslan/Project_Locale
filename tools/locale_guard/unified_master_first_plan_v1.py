@@ -24,9 +24,25 @@ from tools.locale_guard.locale_guard import (
     relative_txt_paths, suspicious_foreign_language,
 )
 from tools.locale_guard.translation_queue_preview_v1 import editable_columns
+from tools.locale_guard.unified_translation_contract_v1 import ALL_BRACKET_DIRECTIVE
 
 ENGINE = "master-first-unified-v1"
 SPECIAL = {"insult.txt", "skilldesc.txt", "monster_card.txt"}
+# Gerçek GitHub Master örneklerinde denetlenen, sekmesiz serbest metinler.
+# Patchnotes, ini/proto ve bilinmeyen TXT dosyaları özellikle DAHİL DEĞİL.
+FREEFORM_MASTER_FILES = frozenset({
+    "attendance_desc.txt",
+    "black_and_white_desc.txt",
+    "catchking_event_desc.txt",
+    "catchking_event_simple_desc.txt",
+    "desc_battle_field.txt",
+    "empiredesc_a.txt", "empiredesc_b.txt", "empiredesc_c.txt",
+    "findm_event_desc.txt", "fish_event_desc.txt",
+    "jobdesc_assassin.txt", "jobdesc_shaman.txt", "jobdesc_sura.txt",
+    "jobdesc_warrior.txt", "jobdesc_wolfman.txt",
+    "mini_game_okey_desc.txt", "pet_primium_feedstuff_desc.txt",
+    "wonexchange_desc.txt",
+})
 FORBIDDEN_SOURCE = ("\ufffd", "\x00")
 
 
@@ -45,7 +61,8 @@ def checked_file(root: Path, language: str, rel: str) -> Path:
 
 
 def translation_surface(line: str) -> str:
-    result = BRACKET_DIRECTIVE_RE.sub(" ", line)
+    result = ALL_BRACKET_DIRECTIVE.sub(" ", line)
+    result = BRACKET_DIRECTIVE_RE.sub(" ", result)
     return METIN_PIPE_RE.sub(" ", result).strip()
 
 
@@ -68,8 +85,11 @@ def extract_master_cells(root: Path, config: dict, rel: str) -> tuple[list[dict]
     except FileContentError as exc:
         return rows, [{"path": rel, "status": "KAYNAK_KODLAMA_ENGELI", "detail": str(exc)}]
     spec = config.get("parser_registry", {}).get(rel)
-    if spec is None and not rel.startswith("wiki/"):
+    allowed_freeform = rel.startswith("wiki/") or rel in FREEFORM_MASTER_FILES
+    if spec is None and not allowed_freeform:
         return rows, [{"path": rel, "status": "KAYITSIZ_DOSYA_PARSER_INCELEMESI"}]
+    if spec is None and "\t" in text:
+        return rows, [{"path": rel, "status": "SERBEST_METINDE_TSV_TAB_ENGELI"}]
     if spec is not None:
         if spec.get("kind") != "keyed_tsv" or spec.get("token_columns") == "disabled":
             return rows, [{"path": rel, "status": "YAPISAL_DOSYA_CEVIRI_YASAK"}]
