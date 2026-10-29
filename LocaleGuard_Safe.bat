@@ -35,7 +35,7 @@ if errorlevel 1 (
 :menu
 cls
 echo ======================================================================
-echo PROJECT_LOCALE - GÜVENLİ ANA MENÜ V3  -  2026-10-29
+echo PROJECT_LOCALE - GÜVENLİ ANA MENÜ V4  -  2026-10-29
 echo ======================================================================
 echo KANONİK KAYNAK: master/             CANLI HEDEF: tr/
 echo SON ÖNİZLEME: 316 hücre / 46 dosya / 1 bekleyen onay
@@ -51,11 +51,13 @@ echo [6] Kanonik EN Aşama-1 kapsam denemesi (yalnız rapor)
 echo [7] TAM GÜVENLİ ÖN KONTROL (testler + iki hat + Aşama-1)
 echo [8] Git durumunu göster (salt okunur)
 echo [9] Çıktı konumları ve sonraki etkinleştirme adımları
+echo [D] Artımlı tarama: 16 dilde eksik/fazla/değişen kayıtlar
 echo [H] Etkinleştirme hazırlığı (canlı uygulama YOK)
 echo [C] Çıkış
 echo.
-choice /C 123456789HC /N /M "Seçiminiz: "
-if errorlevel 11 goto end
+choice /C 123456789HDC /N /M "Seçiminiz: "
+if errorlevel 12 goto end
+if errorlevel 11 goto delta
 if errorlevel 10 goto readiness
 if errorlevel 9 goto paths
 if errorlevel 8 goto gitstatus
@@ -159,13 +161,25 @@ echo Test alanındaki prova:
 echo   .locale_guard\test_apply_master_tr_aa529ec168d1\tr
 echo Önceki 262 hücrelik Staging V2:
 echo   .locale_guard\staging_master_tr_v2
+echo 16 dil artımlı tarama raporu:
+echo   .locale_guard\incremental_scan_v1.json
 echo Kanonik Aşama-1 raporu:
 echo   .locale_guard\safe_menu_canonical_stage1_v2.json
 echo.
-echo Önerilen sıra: 3 test, 1 doğrulama, 2 kayıt, 4 prova, 7 tam kontrol.
+echo Önerilen sıra: D tarama, 3 test, 1 doğrulama, 2 kayıt, 4 prova, 7 tam kontrol.
 echo Not: Bir dragon_alchemy hücresi dışlandı; anlamsal onay gerekiyor.
 echo Hiçbir seçenek canlı master/ veya tr/ dosyalarına yazmaz.
 cmd /c exit /b 0
+goto after
+
+:delta
+if not exist "tools\locale_guard\incremental_scan_v1.py" goto missing_delta
+python -B -m tools.locale_guard.incremental_scan_v1 --root .
+goto after
+
+:missing_delta
+echo [ENGEL] Artımlı tarama modülü bulunamadı; dosya değiştirilmedi.
+cmd /c exit /b 2
 goto after
 
 :readiness
