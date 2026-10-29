@@ -39,3 +39,17 @@ python -B -m tools.locale_guard.unified_master_first_plan_v1 --root .
 - [ ] İstemci ve server locale paket/encoding uyumluluğu ve oyun içi runtime testleri.
 
 **Uyarı:** Bu dalda tek tuşla bütün 16 dilin otomatik canlı güncellendiğini iddia eden hiçbir yol yoktur. Önce güvenlik ve dil sınıflandırması tamamlanmalıdır.
+
+## Gerçek depo taraması / entegrasyon ilerlemesi (29.10.2026)
+
+- `Master/` altında **84** TXT bulundu, **50.514** çevrilebilir görünen hücre/satır tarandı.
+- EN/DE kaynak dili şüphesi güçlü aday: **936**; belirsiz veya zaten Türkçe olabilecek kayıtlar: **49.578**.
+- Şema/kodlama/özel dosya incelemeleri **6**, hedeflerde ekleme/silme önerileri **11.998**.
+- `locale_quest.txt` gerçek 13.353 TSV satırındaki VNUM/anahtar sütunu korunarak parser registry'ye eklendi.
+- 18 tip serbest metin açıklama dosyası explicit allowlist ile tanımlandı; `patchnotes.txt` gibi yapılandırma dosyaları zorla çevrilmez.
+- `[ENTER]`, `[DELAY value;0]`, `[IMG=...]` wiki direktifleri korunur.
+- `unified_qa_cache_v1.py` mevcut proto cache'ini onaylı kabul etmeden kaynak SHA+codec ve token doğrulamasıyla idempotent aday kayıtları saklar.
+- `unified_express_pipeline_v1.py` tek komutta birim testleri → bütün TXT taraması → isteğe bağlı Türkçe staging → yalnız onaylı Master'la 16 dil staging yapar. **Hiçbir canlı locale dosyasına yazmaz**.
+- GitHub Actions tüm guard testleri, sözdizimi kontrolü ve gizli .locale_guard rapor artifact adımını çalıştırır.
+
+**Önemli:** Express genel canlı uygula/sil motoru henüz tamamlanmadı; 16 dildeki boşluklar otomatik yok edilmez. Doküman, insan onayı gerektiğini gizlemez.
