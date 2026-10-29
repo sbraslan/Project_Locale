@@ -37,6 +37,8 @@ KURULACAKLAR = (
     "tools/locale_guard/unified_master_first_plan_v1.py",
     "tools/locale_guard/unified_master_tr_stage_v1.py",
     "tools/locale_guard/unified_targets_stage_v1.py",
+    "tools/locale_guard/unified_qa_cache_v1.py",
+    "tools/locale_guard/tests/test_unified_qa_cache_v1.py",
     "tools/locale_guard/tests/test_unified_translation_contract_v1.py",
     "tools/locale_guard/tests/test_unified_master_first_plan_v1.py",
     "tools/locale_guard/tests/test_unified_master_tr_stage_v1.py",
