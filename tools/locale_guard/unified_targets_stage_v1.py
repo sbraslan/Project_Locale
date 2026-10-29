@@ -24,6 +24,9 @@ from tools.locale_guard.unified_master_tr_stage_v1 import (
 from tools.locale_guard.unified_translation_contract_v1 import (
     TranslationBlocked, cache_key, verify_bridge, verify_target,
 )
+from tools.locale_guard.unified_qa_cache_v1 import (
+    load_cache, validated_bridge, validated_target, write_cache,
+)
 
 APPROVAL = "APPROVED_FULL_TR_MASTER"
 PHASE = "16-language-target-staging-v1"
@@ -92,7 +95,7 @@ def staged_target(root: Path, config: dict, provider, lang: str, rel: str,
         budget[0] -= 1
         tr = item["source"]
         bridge_key = cache_key(tr, "tr", "en", "contract-v1")
-        bridge = cache.get(bridge_key)
+        bridge = validated_bridge(cache, bridge_key, tr)
         if bridge is None:
             bridge = verify_bridge(provider, tr)
             cache[bridge_key] = bridge
@@ -102,7 +105,8 @@ def staged_target(root: Path, config: dict, provider, lang: str, rel: str,
 
         identity = cache_key(english + "\x00" + tr, "en", requested_code,
                              "contract-v1")
-        candidate = cache.get(identity)
+        candidate = validated_target(
+            cache, identity, tr, english, lang, dest_codec)
         if candidate is None:
             candidate = verify_target(
                 provider, tr, english, lang, requested_code, dest_codec)
@@ -135,12 +139,14 @@ def staged_target(root: Path, config: dict, provider, lang: str, rel: str,
 
 
 def build_staging(root: Path, config: dict, provider,
-                  source_manifest: Path, *, max_cells: int = 50) -> dict:
+                  source_manifest: Path, *, max_cells: int = 50,
+                  cache: dict | None = None) -> dict:
     approved_source(root, config, source_manifest)
     if max_cells < 1 or max_cells > 100000:
         raise RuntimeError("Geçersiz işlem bütçesi")
     budget = [max_cells]
-    cache: dict = {}
+    if cache is None:
+        cache = {}
     ready = []
     holds = []
     source_files = sorted(relative_txt_paths(root / "master"))
@@ -188,8 +194,10 @@ def main() -> int:
         if not manifest_path.is_relative_to(guard) or manifest_path.is_symlink():
             raise TranslationBlocked("Onay belgesi güvenli klasör dışında")
         conf = load_config(root / "tools/locale_guard/config.json")
+        qa_cache = load_cache(guard)
         result = build_staging(
-            root, conf, LocalLibreTranslate(), manifest_path, max_cells=args.limit)
+            root, conf, LocalLibreTranslate(), manifest_path,
+            max_cells=args.limit, cache=qa_cache)
         identifier = (dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d_%H%M%S_%f")
                       + "_" + uuid.uuid4().hex[:8])
         folder = guard / ("hedef_diller_staging_" + identifier)
@@ -207,6 +215,8 @@ def main() -> int:
             manifest["files"].append({k: v for k, v in info.items() if k != "bytes"})
         with (folder / "manifest.json").open("x", encoding="utf-8") as f:
             json.dump(manifest, f, ensure_ascii=False, indent=2)
+        # Onay yerine geçmeyen QA aday cache'i; kaynak hash ile yeniden doğrulanır.
+        write_cache(guard, qa_cache)
         print("TAMAM: Staging dosyası:", len(result["files"]))
         print("İnceleme/engel:", len(result["blocked_files"]))
         print("Benzersiz önbellek girdisi:", result["cache_entries"])
