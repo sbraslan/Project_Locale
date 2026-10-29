@@ -16,8 +16,8 @@ class MasterTrRehearsalSafetyTests(unittest.TestCase):
     def test_one_safe_cell_change(self):
         got = verify_file_cells(
             rel="battle_pass.txt",
-            target="KEY\tEski\\n", preview="KEY\tYeni\\n",
-            master="KEY\tEski\\n", candidate="KEY\tYeni\\n",
+            target="KEY\tEski\n", preview="KEY\tYeni\n",
+            master="KEY\tEski\n", candidate="KEY\tYeni\n",
         )
         self.assertEqual(got, (1, 0, 1))
 
@@ -25,22 +25,22 @@ class MasterTrRehearsalSafetyTests(unittest.TestCase):
         with self.assertRaises(RuntimeError):
             verify_file_cells(
                 rel="battle_pass.txt",
-                target="KEY\tBaska\\n", preview="KEY\tYeni\\n",
-                master="KEY\tEski\\n", candidate="KEY\tYeni\\n",
+                target="KEY\tBaska\n", preview="KEY\tYeni\n",
+                master="KEY\tEski\n", candidate="KEY\tYeni\n",
             )
 
     def test_placeholder_mutation_is_blocked(self):
         with self.assertRaises(RuntimeError):
             verify_file_cells(
                 rel="battle_pass.txt",
-                target="KEY\tDeger %s\\n", preview="KEY\tDeger %d\\n",
-                master="KEY\tDeger %s\\n", candidate="KEY\tDeger %d\\n",
+                target="KEY\tDeger %s\n", preview="KEY\tDeger %d\n",
+                master="KEY\tDeger %s\n", candidate="KEY\tDeger %d\n",
             )
 
     def test_only_explicitly_excluded_cell_can_stay_unchanged(self):
-        lines = ["same\\n"] * 27
-        before = "".join(lines) + "Eski\\n"
-        desired = "".join(lines) + "Yeni\\n"
+        lines = ["same\n"] * 27
+        before = "".join(lines) + "Eski\n"
+        desired = "".join(lines) + "Yeni\n"
         got = verify_file_cells(
             rel="wiki/systems/dragon_alchemy.txt",
             target=before, preview=before, master=before, candidate=desired,
@@ -48,9 +48,9 @@ class MasterTrRehearsalSafetyTests(unittest.TestCase):
         self.assertEqual(got, (0, 1, 1))
 
     def test_unapproved_change_is_never_applied(self):
-        lines = ["same\\n"] * 27
-        before = "".join(lines) + "Eski\\n"
-        desired = "".join(lines) + "Yeni\\n"
+        lines = ["same\n"] * 27
+        before = "".join(lines) + "Eski\n"
+        desired = "".join(lines) + "Yeni\n"
         with self.assertRaises(RuntimeError):
             verify_file_cells(
                 rel="wiki/systems/dragon_alchemy.txt",
