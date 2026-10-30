@@ -228,6 +228,8 @@ def main() -> int:
             print("[BİLGİ] Çeviri servisi kapalı; hiçbir canlı işlem yapılmayacak.")
             print("Yerel servisle denemek için --service local seçilebilir.")
             return 0
+        from tools.locale_guard.translation_service_preflight_v1 import ensure_service
+        ensure_service(root, required=("de", "en", "tr"))
         result = stage_master(root, config, LocalLibreTranslate(), limit=args.limit)
         uid = (dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d_%H%M%S_%f")
                + "_" + uuid.uuid4().hex[:8])
