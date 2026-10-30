@@ -143,12 +143,12 @@ class ExpressTests(unittest.TestCase):
         self.assertEqual(result["service_preflight"]["action"], "OTOMATIK_BASLATILDI")
 
     def test_no_autostart_flag_is_forwarded(self):
+        from tools.locale_guard.translation_service_preflight_v1 import ServicePreflightError
         with patch("tools.locale_guard.unified_express_pipeline_v1.load_config",
                    return_value=self.conf), \
              patch("tools.locale_guard.unified_express_pipeline_v1.ensure_service",
                    side_effect=ServicePreflightError("kapalı")) as checker, \
              patch("tools.locale_guard.unified_express_pipeline_v1.stage_master") as stage:
-            from tools.locale_guard.translation_service_preflight_v1 import ServicePreflightError
             result = express(self.root, with_tests=False,
                              service=True, limit=10, autostart=False)
         checker.assert_called_once_with(
