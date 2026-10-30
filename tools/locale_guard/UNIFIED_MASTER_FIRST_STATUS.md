@@ -53,3 +53,25 @@ python -B -m tools.locale_guard.unified_master_first_plan_v1 --root .
 - GitHub Actions tüm guard testleri, sözdizimi kontrolü ve gizli .locale_guard rapor artifact adımını çalıştırır.
 
 **Önemli:** Express genel canlı uygula/sil motoru henüz tamamlanmadı; 16 dildeki boşluklar otomatik yok edilmez. Doküman, insan onayı gerektiğini gizlemez.
+
+
+## LibreTranslate otomatik servis (30.10.2026)
+
+- `translation_service_preflight_v1.py` yeni güvenlik kapısıdır.
+- `unified_express_pipeline_v1.py --service local` artık önce `127.0.0.1:5000` üzerinde gerçek `/languages` ve `/translate` kontrolünü yapar.
+- Sunucu kapalıysa **önceden kurulmuş** `libretranslate.exe` / `libretranslate` CLI komutunu sistemde (PATH, aktif Python Scripts, Windows Python kullanıcı Scripts klasörleri) arar ve sadece `127.0.0.1:5000` adresinde başlatır. Başlatılan servis sonraki Express denemelerinde yeniden kullanılır.
+- Servis/başlatıcı bulunmazsa çevrilecek ilk 10/50 hücreyi tek tek başarısız göstermeden `CEVIRI_SERVISI_HAZIR_DEGIL` ile bitirir; o denemede **0 çeviri çağrısı** yapılır. Çıktı `.locale_guard/unified_express/<run>/sonuc.json` içinde de tutulur.
+- 3 ilk kaynak kodu `de,en,tr` için gerçek dil model çevirileri ve UTF-8 bozukluk kontrolü zorunludur. 16 dil aşamasında hedef dil modelleri ayrıca doğrulanır.
+- Paket kurulumunu kendiliğinden yapmaz (pip veya Docker otomatik yükleme yok); bir defalık manuel `python -m pip install libretranslate` gerekebilir. Başka Python ortamına kurulmuşsa `METIN2_LIBRETRANSLATE_EXE` ortam değişkeniyle kurulu gerçek `libretranslate.exe` yolu seçilebilir.
+- `--no-autostart` yalnız var olan sunucuyu kullanır. V6 `2 -> 8` menüsü 50 hücre Türkçe staging pilotunu servis ön kontrolünden sonra başlatır; `2 -> 9` tekil staging de aynı korumayı uygular.
+- Sunucu logları sadece `.locale_guard/translation_service/libretranslate_server.log` içine yazılır. Gerçek `master/`, `tr/`, diğer 15 locale klasörlerine ve istemciye yazılmaz.
+- **Bu servis yalnız hazırlık ve staging içindir.** Master tam onayı, 16 dil bütünlüğü, yedekli genel canlı uygulama/geri alma ve oyun runtime aşamaları hâlâ kapalıdır.
+
+### Windows deneyin
+
+```powershell
+cd "$env:TEMP\Metin2_Locale_Express_Guvenli\Project_Locale"
+python -B -m tools.locale_guard.unified_express_pipeline_v1 --root . --service local --limit 10
+```
+
+Yalnız daha önceden kurulu servis otomatik açılabilir; `--no-autostart` ile başlatma kapatılır.
