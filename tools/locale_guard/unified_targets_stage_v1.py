@@ -198,6 +198,10 @@ def main() -> int:
             raise TranslationBlocked("Onay belgesi güvenli klasör dışında")
         conf = load_config(root / "tools/locale_guard/config.json")
         qa_cache = load_cache(guard)
+        from tools.locale_guard.translation_service_preflight_v1 import ensure_service
+        required = tuple(conf["translation_language_codes"][code]
+                         for code in conf["languages"])
+        ensure_service(root, required=required)
         result = build_staging(
             root, conf, LocalLibreTranslate(), manifest_path,
             max_cells=args.limit, cache=qa_cache)
