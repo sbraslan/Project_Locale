@@ -63,14 +63,15 @@ class TurkceMenuV6Tests(unittest.TestCase):
             menu.islem_menusu(self.root)
             runner.assert_not_called()
 
-    def test_unified_plan_after_confirmation_uses_read_only_module(self):
+    def test_unified_express_after_confirmation_starts_service_for_staging(self):
         with patch.object(menu, "secim_al", side_effect=["8", "G"]), \
              patch.object(menu, "onay_iste", return_value=True), \
              patch.object(menu, "modulu_calistir") as runner:
             menu.islem_menusu(self.root)
             runner.assert_called_once_with(
                 self.root, "unified",
-                "tools.locale_guard.unified_express_pipeline_v1", "--root", ".")
+                "tools.locale_guard.unified_express_pipeline_v1",
+                "--root", ".", "--service", "local", "--limit", "50")
 
     def test_setup_allowlist_never_contains_locale(self):
         self.assertTrue(menu.KURULACAKLAR)
