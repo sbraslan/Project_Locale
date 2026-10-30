@@ -25,6 +25,9 @@ from tools.locale_guard.unified_targets_stage_v1 import (
     approved_source, build_staging,
 )
 from tools.locale_guard.unified_translation_contract_v1 import TranslationBlocked
+from tools.locale_guard.translation_service_preflight_v1 import (
+    ServicePreflightError, ensure_service,
+)
 
 
 def save_json(path: Path, document: dict) -> None:
@@ -73,7 +76,8 @@ def check_tests(root: Path) -> bool:
 
 def express(root: Path, *, service: bool = False,
             limit: int = 50, approval: Path | None = None,
-            with_tests: bool = True, provider=None) -> dict:
+            with_tests: bool = True, provider=None,
+            autostart: bool = True) -> dict:
     if limit < 1:
         raise TranslationBlocked("Hedef pilot limit pozitif olmalı")
     guard = root / ".locale_guard"
@@ -101,7 +105,39 @@ def express(root: Path, *, service: bool = False,
         print("Master TXT:", plan["master_txt_files"],
               " | Master çeviri adayı:", result["master_pending_foreign_hint"])
         if service:
+            if provider is None:
+                required = ("de", "en", "tr") if approval is None else tuple(
+                    config["translation_language_codes"][language]
+                    for language in config["languages"]
+                )
+                print("[1/2] LibreTranslate sunucu ve dil modelleri kontrolü...")
+                try:
+                    ready = ensure_service(
+                        root, required=required, autostart=autostart)
+                except ServicePreflightError as exc:
+                    message = str(exc)
+                    result["status"] = "CEVIRI_SERVISI_HAZIR_DEGIL"
+                    result["service_preflight"] = {
+                        "status": "ENGEL", "reason": message,
+                        "attempted_translation_cells": 0,
+                    }
+                    result["steps"].append({
+                        "step": "LIBRETRANSLATE_PREFLIGHT",
+                        "status": "ENGEL", "reason": message,
+                    })
+                    print("[ENGEL] Tek seferlik servis ön kontrolü:", message)
+                    print("Çeviri denemesi BAŞLATILMADI. Master / 16 dil değişmedi.")
+                    return result
+                result["service_preflight"] = ready
+                result["steps"].append({
+                    "step": "LIBRETRANSLATE_PREFLIGHT",
+                    "status": "BASARILI", "action": ready["action"],
+                })
+            else:
+                # Dışarıdan verilen test provider'ı servis gerektirmez.
+                result["service_preflight"] = {"status": "TEST_PROVIDER"}
             local = provider if provider is not None else LocalLibreTranslate()
+            print("[2/2] LibreTranslate hazır; güvenli çeviri denemeleri başlıyor.")
             stage = stage_master(root, config, local, limit=limit)
             error_counts = Counter(
                 str(item.get("reason", item.get("status", "BİLİNMİYOR")))
@@ -209,13 +245,18 @@ def main() -> int:
     p.add_argument("--service", choices=("off", "local"), default="off")
     p.add_argument("--limit", type=int, default=50)
     p.add_argument("--source-approval")
+    p.add_argument("--no-autostart", action="store_true",
+                   help="Kurulu LibreTranslate servisini otomatik açma")
     args = p.parse_args()
     try:
         root = Path(args.root).resolve()
         approval = root / args.source_approval if args.source_approval else None
         result = express(root, service=args.service == "local",
-                         limit=args.limit, approval=approval)
+                         limit=args.limit, approval=approval,
+                         autostart=not args.no_autostart)
         print("Sonuç:", result["status"])
+        if result["status"] == "CEVIRI_SERVISI_HAZIR_DEGIL":
+            return 4
         return 3 if result["status"] == "CEVIRI_ENGELLERI_INCELENMELI" else 0
     except (RuntimeError, OSError, ValueError, UnicodeError, KeyError) as exc:
         print("[ENGEL] Master-first Express:", exc)
