@@ -190,7 +190,9 @@ def _launch(root: Path, command: list[str],
         proc = subprocess.Popen(
             startup_args, stdin=subprocess.DEVNULL,
             stdout=writer, stderr=subprocess.STDOUT,
-            close_fds=True, cwd=str(root), env=environment,
+            # Servisin olası DB/cache/log çıktıları proje kaynaklarına değil,
+            # sadece güvenli .locale_guard/translation_service içine düşer.
+            close_fds=True, cwd=str(srv_dir), env=environment,
             creationflags=creationflags,
         )
     return proc
