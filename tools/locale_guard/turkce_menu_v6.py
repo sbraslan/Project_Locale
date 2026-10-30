@@ -39,6 +39,8 @@ KURULACAKLAR = (
     "tools/locale_guard/unified_targets_stage_v1.py",
     "tools/locale_guard/unified_qa_cache_v1.py",
     "tools/locale_guard/unified_express_pipeline_v1.py",
+    "tools/locale_guard/translation_service_preflight_v1.py",
+    "tools/locale_guard/tests/test_translation_service_preflight_v1.py",
     "tools/locale_guard/tests/test_unified_express_pipeline_v1.py",
     "tools/locale_guard/tests/test_unified_qa_cache_v1.py",
     "tools/locale_guard/tests/test_unified_translation_contract_v1.py",
@@ -327,7 +329,7 @@ def islem_menusu(kok: Path) -> None:
         print("[5] Eski 316 canlı uygulama (yeni Master-first akışında KİLİTLİ)")
         print("[6] Eski 316 paketinin runtime SHA denetimi (tüm sistem DEĞİL)")
         print("[7] Son eski 316 uygulamasını yedekten geri al")
-        print("[8] MASTER-FIRST EXPRESS: testler, tüm TXT, 16 dil, güvenli rapor")
+        print("[8] MASTER-FIRST EXPRESS: otomatik servis + Türkçe staging pilot")
         print("[9] Master yabancı metinlerini güvenli staging'e çevir (pilot)")
         print("[G] Geri   [M] Ana menü   [0] Çıkış")
         secim = secim_al(set("123456789GM0"))
@@ -382,10 +384,14 @@ def islem_menusu(kok: Path) -> None:
             if onay_iste("Son işlem yedekten geri alınabilir; ayrıca GERI AL onayı istenecek."):
                 canli_modul(kok, "geri-al")
         elif secim == "8":
-            if onay_iste("Master ve 16 dilde bütün TXT dosyaları salt-okunur taranacak."):
+            if onay_iste(
+                "Bütün TXT dosyaları taranacak; gerekiyorsa yerel LibreTranslate "
+                "otomatik açılacak ve 50 hücre yalnız staging için çevrilecek."
+            ):
                 modulu_calistir(kok, "unified",
                                "tools.locale_guard.unified_express_pipeline_v1",
-                               "--root", ".")
+                               "--root", ".", "--service", "local",
+                               "--limit", "50")
         elif secim == "9":
             if onay_iste("Master EN/DE metinleri yalnız staging alanına çevrilecek."):
                 print("Bu işlem yalnız yerel LibreTranslate servisini kullanır.")
