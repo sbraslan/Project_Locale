@@ -109,6 +109,53 @@ class ExpressTests(unittest.TestCase):
         self.assertFalse(result["live_apply"])
         self.assertFalse(result["all_16_languages_ready"])
 
+    def test_missing_server_blocks_before_first_translation_attempt(self):
+        from tools.locale_guard.translation_service_preflight_v1 import ServicePreflightError
+        source_bytes = self.file.read_bytes()
+        with patch("tools.locale_guard.unified_express_pipeline_v1.load_config",
+                   return_value=self.conf), \
+             patch("tools.locale_guard.unified_express_pipeline_v1.ensure_service",
+                   side_effect=ServicePreflightError("LibreTranslate kurulu değil")) as preflight, \
+             patch("tools.locale_guard.unified_express_pipeline_v1.stage_master") as translator:
+            result = express(self.root, with_tests=False, service=True, limit=10)
+        self.assertEqual(result["status"], "CEVIRI_SERVISI_HAZIR_DEGIL")
+        self.assertEqual(result["service_preflight"]["attempted_translation_cells"], 0)
+        self.assertEqual(self.file.read_bytes(), source_bytes)
+        preflight.assert_called_once()
+        translator.assert_not_called()
+
+    def test_healthy_server_check_is_once_before_staging(self):
+        empty_stage = {"changes": [], "blocked": [],
+                       "queued_not_attempted": 0, "staged_files": {}}
+        def check_order(*args, **kwargs):
+            self.assertTrue(checker.called)
+            return empty_stage
+        with patch("tools.locale_guard.unified_express_pipeline_v1.load_config",
+                   return_value=self.conf), \
+             patch("tools.locale_guard.unified_express_pipeline_v1.ensure_service",
+                   return_value={"status":"HAZIR", "action":"OTOMATIK_BASLATILDI"}) as checker, \
+             patch("tools.locale_guard.unified_express_pipeline_v1.stage_master",
+                   side_effect=check_order) as staging:
+            result = express(self.root, with_tests=False, service=True, limit=10)
+        checker.assert_called_once_with(
+            self.root, required=("de","en","tr"), autostart=True)
+        staging.assert_called_once()
+        self.assertEqual(result["service_preflight"]["action"], "OTOMATIK_BASLATILDI")
+
+    def test_no_autostart_flag_is_forwarded(self):
+        with patch("tools.locale_guard.unified_express_pipeline_v1.load_config",
+                   return_value=self.conf), \
+             patch("tools.locale_guard.unified_express_pipeline_v1.ensure_service",
+                   side_effect=ServicePreflightError("kapalı")) as checker, \
+             patch("tools.locale_guard.unified_express_pipeline_v1.stage_master") as stage:
+            from tools.locale_guard.translation_service_preflight_v1 import ServicePreflightError
+            result = express(self.root, with_tests=False,
+                             service=True, limit=10, autostart=False)
+        checker.assert_called_once_with(
+            self.root, required=("de","en","tr"), autostart=False)
+        stage.assert_not_called()
+        self.assertEqual(result["status"], "CEVIRI_SERVISI_HAZIR_DEGIL")
+
     def test_test_failure_prevents_reports_and_live_changes(self):
         with patch("tools.locale_guard.unified_express_pipeline_v1.check_tests",
                    return_value=False):
